@@ -1,0 +1,96 @@
+.container {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0 0 15px 15px !important; /* Solo esquinas inferiores redondeadas */
+  }
+  
+  .info-section {
+    background-color: #f7f7f7;
+    width: 70%;
+    padding: 0;
+    margin: auto; /* Centrará la sección horizontalmente */
+    border-radius: 0 0 15px 15px !important; /* Solo esquinas inferiores redondeadas */
+  }
+  
+  .info-row {
+    display: flex;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    justify-content: space-between;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0 0 15px 15px !important; /* Solo esquinas inferiores redondeadas */
+  }
+  
+  .info-col {
+    position: relative;
+    padding: auto;
+    font-size: 1.5vw;
+    cursor: pointer;
+    border-left: 1px solid #ddd; /* Añadir la línea entre columnas */
+  }
+  
+  .info-col:first-child {
+    border-left: none; /* Quitar línea del primer elemento */
+  }
+  
+  .info-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none; /* Sin subrayado en el texto */
+    color: inherit; /* Mantiene el color de texto e íconos */
+  }
+  
+  .info-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+  }
+  
+  .info-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #333;
+  }
+  
+  .info-text {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .highlight {
+    color: red;
+    font-weight: bold;
+  }
+  
+  /* Cambios de color al hacer hover */
+  .info-col:hover {
+    background: linear-gradient(135deg, #93ff8c, #64ea49); /* Degradado verde vibrante */
+    color: #000;
+    border-radius: 0 0 15px 15px !important; /* Solo esquinas inferiores redondeadas */
+  }
+  
+  .info-col:hover .info-icon {
+    color: #000;
+  }
+  
+  .info-col:hover .info-text {
+    color: #000;
+  }
+  
+  /* Estilos responsive */
+  @media (max-width: 767px) {
+    .info-text {
+      font-size: 12px;
+    }
+  
+    .info-icon {
+      font-size: 4vw;
+    }
+  }
+  

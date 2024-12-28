@@ -1,0 +1,25 @@
+{
+    "academicHistory": "Academic History",
+    "completedCourses": "Completed Courses",
+    "inProgressCourses": "In-Progress Courses",
+    "evaluations": "Evaluations",
+    "performanceStats": "Performance Stats",
+    "generalProgress": "General Progress",
+    "averageGrade": "Average Grade",
+    "averageTimePerCourse": "Average Time Per Course",
+    "performanceComparison": "Performance Comparison",
+    "highlightedCourses": "Highlighted Courses",
+    "status": "Status",
+    "progressPercentage": "Progress Percentage",
+    "estimatedCompletion": "Estimated Completion Date",
+    "coursesTaken": "Courses Taken",
+    "pendingCourses": "Pending Courses",
+    "evaluationDate": "Evaluation Date",
+    "obtainedGrade": "Obtained Grade",
+    "approved": "Approved",
+    "failed": "Failed",
+    "completionDate": "Completion Date",
+    "grade": "Grade",
+    "comments": "Comments"
+  }
+  

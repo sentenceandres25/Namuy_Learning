@@ -1,0 +1,18 @@
+/* Styles/PlatformAccessRestrictions.module.css */
+
+.platformAccessRestrictions {
+    margin-top: 20px;
+    background: #e0f2f1;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .platformAccessRestrictions h3 {
+    color: #004d40;
+    margin-bottom: 15px;
+  }
+  
+  .platformAccessRestrictions p {
+    color: #004d40;
+  }
+  

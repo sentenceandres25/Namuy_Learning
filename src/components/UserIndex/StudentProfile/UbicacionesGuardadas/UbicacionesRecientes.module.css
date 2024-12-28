@@ -1,0 +1,27 @@
+/* UbicacionesRecientes.module.css */
+
+.ubicacionesRecientes {
+    padding: 20px;
+    background-color: #d1ecf1;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .recientesList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .recientesList li {
+    padding: 10px;
+    background-color: #bee5eb;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .recientesList li:hover {
+    transform: translateX(10px);
+  }
+  

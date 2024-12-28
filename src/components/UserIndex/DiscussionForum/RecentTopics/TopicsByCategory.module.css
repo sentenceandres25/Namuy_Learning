@@ -1,0 +1,32 @@
+/* Styles/TopicsByCategory.module.css */
+
+.topicsByCategory {
+    background: #e0f2fe;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+  
+  .topicsByCategory h4 {
+    color: #0369a1;
+    margin-bottom: 10px;
+  }
+  
+  .topicsByCategory ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .topicsByCategory li {
+    margin-bottom: 8px;
+  }
+  
+  .topicsByCategory a {
+    color: #0284c7;
+    text-decoration: none;
+  }
+  
+  .topicsByCategory a:hover {
+    text-decoration: underline;
+  }
+  

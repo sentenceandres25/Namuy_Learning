@@ -1,0 +1,23 @@
+/* Styles/CertificateDetails.module.css */
+
+.certificateDetails {
+    background: #fefce8;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 25px;
+  }
+  
+  .certificateDetails h3 {
+    color: #ca8a04;
+    margin-bottom: 20px;
+  }
+  
+  .certificateDetails p {
+    margin: 8px 0;
+    color: #854d0e;
+  }
+  
+  .certificateDetails strong {
+    color: #d97706;
+  }
+  

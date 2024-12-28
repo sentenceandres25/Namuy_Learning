@@ -1,0 +1,19 @@
+/* Styles/AcceptanceOfTerms.module.css */
+
+.acceptanceOfTerms {
+    margin-top: 20px;
+    background: #fff3e0;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .acceptanceOfTerms h3 {
+    color: #e65100;
+    margin-bottom: 15px;
+  }
+  
+  .acceptanceOfTerms p {
+    color: #e65100;
+    text-align: justify;
+  }
+  

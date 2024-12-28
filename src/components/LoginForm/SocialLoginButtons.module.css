@@ -1,0 +1,19 @@
+/* Components/LoginForm/SocialLoginButtons.module.css */
+
+.socialButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .socialButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .socialButton svg {
+    margin-right: 8px;
+  }
+  

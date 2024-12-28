@@ -1,0 +1,18 @@
+/* Styles/ConsequencesOfNonCompliance.module.css */
+
+.consequencesOfNonCompliance {
+    margin-top: 20px;
+    background: #ffebee;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .consequencesOfNonCompliance h3 {
+    color: #c62828;
+    margin-bottom: 15px;
+  }
+  
+  .consequencesOfNonCompliance p {
+    color: #c62828;
+  }
+  

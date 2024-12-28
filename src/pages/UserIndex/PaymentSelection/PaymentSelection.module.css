@@ -1,0 +1,73 @@
+
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 1rem;
+    gap: 2rem;
+  }
+  
+  .leftColumn, .rightColumn {
+    flex: 1;
+    min-width: 300px;
+    background: #ffffffcc; /* Fondo blanco semitransparente para más elegancia */
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    backdrop-filter: blur(6px);
+    transition: transform 0.2s ease;
+  }
+  
+  .payTitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .billingAddress {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .taxesNote {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 1rem 0 2rem 0;
+  }
+  
+  .continueButtonWrapper {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .continueButton {
+    background: #00e676;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+  }
+  
+  .continueButton:hover {
+    background: #00c863;
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .leftColumn, .rightColumn {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  

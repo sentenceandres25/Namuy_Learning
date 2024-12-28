@@ -1,0 +1,44 @@
+/* Styles/RescheduleOrCancelOptions.module.css */
+
+.options {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .rescheduleButton,
+  .cancelButton {
+    flex: 1;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+  }
+  
+  .rescheduleButton {
+    background: #fbbf24;
+    color: #ffffff;
+  }
+  
+  .rescheduleButton:hover {
+    background: #f59e0b;
+  }
+  
+  .cancelButton {
+    background: #ef4444;
+    color: #ffffff;
+  }
+  
+  .cancelButton:hover {
+    background: #dc2626;
+  }
+  
+  .options svg {
+    margin-right: 6px;
+  }
+  

@@ -1,0 +1,21 @@
+/* Styles/TopicSearch.module.css */
+
+.topicSearch {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .topicSearch input {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .topicSearch button {
+    background-color: #2563eb;
+    border: none;
+  }
+  
+  .topicSearch button:hover {
+    background-color: #1d4ed8;
+  }
+  

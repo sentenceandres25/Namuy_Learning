@@ -1,0 +1,25 @@
+{
+    "createNewAccount": "Crear Nueva Cuenta",
+    "yourName": "Tu Nombre",
+    "firstAndLastName": "Nombre y apellido",
+    "mobileOrEmail": "Número móvil o correo electrónico",
+    "emailOrPhone": "Correo electrónico o número de teléfono",
+    "password": "Contraseña",
+    "atLeast6Characters": "Al menos 6 caracteres",
+    "reEnterPassword": "Reingresa la Contraseña",
+    "reEnterPasswordPlaceholder": "Reingresa la contraseña",
+    "passwordsDoNotMatch": "Las contraseñas no coinciden",
+    "createAccount": "Crear Cuenta",
+    "byCreatingAccount": "Al crear una cuenta, aceptas los",
+    "conditionsOfUse": "Términos de Uso",
+    "privacyNotice": "Aviso de Privacidad",
+    "alreadyHaveAccountSignIn": "¿Ya tienes una cuenta? Iniciar sesión",
+      "newAccountPageTitle": "Crear Nueva Cuenta",
+      "username": "Nombre de Usuario",
+      "enterUsername": "Ingresa tu nombre de usuario",
+      "email": "Correo Electrónico",
+      "enterEmail": "Ingresa tu correo electrónico",
+      "emailOrUsernameAlreadyRegistered": "El correo electrónico o nombre de usuario ya está registrado",
+      "anErrorOccurred": "Ocurrió un error"    
+  }
+  

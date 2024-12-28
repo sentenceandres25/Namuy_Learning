@@ -1,0 +1,18 @@
+/* Styles/ServiceInterruption.module.css */
+
+.serviceInterruption {
+    margin-top: 20px;
+    background: #fce4ec;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .serviceInterruption h3 {
+    color: #ad1457;
+    margin-bottom: 15px;
+  }
+  
+  .serviceInterruption p {
+    color: #ad1457;
+  }
+  

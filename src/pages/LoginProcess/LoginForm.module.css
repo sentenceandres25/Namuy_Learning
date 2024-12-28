@@ -1,0 +1,56 @@
+/* src/pages/LoginProcess/LoginForm.module.css */
+
+.animatedBackground {
+  min-height: calc(100vh - 125px); /* Ajustado para la nueva altura del encabezado */
+  padding-top: 100px;
+  padding-bottom: 50px; /* Espaciado inferior */
+  background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+  background-size: 400% 400%; /* Aumentado para una animación más fluida */
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.loginFormContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 700px; /* Corregido de 700PX a 700px */
+}
+
+@media (max-width: 576px) {
+  .loginFormContainer {
+    min-height: 600px; /* Ajuste para pantallas pequeñas */
+  }
+}
+
+.loginFormCard {
+  width: 100%;
+  max-width: 450px; /* Aumentado de 400px a 450px */
+  padding: 2rem;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra interna */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.loginFormCard:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .loginFormCard {
+    padding: 1.5rem;
+    margin: 20px;
+  }
+}

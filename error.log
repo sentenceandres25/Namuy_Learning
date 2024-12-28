@@ -1,0 +1,2195 @@
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\auth.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:15:27] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:15:27] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:15:27] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:20:10] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:20:10] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:20:10] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\auth.py', reloading
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:33:56] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:33:56] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:33:57] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:36:56] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:36:57] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:36:57] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:54:04] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:54:04] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:54:04] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\auth.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:54:52] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:54:52] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:55:00] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:55:01] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:55:01] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:58:43] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:58:44] "[33mPOST /api/auth/login HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:58:50] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 07:58:50] "[33mPOST /api/auth/login HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:00:02] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:00:03] "[33mPOST /api/auth/login HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:00:04] "[33mPOST /api/auth/login HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:00:21] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:00:21] "[33mPOST /api/auth/login HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:00:44] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:00:45] "[33mPOST /api/auth/login HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:03:20] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:03:20] "[33mPOST /api/auth/login HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:03:21] "[33mPOST /api/auth/login HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:05:31] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:05:32] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:05:32] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:06:08] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:06:08] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:06:08] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:16:36] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:16:36] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:16:43] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:16:43] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:17:20] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:17:20] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:17:20] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:24:35] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:24:36] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:24:36] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:37:03] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:37:03] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:37:07] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:37:07] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\auth.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:39:03] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:39:03] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 08:39:03] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 09:06:46] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 09:06:46] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 09:06:46] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 09:08:51] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 09:08:52] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 09:08:52] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 14:50:34] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 14:50:34] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 14:50:34] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:11:53] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:11:54] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:11:58] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:11:58] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:11:58] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:11:58] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:12:13] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:12:13] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:12:13] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:12:13] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:13:57] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:13:57] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:14:25] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:14:25] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:14:31] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:14:31] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:14:31] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:14:31] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:14:34] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:14:34] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:14:34] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:14:34] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:23:16] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:23:16] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:23:16] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:23:16] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:23:16] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:23:16] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:23:25] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:23:26] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:23:29] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:23:29] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:23:30] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:23:30] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:23:32] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:23:32] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:23:32] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:23:32] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:23:32] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:23:32] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:23:32] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:23:32] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:24:40] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:24:41] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:24:44] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:24:44] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:24:44] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:24:44] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:24:44] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:24:44] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:28:40] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:28:40] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:28:40] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:28:40] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:28:52] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:28:52] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:28:56] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:28:56] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:28:56] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:28:56] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:29:11] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:29:12] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:29:15] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:29:15] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:29:16] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:29:16] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:29:25] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:29:25] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:29:25] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:29:25] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:31:03] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:31:03] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:31:03] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:31:03] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:31:22] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:31:22] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:31:26] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:31:27] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:31:27] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:31:27] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:32:46] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:32:46] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:32:50] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:32:50] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:32:51] "[33mGET /api/auth/me HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:32:51] "[33mGET /api/auth/me HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:36:09] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:36:09] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:36:13] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:36:13] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:36:14] "[33mGET /api/auth/me HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:36:14] "[33mGET /api/auth/me HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:37:28] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:37:28] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:37:31] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:37:31] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:37:31] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:37:31] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:37:34] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:37:34] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:37:35] "[33mGET /api/auth/me HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:37:35] "[33mGET /api/auth/me HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:38:40] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:38:41] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:38:53] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:38:53] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:38:53] "[33mGET /api/auth/me HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:38:53] "[33mGET /api/auth/me HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\auth.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:43:47] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:43:48] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:43:52] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:43:52] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:43:52] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:43:52] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:43:56] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:43:56] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:43:56] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:43:56] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:43:59] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:43:59] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:43:59] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:43:59] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:43:59] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:43:59] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:45:04] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:45:04] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:45:04] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:45:04] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:45:05] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:45:05] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:45:05] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:45:05] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\personal_detail.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:51:08] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:51:08] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:51:08] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:51:08] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:51:09] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:51:09] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:51:09] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:51:09] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\personal_detail.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:56:17] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:56:17] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:56:17] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:56:17] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:56:18] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:56:18] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:56:18] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:56:18] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:57:17] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:57:17] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:57:17] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:57:17] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:57:17] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:57:17] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:57:17] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 15:57:17] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:03:11] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:03:11] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:03:11] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:03:11] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:03:12] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:03:12] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:03:12] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:03:12] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:05:57] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:05:57] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:05:57] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:05:57] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:05:58] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:05:58] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:05:58] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:05:58] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:11:18] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:11:18] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:11:18] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:11:20] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:11:20] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:11:20] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:11:20] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:11:20] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:11:20] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:11:21] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:11:21] "[33mGET /api/user/11 HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:18:46] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:18:46] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:18:46] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:18:47] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:18:47] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:18:47] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:18:47] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:18:47] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:22:45] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:22:45] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:37:09] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:37:09] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:37:09] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:37:09] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:37:09] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:37:09] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:37:09] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 16:37:09] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\personal_detail.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:25:58] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:25:59] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:27:47] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:27:47] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:27:48] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:27:48] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:28:29] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:28:29] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:28:29] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:28:29] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:28:30] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:28:30] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:28:30] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:28:30] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:30:26] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:30:26] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:30:26] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:30:26] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:30:26] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:30:26] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:30:27] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:30:27] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:31:39] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:31:39] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:31:39] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:31:39] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:31:39] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:31:39] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:31:40] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:31:40] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:32:32] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:32:33] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\personal_detail.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:39:03] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:39:03] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:39:03] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:39:03] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:39:26] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:39:26] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:42:18] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:42:18] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:42:18] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:42:18] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:42:19] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:42:19] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:42:19] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:42:19] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\personal_detail.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:49:40] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:49:41] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:52:11] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:52:11] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:52:11] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 17:52:11] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 18:10:38] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 18:10:38] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 18:10:39] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 18:10:39] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 18:10:45] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 18:10:45] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 18:10:45] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 18:10:45] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 18:10:57] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 18:10:58] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 18:11:02] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 18:11:02] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 18:11:02] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 18:11:02] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:54:26] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:54:26] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:54:26] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:54:26] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:54:42] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:54:42] "[33mPOST /api/auth/login HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:54:47] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:54:47] "[33mPOST /api/auth/login HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:55:02] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:55:02] "[33mPOST /api/auth/login HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:55:33] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:55:34] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:55:37] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:55:37] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:55:37] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:55:37] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:55:48] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:55:48] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:55:48] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:55:48] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:55:57] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:55:58] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:56:02] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:56:02] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:56:02] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:56:02] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:56:18] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:56:18] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:56:22] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:56:22] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:56:22] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 20:56:22] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:05:09] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:05:09] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:05:09] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:05:09] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:05:22] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:05:23] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:05:26] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:05:26] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:05:26] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:05:26] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:05:57] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:05:57] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:06:04] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:06:04] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:06:04] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:06:04] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:07:20] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:07:21] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:07:25] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:07:25] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:07:26] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:07:26] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:07:45] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:07:46] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:13:11] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:13:11] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:13:11] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:13:11] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:13:22] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:13:23] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:13:23] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:13:27] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:13:27] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:13:27] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:13:27] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:15:24] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:15:24] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:15:25] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:15:25] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:15:35] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:15:36] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:15:38] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:15:39] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:15:39] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:15:55] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:15:55] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:22:38] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:22:38] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:22:38] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:22:39] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:22:51] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:22:51] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:22:55] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:22:55] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:22:56] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:22:56] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:23:07] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:23:07] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:32:24] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:32:25] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:45:57] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:45:57] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\personal_detail.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:49:01] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:49:02] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\personal_detail.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:55:10] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:55:10] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:55:49] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 21:55:49] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 405 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\personal_detail.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 22:00:41] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 22:00:41] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 22:00:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 22:00:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 22:00:49] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 22:00:49] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 22:11:02] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 22:11:02] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 22:33:25] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 22:33:25] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 22:33:25] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 22:33:25] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 22:33:37] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 22:33:38] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 22:33:43] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 22:33:43] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 22:33:43] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 22:33:43] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:10:24] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:10:24] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:10:24] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:10:24] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:10:37] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:10:37] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:10:40] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:10:40] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:10:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:10:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:11:17] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:11:17] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:11:17] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:11:17] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:13:12] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:13:13] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:13:19] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:13:19] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:13:19] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:13:20] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:15:18] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:15:18] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:15:18] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:15:18] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:15:57] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:15:58] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:16:01] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:16:01] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:16:01] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:16:01] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:18:49] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:18:49] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:18:50] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:18:50] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:19:03] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:19:03] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:19:07] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:19:07] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:19:08] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:19:08] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:19:27] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:19:27] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:19:27] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:19:28] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:22:39] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:22:40] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:22:44] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:22:44] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:22:44] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:22:44] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:22:55] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:22:55] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:23:23] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:23:23] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:23:24] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:23:24] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\auth.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:31:39] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:31:40] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:31:46] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:31:46] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:31:46] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.account_status', 'H': 'Probablemente quiera hacer referencia a la columna «u.account_status».', 'P': '230', 'F': 'parse_relation.c', 'L': '3732', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:31:46] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\auth.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:33:46] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:33:47] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:33:50] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:33:50] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.preferred_language', 'P': '248', 'F': 'parse_relation.c', 'L': '3721', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:33:51] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.preferred_language', 'P': '248', 'F': 'parse_relation.c', 'L': '3721', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:33:51] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:34:52] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:34:52] "[31m[1mPOST /api/auth/login HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:34:59] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:34:59] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:35:03] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:35:03] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.preferred_language', 'P': '248', 'F': 'parse_relation.c', 'L': '3721', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:35:03] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+ERROR:root:Error en /me: {'S': 'ERROR', 'V': 'ERROR', 'C': '42703', 'M': 'no existe la columna p.preferred_language', 'P': '248', 'F': 'parse_relation.c', 'L': '3721', 'R': 'errorMissingColumn'}
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:35:03] "[35m[1mGET /api/auth/me HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\auth.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:36:16] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:36:17] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:36:20] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:36:20] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:36:21] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:36:21] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:36:24] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:36:24] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:36:24] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:36:24] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:36:31] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:36:31] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:36:31] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:36:31] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:36:32] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:36:32] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:36:32] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:36:32] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:37:22] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:37:22] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:39:20] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:39:20] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:39:20] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:39:20] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:39:21] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:39:21] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:39:21] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [19/Dec/2024 23:39:21] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:28:44] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:28:44] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:28:44] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:28:44] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:28:44] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:28:44] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:28:45] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:28:45] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:32:41] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:32:41] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:32:41] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:32:41] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:32:41] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:32:41] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:32:42] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:32:42] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:32:45] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:32:45] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:32:46] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:32:46] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:34:01] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:34:01] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:38:35] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:38:35] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:38:35] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:38:35] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:38:35] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:38:35] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:38:36] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:38:36] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:39:54] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:39:54] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:39:54] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:39:54] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:39:54] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:39:54] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:39:55] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:39:55] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:40:31] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:40:32] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:45:11] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:45:11] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:48:47] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:48:47] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:56:48] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:56:48] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:57:48] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 00:57:48] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 01:02:18] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 01:02:18] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 01:06:07] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 01:06:07] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\test_email.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 01:18:14] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 01:18:14] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 01:18:14] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 01:18:14] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 01:18:15] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 01:18:15] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 01:18:15] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 01:18:15] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 01:18:32] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 01:18:32] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:15:01] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:15:01] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:15:02] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:15:02] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:15:13] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:15:13] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:15:14] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:15:14] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:15:30] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:15:30] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:17:41] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:17:42] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:43:50] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:43:50] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\test_email.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\personal_detail.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:55:30] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:55:30] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:55:31] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:55:31] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:55:31] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:55:31] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:55:31] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:55:31] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:56:53] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:56:53] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:56:54] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:56:54] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:56:54] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:56:54] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:56:54] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 07:56:54] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\personal_detail.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\personal_detail.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:11:49] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:11:49] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:11:49] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:11:49] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:11:50] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:11:50] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:11:50] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:11:50] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:12:29] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:12:29] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:13:47] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:13:47] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:13:47] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:13:47] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:13:47] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:13:47] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:13:47] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:13:47] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:18:16] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:18:16] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:18:16] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:18:16] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:18:17] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:18:17] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:18:17] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:18:17] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:20:30] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:20:30] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:20:30] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:20:30] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:20:30] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:20:30] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:20:31] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:20:31] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:32:35] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:32:35] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:32:35] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:32:35] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:32:36] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:32:36] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:32:36] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:32:36] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:33:13] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:33:13] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:33:13] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:33:13] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:33:13] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:33:13] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:33:14] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:33:14] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:37:10] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:37:10] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:37:11] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:37:11] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:37:11] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:37:11] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:37:11] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:37:11] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:39:34] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:39:34] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:39:34] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:39:34] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:39:35] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:39:35] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:39:35] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:39:35] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:50:00] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:50:03] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:50:03] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 08:50:03] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:00:04] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:00:04] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:00:04] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:00:04] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:00:05] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:00:05] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:00:05] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:00:05] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:00:49] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:00:49] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:07:41] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:07:44] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:07:44] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:07:44] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:18:18] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:18:18] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:18:18] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:18:18] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:18:18] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:18:18] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:18:19] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:18:19] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:19:24] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:19:24] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:19:24] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:19:24] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:19:25] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:19:25] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:19:25] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:19:25] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:19:46] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:19:48] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:19:49] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:19:49] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\personal_detail.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:30:24] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:30:24] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:30:24] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:30:24] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:30:24] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:30:24] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:30:24] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:30:24] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:30:39] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+ERROR:root:Error al enviar el correo: 'ascii' codec can't encode character '\xf1' in position 72: ordinal not in range(128)
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:30:40] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:30:40] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:30:40] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:31:31] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:31:31] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:31:31] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:31:31] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:31:31] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:31:32] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:31:32] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:31:32] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:31:41] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+ERROR:root:Error al enviar el correo: 'ascii' codec can't encode character '\xf1' in position 72: ordinal not in range(128)
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:31:41] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:31:41] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:31:41] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:32:55] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:32:55] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:32:56] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:32:56] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:32:56] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:32:56] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:32:56] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:32:57] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:33:07] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+ERROR:root:Error al enviar el correo: 'ascii' codec can't encode character '\xf1' in position 72: ordinal not in range(128)
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:33:08] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:33:08] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:33:08] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:33:42] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:33:42] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:33:43] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:33:43] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:33:43] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:33:43] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:33:43] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:33:43] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:33:50] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+ERROR:root:Error al enviar el correo: 'ascii' codec can't encode character '\xf1' in position 72: ordinal not in range(128)
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:33:51] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:33:51] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:33:51] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\personal_detail.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:35:43] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:35:43] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:35:43] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:35:43] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:35:43] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:35:43] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:35:44] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:35:44] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:35:51] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+ERROR:root:Error al enviar el correo: 'ascii' codec can't encode character '\xf1' in position 72: ordinal not in range(128)
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:35:52] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:35:52] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:35:52] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:36:31] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:36:31] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:36:31] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:36:31] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:36:31] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:36:31] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:36:32] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:36:32] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:36:39] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+ERROR:root:Error al enviar el correo: 'ascii' codec can't encode character '\xf1' in position 72: ordinal not in range(128)
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:36:40] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:36:40] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:36:40] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\personal_detail.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:38:13] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:38:13] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:38:13] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:38:13] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:38:13] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:38:13] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:38:14] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:38:14] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:38:30] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+ERROR:root:Error al enviar el correo: 'ascii' codec can't encode character '\xf1' in position 72: ordinal not in range(128)
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:38:31] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:38:31] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:38:31] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:39:32] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:39:32] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:39:32] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:39:32] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:39:33] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:39:33] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:39:33] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:39:33] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:39:54] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+ERROR:root:Error al enviar el correo: 'ascii' codec can't encode character '\xf1' in position 72: ordinal not in range(128)
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:39:55] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:39:55] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:39:55] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:40:11] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:40:11] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:40:11] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:40:11] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:40:12] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:40:12] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:40:12] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:40:12] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:42:04] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+ERROR:root:Error al enviar el correo: 'ascii' codec can't encode character '\xf1' in position 72: ordinal not in range(128)
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:42:05] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:42:05] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:42:05] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\personal_detail.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:47:36] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:47:36] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:47:36] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:47:37] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:47:37] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:47:37] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:47:37] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:47:37] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:47:45] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+ERROR:root:Error al enviar el correo: 'ascii' codec can't encode character '\xf1' in position 72: ordinal not in range(128)
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:47:45] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:47:45] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:47:45] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:49:36] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:49:36] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:49:36] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:49:36] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:49:46] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+ERROR:root:Error al enviar el correo: 'ascii' codec can't encode character '\xf1' in position 72: ordinal not in range(128)
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:49:47] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:49:47] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:49:47] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:50:59] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:50:59] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:50:59] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:50:59] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:51:00] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:51:00] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:51:00] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:51:00] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:51:10] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+ERROR:root:Error al enviar el correo: 'ascii' codec can't encode character '\xf1' in position 72: ordinal not in range(128)
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:51:11] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:51:11] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:51:11] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:54:53] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:54:53] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:54:53] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:54:53] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:55:20] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:55:20] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:55:20] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:55:20] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:55:32] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:55:32] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:55:44] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:55:44] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:55:45] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:55:45] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:57:06] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:57:06] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:57:07] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:57:07] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:57:46] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:57:46] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:57:46] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:57:46] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:57:57] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:57:57] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:58:14] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+ERROR:root:Error al enviar el correo: 'ascii' codec can't encode character '\xf1' in position 72: ordinal not in range(128)
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:58:15] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:58:15] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:58:16] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:58:55] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:58:55] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:58:55] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:58:55] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:59:18] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:59:18] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:59:18] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:59:18] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:59:29] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:59:29] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:59:43] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+ERROR:root:Error al enviar el correo: 'ascii' codec can't encode character '\xf1' in position 72: ordinal not in range(128)
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:59:44] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:59:44] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 09:59:44] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:00:00] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:00:00] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:00:00] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:00:00] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:00:24] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:00:24] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:00:25] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:00:25] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:00:35] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:00:36] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:06:04] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:06:04] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:07:00] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:07:00] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:07:00] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:07:00] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:07:14] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:07:15] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:08:36] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+ERROR:root:Error al enviar el correo: 'ascii' codec can't encode character '\xf1' in position 72: ordinal not in range(128)
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:08:37] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:08:37] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:08:37] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:08:52] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:08:52] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:08:52] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:08:52] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:09:15] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:09:15] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:09:16] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:09:16] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:09:27] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:09:27] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\test_email.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\test_email.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\test_email.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\test_email.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\test_email.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\test_email.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\test_email.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\tes.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\test_email.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\db\\connection.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:44:55] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+ERROR:root:Error al enviar el correo: 'ascii' codec can't encode character '\xf1' in position 72: ordinal not in range(128)
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:44:56] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:44:56] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:44:56] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:46:09] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:46:09] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:46:09] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:46:09] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:46:32] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:46:32] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:46:33] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:46:33] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:46:44] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:46:44] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:46:52] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:46:54] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:46:54] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:46:54] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:47:15] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:47:15] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:47:15] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:47:15] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:47:38] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:47:38] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:47:38] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:47:38] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:47:49] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:47:49] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\test_email.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:53:44] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:53:46] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:53:46] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:53:46] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:54:06] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:54:06] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:54:06] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:54:06] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:54:40] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:54:40] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:54:40] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:54:40] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:55:00] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:55:00] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:55:25] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:55:27] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:55:27] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:55:27] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:55:59] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:55:59] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:55:59] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:55:59] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\personal_detail.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:56:36] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:56:36] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:56:36] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:56:36] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:56:45] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 10:56:46] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:00:56] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:00:58] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:00:58] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:00:59] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:16:04] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:16:04] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:16:04] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:16:04] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:16:27] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:16:27] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:16:27] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:16:27] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:16:38] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:16:38] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:17:45] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:17:45] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:18:00] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:18:02] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:18:02] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:18:02] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:18:34] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:18:34] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:18:34] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:18:34] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:19:11] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:19:11] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:19:11] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:19:11] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:19:35] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:19:35] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\personal_detail.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:19:51] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:19:53] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:19:53] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:19:54] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:31:26] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:31:26] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:31:26] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:31:26] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:31:57] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:31:57] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:31:58] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:31:58] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:32:14] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:32:14] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:34:09] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:34:11] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:34:12] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:34:12] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:34:58] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:34:58] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:34:58] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:34:58] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:35:41] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:35:41] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:35:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:35:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:35:52] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:35:52] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:38:26] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:38:26] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:38:26] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:38:26] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:39:05] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:39:05] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:39:06] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:39:06] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:39:26] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:39:27] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:44:59] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:45:01] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:45:01] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:45:01] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:52:55] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:52:55] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:52:55] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:52:55] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:53:18] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:53:18] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:53:18] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:53:18] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:53:29] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:53:30] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:53:58] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:53:58] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:53:58] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:55:03] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:55:03] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:55:03] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:55:03] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:55:26] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:55:26] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:55:27] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:55:27] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:55:37] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:55:38] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:57:04] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:57:04] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:57:05] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:57:43] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:57:43] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:57:43] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:57:43] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:58:08] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:58:08] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:58:09] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:58:09] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:58:20] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:58:20] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:58:33] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:58:35] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:58:35] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 11:58:35] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:10:11] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:10:11] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:10:11] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:10:11] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:10:34] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:10:34] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:10:34] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:10:34] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:10:45] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:10:45] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:11:22] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:11:23] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:11:23] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:12:13] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:12:13] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:12:13] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:12:14] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:12:36] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:12:36] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:12:36] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:12:36] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:12:47] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:12:47] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:13:00] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:13:02] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:13:02] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [20/Dec/2024 12:13:02] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 400 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:04:20] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:04:20] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:04:20] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:04:20] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:04:43] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:04:43] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:04:43] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:04:43] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:04:54] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:04:54] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:13:21] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:13:21] "[31m[1mPOST /api/user/11/requestChange HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:13:41] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:13:41] "[31m[1mPOST /api/user/11/requestChange HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:14:06] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:14:06] "[31m[1mPOST /api/user/11/requestChange HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:24:42] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:24:42] "[31m[1mPOST /api/user/11/requestChange HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:28:10] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:28:10] "[31m[1mPOST /api/user/11/requestChange HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\personal_detail.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:37:23] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:37:23] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:37:23] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:37:23] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:37:46] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:37:46] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:37:46] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:37:46] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:37:57] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:37:57] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:53:41] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:53:43] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:53:43] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:53:43] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:57:18] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:57:18] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:57:18] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:57:41] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:57:41] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:57:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:57:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:57:52] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 06:57:52] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:22:15] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:22:17] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:22:17] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:22:17] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:43:03] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:43:03] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:43:03] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:43:03] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:43:26] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:43:26] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:43:26] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:43:26] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:43:37] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:43:38] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:43:52] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:43:54] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:43:54] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:43:54] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:44:19] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:44:19] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:44:19] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:44:19] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:44:54] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:44:54] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:44:55] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:44:55] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:45:13] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:45:14] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:56:45] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:56:45] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:56:45] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:56:45] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:57:36] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:57:36] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:57:36] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:57:36] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:57:52] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:57:52] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:58:15] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:58:17] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:58:17] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 07:58:17] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:05:54] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:05:54] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:05:55] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:05:55] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:06:30] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:06:30] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:06:31] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:06:31] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:06:48] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:06:48] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:07:52] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:07:52] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:07:52] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:07:52] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:08:18] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:08:18] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:08:18] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:08:18] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:08:36] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:08:37] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:17:43] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:17:43] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:17:43] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:17:43] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:17:50] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:17:50] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:17:50] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:17:50] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:18:52] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:18:52] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:18:52] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:18:52] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:18:52] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:18:52] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:18:53] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:18:53] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:02] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:02] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:02] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:02] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:03] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:03] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:03] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:09] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:09] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:10] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:10] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:10] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:10] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:10] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:10] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:29] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:29] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:29] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:29] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:29] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:29] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:30] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:30] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:46] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:46] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:47] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:47] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:47] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:47] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:48] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:19:48] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:20:07] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:20:10] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:20:10] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:20:10] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:20:10] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:20:29] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:20:29] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:20:30] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:20:30] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:20:30] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:20:30] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:20:30] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:20:30] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:20:46] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:20:48] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:20:48] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:20:48] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 400 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:21:28] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:21:28] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:21:28] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:21:28] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:21:28] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:21:28] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:21:29] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:21:29] "[35m[1mGET /api/user/11 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:29:20] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:29:20] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:29:20] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:29:20] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:29:20] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:29:20] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:29:21] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:29:21] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:31:10] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:31:12] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:31:12] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:31:12] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:31:12] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:42:56] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:42:56] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:42:56] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:42:56] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:42:56] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:42:56] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:42:57] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:42:57] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:43:13] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:43:15] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:43:15] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:43:15] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 08:43:15] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 12:37:25] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 12:37:25] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 12:37:25] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 12:37:25] "[31m[1mGET /api/auth/me HTTP/1.1[0m" 401 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 12:37:40] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 12:37:41] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 12:37:44] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 12:37:44] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 12:37:44] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 12:37:44] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 12:37:47] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 12:37:47] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 12:37:47] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 12:37:47] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 12:38:05] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 12:38:08] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 12:38:08] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 12:38:08] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 12:38:08] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 20:26:31] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 20:26:31] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 20:26:31] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 20:26:31] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 20:26:32] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 20:26:32] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 20:26:32] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 20:26:32] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 20:28:06] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 20:28:08] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 20:28:08] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 20:28:08] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Dec/2024 20:28:08] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug: * Detected change in 'F:\\pitia-emporium\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 05:53:14] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 05:53:14] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 05:53:15] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 05:53:15] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 05:53:15] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 05:53:15] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 05:53:15] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 05:53:15] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 05:53:37] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 05:53:39] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 05:53:39] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 05:53:40] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 05:53:40] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:16] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:16] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:16] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:16] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:17] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:17] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:17] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:17] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:42] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:44] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:44] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:44] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:44] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:49] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:49] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:50] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:50] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:50] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:50] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:50] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:01:50] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:04:52] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:04:54] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:04:54] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:04:54] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:04:55] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:11:28] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:11:28] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:11:29] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:11:29] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:11:29] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:11:29] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:11:30] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:11:30] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:11:50] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:11:52] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:11:52] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:11:53] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:11:53] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:17:33] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:17:33] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:17:33] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:17:33] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:17:34] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:17:34] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:17:34] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:17:34] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:17:54] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:17:56] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:17:56] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:17:56] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:17:56] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:19:30] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:19:30] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:19:30] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:19:30] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:19:31] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:19:31] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:19:32] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:19:32] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:20:00] "GET /uploads/user_11/request_appa-ang.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:20:38] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:20:41] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:20:41] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:20:41] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:20:41] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:22:46] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:22:46] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:22:46] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:22:46] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:22:47] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:22:47] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:22:47] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:22:47] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:27:54] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:27:54] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:27:54] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:28:11] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:28:13] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:28:13] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:28:13] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:28:13] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:32:17] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:32:17] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:32:17] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:32:17] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:32:18] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:32:18] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:32:18] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:32:18] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:33:27] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:33:29] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:33:29] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:33:29] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 06:33:29] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 692-023-791
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:32:24] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:32:24] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:32:24] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:32:28] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:32:28] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:32:28] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:32:28] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:33:04] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:33:06] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:33:06] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:33:06] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:33:07] "[31m[1mPUT /api/user/11 HTTP/1.1[0m" 415 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:35:25] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:35:25] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:35:25] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:35:25] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:35:26] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:35:26] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:35:26] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:35:26] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:35:48] "OPTIONS /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:35:50] "POST /api/user/11/requestChange HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:35:50] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:35:50] "PUT /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:43:10] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:43:10] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:43:10] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:43:10] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:43:10] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:43:10] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:43:10] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:43:10] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:45:51] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:45:51] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:45:52] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:45:52] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:45:52] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:45:52] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:45:52] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:45:52] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:49:06] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:49:06] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:49:06] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:49:06] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:49:07] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:49:07] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:49:07] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:49:07] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:49:14] "GET /uploads/user_11/request_appa_ang.jpeg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:54:02] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:54:02] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:54:02] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:54:02] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:54:03] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:54:03] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:54:03] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:54:03] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:54:44] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:54:45] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:54:45] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:54:45] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:54:45] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:54:45] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:54:46] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:54:46] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:56:48] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:56:48] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:56:48] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:56:48] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:56:48] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:56:48] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:56:49] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:56:49] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:56:52] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:56:52] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:56:53] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:56:53] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:57:35] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:57:35] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:57:35] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:57:36] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:57:36] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:57:36] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:57:37] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 08:57:37] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 09:05:15] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 09:05:15] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 09:21:33] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 09:21:33] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 09:21:33] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 09:21:33] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 09:21:34] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 09:21:34] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 09:21:34] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [22/Dec/2024 09:21:34] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 383-217-713
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 383-217-713
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:24:01] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:24:01] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:24:04] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:24:05] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:24:05] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:24:07] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:24:07] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:24:07] "GET /api/user/11 HTTP/1.1" 200 -

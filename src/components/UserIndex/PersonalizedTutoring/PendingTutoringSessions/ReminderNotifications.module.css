@@ -1,0 +1,33 @@
+/* Styles/ReminderNotifications.module.css */
+
+.reminderNotifications {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .notificationsButton {
+    background: #f59e0b;
+    color: #ffffff;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .notificationsButton:hover {
+    background: #d97706;
+  }
+  
+  .notificationsButton:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+  }
+  
+  .notificationsButton svg {
+    margin-right: 8px;
+  }
+  

@@ -1,0 +1,71 @@
+/* FilterSidebar.module.css */
+
+.sidebar {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .topOptions {
+    margin-bottom: 1rem;
+  }
+  
+  .topLink {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #00e676;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .topLink:hover {
+    text-decoration: underline;
+  }
+  
+  .sortBy {
+    font-weight: bold;
+  }
+  
+  .section {
+    margin-bottom: 1rem;
+  }
+  
+  .section h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .toggleTitle {
+    display: inline-block;
+  }
+  
+  .subOptions {
+    margin-left: 1rem;
+  }
+  
+  .ratingOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .ratingLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  
+  .ratingText {
+    margin-left: 0.5rem;
+    font-size: 0.85rem;
+    color: #555;
+  }
+  

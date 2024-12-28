@@ -1,0 +1,32 @@
+/* Styles/PopularTopics.module.css */
+
+.popularTopics {
+    background: #fff7ed;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+  
+  .popularTopics h4 {
+    color: #c2410c;
+    margin-bottom: 10px;
+  }
+  
+  .popularTopics ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .popularTopics li {
+    margin-bottom: 8px;
+  }
+  
+  .popularTopics a {
+    color: #ea580c;
+    text-decoration: none;
+  }
+  
+  .popularTopics a:hover {
+    text-decoration: underline;
+  }
+  

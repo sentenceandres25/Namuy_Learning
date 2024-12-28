@@ -1,0 +1,35 @@
+/* Styles/BadgesAndAchievements.module.css */
+
+.badges {
+    background: #f3e8ff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  .badges h4 {
+    color: #7c3aed;
+    margin-bottom: 15px;
+  }
+  
+  .badgeContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .badgeImage {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+  }
+  
+  .badgeContainer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .badgeContainer li {
+    color: #6d28d9;
+    margin-bottom: 5px;
+  }
+  

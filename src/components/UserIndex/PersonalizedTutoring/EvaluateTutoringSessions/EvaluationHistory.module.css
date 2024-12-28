@@ -1,0 +1,42 @@
+/* Styles/EvaluationHistory.module.css */
+
+.evaluationHistory {
+    background: #f3f4f6;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 30px;
+  }
+  
+  .evaluationHistory h3 {
+    color: #1f2937;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .evaluationHistory h3 svg {
+    margin-right: 8px;
+  }
+  
+  .historyList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .historyItem {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  .historyItem h4 {
+    margin: 0;
+    color: #111827;
+  }
+  
+  .historyItem p {
+    margin: 5px 0;
+    color: #4b5563;
+  }
+  

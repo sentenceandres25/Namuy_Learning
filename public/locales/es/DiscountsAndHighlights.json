@@ -1,0 +1,20 @@
+{
+    "discounts": {
+        "title": "Descuentos",
+        "title1": "Descuento 1",
+        "description1": "Aprovecha un 20% de descuento en ropa.",
+        "title2": "Descuento 2",
+        "description2": "¡30% de descuento en accesorios esta semana!",
+        "title3": "Descuento 3",
+        "description3": "15% de descuento en compras mayores a $100."
+      },
+      "highlights": {
+        "title": "Destacados de la Semana",
+        "product1": "Producto 1",
+        "product2": "Producto 2",
+        "product3": "Producto 3",
+        "product4": "Producto 4",
+        "product5": "Producto 5",
+        "product6": "Producto 6"
+      }
+}

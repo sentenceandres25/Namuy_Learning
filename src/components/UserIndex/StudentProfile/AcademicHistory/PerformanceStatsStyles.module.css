@@ -1,0 +1,67 @@
+.performanceStatsContainer {
+  background-color: #e8eaf6; /* Fondo azul claro */
+  border-left: 5px solid #3949ab; /* Borde azul oscuro */
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.performanceStatsTitle {
+  font-size: 2em;
+  color: #6a1b9a; /* Púrpura oscuro */
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.performanceStatItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+}
+
+.performanceStatIcon {
+  font-size: 1.8em;
+  color: #1a237e; /* Azul oscuro para los iconos */
+  margin-right: 16px;
+  flex-shrink: 0; /* Evita que el ícono se reduzca */
+}
+
+.performanceStatLabel {
+  font-size: 1em;
+  color: #283593; /* Azul intermedio */
+  font-weight: 500;
+}
+
+.performanceStatValue {
+  font-size: 1em;
+  color: #283593; /* Azul intermedio */
+  margin-left: auto;
+  word-wrap: break-word; /* Permite que el texto se ajuste */
+  font-weight: bold;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .performanceStatItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .performanceStatValue {
+    margin-left: 0;
+    margin-top: 8px;
+    width: 100%;
+  }
+
+  .performanceStatLabel {
+    width: 100%;
+  }
+
+  .performanceStatIcon {
+    font-size: 1.5em;
+  }
+}

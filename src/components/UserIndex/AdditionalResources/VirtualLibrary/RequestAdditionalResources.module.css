@@ -1,0 +1,23 @@
+/* Styles/RequestAdditionalResources.module.css */
+
+.requestAdditionalResources {
+    margin-top: 20px;
+    background: #f3e5f5;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .requestAdditionalResources h4 {
+    color: #6a1b9a;
+    margin-bottom: 15px;
+  }
+  
+  .requestAdditionalResources button {
+    background-color: #6a1b9a;
+    border: none;
+  }
+  
+  .requestAdditionalResources button:hover {
+    background-color: #4a148c;
+  }
+  

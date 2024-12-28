@@ -1,0 +1,18 @@
+/* Styles/AcceptableUsePolicy.module.css */
+
+.acceptableUsePolicy {
+    margin-top: 20px;
+    background: #f3e5f5;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .acceptableUsePolicy h3 {
+    color: #6a1b9a;
+    margin-bottom: 15px;
+  }
+  
+  .acceptableUsePolicy p {
+    color: #6a1b9a;
+  }
+  

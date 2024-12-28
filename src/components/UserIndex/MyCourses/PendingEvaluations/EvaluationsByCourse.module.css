@@ -1,0 +1,51 @@
+/* Styles/EvaluationsByCourse.module.css */
+
+.evaluationsByCourse {
+    background: #e3f2fd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .evaluationsByCourse h3 {
+    color: #1e88e5;
+    margin-bottom: 15px;
+  }
+  
+  .courseSection {
+    margin-bottom: 15px;
+  }
+  
+  .courseSection h4 {
+    color: #1565c0;
+  }
+  
+  .courseSection ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .courseSection li {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .courseSection li:hover {
+    background: #bbdefb;
+  }
+  
+  .courseSection p {
+    margin: 0;
+    color: #333;
+  }
+  
+  /* Clase para la evaluación seleccionada */
+  .selectedEvaluation {
+    background: #bbdefb;
+    font-weight: bold;
+  }
+  

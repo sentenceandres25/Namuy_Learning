@@ -1,0 +1,16 @@
+{
+  "tutoringHistoryTitle": "Tutoring History",
+  "tutoringHistory": "Tutoring History",
+  "date": "Date",
+  "time": "Time",
+  "tutor": "Tutor",
+  "tutoringDuration": "Tutoring Duration",
+  "tutorRating": "Tutor Rating",
+  "rating": "Rating",
+  "comments": "Comments",
+  "courseProgress": "Course Progress",
+  "notesTaken": "Notes or Highlights Taken",
+  "materialsUsed": "Materials Used",
+  "followUpRecommendations": "Follow-Up Recommendations",
+  "topicsCovered": "Topics Covered"
+}

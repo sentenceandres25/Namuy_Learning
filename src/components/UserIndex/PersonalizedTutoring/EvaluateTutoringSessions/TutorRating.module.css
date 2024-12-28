@@ -1,0 +1,23 @@
+/* Styles/TutorRating.module.css */
+
+.tutorRating {
+    margin-top: 20px;
+    text-align: center; /* Centrar el contenido */
+  }
+  
+  .tutorRating h4 {
+    color: #d97706;
+    margin-bottom: 10px;
+  }
+  
+  .stars {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 8px; /* Reducir el espacio entre las estrellas */
+  }
+  
+  .star {
+    cursor: pointer;
+    transition: color 200ms;
+  }
+  

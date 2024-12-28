@@ -1,0 +1,26 @@
+{
+  "coursesInProgressTitle": "Cursos en Progreso",
+  "courses_in_progress": "Cursos en Progreso",
+  "course_progress": "Progreso del Curso",
+  "last_activity": "Última Actividad",
+  "pending_evaluations": "Evaluaciones Pendientes",
+  "total_study_time": "Tiempo de Estudio Total",
+  "view_details": "Ver Detalles",
+  "course_1": {
+    "name": "Curso 1",
+    "description": "Descripción del Curso 1"
+  },
+  "course_2": {
+    "name": "Curso 2",
+    "description": "Descripción del Curso 2"
+  },
+  "course_3": {
+    "name": "Curso 3",
+    "description": "Descripción del Curso 3"
+  },
+  "course_4": {
+    "name": "Curso 4",
+    "description": "Descripción del Curso 4"
+  },
+  "recommended_courses": "Cursos Recomendados"
+}

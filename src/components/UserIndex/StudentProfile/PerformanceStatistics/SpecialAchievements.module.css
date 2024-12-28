@@ -1,0 +1,23 @@
+/* SpecialAchievements.module.css */
+
+.specialAchievements {
+  background: linear-gradient(135deg, #A1FFCE 0%, #FAFFD1 100%);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  color: var(--text-primary);
+}
+
+.dataSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.dataValue {
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}

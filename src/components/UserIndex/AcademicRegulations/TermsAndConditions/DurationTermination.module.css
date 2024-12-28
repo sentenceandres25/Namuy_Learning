@@ -1,0 +1,18 @@
+/* Styles/DurationTermination.module.css */
+
+.durationTermination {
+    margin-top: 20px;
+    background: #fff3e0;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .durationTermination h3 {
+    color: #e65100;
+    margin-bottom: 15px;
+  }
+  
+  .durationTermination p {
+    color: #e65100;
+  }
+  

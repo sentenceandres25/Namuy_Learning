@@ -1,0 +1,24 @@
+/* Styles/TutoringDuration.module.css */
+
+.tutoringDuration {
+  background: #fefce8;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.tutoringDuration h4 {
+  color: #ca8a04;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.tutoringDuration h4 svg {
+  margin-right: 8px;
+}
+
+.tutoringDuration p {
+  margin: 0;
+  color: #854d0e;
+}

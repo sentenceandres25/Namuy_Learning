@@ -1,0 +1,38 @@
+.custom-button {
+  background: linear-gradient(135deg, #9cf896, #29f301); /* Degradado verde vibrante */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5%;
+  width: auto;
+}
+
+/* Efecto al hacer hover */
+.custom-button:hover {
+  background: linear-gradient(135deg, #7cff72, #7dd86a); /* Degradado verde vibrante */
+  color: white;
+}
+
+/* Estilos responsive para pantallas medianas */
+@media (max-width: 991px) {
+.custom-button {
+  font-size: 14px; /* Tamaño de fuente más pequeño */
+  padding: 8px 9px; /* Ajusta el padding para reducir el tamaño del botón */
+}
+}
+
+/* Estilos responsive para pantallas pequeñas */
+@media (max-width: 767px) {
+.custom-button {
+  font-size: 12px; /* Tamaño de fuente más pequeño aún */
+  padding: 6px 7px !important; /* Ajusta más el padding */
+  box-sizing: border-box; /* Para asegurar que el padding esté bien calculado */
+}
+}

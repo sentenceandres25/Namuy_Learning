@@ -1,0 +1,64 @@
+.generalProgressContainer {
+  text-align: center;
+  margin-bottom: 24px;
+  padding: 20px;
+  background-color: #f0f4c3; /* Fondo verde suave */
+  border: 2px solid #cddc39; /* Borde verde claro */
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.generalProgressTitle {
+  font-size: 2em;
+  color: #827717; /* Verde oscuro */
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.generalProgressCircle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 16px;
+}
+
+.generalProgressCircle svg {
+  width: 150px;
+  height: 150px;
+  transform: rotate(-90deg);
+}
+
+.generalCircleBackground {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: 12;
+}
+
+.generalCircleProgress {
+  fill: none;
+  stroke: #fbc02d; /* Amarillo oscuro para el progreso */
+  stroke-width: 12;
+  stroke-linecap: round;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472; /* Se actualizará dinámicamente */
+}
+
+.generalProgressValue {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.generalProgressValue h2 {
+  font-size: 2em;
+  color: #fbc02d; /* Amarillo oscuro */
+  margin: 0;
+}
+
+.generalProgressDetails {
+  font-size: 1em;
+  color: #616161;
+}

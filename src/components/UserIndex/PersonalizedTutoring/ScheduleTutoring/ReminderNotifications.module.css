@@ -1,0 +1,30 @@
+/* Styles/ReminderNotifications.module.css */
+
+.reminderNotifications {
+  background: #e1f5fe;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.reminderNotifications h3 {
+  color: #0277bd;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.reminderNotifications button {
+  background-color: #0277bd;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.reminderNotifications button:hover {
+  background-color: #01579b;
+}

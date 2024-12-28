@@ -1,0 +1,44 @@
+.replyNotifications {
+    background: #e0f2fe;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .replyNotifications h3 {
+    color: #0369a1;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .replyNotifications h3 svg {
+    margin-right: 8px;
+  }
+  
+  .notificationItem {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .notificationItem:hover {
+    background: #bae6fd;
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .notificationItem p {
+    margin: 5px 0;
+    color: #075985;
+  }
+  
+  .notificationItem strong {
+    color: #0c4a6e;
+  }
+  

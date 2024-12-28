@@ -1,0 +1,29 @@
+/* Styles/ConversationPrivacy.module.css */
+
+.conversationPrivacy {
+    background: #fffde7;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+  
+  .conversationPrivacy h3 {
+    color: #f9a825;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .conversationPrivacy button {
+    background-color: #f9a825;
+    border: none;
+  }
+  
+  .conversationPrivacy button:hover {
+    background-color: #f57f17;
+  }
+  

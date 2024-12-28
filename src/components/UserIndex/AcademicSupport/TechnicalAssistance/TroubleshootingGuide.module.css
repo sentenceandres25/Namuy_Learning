@@ -1,0 +1,14 @@
+/* Styles/TroubleshootingGuide.module.css */
+
+.troubleshootingGuide {
+    margin-top: 20px;
+    background: #e1f5fe;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .troubleshootingGuide h3 {
+    color: #0277bd;
+    margin-bottom: 15px;
+  }
+  

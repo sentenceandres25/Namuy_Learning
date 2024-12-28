@@ -1,0 +1,25 @@
+{
+    "pendingEvaluationsTitle": "Evaluaciones Pendientes",
+    "pendingEvaluations": "Evaluaciones Pendientes",
+    "upcomingEvaluations": "Evaluaciones Próximas",
+    "noUpcomingEvaluations": "No tienes evaluaciones próximas.",
+    "dueDate": "Fecha Límite",
+    "evaluationsByCourse": "Evaluaciones Pendientes por Curso",
+    "course": "Curso",
+    "difficulty": "Nivel de Dificultad",
+    "weight": "Peso en la Nota Final",
+    "format": "Formato",
+    "estimatedTime": "Tiempo Estimado",
+    "topics": "Temas a Evaluar",
+    "status": "Estado de la Evaluación",
+    "studyResources": "Recursos de Estudio Recomendados",
+    "startEvaluation": "Iniciar Evaluación",
+    "startingEvaluation": "Iniciando Evaluación",
+    "feedbackPending": "Evaluaciones en Revisión",
+    "submissionDate": "Fecha de Envío",
+    "No Iniciada": "No Iniciada",
+    "En Progreso": "En Progreso",
+    "Requiere Revisión": "Requiere Revisión",
+    "En Revisión": "En Revisión"
+  }
+  

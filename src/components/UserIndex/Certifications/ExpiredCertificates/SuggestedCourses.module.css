@@ -1,0 +1,39 @@
+/* Styles/SuggestedCourses.module.css */
+
+.suggestedCourses {
+    background: #ecfdf5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  .suggestedCourses h4 {
+    color: #065f46;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .suggestedCourses h4 svg {
+    margin-right: 8px;
+  }
+  
+  .suggestedCourses ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .suggestedCourses li {
+    margin-bottom: 8px;
+  }
+  
+  .suggestedCourses a {
+    color: #047857;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .suggestedCourses a:hover {
+    color: #065f46;
+  }
+  

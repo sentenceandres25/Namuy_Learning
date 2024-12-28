@@ -1,0 +1,29 @@
+/* Styles/SelectCategory.module.css */
+
+.selectCategory {
+    background: #fff3e0;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+  
+  .selectCategory h3 {
+    color: #e65100;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .selectCategory button {
+    background-color: #e65100;
+    border: none;
+  }
+  
+  .selectCategory button:hover {
+    background-color: #bf360c;
+  }
+  

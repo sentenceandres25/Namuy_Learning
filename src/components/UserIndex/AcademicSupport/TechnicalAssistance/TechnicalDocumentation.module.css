@@ -1,0 +1,23 @@
+/* Styles/TechnicalDocumentation.module.css */
+
+.technicalDocumentation {
+    margin-top: 20px;
+    background: #e8f5e9;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .technicalDocumentation h3 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+  }
+  
+  .technicalDocumentation a {
+    color: #2e7d32;
+    text-decoration: none;
+  }
+  
+  .technicalDocumentation a:hover {
+    text-decoration: underline;
+  }
+  

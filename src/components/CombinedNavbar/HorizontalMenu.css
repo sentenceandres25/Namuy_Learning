@@ -1,0 +1,208 @@
+/* ========== Horizontal Menu ========== */
+.horizontal-menu {
+    overflow-x: auto;
+    display: flex;
+    opacity: 1;
+    justify-content: flex-start;
+    padding: 0;
+    background-color: transparent;
+    white-space: nowrap;
+    scrollbar-width: none;
+    gap: 50px;
+    margin: 0;
+    font-size: 0.8rem;
+  }
+  
+  .horizontal-menu::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* ========== Menu Arrow ========== */
+  .menu-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+    padding: 0 10px;
+    user-select: none;
+    font-size: 0.8rem;
+  }
+  
+  .left-arrow {
+    left: 0;
+  }
+  
+  .right-arrow {
+    right: 0;
+  }
+  
+  /* ========== Hamburger Menu ========== */
+  .hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1100;
+  }
+  
+  .hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hamburger-menu.active {
+    display: none;
+    transform: translateX(0);
+  }
+  
+  .hamburger-menu .menu-item {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .hamburger-menu .menu-item.active {
+    background-color: #00ff08;
+  }
+  
+  /* ========== Hamburger Icon Animation ========== */
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  
+  /* ========== Media Queries ========== */
+  @media (max-width: 991px) {
+  
+    .custom-navbar .navbar-collapse .horizontal-menu {
+      position: fixed;
+      top: 50px;
+      left: 0;
+      width: 80%;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+      background-color: white;
+      height: 100vh;
+      padding-top: 50px;
+    }
+  }
+  
+  @media (max-width: 627px) {
+    .menu-wrapper {
+      display: none;
+    }
+  
+    .hamburger {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      z-index: 1100;
+    }
+  
+    .hamburger-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 80%;
+      height: 100%;
+      background-color: white !important;
+      z-index: 1000;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  
+    .hamburger-menu.active {
+      display: block;
+      transform: translateX(0);
+      z-index: 10000000000;
+      top: 50px;
+    }
+  
+    .hamburger-menu .menu-item {
+      background-color: white !important;
+      color: black;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+      border-radius: 0;
+      transition: background-color 0.3s ease;
+    }
+  
+    .hamburger-menu .menu-item:hover {
+      background-color: #f0f0f0 !important;
+      color: black;
+      border-radius: 0 !important;
+    }
+  
+    .hamburger-menu .vertical-menu,
+    .hamburger-menu .subcategory-menu,
+    .hamburger-menu .product-menu {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      width: 100%;
+    }
+  
+    .hamburger-menu .vertical-menu {
+      display: none;
+    }
+  
+    .hamburger-menu .subcategory-menu {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .hamburger-menu .product-menu {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .menu-arrow {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 628px) {
+    .hamburger {
+      display: none !important;
+    }
+  
+    .hamburger-menu {
+      display: none !important;
+    }
+  
+    .menu-wrapper {
+      display: flex;
+      align-items: center;
+    }
+  }  

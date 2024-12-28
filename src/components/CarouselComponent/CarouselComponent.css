@@ -1,0 +1,82 @@
+/* Estilos generales del carrusel */
+.carousel-component {
+  position: relative;
+  z-index: 1; /* Menor que el header */
+  margin-top: -50px; /* Ajusta según la altura de tu header */
+}
+
+.tv-screen {
+  margin: auto;
+  overflow: hidden;
+  background-color: #ccffcc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Cambiado a contain para ver toda la imagen */
+}
+
+.carousel-caption {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  color: white; /* Color de las letras */
+  padding: 10px;
+  text-align: center;
+}
+
+/* Tamaño de las letras para pantallas grandes */
+.carousel-caption h1 {
+  font-size: 36px; /* Tamaño grande para el título */
+}
+
+.carousel-caption p {
+  font-size: 18px; /* Tamaño del párrafo */
+}
+
+/* Asegurar que el contenedor se ajuste a la altura de su contenido */
+.carousel-item {
+  position: relative;
+}
+
+/* Estilos responsive para pantallas medianas */
+@media (max-width: 991px) {
+  /* El contenido del carrusel comienza debajo del header y navbar */
+  .tv-screen {
+    margin-top: 155px; /* Ajusta el margen para evitar el solapamiento con el header y navbar */
+  }
+
+  /* Asegúrate de que las imágenes dentro del carrusel se ajusten correctamente */
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Asegura que las imágenes del carrusel se ajusten */
+  }
+
+  .carousel-caption h1 {
+    font-size: 28px; /* Reducir tamaño del título */
+  }
+
+  .carousel-caption p {
+    font-size: 16px; /* Reducir tamaño del párrafo */
+  }
+}
+
+/* Estilos responsive para pantallas pequeñas */
+@media (max-width: 767px) {
+  .carousel-caption h1 {
+    font-size: 12px; /* Más pequeño para pantallas móviles */
+  }
+
+  .carousel-caption p {
+    font-size: 10px; /* Texto del párrafo más pequeño */
+  }
+
+  /* Asegurar que las imágenes se mantengan bien ajustadas en pantallas pequeñas */
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+}

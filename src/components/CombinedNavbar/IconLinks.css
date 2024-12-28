@@ -1,0 +1,247 @@
+/* ========== Icon Container ========== */
+.icon-container {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ========== User Profile ========== */
+.user-profile, .cart-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-profile .dropdown-menu-account-custom {
+  display: none;
+  position: absolute;
+  top: 32px;
+  left: 0;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  min-width: 200px;
+}
+
+.user-profile:hover .dropdown-menu-account-custom {
+  display: block !important;
+}
+
+.user-profile:hover .user-name,
+.cart-icon:hover .cart-text {
+  color: black;
+  font-weight: bold;
+}
+
+.user-name {
+  margin-left: 10px;
+  font-size: 1rem;
+  color: black;
+}
+
+.user-profile,
+.cart-icon,
+.user-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* ========== Cart Icon ========== */
+
+.cart-count {
+  position: absolute;
+  top: -18px;
+  right: -10px;
+  background-color: orange;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* ========== Dropdown Menu for Account ========== */
+.dropdown-menu-account-custom {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -40px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1000;
+  white-space: nowrap;
+  min-width: 200px;
+}
+
+/* ========== Dropdown Header and Items ========== */
+.dropdown-header-account-custom {
+  font-weight: bold;
+  color: black;
+  padding: 10px 12px;
+  font-size: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.dropdown-item-account-custom {
+  color: black;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  text-align: left;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dropdown-menu-account-custom .dropdown-item-account-custom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu-account-custom .dropdown-item-account-custom:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu-account-custom .dropdown-item-account-custom:hover {
+  background: linear-gradient(135deg, #7cff72, #7dd86a); /* Degradado verde vibrante */
+  color: black;
+}
+
+.dropdown-menu-account-custom .dropdown-item {
+  padding: 10px 20px;
+  display: block;
+  text-align: left;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu-account-custom .dropdown-item:hover {
+  background: linear-gradient(135deg, #7cff72, #7dd86a); /* Degradado verde vibrante */
+  color: #000;
+}
+
+/* ========== Social Icons ========== */
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-left: auto;
+  font-size: 1.2rem;
+}
+
+.social-icons a {
+  color: #1877F2;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-component:hover .social-icons a {
+  transform: scale(1.1);
+}
+
+.header-component .social-icons a[href*="facebook"] {
+  color: #1877F2;
+}
+
+.header-component .social-icons a[href*="instagram"] {
+  color: #E4405F;
+}
+
+.header-component .social-icons a[href*="youtube"] {
+  color: #FF0000;
+}
+
+/* ========== Hover Effects ========== */
+.header-component:hover .user-profile,
+.header-component:hover .user-name,
+.header-component:hover .cart-icon {
+  color: black;
+}
+
+/* ========== Responsive Styles ========== */
+@media (max-width: 991px) {
+  .social-icons a[href*="facebook"] {
+    color: #1877F2;
+  }
+
+  .social-icons a[href*="instagram"] {
+    color: #E4405F;
+  }
+
+  .social-icons a[href*="youtube"] {
+    color: #FF0000;
+  }
+
+  .user-profile,
+  .cart-icon {
+    color: #000 !important;
+  }
+
+  .cart-text,
+  .user-name {
+    display: none;
+  }
+
+  .user-profile .dropdown-menu-account-custom {
+    top: 34px;
+    display: block;
+  }
+}
+
+@media (max-width: 627px) {
+  .social-icons a[href*="facebook"] {
+    color: #1877F2;
+  }
+
+  .social-icons a[href*="instagram"] {
+    color: #E4405F;
+  }
+
+  .social-icons a[href*="youtube"] {
+    color: #FF0000;
+  }
+
+  .user-profile,
+  .user-name,
+  .cart-icon {
+    color: #000 !important;
+  }
+
+  .cart-text,
+  .user-name {
+    display: none;
+  }
+
+  .icon-container {
+    font-size: 0.5rem;
+  }
+
+  .custom-navbar-language {
+    right: 100px;
+  }
+
+  .user-profile .dropdown-menu-account-custom {
+    top: 16px;
+    display: block;
+  }
+}
+
+@media (max-width: 430px) {
+  .icon-container {
+    position: absolute;
+    right: 20px;
+  }
+}

@@ -1,0 +1,29 @@
+/* Styles/TopicDescription.module.css */
+
+.topicDescription {
+    background: #e1f5fe;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+  
+  .topicDescription h3 {
+    color: #0277bd;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .topicDescription button {
+    background-color: #0277bd;
+    border: none;
+  }
+  
+  .topicDescription button:hover {
+    background-color: #01579b;
+  }
+  

@@ -1,0 +1,18 @@
+/* Styles/ForumParticipationRules.module.css */
+
+.forumParticipationRules {
+    margin-top: 20px;
+    background: #f3e5f5;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .forumParticipationRules h3 {
+    color: #6a1b9a;
+    margin-bottom: 15px;
+  }
+  
+  .forumParticipationRules p {
+    color: #6a1b9a;
+  }
+  

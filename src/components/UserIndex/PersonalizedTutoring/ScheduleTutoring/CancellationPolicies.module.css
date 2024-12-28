@@ -1,0 +1,17 @@
+/* Styles/CancellationPolicies.module.css */
+
+.cancellationPolicies {
+  background: #f9fbe7;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.cancellationPolicies h4 {
+  color: #afb42b;
+  margin-bottom: 10px;
+}
+
+.cancellationPolicies p {
+  color: #827717;
+}

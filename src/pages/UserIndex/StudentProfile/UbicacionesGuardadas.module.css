@@ -1,0 +1,23 @@
+/* UbicacionesGuardadas.module.css */
+
+.ubicacionesPage {
+  padding: 20px;
+}
+
+.tituloUbicacionesGuardadas {
+  font-size: 2.0em; /* Aumenta el tamaño de la fuente */
+        color: #2e547d; /* Color verde oscuro para resaltar */
+        text-align: center;
+        margin: 20px 30px; /* Espacio inferior más grande */
+        font-weight: bold;
+        position: relative;
+        padding: 10px;
+        border-radius: 8px;
+        text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .tituloUbicacionesGuardadas {
+      margin-top: 60px; /* Margen superior solo para este título en pantallas pequeñas */
+  }
+}

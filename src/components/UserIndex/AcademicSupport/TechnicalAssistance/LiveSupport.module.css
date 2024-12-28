@@ -1,0 +1,28 @@
+/* Styles/LiveSupport.module.css */
+
+.liveSupport {
+    margin-top: 20px;
+    text-align: center;
+    background: #e3f2fd;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .liveSupport h3 {
+    color: #0d47a1;
+    margin-bottom: 15px;
+  }
+  
+  .liveSupport button {
+    background-color: #0d47a1;
+    border: none;
+  }
+  
+  .liveSupport button:hover {
+    background-color: #08306b;
+  }
+  
+  .liveSupport svg {
+    margin-right: 8px;
+  }
+  

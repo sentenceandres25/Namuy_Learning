@@ -1,0 +1,60 @@
+/* Components/PersonalCenter/PersonalCenter.module.css */
+
+.personalCenter {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.panelTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #333;
+}
+
+/* Estilos para el ListGroup.Item de cierre de sesión */
+.listGroupItem {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: black;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.listGroupItem:hover {
+    background: linear-gradient(135deg, #93ff8c, #64ea49); 
+    transform: translateX(10px);
+}
+
+.itemIcon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: black;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .personalCenter {
+        padding: 10px;
+    }
+
+    .panelTitle {
+        font-size: 1.2rem;
+    }
+}

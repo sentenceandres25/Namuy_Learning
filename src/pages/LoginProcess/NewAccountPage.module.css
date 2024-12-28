@@ -1,0 +1,117 @@
+/* Encapsulamos todo dentro de la clase .newaccount */
+.newaccount * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.newaccount {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newaccount-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    height: 1000px;
+}
+
+.newaccount-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+.newaccount-title {
+    font-size: 2rem;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.newaccount-form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.newaccount-input-field {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.newaccount-input-field:focus {
+    border-color: #ffbe0b;
+}
+
+.newaccount-create-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffbe0b;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.newaccount-create-btn:hover {
+    background-color: #ffaa00;
+    transform: scale(1.02);
+}
+
+.newaccount-links {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.newaccount-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.newaccount-link:hover {
+    text-decoration: underline;
+}
+
+.newaccount-signin-link {
+    display: block;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #007bff;
+}
+
+.newaccount-signin-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .newaccount-card {
+        padding: 30px;
+        max-width: 100%;
+    }
+
+    .newaccount-title {
+        font-size: 1.8rem;
+    }
+
+    .newaccount-input-field {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}

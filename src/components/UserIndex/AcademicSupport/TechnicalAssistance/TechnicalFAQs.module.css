@@ -1,0 +1,24 @@
+/* Styles/TechnicalFAQs.module.css */
+
+.technicalFAQs {
+    margin-top: 20px;
+    background: #fffde7;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .technicalFAQs h3 {
+    color: #f9a825;
+    margin-bottom: 15px;
+  }
+  
+  .technicalFAQs .card-header {
+    background-color: #f9a825;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .technicalFAQs .card-body {
+    background-color: #fff9c4;
+  }
+  

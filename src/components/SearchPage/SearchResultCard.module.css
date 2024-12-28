@@ -1,0 +1,167 @@
+/* SearchResultCard.module.css */
+
+.card {
+    display: flex;
+    background: #fff;
+    border-radius: 8px;
+    padding: 0.8rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .card:hover {
+    transform: scale(1.01);
+  }
+  
+  .imageSection {
+    margin-right: 1rem;
+  }
+  
+  .imageSection img {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .contentSection {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .textInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem; /* Menos espacio entre líneas */
+  }
+  
+  .topRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .courseName {
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .instructor {
+    font-size: 0.8rem;
+    color: #555;
+    margin: 0;
+  }
+  
+  .details {
+    font-size: 0.75rem;
+    color: #333;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem; /* Espacio entre estrellas y texto */
+  }
+  
+  .levels {
+    font-size: 0.75rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  .bestSeller {
+    background: #f4c150;
+    color: #000;
+    padding: 0.1rem 0.3rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+  
+  .priceSection {
+    margin-left: 1rem;
+  }
+  
+  .price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00a651;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  
+  /* Responsivo */
+.details {
+  font-size: 0.75rem;
+  color: #333;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem; /* Espacio entre estrellas y texto */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contentSection {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .priceSection {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    align-self: center;
+  }
+
+  .imageSection img {
+    width: 100%;
+    height: auto;
+  }
+
+  .textInfo {
+    align-items: center;
+    width: 100%;
+  }
+
+  .topRow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details {
+    justify-content: center; /* Centramos la línea de valoraciones, horas y clases */
+  }
+
+  .price {
+    font-size: 0.9rem;
+  }
+  .details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Seleccionar la quinta estrella (5to svg), tras la última estrella insertamos un salto de línea */
+  .details > svg:nth-of-type(5)::after {
+    content: "";
+    display: block;
+    width: 100%;
+  }
+}

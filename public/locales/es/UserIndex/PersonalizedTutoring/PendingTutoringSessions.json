@@ -1,0 +1,28 @@
+{
+    "pendingTutoringSessionsTitle": "Tutorías Pendientes",
+    "pendingTutoringSessions": "Tutorías Pendientes",
+    "tutor": "Tutor",
+    "date": "Fecha",
+    "time": "Hora",
+    "mode": "Modo",
+    "duration": "Duración",
+    "status": "Estado",
+    "Confirmed": "Confirmada",
+    "Pending Confirmation": "Pendiente de Confirmación",
+    "Rescheduled": "Reprogramada",
+    "joinSession": "Unirse a la Tutoría",
+    "reschedule": "Reprogramar",
+    "cancel": "Cancelar",
+    "rescheduleSession": "Reprogramar tutoría",
+    "cancelSession": "Cancelar tutoría",
+    "sessionObjectives": "Objetivos de la Tutoría",
+    "preSessionMaterials": "Materiales Previos",
+    "noMaterials": "No hay materiales previos.",
+    "upload": "Subir Material",
+    "uploadMaterial": "Subir material",
+    "enableNotifications": "Activar Recordatorios",
+    "notificationsEnabled": "Recordatorios Activados",
+    "notificationsSet": "Recordatorios configurados.",
+    "contactTutor": "Contactar al Tutor"
+  }
+  

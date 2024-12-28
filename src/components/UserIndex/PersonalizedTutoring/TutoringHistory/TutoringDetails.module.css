@@ -1,0 +1,22 @@
+/* Styles/TutoringDetails.module.css */
+
+.tutoringDetails {
+  background: #f0fdf4;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 25px;
+}
+
+.tutoringDetails h3 {
+  color: #166534;
+  margin-bottom: 20px;
+}
+
+.tutoringDetails p {
+  margin: 8px 0;
+  color: #14532d;
+}
+
+.tutoringDetails strong {
+  color: #15803d;
+}

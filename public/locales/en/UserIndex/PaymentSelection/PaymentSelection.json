@@ -1,0 +1,20 @@
+{
+    "payTitle": "Pay",
+    "billingAddress": "Billing Address",
+    "taxesNote": "Namuy Learning is legally required to collect taxes on transactions for purchases made in certain tax jurisdictions.",
+    "choosePaymentMethod": "Choose your payment method",
+    "paypalOption": "PayPal",
+    "pseOption": "PSE",
+    "orderDetails": "Order Details",
+    "quantity": "Quantity",
+    "courseName": "Course Name",
+    "price": "Price",
+    "orderSummary": "Order Summary",
+    "termsOfUseNote": "By completing the purchase, you agree to these Terms of Use.",
+    "moneyBackGuarantee": "30-Day Money-Back Guarantee",
+    "cancel": "Cancel",
+    "companyName": "Namuy Learning",
+    "footerMessage": "All rights reserved.",
+    "continue": "Continue"
+  }
+  

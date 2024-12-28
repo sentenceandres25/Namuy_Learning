@@ -1,0 +1,289 @@
+/* ========== Header ========== */
+.header-component {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: 10;
+  height: auto;
+}
+
+header {
+  position: relative;
+  object-fit: cover;
+}
+
+.header-component {
+  animation: fadeInUp 0.5s ease-out forwards;
+  display: flex;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 10px;
+  gap: 20px;
+}
+
+.header-inner-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-component {
+  transition: background-color 0.6s ease, color 0.3s ease;
+}
+
+.header-component:hover,
+.header-component.hovered {
+  background: linear-gradient(135deg, #7cff72, #7dd86a); /* Degradado verde vibrante */
+}
+
+/* ========== Navbar ========== */
+.my-navbar {
+  position: absolute;
+  top: 74.5px;
+  width: 100%;
+  z-index: 3;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.6s ease, color 0.3s ease;
+}
+
+.header-component:hover .my-navbar {
+  background: linear-gradient(135deg, #7cff72, #7dd86a); /* Degradado verde vibrante */
+  color: black;
+}
+
+.my-navbar-inner {
+  padding: 10px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+/* ========== Custom Navbar ========== */
+.custom-navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  gap: 20px;
+}
+
+/* ========== Animation ========== */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(0px);
+  visibility: hidden;
+}
+
+.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* ========== Links and Dropdown ========== */
+#nav-dropdown-options.dropdown-toggle.nav-link {
+  margin-left: 20px;
+}
+
+.dropdown-menu {
+  top: 20px !important;
+  z-index: 1000000;
+}
+
+.dropdown-toggle.nav-link {
+  margin-top: 5px;
+  margin-right: 12px;
+  color: BLACK;
+  font-size: 0.8rem;
+}
+
+.nav-item.dropdown,
+.dropdown-toggle.nav-link {
+  color: black;
+  z-index: 100000;
+}
+
+.header-component:hover .dropdown-toggle.nav-link {
+  color: black !important;
+}
+
+/* ========== Menu Container ========== */
+.menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.5rem 1rem;
+  border: 1px solid #00e676; /* Verde brillante */
+  border-radius: 5px;
+  background: linear-gradient(135deg, #7bff7280, #3dff165c); /* Degradado verde vibrante */
+  box-sizing: border-box;
+  font-size: 0.8rem;
+  gap: 20px;
+}
+
+/* ========== Dropdown Styles ========== */
+.my-dropdown {
+  display: grid;
+  grid-template-areas: 
+    'vertical-menu subcategory-title product-title'
+    'vertical-menu subcategory-menu product-menu';
+  grid-template-columns: auto 1fr 2fr;
+  position: absolute;
+  background: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  font-size: 0.8rem;
+  overflow-y: auto;
+}
+
+.my-dropdown h4 {
+  font-size: 25px;
+  margin-top: 15px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* ========== Vertical, Subcategory, and Product Menus ========== */
+.vertical-menu {
+  flex: 1;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+  min-width: 160px;
+  width: 40px;
+  max-height: 400px;
+  overflow-y: auto;
+  font-size: 0.8rem;
+  grid-area: vertical-menu;
+}
+
+/* ========== Subcategory Item ========== */
+.subcategory-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-right: 10px;
+}
+
+/* ========== Section Titles ========== */
+.section-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: left;
+  margin: 10px 10px;
+  display: block;
+  width: 100%;
+  max-height: 10px;
+  height: 10px;
+}
+
+.subcategory-section .section-title {
+  grid-area: subcategory-title;
+}
+
+.product-section .section-title {
+  grid-area: product-title;
+}
+
+/* ========== Media Queries ========== */
+@media (max-width: 991px) {
+  .my-navbar {
+    top: 69px !important;
+  }
+
+  .header-component,
+  .my-navbar {
+    background: linear-gradient(135deg, #9be15d, #00e676) !important;
+    color: black !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .my-navbar {
+    z-index: 999;
+  }
+
+  .menu-container {
+    top: 50px;
+    flex-direction: column;
+    font-size: 2vh;
+    align-items: flex-start;
+    background: none;
+    border: none;
+    color: black !important;
+  }
+
+  .custom-navbar.active .navbar-collapse {
+    transform: translateX(0);
+  }
+
+  .custom-navbar .close-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1051;
+  }
+}
+
+@media (max-width: 627px) {
+  .my-navbar {
+    top: 69px !important;
+  }
+
+  .custom-navbar {
+    justify-content: space-between;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  .menu-container {
+    flex-direction: column;
+    font-size: 2vh;
+    align-items: flex-start;
+    background-color: transparent;
+    border: none;
+    color: black !important;
+    background: none;
+  }
+
+  .is-search-active .menu-container {
+    justify-content: flex-start;
+  }
+
+  .my-navbar .horizontal-menu,
+  .my-navbar .my-dropdown {
+    display: none;
+  }
+
+  .subcategory-item {
+    justify-content: flex-start;
+    text-align: left;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .tv-screen {
+    margin-top: 119px !important;
+  }
+}

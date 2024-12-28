@@ -1,0 +1,52 @@
+.participationStatistics {
+    background: #e0f2fe;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .participationStatistics h3 {
+    color: #0369a1;
+    margin-bottom: 20px;
+  }
+  
+  .statsContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .statItem {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 150px;
+  }
+  
+  .statItem:hover {
+    background: #bae6fd;
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .statItem .icon {
+    font-size: 2em;
+    color: #0284c7;
+    margin-bottom: 10px;
+  }
+  
+  .statItem p {
+    margin: 0;
+    color: #075985;
+  }
+  
+  .statItem h4 {
+    font-size: 1.5em;
+    color: #0c4a6e;
+  }
+  

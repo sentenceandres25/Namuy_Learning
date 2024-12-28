@@ -1,0 +1,112 @@
+/* Estilos del container general */
+.discounts-highlights-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    gap: 30px; /* Espacio entre los dos contenedores */
+    align-items: center; /* Centra los contenedores verticalmente */
+}
+
+/* Título de las secciones */
+.section-title-weekly {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+}
+
+/* Estilo para la caja de descuentos con degradado dorado */
+.discounts-container {
+    padding: 15px;
+    background: linear-gradient(135deg, #ffd700, #ffecb3);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    width: 48%;
+}
+
+/* Estilos de las tarjetas de descuentos */
+.discount-card {
+    background-color: #eafaf1;
+    border-radius: 10px;
+    border: none;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    height: auto;
+}
+
+.discount-card:hover {
+    transform: scale(1.05);
+}
+
+.discount-card .card-title {
+    font-size: 0.9rem;
+    color: #28a745;
+}
+
+.discount-card .card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Estilo para la caja de highlights con degradado dorado */
+.highlights-container {
+    padding: 15px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    width: 48%;
+    margin-left: 30px; /* Separación entre los dos contenedores */
+}
+
+/* Estilos de las tarjetas de highlights */
+.highlight-card {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    height: auto; /* Evita que las tarjetas se alarguen */
+}
+
+.highlight-card:hover {
+    transform: scale(1.05);
+}
+
+.highlight-card .card-title {
+    font-size: 0.7rem;
+    color: #333;
+    text-align: center;
+}
+
+.highlight-card img {
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 785px) {
+    .discounts-highlights-container {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Alinea los contenedores en el centro */
+        gap: 15px; /* Espacio entre las tarjetas en pantallas pequeñas */
+    }
+
+    .discounts-container, .highlights-container {
+        margin-bottom: 15px;
+        width: 100%; /* Asegura que los contenedores ocupen todo el ancho */
+        margin-left: 0; /* Elimina el margen izquierdo en pantallas pequeñas */
+    }
+
+    .discount-card, .highlight-card {
+        margin-bottom: 15px;
+    }
+
+    .highlight-card img {
+        height: auto;
+    }
+
+    .section-title {
+        font-size: 1.25rem; /* Ajusta el tamaño de la fuente del título */
+    }
+}

@@ -1,0 +1,49 @@
+/* FooterColumn.module.css */
+.footerColumn {
+    flex: 1 1 200px;
+    min-width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .footerColumn h4 {
+    color: #004d40; /* Verde azulado oscuro */
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  .footerColumn h4:hover {
+    color: #2d3436; /* Gris oscuro */
+  }
+  
+  .footerColumn h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Asegura que la línea quede justo debajo del título */
+    width: 100%; /* Extiende la línea a lo largo del título */
+    height: 2px;
+    background-color: #004d40; /* Verde azulado medio */
+  }
+  
+  .footerColumn ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footerColumn ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footerColumn ul li a {
+    color: #004d40; /* Verde azulado oscuro */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footerColumn ul li a:hover {
+    color: #0b0f0e; /* Verde azulado medio */
+  }
+  

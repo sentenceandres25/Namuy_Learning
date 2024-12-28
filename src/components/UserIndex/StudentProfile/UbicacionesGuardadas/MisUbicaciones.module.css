@@ -1,0 +1,27 @@
+/* MisUbicaciones.module.css */
+
+.misUbicaciones {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .ubicacionesList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .ubicacionesList li {
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .ubicacionesList li:hover {
+    transform: translateX(10px);
+  }
+  

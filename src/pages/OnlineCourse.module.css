@@ -1,0 +1,233 @@
+.onlineCourse {
+  background: linear-gradient(135deg, #d0f0c0, #a8e6cf);
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  color: #2d3436;
+  border-radius: 15px;
+}
+
+.contentArea {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.leftContent {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: height 0.3s ease;
+}
+
+.fullScreenVideo {
+  height: 800px; /* Altura fija para pantallas grandes */
+  justify-content: center;
+  align-items: center;
+}
+
+.rightContent {
+  overflow-y: auto;
+  height: calc(889px - 80px); /* Ajusta según la altura del encabezado */
+  background-color: #e0f7da; /* Verde claro de fondo para diferenciar la sección */
+  border-left: 2px solid #a8e6cf; /* Borde sutil para separar visualmente las áreas */
+  padding: 15px;
+  border-radius: 15px; /* Borde redondeado en el lado derecho */
+}
+
+/* Botón para mostrar el contenido cuando esté oculto, solo visible en pantallas grandes */
+.showContentButton {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #66bb6a; /* Verde que complementa el degradado */
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  transition: background-color 0.3s;
+}
+
+.showContentButton:hover {
+  background-color: #4caf50; /* Verde oscuro al hacer hover */
+}
+
+/* Estilos del footer */
+.footer {
+  background-color: #e0f7da; /* Verde claro para el fondo del footer */
+  color: #2d3436;
+  padding: 20px 40px;
+  border-top: 2px solid #a8e6cf; /* Borde superior para separar el footer */
+  border-radius: 0 0 15px 15px; /* Borde redondeado en la parte inferior */
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-sections {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+}
+
+.footer-column h4 {
+  color: #388e3c; /* Verde oscuro para los encabezados */
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+  color: #4caf50; /* Verde para los enlaces */
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+  color: #388e3c; /* Verde más oscuro en hover */
+}
+
+.social-icons a, .app-icons a {
+  color: #66bb6a; /* Verde para iconos de redes sociales */
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.footer-subscription {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.footer-subscription form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.footer-subscription input, .footer-subscription select, .footer-subscription button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.footer-subscription button {
+  background-color: #66bb6a;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer-subscription button:hover {
+  background-color: #4caf50;
+}
+
+.footer-payment img {
+  width: 50px;
+  margin: 0 10px;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+}
+
+.footer-bottom ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-bottom ul li a {
+  color: #66bb6a;
+}
+
+.footer-bottom ul li a:hover {
+  color: #4caf50;
+}
+
+/* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .contentArea {
+    flex-direction: column;
+  }
+  
+  .leftContent,
+  .rightContent {
+    width: 100% !important;
+    height: auto;
+  }
+  
+  .showContentButton {
+    display: none;
+  }
+
+  .rightContent {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+  }
+
+  .footer {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-sections {
+    justify-content: center;
+  }
+
+  .footer-subscription form {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-payment img {
+    width: 40px;
+    margin: 5px;
+  }
+}

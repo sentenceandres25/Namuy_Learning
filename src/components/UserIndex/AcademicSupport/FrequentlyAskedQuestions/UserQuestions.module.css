@@ -1,0 +1,23 @@
+/* Styles/UserQuestions.module.css */
+
+.userQuestions {
+    margin-top: 20px;
+    background: #f3e5f5;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .userQuestions h4 {
+    color: #6a1b9a;
+    margin-bottom: 15px;
+  }
+  
+  .userQuestions button {
+    background-color: #6a1b9a;
+    border: none;
+  }
+  
+  .userQuestions button:hover {
+    background-color: #4a148c;
+  }
+  

@@ -1,0 +1,28 @@
+/* Styles/ContactSupport.module.css */
+
+.contactSupport {
+    margin-top: 20px;
+    text-align: center;
+    background: #e0f2f1;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .contactSupport h4 {
+    color: #004d40;
+    margin-bottom: 15px;
+  }
+  
+  .contactSupport button {
+    background-color: #004d40;
+    border: none;
+  }
+  
+  .contactSupport button:hover {
+    background-color: #00332c;
+  }
+  
+  .contactSupport svg {
+    margin-right: 8px;
+  }
+  

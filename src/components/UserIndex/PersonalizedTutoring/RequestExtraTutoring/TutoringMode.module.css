@@ -1,0 +1,29 @@
+/* Styles/TutoringMode.module.css */
+
+.tutoringMode {
+    background: #e8f5e9;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+  
+  .tutoringMode h3 {
+    color: #2e7d32;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .tutoringMode button {
+    background-color: #2e7d32;
+    border: none;
+  }
+  
+  .tutoringMode button:hover {
+    background-color: #1b5e20;
+  }
+  

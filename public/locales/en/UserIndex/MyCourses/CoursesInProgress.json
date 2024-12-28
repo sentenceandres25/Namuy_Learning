@@ -1,0 +1,26 @@
+{
+  "coursesInProgressTitle": "Courses in Progress",
+  "courses_in_progress": "Courses in Progress",
+  "course_progress": "Course Progress",
+  "last_activity": "Last Activity",
+  "pending_evaluations": "Pending Evaluations",
+  "total_study_time": "Total Study Time",
+  "view_details": "View Details",
+  "course_1": {
+    "name": "Course 1",
+    "description": "Description of Course 1"
+  },
+  "course_2": {
+    "name": "Course 2",
+    "description": "Description of Course 2"
+  },
+  "course_3": {
+    "name": "Course 3",
+    "description": "Description of Course 3"
+  },
+  "course_4": {
+    "name": "Course 4",
+    "description": "Description of Course 4"
+  },
+  "recommended_courses": "Recommended Courses"
+}

@@ -1,0 +1,18 @@
+/* Styles/UseOfMaterials.module.css */
+
+.useOfMaterials {
+    margin-top: 20px;
+    background: #fce4ec;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .useOfMaterials h3 {
+    color: #ad1457;
+    margin-bottom: 15px;
+  }
+  
+  .useOfMaterials p {
+    color: #ad1457;
+  }
+  

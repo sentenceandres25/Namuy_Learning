@@ -1,0 +1,21 @@
+.paymentMethodSection {
+    margin-top: 2rem;
+  }
+  
+  .paymentMethodSection h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .methodOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .methodOption {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  

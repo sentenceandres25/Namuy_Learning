@@ -1,0 +1,49 @@
+/* Styles/RequestConfirmation.module.css */
+
+.requestConfirmation {
+    background: #f1f8e9;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+  
+  .requestConfirmation h3 {
+    color: #33691e;
+    margin-bottom: 20px;
+  }
+  
+  .requestConfirmation p {
+    margin: 5px 0;
+    color: #558b2f;
+  }
+  
+  .requestConfirmation strong {
+    color: #2e7d32;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .requestConfirmation button {
+    border: none;
+  }
+  
+  .requestConfirmation .btn-secondary {
+    background-color: #33691e;
+  }
+  
+  .requestConfirmation .btn-secondary:hover {
+    background-color: #1b5e20;
+  }
+  
+  .requestConfirmation .btn-success {
+    background-color: #2e7d32;
+  }
+  
+  .requestConfirmation .btn-success:hover {
+    background-color: #1b5e20;
+  }
+  

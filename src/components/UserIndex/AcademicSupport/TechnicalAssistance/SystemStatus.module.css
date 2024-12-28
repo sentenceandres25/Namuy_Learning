@@ -1,0 +1,32 @@
+/* Styles/SystemStatus.module.css */
+
+.systemStatus {
+    margin-top: 20px;
+    background: #e0f7fa;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .systemStatus h3 {
+    color: #006064;
+    margin-bottom: 15px;
+  }
+  
+  .operational {
+    color: #2e7d32;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+  }
+  
+  .down {
+    color: #d32f2f;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+  }
+  
+  .systemStatus svg {
+    margin-right: 8px;
+  }
+  

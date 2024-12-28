@@ -1,0 +1,18 @@
+/* Styles/EvaluationFeedback.module.css */
+
+.evaluationFeedback {
+    margin-top: 20px;
+    background: #fffde7;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .evaluationFeedback h3 {
+    color: #f9a825;
+    margin-bottom: 15px;
+  }
+  
+  .evaluationFeedback p {
+    color: #f9a825;
+  }
+  

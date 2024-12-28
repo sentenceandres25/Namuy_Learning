@@ -1,0 +1,24 @@
+/* CursosEnProgreso.module.css */
+
+.coursesPage {
+    padding: 20px; /* General padding for the courses page */
+}
+
+.titleCoursesInProgress {
+    font-size: 2.0em; /* Increases the font size */
+    color: #2e7d43; /* Dark green color for emphasis */
+    text-align: center; /* Center text alignment */
+    margin: 20px 30px; /* Larger bottom margin */
+    font-weight: bold; /* Bold font weight */
+    position: relative; /* Relative positioning for any child elements */
+    padding: 10px; /* Padding inside the title */
+    border-radius: 8px; /* Rounded corners for the title */
+    text-transform: uppercase; /* Converts text to uppercase */
+}
+
+@media (max-width: 768px) {
+    .titleCoursesInProgress {
+        margin-top: 50px; /* Top margin only on small screens */
+        font-size: 1.6rem; /* Smaller font size on mobile */
+    }
+}

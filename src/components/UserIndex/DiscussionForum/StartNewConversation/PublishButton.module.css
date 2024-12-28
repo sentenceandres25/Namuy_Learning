@@ -1,0 +1,18 @@
+/* Styles/PublishButton.module.css */
+
+.publishButtonContainer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .publishButton {
+    background-color: #15803d;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+  }
+  
+  .publishButton:hover {
+    background-color: #166534;
+  }
+  

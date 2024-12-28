@@ -1,0 +1,29 @@
+/* Styles/VisibilityPreferences.module.css */
+
+.visibilityPreferences {
+    background: #e8f5e9;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+  
+  .visibilityPreferences h3 {
+    color: #2e7d32;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .visibilityPreferences button {
+    background-color: #2e7d32;
+    border: none;
+  }
+  
+  .visibilityPreferences button:hover {
+    background-color: #1b5e20;
+  }
+  

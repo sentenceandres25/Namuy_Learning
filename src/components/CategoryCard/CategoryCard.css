@@ -1,0 +1,47 @@
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(0px);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, visibility 0.6s;
+}
+
+.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+.category-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px; /* O cualquier valor que prefieras para redondear las esquinas */
+  height: 200px; /* Ajusta la altura según tu diseño */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+.category-card h3 {
+  position: absolute; /* Posiciona el título sobre la imagen */
+  bottom: 0; /* Ajusta según necesites para la posición del texto */
+  left: 0;
+  width: 100%; /* Asegura que el texto se extienda a lo ancho de la tarjeta */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad */
+  color: white; /* Color del texto */
+  padding: 10px 0; /* Espaciado dentro del contenedor del texto */
+}
+  
+  .category-image {
+    width: 100%; /* Asegura que la imagen cubra el ancho del contenedor */
+    height: 100%; /* Asegura que la imagen cubra la altura del contenedor */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+    object-position: center; /* Centra la imagen dentro de su contenedor */
+  }
+  .category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  

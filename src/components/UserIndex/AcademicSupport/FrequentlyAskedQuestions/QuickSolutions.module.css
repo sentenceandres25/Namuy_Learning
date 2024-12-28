@@ -1,0 +1,14 @@
+/* Styles/QuickSolutions.module.css */
+
+.quickSolutions {
+    margin-top: 20px;
+    background: #e0f7fa;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .quickSolutions h4 {
+    color: #006064;
+    margin-bottom: 15px;
+  }
+  

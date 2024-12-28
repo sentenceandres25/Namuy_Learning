@@ -1,0 +1,42 @@
+/* Styles/UpcomingEvaluations.module.css */
+
+.upcomingEvaluations {
+    background: #fff3e0;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .upcomingEvaluations h3 {
+    color: #ef6c00;
+    margin-bottom: 15px;
+  }
+  
+  .upcomingEvaluations ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .upcomingEvaluations li {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .upcomingEvaluations li:hover {
+    background: #ffe0b2;
+  }
+  
+  .upcomingEvaluations h4 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #333;
+  }
+  
+  .upcomingEvaluations p {
+    margin: 5px 0 0;
+    color: #666;
+  }
+  

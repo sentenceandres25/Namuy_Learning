@@ -1,0 +1,57 @@
+.interests {
+    padding: 20px;
+    background: linear-gradient(135deg, #A1FFCE 0%, #D7FFD9 100%); /* Fondo degradado en verdes suaves */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .title {
+    color: #388E3C; /* Verde oscuro para el título */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .formGroup {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .badge {
+    background-color: #B9F6CA !important; /* Verde pastel claro para los badges */
+    color: #2E7D32; /* Verde oscuro para el texto */
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.6rem; /* Padding para mayor tamaño */
+    border: 1px solid #A5D6A7; /* Borde sutil en verde suave */
+  }
+  
+  .badge svg {
+    margin-left: 5px;
+    color: #388E3C; /* Icono en verde oscuro */
+  }
+  
+  .input {
+    background-color: #E8F5E9; /* Verde muy claro */
+    border: 1px solid #A5D6A7; /* Borde verde suave */
+    border-radius: 5px;
+    padding: 8px;
+    color: #388E3C; /* Texto verde oscuro */
+  }
+  
+  .button {
+    background-color: #81C784; /* Verde medio para el botón */
+    color: #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #66BB6A; /* Verde más oscuro en hover */
+  }
+  

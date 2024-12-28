@@ -1,0 +1,257 @@
+.videoArea {
+  position: relative;
+  width: 100%; /* Ajusta el tamaño del video */
+  max-width: auto; /* Tamaño máximo para limitar su crecimiento */
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0 auto; /* Centra el video horizontalmente */
+}
+
+.videoArea.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  border-radius: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoArea video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.videoArea.fullscreen video {
+  border-radius: 0;
+}
+
+/* VideoArea.module.css */
+.readingContent {
+  padding: 20px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+.readingContent h3 {
+  color: #2d3436;
+  margin-bottom: 10px;
+}
+
+.readingContent p {
+  line-height: 1.6;
+  color: #555;
+}
+
+
+/* Estilos para el handle (bolita) */
+.handle {
+  position: absolute;
+  top: -4px; /* Ajusta según sea necesario */
+  width: 16px;
+  height: 16px;
+  background-color: #9be15d;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* Estilos para la miniatura */
+.thumbnail {
+  position: absolute;
+  bottom: 100%; /* Coloca la miniatura encima de la barra de progreso */
+  transform: translateX(-50%);
+  margin-bottom: 10px; /* Separación entre la barra y la miniatura */
+  z-index: 4;
+}
+
+.thumbnail img {
+  width: 160px;
+  height: 90px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+
+
+.progressBarContainer {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(221, 221, 221, 0.5);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
+
+.progressBar {
+  height: 100%;
+  background-color: rgba(155, 225, 93, 0.8);
+  transition: width 0.1s ease;
+}
+
+.handle {
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.progressBarContainer:not(:hover) .handle {
+  opacity: 0;
+}
+
+
+.tooltipContainer {
+  position: relative;
+  display: inline-block;
+  z-index: 9999;
+}
+
+.tooltip, .tooltipfullscreen, .tooltipplay, .tooltipback, .tooltipsettings {
+  visibility: hidden;
+  background-color: #004d00; /* Verde oscuro */
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 150%; /* Colocar encima del botón */
+  left: 100%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltipfullscreen {
+  left: -150%;
+}
+
+.tooltipContainer:hover .tooltip,
+.tooltipContainer:hover .tooltipsettings,
+.tooltipContainer:hover .tooltipback,
+.tooltipContainer:hover .tooltipplay,
+.tooltipContainer:hover .tooltipfullscreen
+ {
+  visibility: visible;
+  opacity: 1;
+  z-index: 9999;
+}
+
+.controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 15px;
+  transition: opacity 0.3s ease;
+  border-radius: 0 0 13px 13px;
+  z-index: 4;
+}
+
+.controls.fullscreen {
+  position: absolute;
+  bottom: 0;
+}
+
+.showControls .controls,
+.showControls .progressBarContainer {
+  opacity: 1;
+}
+
+.hideControls .controls,
+.hideControls .progressBarContainer {
+  opacity: 0;
+}
+
+.leftControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rightControls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.controlButton {
+  color: #9be15d;
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.controlButton:hover {
+  transform: scale(1.1);
+  color: #66bb6a;
+}
+
+.timeDisplay {
+  color: #9be15d;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .controls {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .leftControls,
+  .rightControls {
+    gap: 3px;
+  }
+
+  .controlButton {
+    padding: 4px;
+    font-size: 12px;
+  }
+
+  .progressBarContainer {
+    bottom: 36px;
+  }
+
+  .timeDisplay {
+    font-size: 10px;
+  }
+
+  .tooltipback {
+    left: 200%;
+  }
+  .tooltipplay {
+    left: 250%;
+  }
+  .tooltipfullscreen {
+    left: -250% !important;
+  }
+  .tooltipsettings{
+    left: -50%;
+  }
+}

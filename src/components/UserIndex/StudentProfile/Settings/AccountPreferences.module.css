@@ -1,0 +1,42 @@
+.accountPreferences {
+  padding: 20px;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Fondo degradado azul suave */
+  color: #333; /* Color de texto */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra para efecto de tarjeta */
+  margin-bottom: 20px;
+  max-width: 900px;
+  margin: 20px auto; /* Centramos la caja */
+}
+
+.settingItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra interna */
+}
+
+.settingItem label {
+  flex: 2;
+  font-weight: bold;
+  color: #333; /* Color del texto */
+}
+
+.settingItem button {
+  flex: 1;
+  padding: 8px 12px;
+  background: linear-gradient(135deg, #7cff72, #7dd86a); /* Fondo de botón azul */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.settingItem button:hover {
+  background: linear-gradient(135deg, #7cff72, #4aa737); /* Color de fondo en hover */
+}

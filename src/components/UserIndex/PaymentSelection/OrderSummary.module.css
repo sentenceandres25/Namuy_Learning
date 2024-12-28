@@ -1,0 +1,23 @@
+.summaryContainer {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .summaryContainer h2 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+  
+  .summaryContainer p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .summaryTotal {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  

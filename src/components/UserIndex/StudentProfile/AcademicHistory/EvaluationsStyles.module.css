@@ -1,0 +1,48 @@
+.evaluationsContainer {
+  padding: 20px;
+  border: 2px solid #43a047; /* Borde verde */
+  border-radius: 8px;
+  max-width: 900px;
+  margin: auto;
+  background-color: #f1f8e9; /* Fondo verde claro */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
+}
+
+.evaluationsTitle {
+  font-size: 2em;
+  color: #2e7d32; /* Verde oscuro */
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.evaluationCard {
+  background-color: #e8f5e9; /* Fondo verde claro para las tarjetas */
+  border-left: 5px solid #43a047; /* Borde verde oscuro */
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 5px rgba(67, 160, 71, 0.1); /* Sombra */
+}
+
+.evaluationCardTitle {
+  font-size: 1.5em;
+  color: #2e7d32; /* Verde oscuro */
+  margin-bottom: 8px;
+}
+
+.evaluationCardContent {
+  font-size: 1em;
+  color: #33691e; /* Verde medio */
+  margin-bottom: 8px;
+}
+
+.evaluationStatusApproved {
+  color: #388e3c; /* Verde fuerte para aprobado */
+  font-weight: bold;
+}
+
+.evaluationStatusFailed {
+  color: #d32f2f; /* Rojo para desaprobado */
+  font-weight: bold;
+}

@@ -1,0 +1,83 @@
+.belowVideoMenu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  background-color: #e0f7da; /* Mismo verde claro que el fondo del contenido */
+  border: 1px solid #8bc34a; /* Borde verde */
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  justify-content: center; /* Centrar los elementos */
+}
+
+.tabButton {
+  background-color: #e8f5e9; /* Fondo verde claro */
+  border: 1px solid transparent;
+  color: #2d3436;
+  font-size: 12px;
+  margin: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tabButton:hover {
+  background-color: #c8e6c9; /* Verde ligeramente más oscuro al hacer hover */
+  border-color: #66bb6a; /* Borde verde en hover */
+  transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.tabButton:focus {
+  outline: none;
+}
+
+.activeTab {
+  background-color: #a5d6a7; /* Verde más oscuro para el tab activo */
+  border-color: #4caf50;
+  color: #2d3436;
+}
+
+.tabButton svg {
+  margin-right: 8px;
+  color: #4caf50; /* Color verde para el icono */
+  font-size: 18px;
+}
+
+.tabButton:hover svg {
+  color: #388e3c; /* Verde más oscuro al hacer hover */
+}
+
+/* Animación de onda al hacer clic */
+.tabButton::after {
+  content: '';
+  position: absolute;
+  background: rgba(102, 187, 106, 0.3); /* Efecto de onda verde */
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: width 0.6s ease-out, height 0.6s ease-out, opacity 1s ease-out;
+}
+
+.tabButton:active::after {
+  width: 200px;
+  height: 200px;
+  opacity: 0.2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .tabButton {
+    flex: 1 1 45%;
+    margin: 5px;
+  }
+}

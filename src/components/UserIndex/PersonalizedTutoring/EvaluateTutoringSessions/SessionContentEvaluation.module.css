@@ -1,0 +1,27 @@
+/* Styles/SessionContentEvaluation.module.css */
+
+.sessionContentEvaluation {
+    margin-top: 20px;
+  }
+  
+  .sessionContentEvaluation h4 {
+    color: #7c3aed;
+    margin-bottom: 10px;
+  }
+  
+  .ratingOptions {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Centrar las opciones */
+  }
+  
+  .form-check {
+    display: flex;
+    align-items: center; /* Alinear puntos con texto */
+    margin-bottom: 10px; /* Reducir el espacio entre opciones */
+  }
+  
+  .form-check-label {
+    margin-left: 8px; /* Espacio entre el punto y la etiqueta */
+  }
+  

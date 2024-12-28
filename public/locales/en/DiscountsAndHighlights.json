@@ -1,0 +1,20 @@
+{
+    "discounts": {
+        "title": "Discounts",
+        "title1": "Discount 1",
+        "description1": "Enjoy a 20% discount on clothing.",
+        "title2": "Discount 2",
+        "description2": "30% off on accessories this week!",
+        "title3": "Discount 3",
+        "description3": "15% discount on purchases over $100."
+      },
+      "highlights": {
+        "title": "Weekly Highlights",
+        "product1": "Product 1",
+        "product2": "Product 2",
+        "product3": "Product 3",
+        "product4": "Product 4",
+        "product5": "Product 5",
+        "product6": "Product 6"
+      }
+    }

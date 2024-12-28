@@ -1,0 +1,52 @@
+/* Styles/ChooseTutor.module.css */
+
+.chooseTutor {
+  background: #f1f8e9;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.chooseTutor h3 {
+  color: #33691e;
+  margin-bottom: 20px;
+}
+
+.tutorsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.tutorCard {
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tutorCard:hover {
+  transform: translateY(-5px);
+}
+
+.selected {
+  border: 2px solid #33691e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.chooseTutor button {
+  background-color: #33691e;
+  border: none;
+  color: white;
+}
+
+.chooseTutor button:hover {
+  background-color: #1b5e20;
+}

@@ -1,0 +1,59 @@
+/* Styles/PreSessionMaterials.module.css */
+
+.preSessionMaterials {
+    background: #f0f9ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  .preSessionMaterials h4 {
+    color: #0369a1;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .preSessionMaterials h4 svg {
+    margin-right: 8px;
+  }
+  
+  .preSessionMaterials ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .preSessionMaterials li {
+    margin-bottom: 8px;
+  }
+  
+  .preSessionMaterials a {
+    color: #0284c7;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .preSessionMaterials a:hover {
+    color: #0369a1;
+  }
+  
+  .preSessionMaterials p {
+    color: #0c4a6e;
+  }
+  
+  .uploadButton {
+    background: #3b82f6;
+    color: #ffffff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 10px;
+    transition: background 0.3s;
+  }
+  
+  .uploadButton:hover {
+    background: #2563eb;
+  }
+  

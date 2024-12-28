@@ -1,0 +1,39 @@
+/* Styles/PendingRequirements.module.css */
+
+.pendingRequirements {
+    background: #f0fff4;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  .pendingRequirements h4 {
+    color: #276749;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .pendingRequirements h4 svg {
+    margin-right: 8px;
+  }
+  
+  .pendingRequirements ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .pendingRequirements li {
+    color: #22543d;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .pendingRequirements li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #38a169;
+  }
+  

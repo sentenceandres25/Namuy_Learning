@@ -1,0 +1,16 @@
+/* Styles/MaterialRecommendations.module.css */
+
+.materialRecommendations {
+    margin-top: 20px;
+  }
+  
+  .materialRecommendations h3 {
+    color: #1f2937;
+    margin-bottom: 15px;
+  }
+  
+  .materialCard {
+    background-color: #f3f4f6;
+    border: none;
+  }
+  

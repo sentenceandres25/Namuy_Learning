@@ -1,0 +1,24 @@
+/* Settings.module.css */
+
+.settings-page {
+    padding: 20px;
+  }
+  .settings-title {
+    font-size: 2.0em; /* Aumenta el tamaño de la fuente */
+        color: #337d2e; /* Color verde oscuro para resaltar */
+        text-align: center;
+        margin: 20px 30px; /* Espacio inferior más grande */
+        font-weight: bold;
+        position: relative;
+        padding: 10px;
+        border-radius: 8px;
+        text-transform: uppercase;
+  }
+  
+  @media (max-width: 768px) {
+    .settings-title {
+      margin-top: 50px !important; /* Mayor margen en pantallas pequeñas */
+    }
+  }
+  
+  

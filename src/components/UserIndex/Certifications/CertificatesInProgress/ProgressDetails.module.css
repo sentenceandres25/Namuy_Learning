@@ -1,0 +1,23 @@
+/* Styles/ProgressDetails.module.css */
+
+.progressDetails {
+    background: linear-gradient(135deg, #fff5f7, #fed7e2);
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 25px;
+  }
+  
+  .progressDetails h3 {
+    color: #b83280;
+    margin-bottom: 20px;
+  }
+  
+  .progressDetails p {
+    margin: 8px 0;
+    color: #702459;
+  }
+  
+  .progressDetails strong {
+    color: #b83280;
+  }
+  

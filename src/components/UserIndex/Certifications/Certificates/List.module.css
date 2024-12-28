@@ -1,0 +1,57 @@
+/* Styles/List.module.css */
+
+.certificateList {
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .certificateList h3 {
+    color: #102a43;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .certificateCard {
+    background: #fff;
+    width: 200px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 4px 6px rgba(16, 42, 67, 0.1);
+  }
+  
+  .certificateCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .selected {
+    background: #e0f7fa;
+    border: 2px solid #007aff;
+  }
+  
+  .icon {
+    font-size: 2em;
+    color: #007aff;
+    margin-bottom: 10px;
+  }
+  
+  .certificateCard h4 {
+    margin: 0;
+    color: #334e68;
+  }
+  
+  .certificateCard p {
+    margin: 5px 0 0;
+    color: #627d98;
+  }
+  

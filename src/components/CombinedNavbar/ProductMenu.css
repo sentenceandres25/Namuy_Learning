@@ -1,0 +1,67 @@
+/* ========== Product Menu ========== */
+.product-menu {
+  flex: 3;
+  display: grid;
+  padding: 10px;
+  align-items: baseline;
+  grid-area: product-menu;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  max-height: 350px;
+  min-width: 160px;
+  overflow-y: auto;
+  border-right: none;
+}
+
+/* ========== Product Item ========== */
+.product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+/* ========== Product Image ========== */
+.product-image img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+/* ========== Product Name ========== */
+.product-name {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: black;
+  text-decoration: none;
+}
+
+/* ========== Product Item Links ========== */
+.product-item a,
+.product-item a:visited,
+.product-item a:hover,
+.product-item a:active {
+  color: black;
+  text-decoration: none;
+}
+
+/* ========== Media Queries for Max Width 627px ========== */
+@media (max-width: 627px) {
+
+  /* Adjustments for Product Items in Small Screens */
+  .product-item {
+    justify-content: flex-start;
+    text-align: left;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+}

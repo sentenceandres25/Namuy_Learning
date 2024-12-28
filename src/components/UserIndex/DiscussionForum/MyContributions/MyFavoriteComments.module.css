@@ -1,0 +1,44 @@
+.myFavoriteComments {
+    background: #fef9c3;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .myFavoriteComments h3 {
+    color: #ca8a04;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+  }
+  
+  .favoriteItem {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .favoriteItem:hover {
+    background: #fef08a;
+    transform: scale(1.03);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .favoriteItem h4 {
+    margin: 0;
+    color: #854d0e;
+  }
+  
+  .favoriteItem p {
+    margin: 5px 0;
+    color: #92400e;
+    text-align: center;
+  }
+  
+  .favoriteItem strong {
+    color: #b45309;
+  }
+  

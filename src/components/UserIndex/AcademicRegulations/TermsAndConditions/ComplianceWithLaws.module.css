@@ -1,0 +1,18 @@
+/* Styles/ComplianceWithLaws.module.css */
+
+.complianceWithLaws {
+    margin-top: 20px;
+    background: #fffde7;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .complianceWithLaws h3 {
+    color: #f9a825;
+    margin-bottom: 15px;
+  }
+  
+  .complianceWithLaws p {
+    color: #f9a825;
+  }
+  

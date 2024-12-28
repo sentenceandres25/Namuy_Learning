@@ -1,0 +1,23 @@
+/* Styles/LibraryGuides.module.css */
+
+.libraryGuides {
+    margin-top: 20px;
+    background: #e8eaf6;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .libraryGuides h4 {
+    color: #1a237e;
+    margin-bottom: 10px;
+  }
+  
+  .libraryGuides a {
+    color: #1a237e;
+    text-decoration: none;
+  }
+  
+  .libraryGuides a:hover {
+    text-decoration: underline;
+  }
+  

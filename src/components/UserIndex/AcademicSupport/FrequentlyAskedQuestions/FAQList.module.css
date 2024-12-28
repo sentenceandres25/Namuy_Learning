@@ -1,0 +1,11 @@
+/* Styles/FAQList.module.css */
+
+.faqList {
+    margin-top: 20px;
+  }
+  
+  .faqList h3 {
+    color: #1f2937;
+    margin-bottom: 20px;
+  }
+  

@@ -1,0 +1,25 @@
+{
+    "newAccountPageTitle": "Create New Account",
+    "createNewAccount": "Create New Account",
+    "username": "Username",
+    "enterUsername": "Enter your username",
+    "email": "Email Address",
+    "enterEmail": "Enter your email address",
+    "password": "Password",
+    "atLeast6Characters": "At least 6 characters",
+    "reEnterPassword": "Re-enter Password",
+    "reEnterPasswordPlaceholder": "Re-enter your password",
+    "createAccount": "Create Account",
+    "byCreatingAccount": "By creating an account, you agree to our",
+    "conditionsOfUse": "Terms of Use",
+    "privacyNotice": "Privacy Notice",
+    "alreadyHaveAccountSignIn": "Already have an account? Sign in",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "emailOrUsernameAlreadyRegistered": "Email or username already registered",
+    "anErrorOccurred": "An error occurred",
+    "yourName": "Your Name",
+    "firstAndLastName": "First and last name",
+    "mobileOrEmail": "Mobile number or email",
+    "emailOrPhone": "Email or phone number"
+  }
+  

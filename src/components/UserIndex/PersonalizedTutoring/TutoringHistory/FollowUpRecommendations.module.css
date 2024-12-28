@@ -1,0 +1,38 @@
+/* Styles/FollowUpRecommendations.module.css */
+
+.followUpRecommendations {
+  background: #fef9c3;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.followUpRecommendations h4 {
+  color: #ca8a04;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.followUpRecommendations h4 svg {
+  margin-right: 8px;
+}
+
+.followUpRecommendations ul {
+  list-style: none;
+  padding: 0;
+}
+
+.followUpRecommendations li {
+  color: #854d0e;
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.followUpRecommendations li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #ca8a04;
+}

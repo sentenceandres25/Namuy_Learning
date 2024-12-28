@@ -1,0 +1,20 @@
+/* Styles/MySavedResources.module.css */
+
+.mySavedResources {
+    margin-top: 20px;
+  }
+  
+  .mySavedResources h4 {
+    color: #1f2937;
+    margin-bottom: 15px;
+  }
+  
+  .resourceItem {
+    margin-bottom: 15px;
+    background-color: #ffffff;
+  }
+  
+  .resourceItem button {
+    margin-top: 10px;
+  }
+  

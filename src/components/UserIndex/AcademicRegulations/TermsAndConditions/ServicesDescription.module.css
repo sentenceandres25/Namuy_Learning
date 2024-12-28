@@ -1,0 +1,19 @@
+/* Styles/ServicesDescription.module.css */
+
+.servicesDescription {
+    margin-top: 20px;
+    background: #e1f5fe;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .servicesDescription h3 {
+    color: #0277bd;
+    margin-bottom: 15px;
+  }
+  
+  .servicesDescription p {
+    color: #0277bd;
+    text-align: justify;
+  }
+  

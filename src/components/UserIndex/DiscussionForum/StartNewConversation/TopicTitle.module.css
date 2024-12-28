@@ -1,0 +1,29 @@
+/* Styles/TopicTitle.module.css */
+
+.topicTitle {
+    background: #e0f7fa;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+  
+  .topicTitle h3 {
+    color: #006064;
+    margin-bottom: 20px;
+  }
+  
+  .topicTitle .buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .topicTitle button {
+    background-color: #006064;
+    border: none;
+  }
+  
+  .topicTitle button:hover {
+    background-color: #004d40;
+  }
+

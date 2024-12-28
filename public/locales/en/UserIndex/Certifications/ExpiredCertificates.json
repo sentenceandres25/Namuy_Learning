@@ -1,0 +1,16 @@
+{
+    "expiredCertificatesTitle": "Expired Certificates",
+    "expiredCertificates": "Expired Certificates",
+    "expiredOn": "Expired on",
+    "institution": "Institution",
+    "obtainedDate": "Obtained Date",
+    "expiredDate": "Expiration Date",
+    "reasonForExpiration": "Reason for Expiration",
+    "certificationHistory": "Certification History",
+    "downloadExpiredCertificate": "Download Expired Certificate",
+    "renewCertificate": "Renew Certificate",
+    "suggestedUpdatedCourses": "Suggested Updated Courses",
+    "setRenewalReminder": "Set Renewal Reminder",
+    "reminderSet": "Reminder Set",
+    "renewalReminderSet": "The renewal reminder has been set."
+  }

@@ -1,0 +1,43 @@
+/* Styles/AddFilesOrLinks.module.css */
+
+.addFilesOrLinks {
+    background: #fce4ec;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+  
+  .addFilesOrLinks h3 {
+    color: #ad1457;
+    margin-bottom: 20px;
+  }
+  
+  .filesLinksList {
+    margin-top: 15px;
+  }
+  
+  .filesLinksList ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .filesLinksList li {
+    margin-bottom: 5px;
+    color: #880e4f;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .addFilesOrLinks button {
+    background-color: #ad1457;
+    border: none;
+  }
+  
+  .addFilesOrLinks button:hover {
+    background-color: #880e4f;
+  }
+  

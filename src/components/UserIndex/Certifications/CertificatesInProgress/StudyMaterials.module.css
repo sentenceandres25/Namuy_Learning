@@ -1,0 +1,39 @@
+/* Styles/StudyMaterials.module.css */
+
+.studyMaterials {
+    background: #ebf8ff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  .studyMaterials h4 {
+    color: #2c5282;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .studyMaterials h4 svg {
+    margin-right: 8px;
+  }
+  
+  .studyMaterials ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .studyMaterials li {
+    margin-bottom: 8px;
+  }
+  
+  .studyMaterials a {
+    color: #2b6cb0;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .studyMaterials a:hover {
+    color: #2c5282;
+  }
+  

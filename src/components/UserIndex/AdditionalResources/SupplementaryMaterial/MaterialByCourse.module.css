@@ -1,0 +1,16 @@
+/* Styles/MaterialByCourse.module.css */
+
+.materialByCourse {
+    margin-top: 20px;
+  }
+  
+  .materialByCourse h4 {
+    color: #1f2937;
+    margin-bottom: 15px;
+  }
+  
+  .materialItem {
+    margin-bottom: 15px;
+    background-color: #ffffff;
+  }
+  

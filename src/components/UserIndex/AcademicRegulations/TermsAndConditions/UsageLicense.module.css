@@ -1,0 +1,18 @@
+/* Styles/UsageLicense.module.css */
+
+.usageLicense {
+    margin-top: 20px;
+    background: #fffde7;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .usageLicense h3 {
+    color: #f9a825;
+    margin-bottom: 15px;
+  }
+  
+  .usageLicense p {
+    color: #f9a825;
+  }
+  

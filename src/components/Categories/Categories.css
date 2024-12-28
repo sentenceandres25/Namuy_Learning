@@ -1,0 +1,82 @@
+.categories-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .category-box {
+    background: linear-gradient(135deg, #93ff8c, #64ea49); 
+    text-align: left; /* Alinear a la izquierda */
+    padding: 10px;
+    border-radius: 10px;
+    display: flex; /* Usar flexbox para alinear la imagen y el texto en línea */
+    align-items: center;
+    justify-content: flex-start;
+    height: 100px; /* Establecer una altura fija */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Cambiar el cursor a pointer */
+    box-sizing: border-box; /* Asegurarse de que padding no cambie el tamaño de la caja */
+  }
+  
+  .category-box img {
+    width: 60px; /* Establecer un tamaño fijo para la imagen */
+    height: 60px; /* Establecer una altura fija para la imagen */
+    object-fit: cover; /* Asegurar que la imagen se ajuste al contenedor */
+    margin-right: 15px; /* Espacio entre la imagen y el texto */
+  }
+  
+  .category-box h3 {
+    font-size: 1.1em;
+    color: #333;
+    margin: 0;
+    flex: 1; /* Asegura que el texto ocupe todo el espacio restante */
+  }
+  
+  /* Efecto Hover */
+  .category-box:hover {
+    transform: scale(1.05); /* Aumentar el tamaño al hacer hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hacer hover */
+  }
+  
+  /* Media Queries */
+  
+  /* Para pantallas medianas (tablets y pantallas más pequeñas) */
+  @media (max-width: 1024px) {
+    .categories-container {
+      grid-template-columns: repeat(3, 1fr); /* Cambiar a 3 columnas */
+    }
+  }
+  
+  /* Para pantallas pequeñas (smartphones grandes y tablets pequeñas) */
+  @media (max-width: 768px) {
+    .categories-container {
+      grid-template-columns: repeat(2, 1fr); /* Cambiar a 2 columnas */
+    }
+  
+    .category-box {
+      height: 130px; /* Reducir ligeramente la altura en pantallas más pequeñas */
+    }
+  
+    .category-box img {
+      width: 50px; /* Reducir el tamaño de la imagen */
+      height: 50px;
+    }
+  }
+  
+  /* Para pantallas muy pequeñas (smartphones pequeños) */
+  @media (max-width: 480px) {
+    .categories-container {
+      grid-template-columns: 1fr; /* Cambiar a 1 columna en pantallas muy pequeñas */
+    }
+  
+    .category-box {
+      height: 120px; /* Ajustar aún más la altura */
+    }
+  
+    .category-box img {
+      width: 40px; /* Reducir el tamaño de la imagen en pantallas pequeñas */
+      height: 40px;
+    }
+  }
+  

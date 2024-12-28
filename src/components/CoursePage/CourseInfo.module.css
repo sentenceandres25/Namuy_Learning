@@ -1,0 +1,29 @@
+.courseInfoContainer {
+    border: 2px solid #ddd; /* Borde del cuadrado */
+    border-radius: 10px;    /* Bordes redondeados */
+    padding: 20px;          /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para el efecto de tarjeta */
+    background: linear-gradient(135deg, #d6f5d6, #b3e6b3);
+    max-width: 600px;       /* Ancho máximo del cuadro */
+    margin: 20px auto;      /* Centramos el contenido en la página */
+}
+
+.enrollButton {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    background-color: #4CAF50; /* Color de fondo original del botón */
+    color: white;              /* Texto en blanco */
+    border: none;              /* Sin bordes */
+    padding: 10px 20px;        /* Espaciado interno del botón */
+    border-radius: 5px;        /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.enrollButton:hover {
+    background-color: #45a049; /* Color de fondo en hover */
+}
+
+.courseRating {
+    font-size: 1.5rem;
+    color: #FFD700; /* Color dorado para las estrellas */
+}

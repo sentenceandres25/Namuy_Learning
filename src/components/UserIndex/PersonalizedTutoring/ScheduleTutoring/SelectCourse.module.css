@@ -1,0 +1,28 @@
+/* Styles/SelectCourse.module.css */
+
+.selectCourse {
+  background: #e0f7fa;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.selectCourse h3 {
+  color: #006064;
+  margin-bottom: 20px;
+}
+
+.selectCourse .buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.selectCourse button {
+  background-color: #006064;
+  border: none;
+}
+
+.selectCourse button:hover {
+  background-color: #004d40;
+}

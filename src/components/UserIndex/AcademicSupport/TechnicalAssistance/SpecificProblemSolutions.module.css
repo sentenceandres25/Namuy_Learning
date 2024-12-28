@@ -1,0 +1,24 @@
+/* Styles/SpecificProblemSolutions.module.css */
+
+.specificProblemSolutions {
+    margin-top: 20px;
+    background: #fce4ec;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .specificProblemSolutions h3 {
+    color: #ad1457;
+    margin-bottom: 15px;
+  }
+  
+  .specificProblemSolutions .card-header {
+    background-color: #ad1457;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .specificProblemSolutions .card-body {
+    background-color: #f8bbd0;
+  }
+  

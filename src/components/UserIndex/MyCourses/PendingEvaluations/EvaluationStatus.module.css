@@ -1,0 +1,28 @@
+/* Styles/EvaluationStatus.module.css */
+
+.status {
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+  
+  .notStarted {
+    background: #ffebee;
+    color: #c62828;
+  }
+  
+  .inProgress {
+    background: #fff8e1;
+    color: #ff8f00;
+  }
+  
+  .needsReview {
+    background: #e3f2fd;
+    color: #1e88e5;
+  }
+  
+  .defaultStatus {
+    background: #e0e0e0;
+    color: #616161;
+  }
+  

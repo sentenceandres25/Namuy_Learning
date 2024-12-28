@@ -1,0 +1,19 @@
+/* Styles/FAQItem.module.css */
+
+.faqItem {
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .faqItem .card-header {
+    background-color: #2563eb;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .faqItem .card-body {
+    background-color: #f3f4f6;
+  }
+  

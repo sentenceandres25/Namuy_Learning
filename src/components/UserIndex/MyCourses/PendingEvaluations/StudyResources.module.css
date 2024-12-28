@@ -1,0 +1,33 @@
+/* Styles/StudyResources.module.css */
+
+.resources {
+    background: #ede7f6;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 15px;
+  }
+  
+  .resources h4 {
+    color: #5e35b1;
+    margin-bottom: 10px;
+  }
+  
+  .resources ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .resources li {
+    margin-bottom: 8px;
+  }
+  
+  .resources a {
+    color: #512da8;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .resources a:hover {
+    color: #311b92;
+  }
+  

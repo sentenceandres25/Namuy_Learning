@@ -1,0 +1,29 @@
+/* Styles/PreferredDateTime.module.css */
+
+.preferredDateTime {
+    background: #fffde7;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+  
+  .preferredDateTime h3 {
+    color: #f9a825;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .preferredDateTime button {
+    background-color: #f9a825;
+    border: none;
+  }
+  
+  .preferredDateTime button:hover {
+    background-color: #f57f17;
+  }
+  

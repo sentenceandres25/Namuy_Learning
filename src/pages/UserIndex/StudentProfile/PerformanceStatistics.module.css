@@ -1,0 +1,70 @@
+/* PerformanceStatistics.module.css */
+.statisticsPage {
+    padding: 20px;
+    background-color: var(--background-color); /* Adjust colors according to your style variables */
+    color: var(--text-color);
+    border-radius: 8px;
+}
+
+.statisticsPage h2 {
+    font-size: 2.0em; /* Increase font size */
+    color: #2e7d40; /* Dark green color to highlight */
+    text-align: center;
+    margin: 20px 30px; /* Larger bottom space */
+    font-weight: bold;
+    position: relative;
+    padding: 10px;
+    border-radius: 8px;
+    text-transform: uppercase;
+}
+
+.statisticsPage .row {
+    margin-bottom: 15px;
+}
+
+.statisticsPage .row > .col-md-12 {
+    background-color: var(--card-background); /* Background for each component */
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.statisticsPage .row > .col-md-12 h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color); /* Secondary color for subheadings */
+    margin-bottom: 10px;
+}
+
+.statisticsPage .row > .col-md-12 p {
+    font-size: 1rem;
+    color: var(--text-secondary); /* Secondary color for text */
+}
+
+.performanceStatisticsTitle {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .performanceStatisticsTitle {
+        margin-top: 50px; /* Top margin for this title on small screens */
+        font-size: 1.6rem;
+    }
+
+    .statisticsPage {
+        padding: 10px;
+    }
+
+    .statisticsPage h2 {
+        font-size: 1.6rem;
+    }
+
+    .statisticsPage .row > .col-md-12 {
+        padding: 10px;
+    }
+
+    .statisticsPage .row > .col-md-12 h3 {
+        font-size: 1.4rem;
+    }
+}

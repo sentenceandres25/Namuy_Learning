@@ -1,0 +1,29 @@
+/* Styles/DurationSelection.module.css */
+
+.durationSelection {
+    background: #e1f5fe;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+  
+  .durationSelection h3 {
+    color: #0277bd;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .durationSelection button {
+    background-color: #0277bd;
+    border: none;
+  }
+  
+  .durationSelection button:hover {
+    background-color: #01579b;
+  }
+  

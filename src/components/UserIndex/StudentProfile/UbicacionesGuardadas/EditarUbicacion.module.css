@@ -1,0 +1,19 @@
+/* EditarUbicacion.module.css */
+
+.editarUbicacion {
+    padding: 20px;
+    background-color: #fff3cd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .submitButton {
+    margin-top: 10px;
+    background-color: #ffc107;
+  }
+  
+  .submitButton:hover {
+    background-color: #e0a800;
+    transition: background-color 0.2s ease;
+  }
+  

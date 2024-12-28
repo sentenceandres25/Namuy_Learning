@@ -1,0 +1,11 @@
+/* Styles/AnonymousComments.module.css */
+
+.anonymousComments {
+    margin-top: 20px;
+  }
+  
+  .anonymousComments h4 {
+    color: #4b5563;
+    margin-bottom: 10px;
+  }
+  

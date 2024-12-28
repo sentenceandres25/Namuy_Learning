@@ -1,0 +1,22 @@
+.orderDetailsSection {
+    margin-top: 2rem;
+  }
+  
+  .orderDetailsSection h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .orderDetailItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .courseImage {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+  

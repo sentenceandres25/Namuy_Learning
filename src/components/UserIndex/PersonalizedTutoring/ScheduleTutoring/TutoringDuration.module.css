@@ -1,0 +1,28 @@
+/* Styles/TutoringDuration.module.css */
+
+.tutoringDuration {
+  background: #f3e5f5;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.tutoringDuration h3 {
+  color: #6a1b9a;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.tutoringDuration button {
+  background-color: #6a1b9a;
+  border: none;
+}
+
+.tutoringDuration button:hover {
+  background-color: #4a148c;
+}

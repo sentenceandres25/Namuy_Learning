@@ -1,0 +1,45 @@
+/* SubscriptionForm.module.css */
+.footerSubscription {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .footerSubscription h4 {
+    color: #2d3436; /* Gris oscuro */
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+  
+  .form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .form input,
+  .form select,
+  .form button {
+    padding: 10px;
+    border: 1px solid #004d40; /* Verde azulado oscuro */
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .form input,
+  .form select {
+    flex: 1;
+  }
+  
+  .form button {
+    background-color: #004d40; /* Verde azulado oscuro */
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .form button:hover {
+    background-color: #00bfa5; /* Verde azulado medio */
+  }
+  

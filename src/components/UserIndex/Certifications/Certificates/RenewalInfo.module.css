@@ -1,0 +1,30 @@
+/* Styles/RenewalInfo.module.css */
+
+.renewalInfo {
+    background: #fee2e2;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .renewalInfo p {
+    color: #b91c1c;
+    margin-bottom: 10px;
+  }
+  
+  .renewButton {
+    background: #ef4444;
+    color: #ffffff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+  }
+  
+  .renewButton:hover {
+    background: #dc2626;
+  }
+  

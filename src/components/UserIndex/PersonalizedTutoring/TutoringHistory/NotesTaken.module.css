@@ -1,0 +1,48 @@
+/* Styles/NotesTaken.module.css */
+
+.notesTaken {
+  background: #fdf4ff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.notesTaken h4 {
+  color: #7e22ce;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.notesTaken h4 svg {
+  margin-right: 8px;
+}
+
+.notesTaken p {
+  margin: 5px 0;
+  color: #6b21a8;
+}
+
+.materials h5 {
+  color: #7e22ce;
+  margin-top: 15px;
+}
+
+.materials ul {
+  list-style: none;
+  padding: 0;
+}
+
+.materials li {
+  margin-bottom: 8px;
+}
+
+.materials a {
+  color: #9333ea;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.materials a:hover {
+  color: #7e22ce;
+}

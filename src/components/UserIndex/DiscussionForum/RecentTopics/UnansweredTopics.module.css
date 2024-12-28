@@ -1,0 +1,39 @@
+/* Styles/UnansweredTopics.module.css */
+
+.unansweredTopics {
+    background: #fefce8;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+  
+  .unansweredTopics h3 {
+    color: #ca8a04;
+    margin-bottom: 20px;
+  }
+  
+  .unansweredTopics ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .unansweredTopics li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    color: #d97706;
+    margin-right: 8px;
+  }
+  
+  .unansweredTopics a {
+    color: #d97706;
+    text-decoration: none;
+  }
+  
+  .unansweredTopics a:hover {
+    text-decoration: underline;
+  }
+  

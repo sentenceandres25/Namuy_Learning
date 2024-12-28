@@ -1,0 +1,24 @@
+/* Styles/EvaluationForm.module.css */
+
+.evaluationForm {
+    background: #f0fdf4;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 25px;
+  }
+  
+  .evaluationForm h3 {
+    color: #166534;
+    margin-bottom: 20px;
+  }
+  
+  .evaluationForm button {
+    background-color: #10b981;
+    border: none;
+    margin-top: 20px;
+  }
+  
+  .evaluationForm button:hover {
+    background-color: #059669;
+  }
+  

@@ -1,0 +1,82 @@
+.headerWrapper {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .pageTitle {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 150px;
+  }
+  
+  .cartSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .itemsAndSummary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  
+  .itemsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 2; /* Ocupa más espacio */
+    margin: 0 auto;
+  }
+  
+  .emptyCart {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #555;
+    flex: 1;
+  }
+  
+  .recommendedSection {
+    margin-top: 3rem;
+  }
+  
+  /* Media Queries para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .itemsAndSummary {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .pageTitle {
+      font-size: 1.5rem;
+      margin-top: 130px;
+    }
+  
+    .container {
+      padding: 0.5rem;
+    }
+  
+    .itemsList {
+      gap: 1rem;
+    }
+  
+    .emptyCart {
+      font-size: 1.2rem;
+    }
+  
+    .recommendedSection {
+      margin-top: 2rem;
+    }
+  }
+  

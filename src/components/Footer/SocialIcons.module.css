@@ -1,0 +1,19 @@
+/* SocialIcons.module.css */
+.socialIcons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  .socialIcons a {
+    color: #004d40; /* Verde azulado oscuro */
+    font-size: 32px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .socialIcons a:hover {
+    transform: scale(1.1);
+    color: #031210; /* Verde azulado medio */
+  }
+  

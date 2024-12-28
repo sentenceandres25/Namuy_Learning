@@ -1,0 +1,39 @@
+/* Styles/NewReplies.module.css */
+
+.newReplies {
+    background: #f0f9ff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+  
+  .newReplies h3 {
+    color: #0369a1;
+    margin-bottom: 20px;
+  }
+  
+  .newReplies ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .newReplies li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    color: #0284c7;
+    margin-right: 8px;
+  }
+  
+  .newReplies a {
+    color: #0284c7;
+    text-decoration: none;
+  }
+  
+  .newReplies a:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,29 @@
+/* Styles/RequestNotifications.module.css */
+
+.requestNotifications {
+    background: #fce4ec;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+  
+  .requestNotifications h3 {
+    color: #ad1457;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .requestNotifications button {
+    background-color: #ad1457;
+    border: none;
+  }
+  
+  .requestNotifications button:hover {
+    background-color: #880e4f;
+  }
+  

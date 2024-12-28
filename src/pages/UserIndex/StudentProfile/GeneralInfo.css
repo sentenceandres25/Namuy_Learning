@@ -1,0 +1,103 @@
+/* GeneralInfo.css */
+.general-info {
+  padding: 20px;
+}
+
+.general-info h2 {
+  font-size: 2.0em; /* Aumenta el tamaño de la fuente */
+  color: #2e7d32; /* Color verde oscuro para resaltar */
+  text-align: center;
+  margin-bottom: 30px; /* Espacio inferior más grande */
+  font-weight: bold;
+  position: relative;
+  padding: 10px;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.general-info h2 {
+  margin-top: 20px; /* Margen por defecto */
+}
+
+h3 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.badge {
+  font-size: 16px;
+}
+
+.badge .fa-times-circle {
+  margin-left: 5px;
+  color: #fff;
+}
+.header-user-index {
+  background-color: #0056b3; /* Fondo para el header de UserIndex */
+  color: white;
+}
+
+.header-user-index .header-component,
+.header-user-index .my-navbar {
+  background: linear-gradient(135deg, #7cff72, #7dd86a); /* Degradado verde vibrante */
+}
+
+.header-user-index .my-navbar,
+.header-user-index .fa-search,
+.header-user-index .dropdown-toggle.nav-link,
+.header-user-index .user-profile,
+.header-user-index .user-name,
+.header-user-index .cart-icon,
+.header-user-index .horizontal-menu .menu-item,
+.header-user-index .my-navbar .cart-icon .cart-text {
+  color: black; /* Color del texto del carrito */
+}
+.header-user-index .social-icons a[href*="facebook"] {
+  color: #1877F2;
+}
+
+.header-user-index .social-icons a[href*="instagram"] {
+  color: #E4405F;
+}
+
+.header-user-index .social-icons a[href*="youtube"] {
+  color: #FF0000;
+}
+
+.user-index {
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.user-index .row {
+  margin-bottom: 20px;
+}
+
+.user-index .col-md-6 {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-index .col-md-3 {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .general-info h2 {
+    margin-top: 60px; /* Margen mayor en pantallas pequeñas */
+  }
+}

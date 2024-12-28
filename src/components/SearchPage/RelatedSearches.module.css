@@ -1,0 +1,32 @@
+.relatedSearches {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .relatedSearches h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .searchLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .searchLink {
+    background: #e0f7fa;
+    color: #00796b;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+  
+  .searchLink:hover {
+    background: #b2ebf2;
+  }
+  

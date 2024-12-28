@@ -1,0 +1,16 @@
+{
+  "tutoringHistoryTitle": "Historial de Tutorías",
+  "tutoringHistory": "Historial de Tutorías",
+  "date": "Fecha",
+  "time": "Hora",
+  "tutor": "Tutor",
+  "tutoringDuration": "Duración de la Tutoría",
+  "tutorRating": "Calificación del Tutor",
+  "rating": "Calificación",
+  "comments": "Comentarios",
+  "courseProgress": "Progreso en el Curso",
+  "notesTaken": "Notas o Apuntes Tomados",
+  "materialsUsed": "Materiales Utilizados",
+  "followUpRecommendations": "Recomendaciones de Seguimiento",
+  "topicsCovered": "Temas Abordados"
+}

@@ -1,0 +1,19 @@
+/* PreferenciasUbicacion.module.css */
+
+.preferenciasUbicacion {
+    padding: 20px;
+    background-color: #d4edda;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .submitButton {
+    margin-top: 10px;
+    background-color: #28a745;
+  }
+  
+  .submitButton:hover {
+    background-color: #218838;
+    transition: background-color 0.2s ease;
+  }
+  

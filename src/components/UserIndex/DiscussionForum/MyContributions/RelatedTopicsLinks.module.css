@@ -1,0 +1,50 @@
+.relatedTopicsLinks {
+    background: #f3e8ff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .relatedTopicsLinks h3 {
+    color: #7e22ce;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .relatedTopicsLinks h3 svg {
+    margin-right: 8px;
+  }
+  
+  .topicItem {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .topicItem:hover {
+    background: #e9d5ff;
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .topicItem h4 {
+    margin: 0;
+    color: #6b21a8;
+  }
+  
+  .topicItem p {
+    margin: 5px 0;
+    color: #581c87;
+    text-align: center;
+  }
+  
+  .topicItem strong {
+    color: #5b21b6;
+  }
+  

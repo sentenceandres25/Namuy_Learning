@@ -1,0 +1,21 @@
+/* Styles/LinksLogin.module.css */
+
+.linksContainer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .loginLink {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .loginLink:hover {
+    text-decoration: underline;
+  }
+  
+  .separator {
+    color: #777;
+  }
+  

@@ -1,0 +1,33 @@
+{
+    "mycartTitle": "My Cart",
+    "myCartHeading": "My Cart",
+    "emptyCartMessage": "Your cart is empty. Add products to continue.",
+  
+    "delete": "Delete",
+    "saveForLater": "Save for later",
+    "moveToWishlist": "Move to wishlist",
+    "author": "Author",
+    "rating": "Rating",
+    "duration": "Duration",
+    "level": "Level",
+    "price": "Price",
+
+    "orderSummary": "Order Summary",
+    "subtotal": "Subtotal",
+    "checkout": "Proceed to Checkout",
+  
+    "recommendedForYou": "Recommended for You",
+    "addToCart": "Add to Cart",
+  
+    "cartItemQuantity": "Quantity",
+    "cartItemRemove": "Remove",
+    "cartItemPrice": "Price",
+    
+    "cartSummaryTotal": "Total",
+    "cartSummaryButton": "Pay Now",
+  
+    "productName": "Product Name",
+    "productPrice": "Product Price",
+    "productAddedToCart": "Product added to cart"
+  }
+  

@@ -1,0 +1,21 @@
+{
+    "completedCoursesTitle": "Cursos Completados",
+    "completedCourses": "Cursos Completados",
+    "selectCourse": "Por favor, selecciona un curso para ver los detalles.",
+    "instructor": "Instructor",
+    "duration": "Duración",
+    "startDate": "Fecha de Inicio",
+    "endDate": "Fecha de Finalización",
+    "progress": "Progreso",
+    "certifications": "Certificaciones Obtenidas",
+    "downloadCertificate": "Descargar Certificado",
+    "commentsAndReviews": "Comentarios y Evaluaciones",
+    "rating": "Calificación",
+    "recommendedCourses": "Cursos Recomendados",
+    "studyMaterials": "Material de Estudio Disponible",
+    "performanceStats": "Estadísticas de Desempeño",
+    "totalTime": "Tiempo Total Invertido",
+    "averageRating": "Calificación Promedio",
+    "achievements": "Logros Obtenidos"
+  }
+  

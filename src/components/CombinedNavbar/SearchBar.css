@@ -1,0 +1,128 @@
+/* ========== Search and Category Styles ========== */
+.search-and-category .form-control {
+    width: 19vw;
+  }
+  
+  /* ========== Button Outline Success Styles ========== */
+  .btn-outline-success {
+    border-color: transparent;
+    color: #00ff26;
+    background-color: transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-outline-success:hover {
+    background-color: #b1fab2;
+    border-color: #4fff27;
+    color: black;
+    box-shadow: none;
+  }
+  
+  .btn-outline-success:active,
+  .btn-outline-success:active:hover {
+    background-color: #27ff3d;
+    border-color: #56ff27;
+    color: black;
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .btn-outline-success:hover .fa-search,
+  .btn-outline-success:active .fa-search {
+    color: black;
+  }
+  
+  /* ========== Font Awesome Search Icon ========== */
+  .fa-search {
+    color: #b3b3b3;
+  }
+  
+  .header-component:hover .fa-search {
+    color: black;
+  }
+  
+  /* ========== Media Queries for Max Width 991px ========== */
+  @media (max-width: 991px) {
+  
+    /* Navbar Scrolling Dropdown */
+    #navbarScrollingDropdown {
+      display: none;
+    }
+  
+    /* Search and Category Section */
+    .search-and-category {
+      position: absolute;
+      top: 118px;
+      width: 100%;
+      display: flex;
+      left: 0;
+      justify-content: center;
+      background-color: #8ff04e;
+    }
+  
+    .search-and-category .form-control {
+      width: 92vw !important;
+      font-size: 1rem;
+      padding: 10px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+    }
+  
+    .btn-outline-success {
+      background-color: #4ef071 !important;
+      border: none;
+    }
+  
+    .fa-search,
+    .dropdown-toggle {
+      color: #000 !important;
+    }
+  
+    /* ========== Media Queries for Max Width 627px ========== */
+    @media (max-width: 627px) {
+  
+      /* Navbar Scrolling Dropdown */
+      #navbarScrollingDropdown {
+        display: none;
+      }
+  
+      /* Search and Category Section */
+      .search-and-category {
+        position: absolute;
+        top: 70px;
+        width: 100%;
+        display: flex;
+        left: 0;
+        justify-content: center;
+        background-color: #4ef05e;
+        display: none;
+      }
+  
+      .search-and-category .form-control {
+        width: 62vw !important;
+        font-size: 1rem;
+        padding: 10px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        margin-left: 30px;
+        z-index: 1000;
+      }
+  
+      .btn-outline-success {
+        background-color: #56fc51 !important;
+        border: none;
+        z-index: 1000;
+      }
+  
+      .is-search-active .form-control {
+        display: block;
+        width: 100%;
+        margin-top: 4px;
+      }
+  
+      .fa-search {
+        color: #000 !important;
+      }
+    }
+  }
+  

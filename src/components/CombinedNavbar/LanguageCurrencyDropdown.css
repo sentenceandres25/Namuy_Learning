@@ -1,0 +1,16 @@
+/* ========== Media Queries for Max Width 627px ========== */
+@media (max-width: 627px) {
+
+    /* Language Dropdown Toggle */
+    .language-dropdown .dropdown-toggle.nav-link {
+      display: block !important;
+    }
+  
+    /* Custom Navbar Language */
+    .custom-navbar-language {
+      margin-left: 20px;
+      font-size: 1rem;
+      color: black;
+    }
+  }
+  

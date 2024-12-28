@@ -1,0 +1,31 @@
+/* Styles/MaterialList.module.css */
+
+.materialList {
+    margin-top: 20px;
+  }
+  
+  .materialList h3 {
+    color: #1f2937;
+    margin-bottom: 15px;
+  }
+  
+  .materialItem {
+    margin-bottom: 15px;
+    background-color: #ffffff;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .buttons button {
+    display: flex;
+    align-items: center;
+  }
+  
+  .buttons svg {
+    margin-right: 5px;
+  }
+  

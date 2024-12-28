@@ -1,0 +1,44 @@
+.myMessagesList {
+    background: #f3f4f6;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    text-align: center; /* Center all content */
+  }
+  
+  .myMessagesList h3 {
+    color: #1f2937;
+    margin-bottom: 20px;
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem; 
+    gap: 10px; 
+  }
+  
+  .myMessagesList h3 svg {
+    margin: 0; 
+  }
+  
+  .messageItem {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    text-align: center; 
+  }
+  
+  .messageItem h4 {
+    margin: 0;
+    color: #111827;
+  }
+  
+  .messageItem p {
+    margin: 5px 0;
+    color: #4b5563;
+  }
+  
+  .messageItem strong {
+    color: #374151;
+  }
+  

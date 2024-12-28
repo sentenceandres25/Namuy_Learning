@@ -1,0 +1,18 @@
+/* Styles/ConfidentialityDataProtection.module.css */
+
+.confidentialityDataProtection {
+    margin-top: 20px;
+    background: #e8f5e9;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .confidentialityDataProtection h3 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+  }
+  
+  .confidentialityDataProtection p {
+    color: #2e7d32;
+  }
+  

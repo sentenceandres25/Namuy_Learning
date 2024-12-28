@@ -1,0 +1,52 @@
+.inProgressCoursesContainer {
+  padding: 20px;
+  border: 2px solid #ffb74d; /* Borde naranja claro */
+  border-radius: 8px;
+  max-width: 890px;
+  margin: auto;
+  background-color: #fffde7; /* Fondo amarillo claro */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
+}
+
+.inProgressCoursesTitle {
+  font-size: 2em;
+  color: #e65100; /* Naranja oscuro */
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.inProgressCourseCard {
+  background-color: #fff3e0; /* Fondo suave para cada tarjeta */
+  border-left: 5px solid #ff9800; /* Borde naranja */
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 5px rgba(255, 152, 0, 0.1); /* Sombra suave */
+}
+
+.inProgressCourseTitle {
+  font-size: 1.5em;
+  color: #f57c00; /* Naranja fuerte para el título */
+  margin-bottom: 8px;
+}
+
+.inProgressCourseContent {
+  font-size: 1em;
+  color: #6d4c41; /* Café oscuro para el texto */
+  margin-bottom: 8px;
+}
+
+.inProgressBarContainer {
+  background-color: #ffe0b2; /* Fondo claro para la barra de progreso */
+  border-radius: 4px;
+  height: 10px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.inProgressBar {
+  height: 100%;
+  background-color: #ff9800; /* Naranja intenso para el progreso */
+  width: 0%; /* Se actualizará dinámicamente */
+}

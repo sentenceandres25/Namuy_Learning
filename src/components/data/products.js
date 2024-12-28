@@ -1,0 +1,22 @@
+export const products = {
+  Camisetas: ['Camiseta 1', 'Camiseta 2', 'Camiseta 3'],
+  Pantalones: ['Pantalón 1', 'Pantalón 2', 'Pantalón 3'],
+  Vestidos: ['Vestido 1', 'Vestido 2'],
+  Medias: ['Media 1', 'Media 2', 'Media 3'],
+  Chaquetas: ['Chaqueta 1', 'Chaqueta 2'],
+  Pantalonetas: ['Pantaloneta 1', 'Pantaloneta 2', 'Pantaloneta 3'],
+  Esqueletos: ['Esqueleto 1', 'Esqueleto 2'],
+  Resortes: ['Resorte 1', 'Resorte 2'],
+  Camino: ['Camino 1', 'Camino 2'],
+  Juguetes: ['Juguete 1', 'Juguete 2'],
+  Libros: ['Libro 1', 'Libro 2'],
+  Ropa: ['Ropa 1', 'Ropa 2'],
+  Muñecas: ['Muñeca 1', 'Muñeca 2'],
+  Juegos: ['Juego 1', 'Juego 2'],
+  Accesorios: ['Accesorio 1', 'Accesorio 2'],
+  Zapatos: ['Zapato 1', 'Zapato 2'],
+  'Ropa de Oficina': ['Ropa Oficina 1', 'Ropa Oficina 2'],
+  Corbatas: ['Corbata 1', 'Corbata 2'],
+  Relojes: ['Reloj 1', 'Reloj 2'],
+  Calzado: ['Calzado 1', 'Calzado 2']
+};

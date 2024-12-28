@@ -1,0 +1,19 @@
+/* EliminarUbicacion.module.css */
+
+.eliminarUbicacion {
+    padding: 20px;
+    background-color: #f8d7da;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .submitButton {
+    margin-top: 10px;
+    background-color: #dc3545;
+  }
+  
+  .submitButton:hover {
+    background-color: #c82333;
+    transition: background-color 0.2s ease;
+  }
+  

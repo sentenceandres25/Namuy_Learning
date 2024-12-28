@@ -1,0 +1,14 @@
+/* Styles/InstructionsForUse.module.css */
+
+.instructionsForUse {
+    margin-top: 20px;
+    background: #fff8e1;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .instructionsForUse h4 {
+    color: #f9a825;
+    margin-bottom: 10px;
+  }
+  

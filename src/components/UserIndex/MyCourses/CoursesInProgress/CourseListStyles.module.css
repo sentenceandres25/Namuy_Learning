@@ -1,0 +1,13 @@
+.courseListContainer {
+  padding: 20px;
+  border: 2px solid #4ae259; /* Medium green border */
+  border-radius: 8px;
+  max-width: 900px;
+  margin: auto;
+  background-color: #e6fde3; /* Light green background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.courseCardCol {
+  margin-bottom: 20px;
+}

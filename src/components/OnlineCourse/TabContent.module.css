@@ -1,0 +1,31 @@
+.tabContent {
+  background-color: #e0f7da; /* Verde muy claro, complementario al fondo */
+  border: 1px solid #8bc34a; /* Verde oscuro para el borde */
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  margin-top: 10px;
+  min-height: 200px;
+  color: #2d3436;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para un efecto de elevación */
+}
+
+.tabContent.fullWidthTabContent {
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0;
+  width: 100%;
+  border: 1px solid #8bc34a; /* Borde continuo para el ancho completo */
+}
+
+.tabContent h2 {
+  color: #388e3c; /* Verde más oscuro para los encabezados */
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.tabContent p {
+  line-height: 1.6;
+  color: #4e5d6c; /* Gris oscuro para el texto del párrafo */
+}

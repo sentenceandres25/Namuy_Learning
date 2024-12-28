@@ -1,0 +1,30 @@
+/* Styles/DateAndTimeSelector.module.css */
+
+.dateAndTimeSelector {
+  background: #fff3e0;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.dateAndTimeSelector h3 {
+  color: #e65100;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.dateAndTimeSelector button {
+  background-color: #e65100;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.dateAndTimeSelector button:hover {
+  background-color: #bf360c;
+}

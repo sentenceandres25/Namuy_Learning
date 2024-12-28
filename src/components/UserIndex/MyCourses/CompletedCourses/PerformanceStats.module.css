@@ -1,0 +1,54 @@
+/* Styles/PerformanceStats.module.css */
+
+.stats {
+    background: #fff3e0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .stats h3 {
+    color: #ef6c00;
+    margin-bottom: 15px;
+  }
+  
+  .stats p {
+    margin: 5px 0;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .stats strong {
+    color: #ef6c00;
+  }
+  
+  /* Ajuste para la lista de logros */
+  .stats ul {
+    list-style-type: none; /* Elimina los puntos predeterminados */
+    padding: 0;
+    margin-top: 5px;
+    display: inline-block; /* Centra la lista */
+    text-align: left; /* Alineación izquierda del texto en la lista */
+  }
+  
+  .stats ul li {
+    position: relative;
+    padding-left: 18px; /* Alinea el texto más cerca de la viñeta */
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 0.95em;
+    line-height: 1.4;
+  }
+  
+  /* Estilo personalizado para las viñetas */
+  .stats ul li::before {
+    content: '•'; /* Viñeta */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ef6c00;
+    font-size: 1em;
+    line-height: 1; /* Alinea la viñeta con el texto */
+  }
+  

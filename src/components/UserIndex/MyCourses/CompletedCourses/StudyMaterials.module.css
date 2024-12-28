@@ -1,0 +1,33 @@
+/* Styles/StudyMaterials.module.css */
+
+.materials {
+    background: #ede7f6;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .materials h3 {
+    color: #5e35b1;
+    margin-bottom: 15px;
+  }
+  
+  .materials ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .materials li {
+    margin-bottom: 10px;
+  }
+  
+  .materials a {
+    color: #512da8;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .materials a:hover {
+    color: #311b92;
+  }
+  

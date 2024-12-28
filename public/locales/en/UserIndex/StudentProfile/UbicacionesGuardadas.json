@@ -1,0 +1,26 @@
+{
+    "ubicaciones_guardadas": "Saved Locations",
+    "mis_ubicaciones": "My Locations",
+    "agregar_ubicacion": "Add New Location",
+    "editar_ubicacion": "Edit Saved Location",
+    "eliminar_ubicacion": "Delete Location",
+    "ubicaciones_recientes": "Recent Locations",
+    "preferencias_ubicacion": "Location Preferences",
+    "sedes_disponibles": "Available Locations",
+    "rutas_estudio": "My Study Routes",
+    "descripcion_mis_ubicaciones": "Here you can see the locations you've saved.",
+    "ubicacion_1": "Location 1 - Bogotá",
+    "ubicacion_2": "Location 2 - Medellín",
+    "activadas": "Enabled",
+    "desactivadas": "Disabled",
+    "guardar_preferencias": "Save Preferences",
+    "actualizar_ubicacion": "Update Location",
+    "nombre_ubicacion": "Location Name",
+    "seleccione_ubicacion": "Select Location to Delete",
+    "notificaciones_ubicaciones_guardadas": "Saved Locations Notifications",
+    "ubicaciones_switch": "Enable/Disable Notifications",
+    "ubicacion_agregada": "Location added",
+    "ubicacion_eliminada": "Location deleted",
+    "ubicacion_actualizada": "Location updated"
+  }
+  

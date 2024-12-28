@@ -1,0 +1,74 @@
+/* Components/PersonalCenter/CollapsibleSection.module.css */
+
+.listGroupItem {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: black;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.toggleIcon {
+    font-size: 1.2rem;
+    color: #000;
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+.itemIcon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.listGroupItem:hover {
+    background: linear-gradient(135deg, #93ff8c, #64ea49); 
+    transform: translateX(10px);
+}
+
+.listGroupItem:hover .toggleIcon {
+    transform: rotate(90deg);
+}
+
+/* Submenu styles */
+.submenu {
+    background-color: #d1f9c7;
+    border-left: 3px solid #70f450;
+    padding-left: 30px;
+}
+
+.submenuItem {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    padding: 10px;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.submenuItem:hover {
+    background: linear-gradient(135deg, #93ff8c, #64ea49); 
+}
+
+.itemIcon {
+    margin-right: 10px;
+    font-size: 1rem;
+    color: black;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .listGroupItem {
+        padding: 8px 15px;
+    }
+
+    .toggleIcon {
+        font-size: 1rem;
+    }
+
+    .submenuItem {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+}

@@ -1,0 +1,30 @@
+/* Styles/GoalsTutoring.module.css */
+
+.goalsTutoring {
+  background: #fffde7;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.goalsTutoring h3 {
+  color: #f9a825;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.goalsTutoring button {
+  background-color: #f9a825;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.goalsTutoring button:hover {
+  background-color: #f57f17;
+}

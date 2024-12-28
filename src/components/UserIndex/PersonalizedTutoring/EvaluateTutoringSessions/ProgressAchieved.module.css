@@ -1,0 +1,34 @@
+/* Styles/ProgressAchieved.module.css */
+
+.progressAchieved {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    align-items: center; /* Centra horizontalmente todo el contenido */
+    text-align: center; /* Asegura que el texto esté centrado */
+  }
+  
+  .progressAchieved h4 {
+    color: #0d9488;
+    margin-bottom: 20px;
+  }
+  
+  .progressAchieved .form-check {
+    display: flex;
+    align-items: center; /* Alinea los puntos con el texto */
+    justify-content: center; /* Centra horizontalmente cada opción */
+    gap: 10px; /* Espaciado entre el punto y el texto */
+    margin-bottom: 15px; /* Espaciado uniforme entre las opciones */
+  }
+  
+  .progressAchieved .form-check-input {
+    margin: 0;
+    accent-color: #0284c7; /* Cambia el color del radio button */
+    transform: scale(1.3); /* Agranda ligeramente el tamaño del punto */
+  }
+  
+  .progressAchieved .form-check-label {
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+    margin: 0;
+  }
+  

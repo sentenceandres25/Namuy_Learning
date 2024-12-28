@@ -1,0 +1,28 @@
+/* Styles/Certifications.module.css */
+
+.certifications {
+    background: #fff9c4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .certifications h3 {
+    color: #f57f17;
+    margin-bottom: 15px;
+  }
+  
+  .downloadButton {
+    display: inline-block;
+    background: #f57f17;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .downloadButton:hover {
+    background: #e65100;
+  }
+  

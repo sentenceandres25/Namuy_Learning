@@ -1,0 +1,20 @@
+/* Styles/ExamPreparationMaterials.module.css */
+
+.examPreparationMaterials {
+    margin-top: 20px;
+  }
+  
+  .examPreparationMaterials h4 {
+    color: #1f2937;
+    margin-bottom: 15px;
+  }
+  
+  .materialItem {
+    margin-bottom: 15px;
+    background-color: #ffffff;
+  }
+  
+  .materialItem button {
+    margin-top: 10px;
+  }
+  

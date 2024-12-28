@@ -1,0 +1,37 @@
+/* Styles/FeedbackPending.module.css */
+
+.feedbackPending {
+    background: #fff9c4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .feedbackPending h3 {
+    color: #f57f17;
+    margin-bottom: 15px;
+  }
+  
+  .feedbackPending ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .feedbackPending li {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .feedbackPending h4 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #333;
+  }
+  
+  .feedbackPending p {
+    margin: 5px 0 0;
+    color: #666;
+  }
+  

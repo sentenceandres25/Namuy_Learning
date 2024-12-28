@@ -1,0 +1,18 @@
+/* Styles/ViewMaterialOnline.module.css */
+
+.viewMaterialOnline {
+    margin-top: 20px;
+    background: #e0f2f1;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .viewMaterialOnline h4 {
+    color: #004d40;
+    margin-bottom: 10px;
+  }
+  
+  .viewMaterialOnline p {
+    color: #004d40;
+  }
+  

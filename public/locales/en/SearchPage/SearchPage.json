@@ -1,0 +1,28 @@
+  {
+    "searchTitle": "Search",
+    "resultsCount": "{{count}} results found",
+    "filterButton": "Filter",
+    "prepCoursesLink": "See certification preparation courses",
+    "sortBy": "Sort by",
+    "ratings": "Ratings",
+    "language": "Language",
+    "practicalExperience": "Practical Experience",
+    "videoDuration": "Video Duration",
+    "subject": "Subject",
+    "level": "Level",
+    "subtitles": "Subtitles",
+    "price": "Price",
+    "bestSeller": "Bestseller",
+    "relatedSearches": "Related Searches",
+    "next": "Next",
+    "prev": "Previous",
+    "hours": "hours",
+    "classes": "classes",
+    "peopleRated": "{{count}} ratings",
+    "certificationPrep": "Certification Prep",
+    "sortByPopularity": "Popularity",
+    "sortByNewest": "Newest",
+    "sortByRating": "Top Rated",
+    "instructor": "Instructor:"
+  }
+    

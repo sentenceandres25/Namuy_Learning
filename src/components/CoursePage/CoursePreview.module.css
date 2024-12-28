@@ -1,0 +1,29 @@
+.coursePreview {
+    margin-bottom: 20px;
+  }
+  
+  .courseImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .courseVideo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .courseVideoContainer {
+    display: flex;
+    align-items: center; /* Centramos verticalmente */
+    justify-content: center; /* Centramos horizontalmente */
+    height: 100%; /* Aseguramos que el contenedor ocupe toda la altura */
+  }
+  
+  .courseVideo {
+    width: 100%;
+    max-width: 800px; /* Puedes ajustar el tamaño máximo según sea necesario */
+    border-radius: 10px;
+  }
+  

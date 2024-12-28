@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem; /* Reducimos el padding para acercar los elementos */
+    background: linear-gradient(135deg, #9be15d, #00e676);
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center; /* Alineamos el logo verticalmente */
+  }
+  
+  .logo img {
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  .rightOption {
+    margin-left: auto; /* Empuja el botón hacia la derecha */
+  }
+  
+  .cancelButton {
+    background: none;
+    border: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 1rem; /* Espacio entre el logo y el botón */
+    padding: 0.5rem 1rem; /* Espaciado interno del botón */
+    border-radius: 4px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  .cancelButton:hover {
+    text-decoration: none;
+    transform: scale(1.1); /* Hace que el botón se acerque visualmente */
+    background-color: rgba(0, 0, 0, 0.1); /* Añadimos un efecto visual al hover */
+  }
+  

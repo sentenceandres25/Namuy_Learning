@@ -1,0 +1,19 @@
+/* Styles/Introduction.module.css */
+
+.introduction {
+    margin-top: 20px;
+    background: #e0f7fa;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .introduction h3 {
+    color: #006064;
+    margin-bottom: 15px;
+  }
+  
+  .introduction p {
+    color: #006064;
+    text-align: justify;
+  }
+  

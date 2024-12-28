@@ -1,0 +1,47 @@
+/* Styles/TagsKeywords.module.css */
+
+.tagsKeywords {
+    background: #f1f8e9;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+  
+  .tagsKeywords h3 {
+    color: #33691e;
+    margin-bottom: 20px;
+  }
+  
+  .tagsList {
+    margin-top: 15px;
+  }
+  
+  .tagItem {
+    display: inline-block;
+    background: #c5e1a5;
+    color: #33691e;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin: 5px;
+  }
+  
+  .tagItem button {
+    margin-left: 5px;
+    color: #33691e;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .tagsKeywords button {
+    background-color: #33691e;
+    border: none;
+  }
+  
+  .tagsKeywords button:hover {
+    background-color: #1b5e20;
+  }
+  

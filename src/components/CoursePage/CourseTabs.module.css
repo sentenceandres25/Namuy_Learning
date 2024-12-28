@@ -1,0 +1,66 @@
+.motionCourseTabsContainer {
+    background: linear-gradient(135deg, #d4ffd9, #aae491);
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-top: 40px;
+    transition: all 0.3s ease;
+}
+
+.motionCourseTabs {
+    margin-top: 20px;
+}
+
+/* Contenedor personalizado para Tabs */
+.customTabContainer .nav-item {
+    margin: 0 10px;
+}
+
+/* Estilo para las pestañas */
+.motionNavLink {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: #444;
+    transition: color 0.3s, background 0.3s, transform 0.2s;
+    background: none;
+    font-weight: 500;
+}
+
+/* Activo */
+.customTabContainer .nav-link.active .motionNavLink {
+    color: #ffffff;
+    background: linear-gradient(135deg, #7cff72, #7dd86a);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+/* Hover */
+.motionNavLink:hover {
+    color: #333 !important;
+    transform: scale(1.05);
+}
+
+/* Texto de contenido alineado a la izquierda */
+.tabContent p {
+    text-align: left;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  .customTabContainer .nav-item {
+    flex-basis: 100%;
+    margin: 5px 0;
+  }
+
+  .motionNavLink {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+}

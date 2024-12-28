@@ -1,0 +1,18 @@
+/* Styles/DownloadMaterials.module.css */
+
+.downloadMaterials {
+    margin-top: 20px;
+    background: #e1f5fe;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .downloadMaterials h4 {
+    color: #0277bd;
+    margin-bottom: 10px;
+  }
+  
+  .downloadMaterials p {
+    color: #0277bd;
+  }
+  

@@ -1,0 +1,23 @@
+/* Styles/ResolutionTimeEstimates.module.css */
+
+.resolutionTimeEstimates {
+    margin-top: 20px;
+    background: #e0f2f1;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .resolutionTimeEstimates h3 {
+    color: #004d40;
+    margin-bottom: 15px;
+  }
+  
+  .resolutionTimeEstimates table {
+    background-color: #ffffff;
+  }
+  
+  .resolutionTimeEstimates th,
+  .resolutionTimeEstimates td {
+    text-align: center;
+  }
+  

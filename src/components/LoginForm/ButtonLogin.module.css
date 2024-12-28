@@ -1,0 +1,24 @@
+/* Styles/ButtonLogin.module.css */
+
+.loginFormButton {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffbe0b;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .loginFormButton:hover {
+    background-color: #ffaa00;
+    transform: scale(1.02);
+  }
+  
+  .loginFormButton:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  

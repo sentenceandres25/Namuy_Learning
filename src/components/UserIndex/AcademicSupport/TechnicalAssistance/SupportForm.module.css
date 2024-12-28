@@ -1,0 +1,23 @@
+/* Styles/SupportForm.module.css */
+
+.supportForm {
+    margin-top: 20px;
+    background: #e0f2f1;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .supportForm h3 {
+    color: #004d40;
+    margin-bottom: 15px;
+  }
+  
+  .supportForm button {
+    background-color: #004d40;
+    border: none;
+  }
+  
+  .supportForm button:hover {
+    background-color: #00332c;
+  }
+  

@@ -1,0 +1,29 @@
+/* Styles/ResponseNotifications.module.css */
+
+.responseNotifications {
+    background: #e0f2fe;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+  
+  .responseNotifications h3 {
+    color: #0288d1;
+    margin-bottom: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .responseNotifications button {
+    background-color: #0288d1;
+    border: none;
+  }
+  
+  .responseNotifications button:hover {
+    background-color: #0277bd;
+  }
+  

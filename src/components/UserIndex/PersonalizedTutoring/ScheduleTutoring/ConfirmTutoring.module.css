@@ -1,0 +1,48 @@
+/* Styles/ConfirmTutoring.module.css */
+
+.confirmTutoring {
+  background: #f1f8e9;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.confirmTutoring h3 {
+  color: #33691e;
+  margin-bottom: 20px;
+}
+
+.confirmTutoring p {
+  margin: 5px 0;
+  color: #558b2f;
+}
+
+.confirmTutoring strong {
+  color: #2e7d32;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.confirmTutoring button {
+  border: none;
+}
+
+.confirmTutoring .btn-secondary {
+  background-color: #33691e;
+}
+
+.confirmTutoring .btn-secondary:hover {
+  background-color: #1b5e20;
+}
+
+.confirmTutoring .btn-success {
+  background-color: #2e7d32;
+}
+
+.confirmTutoring .btn-success:hover {
+  background-color: #1b5e20;
+}

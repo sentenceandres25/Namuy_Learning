@@ -1,0 +1,30 @@
+{
+    "footer": {
+          "sobreNosotros": "Sobre Nosotros",
+          "quienesSomos": "Quienes Somos",
+          "responsabilidadSocial": "Responsabilidad social",
+          "empleos": "Empleos",
+          "salaDePrensa": "Sala de prensa",
+          "ayudaApoyo": "Ayuda & Apoyo",
+          "informacionEnvio": "Información De Envío",
+          "devolucion": "Devolución",
+          "reembolso": "Reembolso",
+          "rastrearPedido": "Rastrear El Pedido",
+          "guiaTallas": "Guía De Tallas",
+          "namuaVIP": "Namua VIP",
+          "servicioCliente": "Servicio al Cliente",
+          "contactenos": "Contáctenos",
+          "formaPago": "Forma De Pago",
+          "puntos": "Puntos",
+          "encuentranosEn": "Encuéntranos en",
+          "app": "APP",
+          "suscribete": "Suscríbete para recibir ofertas exclusivas",
+          "tuEmail": "Tu dirección del Email",
+          "suscribir": "Suscribir",
+          "cuentaWhatsapp": "Cuenta de WhatsApp",
+          "derechosReservados": "Namuy Learning Todos los derechos reservados",
+          "centroPrivacidad": "Centro de Privacidad",
+          "politicaPrivacidad": "Política de privacidad y cookies",
+          "terminosCondiciones": "Términos y condiciones"
+        }
+}

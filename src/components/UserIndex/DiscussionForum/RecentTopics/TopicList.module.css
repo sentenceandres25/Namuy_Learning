@@ -1,0 +1,45 @@
+/* Styles/TopicList.module.css */
+
+.topicList {
+    background: #f0fdf4;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .topicList h3 {
+    color: #166534;
+    margin-bottom: 20px;
+  }
+  
+  .topicList ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .topicList li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .topicList li:hover {
+    background: #ecfdf5;
+    border-radius: 8px;
+  }
+  
+  .icon {
+    font-size: 2em;
+    color: #10b981;
+    margin-right: 15px;
+  }
+  
+  .topicList h4 {
+    margin: 0;
+    color: #065f46;
+  }
+  
+  .topicList p {
+    margin: 0;
+    color: #064e3b;
+  }
+  

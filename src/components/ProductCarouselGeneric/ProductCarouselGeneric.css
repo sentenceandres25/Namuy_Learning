@@ -1,0 +1,116 @@
+/* Estilos generales para cualquier categoría */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.product-card img {
+    height: 170px;
+    max-height: 250px; /* Ajustado para hacer la imagen más grande */
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.product-card h5 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.product-carousel .swiper-button-prev {
+    left: -10px !important;
+}
+.product-carousel .swiper-button-next {
+    right: -10px !important;
+}
+.product-carousel .swiper-button-prev,
+.product-carousel .swiper-button-next {
+    color: #dbcd51f0; /* Cambiar el color */
+    font-size: 18px; /* Cambiar el tamaño */
+    width: 40px; /* Cambiar el ancho */
+    height: 40px; /* Cambiar el alto */
+    top: 50%; /* Centrar verticalmente */
+    transform: translateY(-50%); /* Asegura que estén centradas */
+}
+
+.product-carousel .swiper-button-prev::after,
+.product-carousel .swiper-button-next::after {
+    font-size: 25px; /* Cambiar el tamaño del icono */
+    color: #dbcd51f0; /* Asegura el color */
+}
+
+
+/* Botones genéricos */
+.product-card .btn-dark {
+    background: linear-gradient(135deg, #7cff72, #7dd86a);
+    color: #000; /* Color del texto a negro */
+    border: none; /* Eliminar el borde */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animación suave al hacer hover */
+}
+
+.product-card .btn-dark:hover {
+    background: linear-gradient(135deg, #7cff72, #4aa737);
+    color: Black; /* Cambiar el color del texto a blanco en hover */
+    transform: scale(1.1); /* Hacer que el botón se acerque un 10% */
+    border: none; /* Mantener sin borde */
+}
+
+.product-card .btn-dark {
+    transform: scale(1); /* Escala normal */
+}
+
+/* Estilos adaptativos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .product-card img {
+        max-height: 180px; /* Ajustado para dispositivos más pequeños */
+    }
+
+    .product-card h5 {
+        font-size: 1rem;
+    }
+
+    .product-card p {
+        font-size: 0.9rem;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-card img {
+        max-height: 150px; /* Ajustado para pantallas más pequeñas */
+    }
+
+    .product-card h5 {
+        font-size: 0.9rem;
+    }
+
+    .product-card p {
+        font-size: 0.8rem;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        font-size: 14px;
+    }
+}
+
+/* Clases específicas para las categorías: "man", "kids", etc. */
+.product-card.man {
+    background-color: #f0f0f0; /* Cambiar el color de fondo para la categoría de hombres */
+}
+
+.product-card.kids {
+    background-color: #ffebcc; /* Cambiar el color de fondo para la categoría de niños */
+}
+
+/* Otras categorías pueden tener más estilos personalizados si es necesario */

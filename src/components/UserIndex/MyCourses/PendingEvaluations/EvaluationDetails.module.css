@@ -1,0 +1,23 @@
+/* Styles/EvaluationDetails.module.css */
+
+.evaluationDetails {
+    background: #e8f5e9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .evaluationDetails h3 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+  }
+  
+  .evaluationDetails p {
+    margin: 5px 0;
+    color: #333;
+  }
+  
+  .evaluationDetails strong {
+    color: #2e7d32;
+  }
+  

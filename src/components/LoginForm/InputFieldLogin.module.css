@@ -1,0 +1,14 @@
+/* Styles/InputFieldLogin.module.css */
+
+.loginFormInput {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 12px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .loginFormInput:focus {
+    border-color: #ffbe0b;
+    outline: none;
+  }
+  

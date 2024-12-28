@@ -1,0 +1,26 @@
+/* Styles/CommentsAndReviews.module.css */
+
+.comments {
+    background: #fce4ec;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .comments h3 {
+    color: #ad1457;
+    margin-bottom: 15px;
+  }
+  
+  .commentItem {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .commentItem p {
+    margin: 5px 0;
+    color: #333;
+  }
+  

@@ -1,0 +1,18 @@
+/* Styles/GeneralStudyNorms.module.css */
+
+.generalStudyNorms {
+    margin-top: 20px;
+    background: #e0f7fa;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .generalStudyNorms h3 {
+    color: #006064;
+    margin-bottom: 15px;
+  }
+  
+  .generalStudyNorms p {
+    color: #006064;
+  }
+  

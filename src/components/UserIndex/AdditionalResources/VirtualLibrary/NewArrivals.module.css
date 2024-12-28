@@ -1,0 +1,16 @@
+/* Styles/NewArrivals.module.css */
+
+.newArrivals {
+    margin-top: 20px;
+  }
+  
+  .newArrivals h3 {
+    color: #1f2937;
+    margin-bottom: 15px;
+  }
+  
+  .resourceCard {
+    background-color: #f3f4f6;
+    border: none;
+  }
+  

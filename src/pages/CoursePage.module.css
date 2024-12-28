@@ -1,0 +1,16 @@
+.coursePage {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .courseContent {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  

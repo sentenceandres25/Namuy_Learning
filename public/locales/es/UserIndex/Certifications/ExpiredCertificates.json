@@ -1,0 +1,16 @@
+{
+    "expiredCertificatesTitle": "Certificados Caducados",
+    "expiredCertificates": "Certificados Caducados",
+    "expiredOn": "Caducado el",
+    "institution": "Institución",
+    "obtainedDate": "Fecha de Obtención",
+    "expiredDate": "Fecha de Caducidad",
+    "reasonForExpiration": "Razón de Caducidad",
+    "certificationHistory": "Historial de Certificación",
+    "downloadExpiredCertificate": "Descargar Certificado Caducado",
+    "renewCertificate": "Renovar Certificado",
+    "suggestedUpdatedCourses": "Cursos Actualizados Sugeridos",
+    "setRenewalReminder": "Configurar Recordatorio de Renovación",
+    "reminderSet": "Recordatorio Configurado",
+    "renewalReminderSet": "El recordatorio de renovación ha sido configurado."
+  }

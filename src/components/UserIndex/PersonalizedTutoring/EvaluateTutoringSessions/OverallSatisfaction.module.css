@@ -1,0 +1,36 @@
+/* Styles/OverallSatisfaction.module.css */
+
+.overallSatisfaction {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Organizar todo en una columna */
+    align-items: center; /* Centrar contenido horizontalmente */
+    text-align: center;
+  }
+  
+  .overallSatisfaction h4 {
+    color: #0369a1;
+    margin-bottom: 20px;
+  }
+  
+  .overallSatisfaction .overall-satisfaction-check {
+    display: flex;
+    align-items: center; /* Alinear verticalmente el radio button con el texto */
+    justify-content: center; /* Asegurar que cada fila esté centrada horizontalmente */
+    width: 100%; /* Ocupa todo el ancho para mantener la alineación */
+    max-width: 400px; /* Limitar el ancho para pantallas grandes */
+    margin-bottom: 10px; /* Separación uniforme entre filas */
+  }
+  
+  .overallSatisfaction .overall-satisfaction-input {
+    margin: 0;
+    accent-color: #0284c7; /* Color del punto */
+    transform: scale(1.3); /* Aumentar tamaño del radio button */
+  }
+  
+  .overallSatisfaction .overall-satisfaction-label {
+    margin-left: 10px; /* Espacio entre el punto y el texto */
+    font-size: 1rem; /* Ajustar el tamaño del texto */
+    flex-grow: 1; /* Permitir que el texto ocupe todo el espacio disponible */
+  }
+  

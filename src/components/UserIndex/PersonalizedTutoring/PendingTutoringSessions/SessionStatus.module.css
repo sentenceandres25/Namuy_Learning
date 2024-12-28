@@ -1,0 +1,13 @@
+/* Styles/SessionStatus.module.css */
+
+.sessionStatus {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .sessionStatus svg {
+    font-size: 1.5em;
+    margin-right: 8px;
+  }
+  

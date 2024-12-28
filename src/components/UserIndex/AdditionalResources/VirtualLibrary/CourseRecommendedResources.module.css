@@ -1,0 +1,16 @@
+/* Styles/CourseRecommendedResources.module.css */
+
+.courseRecommendedResources {
+    margin-top: 20px;
+  }
+  
+  .courseRecommendedResources h4 {
+    color: #1f2937;
+    margin-bottom: 15px;
+  }
+  
+  .resourceItem {
+    margin-bottom: 15px;
+    background-color: #ffffff;
+  }
+  

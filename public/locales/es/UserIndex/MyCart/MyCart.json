@@ -1,0 +1,32 @@
+{
+  "mycartTitle": "Mi Carrito",
+  "myCartHeading": "Mi Carrito",
+  "emptyCartMessage": "Tu carrito está vacío. Agrega productos para continuar.",
+
+  "delete": "Eliminar",
+  "saveForLater": "Guardar para después",
+  "moveToWishlist": "Mover a la lista de deseos",
+  "author": "Autor",
+  "rating": "Calificación",
+  "duration": "Duración",
+  "level": "Nivel",
+  "price": "Precio",
+
+  "orderSummary": "Resumen del Pedido",
+  "subtotal": "Subtotal",
+  "checkout": "Proceder al Pago",
+
+  "recommendedForYou": "Recomendado para Ti",
+  "addToCart": "Agregar al Carrito",
+
+  "cartItemQuantity": "Cantidad",
+  "cartItemRemove": "Eliminar",
+  "cartItemPrice": "Precio",
+  
+  "cartSummaryTotal": "Total",
+  "cartSummaryButton": "Pagar Ahora",
+
+  "productName": "Nombre del Producto",
+  "productPrice": "Precio del Producto",
+  "productAddedToCart": "Producto agregado al carrito"
+}

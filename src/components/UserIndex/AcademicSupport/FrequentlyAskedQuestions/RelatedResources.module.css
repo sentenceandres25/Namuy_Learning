@@ -1,0 +1,23 @@
+/* Styles/RelatedResources.module.css */
+
+.relatedResources {
+    margin-top: 20px;
+    background: #fff3e0;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .relatedResources h4 {
+    color: #e65100;
+    margin-bottom: 15px;
+  }
+  
+  .relatedResources a {
+    color: #e65100;
+    text-decoration: none;
+  }
+  
+  .relatedResources a:hover {
+    text-decoration: underline;
+  }
+  

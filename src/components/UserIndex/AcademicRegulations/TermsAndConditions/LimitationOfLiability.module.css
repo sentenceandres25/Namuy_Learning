@@ -1,0 +1,18 @@
+/* Styles/LimitationOfLiability.module.css */
+
+.limitationOfLiability {
+    margin-top: 20px;
+    background: #ffebee;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .limitationOfLiability h3 {
+    color: #c62828;
+    margin-bottom: 15px;
+  }
+  
+  .limitationOfLiability p {
+    color: #c62828;
+  }
+  

@@ -1,0 +1,46 @@
+.editDeleteOptions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .editButton,
+  .deleteButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+  
+  .editButton {
+    background: #3b82f6;
+    color: #ffffff;
+  }
+  
+  .editButton:hover {
+    background: #2563eb;
+    transform: scale(1.05);
+  }
+  
+  .deleteButton {
+    background: #ef4444;
+    color: #ffffff;
+  }
+  
+  .deleteButton:hover {
+    background: #dc2626;
+    transform: scale(1.05);
+  }
+  
+  .editDeleteOptions svg {
+    margin-right: 8px;
+  }
+  
