@@ -72,5 +72,12 @@
     "passwordUpdated": "Contraseña actualizada exitosamente.",
     "passwordErrorServer": "Hubo un error al actualizar la contraseña. Intenta nuevamente.",
     "spanish": "Español",
-    "english": "Inglés"
+    "english": "Inglés",
+    "errorFetchingInterests": "Hubo un error al obtener tus intereses.",
+    "interestLimitReached": "Has alcanzado el límite máximo de intereses.",
+    "interestAdded": "Interés agregado exitosamente.",
+    "errorAddingInterest": "Hubo un error al agregar el interés.",
+    "interestRemoved": "Interés eliminado exitosamente.",
+    "errorRemovingInterest": "Hubo un error al eliminar el interés.",
+    "maxInterestsReached": "Has alcanzado el máximo de {{count}} intereses."
 }

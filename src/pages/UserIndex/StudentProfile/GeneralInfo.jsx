@@ -13,31 +13,28 @@ import PersonalCenter from '../../../components/UserIndex/PersonalCenter';
 import Footer from '../../../components/Footer/Footer';
 import { useTranslation } from 'react-i18next';
 import PageTitle from '../../../components/PageTitle/PageTitle';
-import axios from '../../../axiosConfig'; 
+import axios from '../../../axiosConfig'; // Asegúrate de tener la ruta correcta
 import { AuthContext } from '../../../contexts/AuthContext';
 import './GeneralInfo.css';
 
 const GeneralInfo = () => {
   const { t } = useTranslation('UserIndex/StudentProfile/GeneralInfo');
   const headerHeight = '125px';
-  const { user, token } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
   const [personalDetails, setPersonalDetails] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [updateSuccess, setUpdateSuccess] = useState(false);
 
+  // Obtener la información personal al montar el componente
   useEffect(() => {
     if (user && user.user_id) {
-      // Hacer la petición con el token (buena práctica de seguridad)
+      // Llamamos a /api/personal_details/<user_id> en vez de /api/user/<user_id>
       axios
-        .get(`/user/${user.user_id}`, {
-          headers: {
-            Authorization: `Bearer ${token}`
-          }
-        })
+        .get(`/personal_details/${user.user_id}`)
         .then((response) => {
-          console.log("Datos obtenidos del backend:", response.data);
-          // Se espera que 'response.data' contenga { date_joined, account_status, ... } 
+          console.log("Datos obtenidos del backend (personal_details):", response.data);
           setPersonalDetails(response.data);
           setIsLoading(false);
         })
@@ -54,20 +51,7 @@ const GeneralInfo = () => {
       setIsLoading(false);
       setError(t('userNotAuthenticated'));
     }
-  }, [user, token, t]);
-
-  if (isLoading) {
-    return <p>{t('loading')}</p>;
-  }
-
-  if (error) {
-    return <Alert variant="danger">{error}</Alert>;
-  }
-
-  // Si personalDetails no existe, mostramos aviso
-  if (!personalDetails) {
-    return <Alert variant="info">{t('noDetails')}</Alert>;
-  }
+  }, [user, t]);
 
   return (
     <>
@@ -88,43 +72,45 @@ const GeneralInfo = () => {
             </Col>
 
             <Col md={9}>
-              <Row>
-                <Col md={12}>
-                  <h2>{t('titulo')}</h2>
-                </Col>
-              </Row>
-
-              <Row>
-                <Col md={12}>
-                  <ProfilePicture profilePic={personalDetails?.profile_pic} />
-                </Col>
-              </Row>
-
-              <Row>
-                <Col md={12}>
-                  {/* Pasamos la información a PersonalDetails */}
-                  <PersonalDetails data={personalDetails} />
-                </Col>
-              </Row>
-
-              <Row>
-                <Col md={12}>
-                  {/* Pasamos la MISMA info a AccountDetails */}
-                  <AccountDetails data={personalDetails} />
-                </Col>
-              </Row>
-
-              <Row>
-                <Col md={12}>
-                  <Interests interests={personalDetails?.interests || []} />
-                </Col>
-              </Row>
-
-              <Row>
-                <Col md={12}>
-                  <SessionHistory data={personalDetails?.session_history} />
-                </Col>
-              </Row>
+              {isLoading ? (
+                <p>{t('loading')}</p>
+              ) : error ? (
+                <Alert variant="danger">{error}</Alert>
+              ) : (
+                <>
+                  {updateSuccess && <Alert variant="success">{t('updateSuccess')}</Alert>}
+                  <Row>
+                    <Col md={12}>
+                      <h2>{t('titulo')}</h2>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col md={12}>
+                    <ProfilePicture data={personalDetails} />
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col md={12}>
+                      <PersonalDetails data={personalDetails} />
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col md={12}>
+                      <AccountDetails data={personalDetails} />
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col md={12}>
+                      <Interests interests={personalDetails?.interests || []} />
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col md={12}>
+                      <SessionHistory data={personalDetails?.session_history} />
+                    </Col>
+                  </Row>
+                </>
+              )}
             </Col>
           </Row>
         </Container>

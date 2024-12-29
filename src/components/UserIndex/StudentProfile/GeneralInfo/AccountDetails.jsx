@@ -12,7 +12,7 @@ import i18n from '../../../../i18n';
 import axios from '../../../../axiosConfig';
 
 const AccountDetails = ({ data = {}, onPasswordUpdate }) => {
-  // userData DEBE contener { date_joined, account_status, ... }
+  // data DEBE contener { user_id, date_joined, account_status, ... }
   
   const { t } = useTranslation('UserIndex/StudentProfile/GeneralInfo');
 
@@ -25,7 +25,7 @@ const AccountDetails = ({ data = {}, onPasswordUpdate }) => {
   const [selectedLang, setSelectedLang] = useState(i18n.language);
 
   useEffect(() => {
-    // Cargar idioma de localStorage
+    // Cargar idioma de localStorage si existe
     const savedLang = localStorage.getItem('i18nextLng');
     if (savedLang) {
       setSelectedLang(savedLang);
@@ -34,6 +34,7 @@ const AccountDetails = ({ data = {}, onPasswordUpdate }) => {
   }, []);
 
   const handleUpdatePassword = async () => {
+    // Validar campos
     if (!newPassword || !confirmPassword) {
       alert(t('passwordErrorEmpty'));
       return;
@@ -42,13 +43,21 @@ const AccountDetails = ({ data = {}, onPasswordUpdate }) => {
       alert(t('passwordErrorMatch'));
       return;
     }
+
     try {
-      const response = await axios.put(`/user/${data.user_id}/updatePassword`, {
-        newPassword
-      });
+      // Llamar a la ruta /api/user/<user_id>/updatePassword
+      // (Asegúrate de que tu blueprint en Flask coincida con esta ruta)
+      const response = await axios.put(
+        `/account/${data.user_id}/updatePassword`,
+        { newPassword }
+      );
+
       alert(t('passwordUpdated'));
+      // Limpiar campos
       setNewPassword('');
       setConfirmPassword('');
+
+      // Disparar callback si lo requieres
       if (onPasswordUpdate) onPasswordUpdate();
     } catch (error) {
       alert(t('passwordErrorServer'));
@@ -90,7 +99,7 @@ const AccountDetails = ({ data = {}, onPasswordUpdate }) => {
               type="text"
               disabled
               className={styles.input}
-              // asumiendo que userData.date_joined es "2024-12-13T11:12:26.910018"
+              // asumiendo que data.date_joined es "2024-12-13T11:12:26.910018"
               value={
                 data.date_joined 
                   ? data.date_joined.split('T')[0]
@@ -100,7 +109,7 @@ const AccountDetails = ({ data = {}, onPasswordUpdate }) => {
           </Col>
         </Form.Group>
 
-        {/* Contraseña nueva */}
+        {/* Nueva contraseña */}
         <Form.Group as={Row} className={styles.formGroup}>
           <Form.Label column sm={4} className={styles.label}>
             {t('newPassword')}

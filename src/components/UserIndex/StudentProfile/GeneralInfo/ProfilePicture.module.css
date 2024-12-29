@@ -1,3 +1,5 @@
+/* src/components/UserIndex/StudentProfile/GeneralInfo/ProfilePicture.module.css */
+
 .profilePictureContainer {
   padding: 20px;
   background: linear-gradient(135deg, #A5FFD6 0%, #FFFCD4 100%);
@@ -50,4 +52,22 @@
 
 .hiddenFileInput {
   display: none;
+}
+
+/* Estilos para el botón "Subir Foto" */
+.uploadPhotoButton {
+  background-color: #77C37A;
+  color: #ffffff;
+  border-radius: 5px;
+  border: 2px solid #357A38;
+  padding: 6px 12px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;      
+  margin-top: 5px;
+}
+
+/* Estado hover para el botón "Subir Foto" */
+.uploadPhotoButton:hover {
+  background-color: #66AA6D;
+  border-color: #2C6B2E;         /* Mantener el texto blanco */
 }

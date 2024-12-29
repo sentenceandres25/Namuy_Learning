@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import styles from './PersonalDetails.module.css';
 import { AuthContext } from '../../../../contexts/AuthContext';
-import axios from 'axios';
+import axios from '../../../../axiosConfig';  // <-- Usar tu axiosConfig con baseURL
 
 const PersonalDetails = ({ data, onUpdate }) => {
   const { t } = useTranslation('UserIndex/StudentProfile/GeneralInfo');
@@ -21,7 +21,8 @@ const PersonalDetails = ({ data, onUpdate }) => {
     id_type: '',
     id_number: '',
     birth_date: '',
-    country_of_residence: ''
+    country_of_residence: '',
+    doc_url: ''
   });
 
   const [pendingRequest, setPendingRequest] = useState(false);
@@ -78,11 +79,11 @@ const PersonalDetails = ({ data, onUpdate }) => {
     try {
       // Definir campos que requieren aprobación
       const approvalRequiredFields = ['full_name', 'id_type', 'id_number', 'student_id'];
+      // Checar si el usuario cambió alguno de esos campos
       const hasApprovalFields = approvalRequiredFields.some(field => userData[field]);
 
-      // Enviar solicitud de cambio si hay campos que requieren aprobación
+      // Si hay campos que requieren aprobación, se prepara la solicitud de cambio
       if (hasApprovalFields) {
-        // Recopilar solo los campos que requieren aprobación
         const approvalFields = {};
         approvalRequiredFields.forEach(field => {
           if (userData[field]) {
@@ -101,10 +102,9 @@ const PersonalDetails = ({ data, onUpdate }) => {
         await handleSubmitApprovalFields(approvalFields, file);
       }
 
-      // Recopilar campos que no requieren aprobación
+      // Campos que no requieren aprobación
       const updatableFields = ['email', 'alt_email', 'contact_number', 'birth_date', 'country_of_residence'];
       const autoFields = {};
-
       updatableFields.forEach(field => {
         if (userData[field]) {
           autoFields[field] = userData[field];
@@ -127,6 +127,11 @@ const PersonalDetails = ({ data, onUpdate }) => {
     }
   };
 
+  /**
+   * handleUpdateAutoFields:
+   * Realiza la petición PUT a /api/personal_details/<user_id>
+   * para actualizar campos que no requieren aprobación (email, alt_email, etc.).
+   */
   const handleUpdateAutoFields = async (autoFields) => {
     console.log("Enviando solicitud PUT con autoFields:", autoFields);
 
@@ -137,12 +142,13 @@ const PersonalDetails = ({ data, onUpdate }) => {
 
     try {
       const response = await axios.put(
-        `http://localhost:3001/api/user/${user.user_id}`,
-        autoFields, // Datos en formato JSON
+        // <-- Ajuste importante: ruta a /api/personal_details en vez de /api/user
+        `/personal_details/${user.user_id}`,
+        autoFields,
         {
           headers: {
-            'Authorization': `Bearer ${token}`,
-            // 'Content-Type': 'application/json' // Axios lo maneja automáticamente
+            'Authorization': `Bearer ${token}`
+            // 'Content-Type': 'application/json' se maneja automáticamente
           }
         }
       );
@@ -159,19 +165,25 @@ const PersonalDetails = ({ data, onUpdate }) => {
     }
   };
 
+  /**
+   * handleSubmitApprovalFields:
+   * Realiza la petición POST a /api/personal_details/<user_id>/requestChange
+   * para los campos que requieren aprobación (full_name, id_type, etc.).
+   */
   const handleSubmitApprovalFields = async (approvalFields, file) => {
     try {
       const formData = new FormData();
       formData.append('changes', JSON.stringify(approvalFields));
       formData.append('file', file);
 
+      // <-- Ajuste importante: ruta a /api/personal_details en vez de /api/user
       const response = await axios.post(
-        `http://localhost:3001/api/user/${user.user_id}/requestChange`,
+        `/personal_details/${user.user_id}/requestChange`,
         formData,
         {
           headers: {
-            'Authorization': `Bearer ${token}`,
-            // **Nota:** No es necesario establecer 'Content-Type'; Axios lo maneja automáticamente.
+            'Authorization': `Bearer ${token}`
+            // No se necesita 'Content-Type': FormData la maneja Axios
           }
         }
       );
@@ -223,7 +235,9 @@ const PersonalDetails = ({ data, onUpdate }) => {
       <Form onSubmit={handleSubmit}>
         {/* Full Name */}
         <Form.Group as={Row} className={styles['form-group']}>
-          <Form.Label column sm={4} className={styles.label}>{t('nombre_completo')}</Form.Label>
+          <Form.Label column sm={4} className={styles.label}>
+            {t('nombre_completo')}
+          </Form.Label>
           <Col sm={8}>
             <Form.Control
               type="text"
@@ -240,7 +254,9 @@ const PersonalDetails = ({ data, onUpdate }) => {
 
         {/* Student ID */}
         <Form.Group as={Row} className={styles['form-group']}>
-          <Form.Label column sm={4} className={styles.label}>{t('id_estudiante')}</Form.Label>
+          <Form.Label column sm={4} className={styles.label}>
+            {t('id_estudiante')}
+          </Form.Label>
           <Col sm={8}>
             <Form.Control
               type="text"
@@ -260,7 +276,9 @@ const PersonalDetails = ({ data, onUpdate }) => {
 
         {/* Email */}
         <Form.Group as={Row} className={styles['form-group']}>
-          <Form.Label column sm={4} className={styles.label}>{t('correo_electronico')}</Form.Label>
+          <Form.Label column sm={4} className={styles.label}>
+            {t('correo_electronico')}
+          </Form.Label>
           <Col sm={8}>
             <Form.Control
               type="email"
@@ -276,7 +294,9 @@ const PersonalDetails = ({ data, onUpdate }) => {
 
         {/* Alternate Email */}
         <Form.Group as={Row} className={styles['form-group']}>
-          <Form.Label column sm={4} className={styles.label}>{t('correo_alternativo')}</Form.Label>
+          <Form.Label column sm={4} className={styles.label}>
+            {t('correo_alternativo')}
+          </Form.Label>
           <Col sm={8}>
             <Form.Control
               type="email"
@@ -292,7 +312,9 @@ const PersonalDetails = ({ data, onUpdate }) => {
 
         {/* Contact Number */}
         <Form.Group as={Row} className={styles['form-group']}>
-          <Form.Label column sm={4} className={styles.label}>{t('numero_contacto')}</Form.Label>
+          <Form.Label column sm={4} className={styles.label}>
+            {t('numero_contacto')}
+          </Form.Label>
           <Col sm={8}>
             <Form.Control
               type="text"
@@ -310,7 +332,9 @@ const PersonalDetails = ({ data, onUpdate }) => {
 
         {/* ID Type */}
         <Form.Group as={Row} className={styles['form-group']}>
-          <Form.Label column sm={4} className={styles.label}>{t('tipo_identificacion')}</Form.Label>
+          <Form.Label column sm={4} className={styles.label}>
+            {t('tipo_identificacion')}
+          </Form.Label>
           <Col sm={8}>
             <Form.Select
               name="id_type"
@@ -331,7 +355,9 @@ const PersonalDetails = ({ data, onUpdate }) => {
 
         {/* ID Number */}
         <Form.Group as={Row} className={styles['form-group']}>
-          <Form.Label column sm={4} className={styles.label}>{t('numero_identificacion')}</Form.Label>
+          <Form.Label column sm={4} className={styles.label}>
+            {t('numero_identificacion')}
+          </Form.Label>
           <Col sm={8}>
             <Form.Control
               type="text"
@@ -350,7 +376,9 @@ const PersonalDetails = ({ data, onUpdate }) => {
 
         {/* Birth Date */}
         <Form.Group as={Row} className={styles['form-group']}>
-          <Form.Label column sm={4} className={styles.label}>{t('fecha_nacimiento')}</Form.Label>
+          <Form.Label column sm={4} className={styles.label}>
+            {t('fecha_nacimiento')}
+          </Form.Label>
           <Col sm={8}>
             <Form.Control
               type="date"
@@ -365,7 +393,9 @@ const PersonalDetails = ({ data, onUpdate }) => {
 
         {/* Country of Residence */}
         <Form.Group as={Row} className={styles['form-group']}>
-          <Form.Label column sm={4} className={styles.label}>{t('pais_residencia')}</Form.Label>
+          <Form.Label column sm={4} className={styles.label}>
+            {t('pais_residencia')}
+          </Form.Label>
           <Col sm={8}>
             <Form.Control
               type="text"
@@ -379,10 +409,12 @@ const PersonalDetails = ({ data, onUpdate }) => {
           </Col>
         </Form.Group>
 
-        {/* Documento de Identidad (si se necesitan campos de aprobación) */}
+        {/* Documento de Identidad si hay campos de aprobación */}
         {['full_name', 'id_type', 'id_number', 'student_id'].some(field => userData[field]) && (
           <Form.Group as={Row} className={styles['form-group']}>
-            <Form.Label column sm={4} className={styles.label}>{t('documento_identidad')}</Form.Label>
+            <Form.Label column sm={4} className={styles.label}>
+              {t('documento_identidad')}
+            </Form.Label>
             <Col sm={8}>
               <Form.Control
                 type="file"
@@ -410,11 +442,16 @@ const PersonalDetails = ({ data, onUpdate }) => {
         </Row>
       </Form>
 
-      {/* Mostrar el documento de identidad si existe */}
+      {/* Mostrar link al documento de identidad si existe */}
       {userData.doc_url && (
         <div className={styles.document}>
           <h5>{t('documento_identidad')}</h5>
-          <a href={`http://localhost:3001${userData.doc_url}`} target="_blank" rel="noopener noreferrer">
+          {/* Ajusta la URL si tu servidor sirve /uploads/ directamente en /uploads/... */}
+          <a
+            href={`http://localhost:3001${userData.doc_url}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {t('ver_documento')}
           </a>
         </div>
