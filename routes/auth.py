@@ -1,3 +1,5 @@
+# auth.py
+
 from flask import Blueprint, request, jsonify
 import jwt
 from functools import wraps
@@ -47,7 +49,7 @@ def token_required(f):
 def login():
     """
     Inicia sesión validando el email y la contraseña con bcrypt.
-    Retorna un token JWT si es correcto.
+    Retorna un token JWT y actualiza last_access si es correcto.
     """
     data = request.get_json()
     logging.info(f"Datos recibidos en /login: {data}")
@@ -70,26 +72,45 @@ def login():
         user_id, username, password_hash_str = row
         logging.info(f"DEBUG en /login -> user_id={user_id}, username={username}, password_hash={password_hash_str}")
 
-        # password_hash_str es un string: '$2b$12$abc123...'
-        # Verificar con check_password
+        # Verificar la contraseña
         if check_password(password, password_hash_str):
+            # Actualizar last_access en personal_details con hora UTC
+            current_utc_time = datetime.datetime.now(datetime.timezone.utc)
+            cursor.execute("""
+                UPDATE personal_details
+                SET last_access = %s
+                WHERE user_id = %s
+                RETURNING last_access;
+            """, (current_utc_time, user_id))
+            updated_row = cursor.fetchone()
+            if not updated_row:
+                conn.rollback()
+                logging.error(f"No se pudo actualizar last_access para user_id {user_id}")
+                return jsonify({"error": "Error al actualizar la última hora de acceso"}), 500
+
+            conn.commit()
+
             # Generar JWT
             token = jwt.encode({
                 'user_id': user_id,
                 'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=24)
             }, SECRET_KEY, algorithm="HS256")
+
             logging.info(f"Usuario {user_id} autenticado con éxito.")
+
             return jsonify({
                 "message": "Inicio de sesión exitoso",
                 "token": token,
                 "user_id": user_id,
-                "username": username
+                "username": username,
+                "last_access": updated_row[0].isoformat() if updated_row[0] else None
             }), 200
         else:
             logging.warning(f"Contraseña incorrecta para el email: {email}")
             return jsonify({"error": "Contraseña incorrecta"}), 401
 
     except Exception as e:
+        conn.rollback()
         logging.error(f"Error en /login: {e}", exc_info=True)
         return jsonify({"error": "Error interno del servidor"}), 500
     finally:

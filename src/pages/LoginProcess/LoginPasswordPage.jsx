@@ -69,11 +69,12 @@ const LoginPasswordPage = () => {
       }
 
       const data = await response.json();
-      // data.token, data.user_id, data.username deben venir del backend
+      // data.token, data.user_id, data.username, data.last_access vienen del backend
       const userData = {
         user_id: data.user_id,
         email: loginData.email,
         username: data.username,
+        last_access: data.last_access, // Agregado last_access
       };
       // Llamar login con userData y data.token
       login(userData, data.token);

@@ -1,44 +1,68 @@
+/* src/components/UserIndex/StudentProfile/GeneralInfo/SessionHistoryStyles.module.css */
+
 .sessionHistoryContainer {
-    padding: 20px;
-    background: linear-gradient(135deg, #FFD194 0%, #FFDFBA 100%); /* Fondo degradado en tonos cálidos */
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    margin: auto;
-  }
-  
-  .sessionTitle {
-    color: #BF360C; /* Rojo oscuro suave */
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .sessionFormLabel {
-    color: #D84315; /* Naranja oscuro para las etiquetas */
-    font-weight: 500;
-  }
-  
-  .sessionInput {
-    background-color: #FFF3E0; /* Naranja claro para los campos de texto */
-    border: 1px solid #FFAB91; /* Borde naranja suave */
-    border-radius: 5px;
-    padding: 8px;
-    color: #D84315; /* Texto naranja oscuro */
-  }
-  
-  .sessionButton {
-    background-color: #FF7043; /* Naranja vibrante para el botón */
-    color: #ffffff;
-    border-radius: 5px;
-    border: 2px solid #BF360C;
-    padding: 6px 12px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .sessionButton:hover {
-    background-color: #E64A19; /* Naranja oscuro en hover */
-    border-color: #A3331B;
-  }
-  
-  
+  padding: 20px;
+  background: linear-gradient(135deg, #FFD194 0%, #FFDFBA 100%); /* Fondo degradado en tonos cálidos */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.sessionTitle {
+  color: #BF360C; /* Rojo oscuro suave */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sessionFormLabel {
+  color: #D84315; /* Naranja oscuro para las etiquetas */
+  font-weight: 500;
+}
+
+.sessionInput {
+  background-color: #FFF3E0; /* Naranja claro para los campos de texto */
+  border: 1px solid #FFAB91; /* Borde naranja suave */
+  border-radius: 5px;
+  padding: 8px;
+  color: #D84315; /* Texto naranja oscuro */
+}
+
+.sessionButton {
+  background-color: #FF7043; /* Naranja vibrante para el botón */
+  color: #ffffff;
+  border-radius: 5px;
+  border: 2px solid #BF360C;
+  padding: 10px 20px; /* Aumentado para mejor tamaño */
+  font-weight: 600; /* Aumentado para mejor legibilidad */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  margin-top: 1rem; /* Espaciado superior */
+}
+
+.sessionButton:hover {
+  background-color: #E64A19; /* Naranja oscuro en hover */
+  border-color: #A3331B;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.alert {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.notificationCheckbox {
+  margin-bottom: 10px;
+  color: #D84315; /* Texto naranja oscuro */
+}
