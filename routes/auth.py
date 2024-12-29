@@ -18,6 +18,9 @@ if not SECRET_KEY:
 logging.basicConfig(filename='error.log', level=logging.ERROR)
 
 def token_required(f):
+    """
+    Decorador para verificar que se incluya un Bearer token válido en el header Authorization.
+    """
     @wraps(f)
     def decorated(*args, **kwargs):
         token = None
@@ -42,8 +45,12 @@ def token_required(f):
 
 @auth_blueprint.route("/login", methods=["POST"])
 def login():
+    """
+    Inicia sesión validando el email y la contraseña con bcrypt.
+    Retorna un token JWT si es correcto.
+    """
     data = request.get_json()
-    logging.info(f"Datos recibidos: {data}")
+    logging.info(f"Datos recibidos en /login: {data}")
     email = data.get('email')
     password = data.get('password')
 
@@ -54,16 +61,19 @@ def login():
     conn = get_db_connection()
     cursor = conn.cursor()
     try:
-        cursor.execute("""
-            SELECT user_id, username, password_hash FROM users WHERE email = %s
-        """, (email,))
+        cursor.execute("SELECT user_id, username, password_hash FROM users WHERE email = %s", (email,))
         row = cursor.fetchone()
         if not row:
             logging.warning(f"Usuario no encontrado para el email: {email}")
             return jsonify({"error": "Usuario no encontrado"}), 404
 
-        user_id, username, password_hash = row
-        if check_password(password, password_hash.encode('utf-8')):
+        user_id, username, password_hash_str = row
+        logging.info(f"DEBUG en /login -> user_id={user_id}, username={username}, password_hash={password_hash_str}")
+
+        # password_hash_str es un string: '$2b$12$abc123...'
+        # Verificar con check_password
+        if check_password(password, password_hash_str):
+            # Generar JWT
             token = jwt.encode({
                 'user_id': user_id,
                 'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=24)
@@ -78,8 +88,9 @@ def login():
         else:
             logging.warning(f"Contraseña incorrecta para el email: {email}")
             return jsonify({"error": "Contraseña incorrecta"}), 401
+
     except Exception as e:
-        logging.error(f"Error en /login: {e}")
+        logging.error(f"Error en /login: {e}", exc_info=True)
         return jsonify({"error": "Error interno del servidor"}), 500
     finally:
         conn.close()
@@ -87,10 +98,12 @@ def login():
 @auth_blueprint.route("/me", methods=["GET"])
 @token_required
 def get_current_user(current_user_id):
+    """
+    Retorna datos del usuario (tabla users y personal_details) para el usuario logueado.
+    """
     conn = get_db_connection()
     cursor = conn.cursor()
     try:
-        # Ajustar la consulta para evitar columnas inexistentes
         cursor.execute("""
             SELECT u.user_id, u.username, u.email,
                    p.full_name, p.student_id, p.alt_email, p.contact_number,
@@ -115,14 +128,15 @@ def get_current_user(current_user_id):
                 "id_number": row[8],
                 "birth_date": row[9].isoformat() if row[9] else None,
                 "country_of_residence": row[10],
-                "account_status": row[11],  # Desde la tabla `users`
+                "account_status": row[11],  # Ej: 'Active', 'Inactive', etc.
                 "last_access": row[12].isoformat() if row[12] else None
             }
             return jsonify({"user": user_data}), 200
         else:
             return jsonify({"error": "Usuario no encontrado"}), 404
+
     except Exception as e:
-        logging.error(f"Error en /me: {e}")
+        logging.error(f"Error en /me: {e}", exc_info=True)
         return jsonify({"error": "Error interno del servidor", "details": str(e)}), 500
     finally:
         conn.close()

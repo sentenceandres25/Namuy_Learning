@@ -2193,3 +2193,658 @@ INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:24:05] "GET /api/auth/me HTTP/1.1" 2
 INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:24:07] "OPTIONS /api/user/11 HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:24:07] "GET /api/user/11 HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:24:07] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\Namuy_Learning\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 383-217-713
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:47:50] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:47:50] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:47:52] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:53:15] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:53:15] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:53:21] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:53:21] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:53:21] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:53:21] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:53:21] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:53:22] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:53:22] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:53:22] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:53:22] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:53:50] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:53:50] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:54:34] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:54:34] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:54:38] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:54:40] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:54:40] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:55:13] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:55:13] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:55:13] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:55:13] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:55:13] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:55:13] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:55:14] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:55:14] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:55:14] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:55:46] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 16:55:46] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\Namuy_Learning\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 383-217-713
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:02:27] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:02:27] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:02:28] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:02:28] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:02:28] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:02:28] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:02:28] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:02:28] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:02:28] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:02:29] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:05:32] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:05:32] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:05:47] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:05:47] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:06:21] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:06:21] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:06:24] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\Namuy_Learning\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 383-217-713
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:10:22] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:10:22] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:10:22] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:10:22] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:10:22] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:10:22] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:10:22] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:10:22] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:10:23] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:18:26] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:18:27] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:18:52] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:18:53] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:18:58] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:18:58] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:19:44] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:19:44] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:19:44] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:19:44] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:19:44] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:19:44] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:19:45] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:19:45] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:19:45] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:26:15] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:26:15] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:26:23] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:26:23] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:26:23] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:26:23] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:26:23] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:26:23] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:26:24] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:26:24] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:26:24] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:29:01] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:29:01] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:29:01] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:29:01] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:29:02] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:29:18] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:29:18] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:29:18] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:29:18] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:29:18] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:29:18] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:29:19] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:29:19] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:29:19] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:30:08] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:30:08] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:30:24] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:30:24] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:30:24] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:30:24] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:30:24] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:30:24] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:30:24] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:30:24] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:30:25] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:30:56] "GET /uploads/user_11/request_appa_ang.jpeg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:30:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:31:26] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:31:26] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:31:28] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:31:30] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:31:31] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:31:32] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:32:16] "[33mOPTIONS /api/user/undefined/updatePassword HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:45:57] "[33mOPTIONS /api/user/undefined/updatePassword HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:52:38] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:52:38] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:52:59] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:52:59] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'F:\\Namuy_Learning\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 383-217-713
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:58:19] "[33mOPTIONS /api/user/undefined/updatePassword HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:58:24] "[33mOPTIONS /api/user/undefined/updatePassword HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:58:30] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:58:30] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:58:31] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:58:31] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:58:31] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:58:31] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:58:31] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:58:31] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:58:31] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:58:44] "OPTIONS /api/user/11/updatePassword HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:58:44] "PUT /api/user/11/updatePassword HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:59:47] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:59:48] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:59:54] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 17:59:54] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'F:\\Namuy_Learning\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 383-217-713
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:00:37] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:00:37] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:00:51] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:00:51] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:00:52] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:00:52] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'F:\\Namuy_Learning\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 383-217-713
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:01:13] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:01:13] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:01:24] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:01:25] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:01:27] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'F:\\Namuy_Learning\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 383-217-713
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:01:41] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:01:41] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:01:43] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:01:51] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:01:51] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:02:18] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:02:18] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:02:19] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:02:20] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:02:27] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:02:28] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'F:\\Namuy_Learning\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 383-217-713
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:02:55] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:02:55] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:02:56] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:02:57] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:02:57] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:02:57] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:02:57] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:02:57] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:02:58] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:03:00] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:03:01] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:03:01] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:03:01] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:03:01] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:03:01] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:03:01] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:03:02] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:03:42] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:03:43] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:03:44] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:04:46] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:04:46] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:04:53] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:04:54] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:07:22] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:07:22] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:07:24] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 383-217-713
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:07:36] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:07:36] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:07:38] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:07:42] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:07:42] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:07:43] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:07:43] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:07:43] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:08:41] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:08:41] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:10:34] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:10:35] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:10:50] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:10:50] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:10:55] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:10:56] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:11:41] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:11:41] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'F:\\Namuy_Learning\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 383-217-713
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:12:13] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:12:14] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:12:22] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:12:22] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:15:00] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:15:00] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:15:01] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:15:12] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: Invalid salt
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:15:12] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'F:\\Namuy_Learning\\utils\\hash_utils.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 383-217-713
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:27:52] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: 'bytes' object has no attribute 'encode'
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:27:52] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'F:\\Namuy_Learning\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 383-217-713
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:30:39] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: 'bytes' object has no attribute 'encode'
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:30:39] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'F:\\Namuy_Learning\\new_password.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 383-217-713
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:35:14] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: 'bytes' object has no attribute 'encode'
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:35:14] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: 'bytes' object has no attribute 'encode'
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:35:18] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:36:15] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: 'bytes' object has no attribute 'encode'
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:36:15] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 383-217-713
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:36:34] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: 'bytes' object has no attribute 'encode'
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:36:35] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:44:05] "OPTIONS /api/user HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:44:05] "[35m[1mPOST /api/user HTTP/1.1[0m" 201 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:44:18] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: 'bytes' object has no attribute 'encode'
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:44:18] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://localhost:3001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 383-217-713
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:51:15] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: 'bytes' object has no attribute 'encode'
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:51:15] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+ERROR:root:Error en /login: 'bytes' object has no attribute 'encode'
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:51:19] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:51:31] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+ERROR:root:Error en /login: 'bytes' object has no attribute 'encode'
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:51:31] "[35m[1mPOST /api/auth/login HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in 'F:\\Namuy_Learning\\routes\\auth.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 383-217-713
+INFO:werkzeug: * Detected change in 'F:\\Namuy_Learning\\routes\\users.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 383-217-713
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:56:25] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:56:25] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:56:30] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:56:30] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:56:31] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:56:31] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:56:31] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:56:40] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:56:40] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:56:41] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:56:41] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:56:41] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:56:41] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:56:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:56:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:56:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:57:06] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:57:06] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:57:06] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:57:06] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:57:06] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:57:06] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:57:06] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:57:06] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:57:07] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:57:25] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:57:25] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:57:25] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:57:25] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:57:26] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:57:26] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:57:26] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:57:26] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 18:57:26] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:37] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:37] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:37] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:37] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:38] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:38] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:38] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:38] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:38] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:38] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:39] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:39] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:39] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:39] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:39] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:39] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:39] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:39] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:39] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:40] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:40] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:40] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:40] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:40] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:40] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:40] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:40] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:40] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:41] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:42] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:42] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:42] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:42] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:42] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:42] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:42] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:43] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:43] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:43] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:43] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:43] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:43] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:43] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:44] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:44] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:44] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:44] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:45] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:45] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:45] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:45] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:45] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:46] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:46] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:46] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:46] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:46] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:46] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:47] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:47] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:47] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:47] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:47] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:48] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:48] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:48] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:48] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:48] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:48] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:49] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:49] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:49] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:50] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:50] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:50] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:50] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:51] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:51] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:51] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:51] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:51] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:51] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:52] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:52] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:52] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:52] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:52] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:52] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:52] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:53] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:53] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:53] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:53] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:53] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:53] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:53] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:53] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:54] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:54] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:54] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:54] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:54] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:54] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:54] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:54] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:55] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:55] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:55] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:55] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:55] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:56] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:56] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:56] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:56] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:56] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:57] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:57] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:57] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:57] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:57] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:57] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:57] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:57] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:58] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:58] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:58] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:58] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:58] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:58] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:59] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:59] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:59] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:59] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:59] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:01:59] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:00] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:00] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:00] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:00] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:00] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:01] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:01] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:01] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:01] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:01] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:01] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:02] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:02] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:02] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:02] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:03] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:03] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:03] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:03] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:03] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:03] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:04] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:04] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:04] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:05] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:05] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:05] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:06] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:06] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:06] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:06] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:07] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:07] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:07] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:07] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:07] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:07] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:07] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:07] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:07] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:07] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:07] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:07] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:07] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:09] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:09] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:09] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:09] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:10] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:10] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:10] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:10] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:02:11] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:05:26] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:05:27] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:05:27] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:05:31] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:05:41] "OPTIONS /api/user/11/updatePassword HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:05:41] "PUT /api/user/11/updatePassword HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:05:46] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:05:46] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:05:46] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:05:46] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:05:46] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:05:46] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:05:47] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:05:47] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:05:47] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:06:01] "OPTIONS /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:06:01] "POST /api/auth/login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:06:37] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:06:37] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:06:37] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:06:37] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:06:37] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:08:51] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:08:51] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:08:51] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:08:51] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:08:51] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:08:51] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:08:51] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:08:51] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:08:52] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:09:56] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:09:56] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:09:56] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:09:56] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:09:56] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:09:56] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:09:56] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:09:56] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:09:56] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:09:57] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:10:17] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:10:17] "OPTIONS /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:10:18] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:10:18] "GET /api/auth/me HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:10:18] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:10:18] "OPTIONS /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:10:18] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:10:18] "GET /api/user/11 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Dec/2024 19:10:18] "GET /api/user/11 HTTP/1.1" 200 -

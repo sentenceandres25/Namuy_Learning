@@ -58,5 +58,18 @@
     "anErrorOccurred": "An error occurred.",
     "userNotAuthenticated": "User not authenticated.",
     "solicitud_pendiente": "Your request is pending approval.",
-    "actualizar_informacion": "Update Information"
+    "actualizar_informacion": "Update Information",
+    "accountDetailsTitle": "Account Details",
+    "inscriptionDate": "Inscription Date",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password",
+    "updatePassword": "Update Password",
+    "accountStatus": "Account Status",
+    "preferredLanguage": "Preferred Language",
+    "passwordErrorEmpty": "Please fill in all password fields.",
+    "passwordErrorMatch": "Passwords do not match.",
+    "passwordUpdated": "Password updated successfully.",
+    "passwordErrorServer": "There was an error updating the password. Please try again.",
+    "spanish": "Spanish",
+    "english": "English"
 }
