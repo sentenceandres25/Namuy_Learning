@@ -7,12 +7,12 @@ import { faBell } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import styles from './SessionHistoryStyles.module.css'; 
-import axios from '../../../../axiosConfig'; // Ajusta la ruta si difiere en tu proyecto
+import axios from '../../../../axiosConfig'; // Asegúrate de tener la ruta correcta
 import { AuthContext } from '../../../../contexts/AuthContext';
 
 const SessionHistory = () => {
   const { t } = useTranslation('UserIndex/StudentProfile/GeneralInfo');
-  const { user, token } = useContext(AuthContext);
+  const { user, token, login } = useContext(AuthContext); // Añadido login para actualizar el contexto si es necesario
 
   const [lastAccess, setLastAccess] = useState(null);
   const [notificationPreferences, setNotificationPreferences] = useState({
@@ -21,7 +21,7 @@ const SessionHistory = () => {
     whatsapp: false
   });
   const [loading, setLoading] = useState(true); // Para cargar datos iniciales
-  const [saving, setSaving] = useState(false); // Para guardar preferencias
+  const [saving, setSaving] = useState(false); // Para guardar preferencias o actualizar last_access
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
@@ -48,7 +48,8 @@ const SessionHistory = () => {
           });
 
           if (updateResponse.data.last_access) {
-            setLastAccess(new Date(updateResponse.data.last_access));
+            const utcDate = new Date(updateResponse.data.last_access);
+            setLastAccess(utcDate.toLocaleString());
             // Marcar que ya se actualizó last_access en esta sesión
             sessionStorage.setItem('hasUpdatedAccess', 'true');
           }
@@ -61,7 +62,8 @@ const SessionHistory = () => {
           });
 
           if (accessResponse.data.last_access) {
-            setLastAccess(new Date(accessResponse.data.last_access));
+            const utcDate = new Date(accessResponse.data.last_access);
+            setLastAccess(utcDate.toLocaleString());
           } else {
             setLastAccess(null);
           }
@@ -115,9 +117,11 @@ const SessionHistory = () => {
       });
 
       if (response.data.last_access) {
-        setLastAccess(new Date(response.data.last_access));
+        const utcDate = new Date(response.data.last_access);
+        setLastAccess(utcDate.toLocaleString());
         setSuccess(t('lastAccessUpdated'));
-        // Opcional: Actualizar la marca en sessionStorage si es necesario
+        // Opcional: Actualizar el contexto de usuario si quieres reflejar el nuevo last_access
+        login({ ...user, last_access: response.data.last_access }, token);
       }
     } catch (err) {
       console.error('Error updating last access:', err.response?.data || err.message);
@@ -166,7 +170,7 @@ const SessionHistory = () => {
 
   // 5. Formatear la fecha/hora para mostrarla en la interfaz
   const formattedLastAccess = lastAccess
-    ? lastAccess.toLocaleString()
+    ? lastAccess
     : t('noSessionData');
 
   if (loading) {

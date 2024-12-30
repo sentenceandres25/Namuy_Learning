@@ -8,7 +8,8 @@ from routes.interests import interests_blueprint
 from routes.sessionhistory import session_history_blueprint
 from routes.personal_details import personal_details_blueprint
 from routes.account_details import account_details_blueprint
-from routes.profile_picture import profile_picture_blueprint  # <-- Nuevo import
+from routes.profile_picture import profile_picture_blueprint  
+from routes.notifications import notifications_blueprint
 
 from dotenv import load_dotenv
 import os
@@ -51,8 +52,9 @@ app.register_blueprint(interests_blueprint, url_prefix="/api/interests")
 app.register_blueprint(session_history_blueprint, url_prefix="/api/session")
 app.register_blueprint(personal_details_blueprint, url_prefix="/api/personal_details")
 app.register_blueprint(account_details_blueprint, url_prefix="/api/account")
-
-# Nuevo blueprint para profile_picture
+# Corregir el url_prefix para notifications_blueprint
+app.register_blueprint(notifications_blueprint, url_prefix="/api/notifications")
+# Registrar el blueprint de profile_picture
 app.register_blueprint(profile_picture_blueprint, url_prefix="/api/profile_picture")
 
 app.config['STORAGE_TYPE'] = os.getenv('STORAGE_TYPE', 'local')

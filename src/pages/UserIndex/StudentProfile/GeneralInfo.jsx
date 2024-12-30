@@ -86,7 +86,7 @@ const GeneralInfo = () => {
                   </Row>
                   <Row>
                     <Col md={12}>
-                    <ProfilePicture data={personalDetails} />
+                      <ProfilePicture data={personalDetails} />
                     </Col>
                   </Row>
                   <Row>
@@ -106,7 +106,8 @@ const GeneralInfo = () => {
                   </Row>
                   <Row>
                     <Col md={12}>
-                      <SessionHistory data={personalDetails?.session_history} />
+                      {/* Eliminada la prop 'data' para evitar conflictos */}
+                      <SessionHistory />
                     </Col>
                   </Row>
                 </>

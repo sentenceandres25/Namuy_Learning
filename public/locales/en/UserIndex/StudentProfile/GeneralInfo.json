@@ -78,5 +78,20 @@
   "errorAddingInterest": "There was an error adding the interest.",
   "interestRemoved": "Interest removed successfully.",
   "errorRemovingInterest": "There was an error removing the interest.",
-  "maxInterestsReached": "You have reached the maximum of {{count}} interests."
+  "maxInterestsReached": "You have reached the maximum of {{count}} interests.",
+  "session_history": "Session History",
+  "last_access": "Last Access",
+  "update_last_access": "Update Last Access",
+  "notification_preferences": "Notification Preferences",
+  "sms": "SMS",
+  "whatsapp": "WhatsApp",
+  "save_preferences": "Save Preferences",
+  "saving": "Saving...",
+  "errorFetchingData": "Error fetching data.",
+  "errorUpdatingLastAccess": "Error updating last access.",
+  "lastAccessUpdated": "Last access updated successfully.",
+  "preferencesUpdated": "Notification preferences updated successfully.",
+  "errorSavingPreferences": "Error saving notification preferences.",
+  "errorFetchingPhoto": "Error fetching profile photo.",
+  "noSessionData": "No session data available."
 }
