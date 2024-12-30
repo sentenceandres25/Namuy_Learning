@@ -9,7 +9,6 @@ import HeaderComponent from '../../../components/Header/Header';
 import CentroPersonal from '../../../components/UserIndex/PersonalCenter';
 import Footer from '../../../components/Footer/Footer';
 import PageTitle from '../../../components/PageTitle/PageTitle';
-import InterfaceSettings from '../../../components/UserIndex/StudentProfile/Settings/InterfaceSettings';
 import NotificationSettings from '../../../components/UserIndex/StudentProfile/Settings/NotificationSettings';
 import PrivacySettings from '../../../components/UserIndex/StudentProfile/Settings/PrivacySettings';
 import ContentPreferences from '../../../components/UserIndex/StudentProfile/Settings/ContentPreferences';
@@ -57,11 +56,6 @@ const Settings = () => {
                 <Col md={12}>
                 <h2 className={styles['settings-title']}>{t('settings')}</h2>
                 {/* Usando traducción para el título */}
-                </Col>
-              </Row>
-              <Row>
-                <Col md={12}>
-                  <InterfaceSettings />
                 </Col>
               </Row>
               <Row>
