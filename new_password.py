@@ -2,7 +2,7 @@ import bcrypt
 
 # Contraseña deseada
 new_password = "pas123"
-
+# Generar hash (bytes)
 # Generar hash (bytes)
 hashed_bytes = bcrypt.hashpw(new_password.encode('utf-8'), bcrypt.gensalt())
 # Convertirlo a string
