@@ -1,6 +1,6 @@
 // src/components/UserIndex/StudentProfile/GeneralInfo/AccountDetails.jsx
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Form, Row, Col, Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
@@ -8,30 +8,22 @@ import styles from './AccountDetails.module.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import i18n from '../../../../i18n'; 
+import { useLanguageCurrency } from '../../../CombinedNavbar/hooks/useLanguageCurrency'; // Ruta corregida
 import axios from '../../../../axiosConfig';
 
 const AccountDetails = ({ data = {}, onPasswordUpdate }) => {
   // data DEBE contener { user_id, date_joined, account_status, ... }
-  
+
   const { t } = useTranslation('UserIndex/StudentProfile/GeneralInfo');
+
+  // Usamos el hook para manejar el idioma y la moneda
+  const { currentLanguage, handleLanguageChange } = useLanguageCurrency();
 
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-
-  const [selectedLang, setSelectedLang] = useState(i18n.language);
-
-  useEffect(() => {
-    // Cargar idioma de localStorage si existe
-    const savedLang = localStorage.getItem('i18nextLng');
-    if (savedLang) {
-      setSelectedLang(savedLang);
-      i18n.changeLanguage(savedLang);
-    }
-  }, []);
 
   const handleUpdatePassword = async () => {
     // Validar campos
@@ -45,18 +37,17 @@ const AccountDetails = ({ data = {}, onPasswordUpdate }) => {
     }
 
     try {
-      // Llamar a la ruta /api/user/<user_id>/updatePassword
-      // (Asegúrate de que tu blueprint en Flask coincida con esta ruta)
-      const response = await axios.put(
-        `/account/${data.user_id}/updatePassword`,
-        { newPassword }
-      );
+      // Llamar a la ruta /account/<user_id>/updatePassword
+      // Ajusta la URL si tu endpoint es diferente
+      await axios.put(`/account/${data.user_id}/updatePassword`, {
+        newPassword,
+      });
 
       alert(t('passwordUpdated'));
       // Limpiar campos
       setNewPassword('');
       setConfirmPassword('');
-
+      
       // Disparar callback si lo requieres
       if (onPasswordUpdate) onPasswordUpdate();
     } catch (error) {
@@ -65,11 +56,9 @@ const AccountDetails = ({ data = {}, onPasswordUpdate }) => {
     }
   };
 
-  const handleLanguageChange = (evt) => {
-    const newLang = evt.target.value;
-    setSelectedLang(newLang);
-    i18n.changeLanguage(newLang);
-    localStorage.setItem('i18nextLng', newLang);
+  const handleLanguageSelect = (e) => {
+    const newLang = e.target.value;
+    handleLanguageChange(newLang);
   };
 
   return (
@@ -99,10 +88,9 @@ const AccountDetails = ({ data = {}, onPasswordUpdate }) => {
               type="text"
               disabled
               className={styles.input}
-              // asumiendo que data.date_joined es "2024-12-13T11:12:26.910018"
               value={
-                data.date_joined 
-                  ? data.date_joined.split('T')[0]
+                data.date_joined
+                  ? data.date_joined.split('T')[0] // "yyyy-mm-dd"
                   : ''
               }
             />
@@ -180,9 +168,7 @@ const AccountDetails = ({ data = {}, onPasswordUpdate }) => {
               disabled
               className={styles.input}
               value={
-                data.account_status
-                  ? data.account_status
-                  : ''
+                data.account_status ? data.account_status : ''
               }
             />
           </Col>
@@ -197,11 +183,12 @@ const AccountDetails = ({ data = {}, onPasswordUpdate }) => {
             <motion.div initial={{ x: -10 }} animate={{ x: 0 }}>
               <Form.Select
                 className={styles.select}
-                value={selectedLang}
-                onChange={handleLanguageChange}
+                value={currentLanguage}
+                onChange={handleLanguageSelect}
               >
                 <option value="es">{t('spanish')}</option>
                 <option value="en">{t('english')}</option>
+                {/* Agrega más opciones si soportas otros idiomas */}
               </Form.Select>
             </motion.div>
           </Col>

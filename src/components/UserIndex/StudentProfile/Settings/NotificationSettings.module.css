@@ -1,3 +1,5 @@
+/* components/Settings/NotificationSettings.module.css */
+
 .notificationSettings {
   padding: 20px;
   background: linear-gradient(135deg, #d6f5db, #b5e6b6); /* Fondo degradado verde claro */
@@ -9,49 +11,33 @@
   margin: 20px auto; /* Centramos el contenedor */
 }
 
-.settingItem {
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
+.formGroup {
+  margin-bottom: 20px;
 }
 
-.settingItem label {
-  flex: 1;
+.formLabel {
   font-weight: bold;
 }
 
-.settingItem input[type='checkbox'] {
-  transform: scale(1.2);
-  accent-color: #4caf50; /* Verde compatible con el diseño del componente */
-  border: 1px solid #4caf50;
+.notificationCheckbox {
+  margin-bottom: 10px;
+  transform: scale(1.1);
 }
 
-.settingItem input[type='checkbox']:checked {
-  background-color: #4caf50; /* Fondo verde claro */
+.saveButton {
+  background-color: #4caf50;
   border-color: #4caf50;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
-.dndTimes {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 8px;
-  gap: 10px;
+.saveButton:hover {
+  background-color: #45a049;
+  border-color: #45a049;
 }
 
-.dndItem {
-  flex: 1;
+.spinner {
   display: flex;
+  justify-content: center;
   align-items: center;
-}
-
-.dndItem label {
-  flex: 1;
-  font-weight: bold;
-}
-
-.dndItem input {
-  flex: 2;
-  padding: 6px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  height: 100px;
 }

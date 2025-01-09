@@ -1,14 +1,17 @@
+// src/i18n.js
+
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import Backend from 'i18next-http-backend';
-import LanguageDetector from 'i18next-browser-languagedetector';
+// import LanguageDetector from 'i18next-browser-languagedetector'; // Descomentar si deseas usarlo
 
 i18n
-  .use(Backend) // Cargar recursos de traducción de manera asíncrona
-  .use(LanguageDetector) // Detecta el idioma del navegador
-  .use(initReactI18next) // Integra i18n con React
+  // Carga de traducciones desde ficheros JSON de manera asíncrona
+  .use(Backend)
+  // .use(LanguageDetector) // Descomentar si deseas detectar idioma con querystring, cookies, etc.
+  .use(initReactI18next)
   .init({
-    fallbackLng: 'es', // Idioma predeterminado
+    fallbackLng: 'es',
     ns: [
       'UserIndex/MyCart/MyCart',
       'UserIndex/AcademicRegulations',
@@ -30,21 +33,21 @@ i18n
       'DiscountsAndHighlights',
       'Footer',
       'GeneralInfo',
-      'OnlineCourse'
-    ], // Lista de namespaces
-    defaultNS: 'translation', // Namespace por defecto
+      'OnlineCourse',
+    ],
+    defaultNS: 'translation',
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json', // Ruta para cargar los archivos de traducción
+      loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
-    detection: {
-      order: ['querystring', 'cookie', 'localStorage', 'navigator'], // Orden de detección del idioma
-      caches: ['localStorage', 'cookie'], // Dónde almacenar el idioma detectado
-    },
+    // detection: {
+    //   order: ['querystring', 'cookie', 'localStorage', 'navigator'],
+    //   caches: ['localStorage', 'cookie'],
+    // },
     react: {
-      useSuspense: true, // Suspense para la carga de recursos
+      useSuspense: true,
     },
     interpolation: {
-      escapeValue: false, // React ya maneja el escape de XSS
+      escapeValue: false,
     },
   });
 

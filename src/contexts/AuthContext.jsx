@@ -1,6 +1,7 @@
 // src/contexts/AuthContext.jsx
+
 import React, { createContext, useState, useEffect } from 'react';
-import axios from 'axios';
+import axios from '../axiosConfig'; // Asegúrate de que la ruta es correcta
 
 export const AuthContext = createContext();
 
@@ -12,22 +13,20 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const storedToken = localStorage.getItem('token');
     if (storedToken) {
-      axios.get('http://localhost:3001/api/auth/me', {
-        headers: { Authorization: `Bearer ${storedToken}` }
-      })
-      .then(res => {
-        setUser(res.data.user);
-        setToken(storedToken);
-        console.log("Usuario autenticado:", res.data.user); // Log añadido
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error('Error al restaurar sesión:', err.response ? err.response.data : err.message);
-        localStorage.removeItem('token');
-        setUser(null);
-        setToken(null);
-        setLoading(false);
-      });
+      axios.get('/auth/me')
+        .then(res => {
+          setUser(res.data.user);
+          setToken(storedToken);
+          console.log("Usuario autenticado:", res.data.user); // Log añadido
+          setLoading(false);
+        })
+        .catch(err => {
+          console.error('Error al restaurar sesión:', err.response ? err.response.data : err.message);
+          localStorage.removeItem('token');
+          setUser(null);
+          setToken(null);
+          setLoading(false);
+        });
     } else {
       setLoading(false);
     }

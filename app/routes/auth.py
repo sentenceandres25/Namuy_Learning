@@ -1,4 +1,4 @@
-# auth.py
+# app/routes/auth.py
 
 from flask import Blueprint, request, jsonify
 import jwt
@@ -9,12 +9,12 @@ import os
 import datetime
 import logging
 
-auth_blueprint = Blueprint('auth', __name__)
+auth_blueprint = Blueprint('auth_blueprint', __name__)
 
 # Cargar la clave secreta desde las variables de entorno
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.getenv('JWT_SECRET_KEY', 'tu_clave_secreta_jwt')
 if not SECRET_KEY:
-    raise RuntimeError("SECRET_KEY no está configurada en el .env")
+    raise RuntimeError("JWT_SECRET_KEY no está configurada en el .env")
 
 # Configurar logging para errores
 logging.basicConfig(filename='error.log', level=logging.ERROR)
@@ -63,14 +63,14 @@ def login():
     conn = get_db_connection()
     cursor = conn.cursor()
     try:
-        cursor.execute("SELECT user_id, username, password_hash FROM users WHERE email = %s", (email,))
+        cursor.execute("SELECT user_id, username, password_hash, preferred_language FROM users WHERE email = %s", (email,))
         row = cursor.fetchone()
         if not row:
             logging.warning(f"Usuario no encontrado para el email: {email}")
             return jsonify({"error": "Usuario no encontrado"}), 404
 
-        user_id, username, password_hash_str = row
-        logging.info(f"DEBUG en /login -> user_id={user_id}, username={username}, password_hash={password_hash_str}")
+        user_id, username, password_hash_str, preferred_language = row
+        logging.info(f"DEBUG en /login -> user_id={user_id}, username={username}, password_hash={password_hash_str}, preferred_language={preferred_language}")
 
         # Verificar la contraseña
         if check_password(password, password_hash_str):
@@ -103,6 +103,7 @@ def login():
                 "token": token,
                 "user_id": user_id,
                 "username": username,
+                "preferred_language": preferred_language,  # Incluir preferred_language en la respuesta de login
                 "last_access": updated_row[0].isoformat() if updated_row[0] else None
             }), 200
         else:
@@ -121,12 +122,13 @@ def login():
 def get_current_user(current_user_id):
     """
     Retorna datos del usuario (tabla users y personal_details) para el usuario logueado.
+    Incluye preferred_language.
     """
     conn = get_db_connection()
     cursor = conn.cursor()
     try:
         cursor.execute("""
-            SELECT u.user_id, u.username, u.email,
+            SELECT u.user_id, u.username, u.email, u.preferred_language,
                    p.full_name, p.student_id, p.alt_email, p.contact_number,
                    p.id_type, p.id_number, p.birth_date, p.country_of_residence,
                    u.account_status, p.last_access
@@ -141,16 +143,17 @@ def get_current_user(current_user_id):
                 "user_id": row[0],
                 "username": row[1],
                 "email": row[2],
-                "full_name": row[3],
-                "student_id": row[4],
-                "alt_email": row[5],
-                "contact_number": row[6],
-                "id_type": row[7],
-                "id_number": row[8],
-                "birth_date": row[9].isoformat() if row[9] else None,
-                "country_of_residence": row[10],
-                "account_status": row[11],  # Ej: 'Active', 'Inactive', etc.
-                "last_access": row[12].isoformat() if row[12] else None
+                "preferred_language": row[3],
+                "full_name": row[4],
+                "student_id": row[5],
+                "alt_email": row[6],
+                "contact_number": row[7],
+                "id_type": row[8],
+                "id_number": row[9],
+                "birth_date": row[10].isoformat() if row[10] else None,
+                "country_of_residence": row[11],
+                "account_status": row[12],  # Ej: 'Active', 'Inactive', etc.
+                "last_access": row[13].isoformat() if row[13] else None
             }
             return jsonify({"user": user_data}), 200
         else:
@@ -159,5 +162,64 @@ def get_current_user(current_user_id):
     except Exception as e:
         logging.error(f"Error en /me: {e}", exc_info=True)
         return jsonify({"error": "Error interno del servidor", "details": str(e)}), 500
+    finally:
+        conn.close()
+
+@auth_blueprint.route("/preferred-language", methods=["GET"])
+@token_required
+def get_preferred_language(current_user_id):
+    """
+    Obtiene el idioma preferido del usuario autenticado.
+    """
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    try:
+        cursor.execute("""
+            SELECT preferred_language FROM users WHERE user_id = %s;
+        """, (current_user_id,))
+        row = cursor.fetchone()
+        if row:
+            preferred_language = row[0]
+            return jsonify({"preferredLanguage": preferred_language}), 200
+        else:
+            return jsonify({"error": "Usuario no encontrado"}), 404
+    except Exception as e:
+        logging.error(f"Error en /preferred-language (GET): {e}", exc_info=True)
+        return jsonify({"error": "Error interno del servidor"}), 500
+    finally:
+        conn.close()
+
+@auth_blueprint.route("/preferred-language", methods=["PUT"])
+@token_required
+def update_preferred_language(current_user_id):
+    """
+    Actualiza el idioma preferido del usuario autenticado.
+    """
+    data = request.get_json()
+    preferred_language = data.get('preferredLanguage')
+
+    if not preferred_language or preferred_language not in ['en', 'es']:
+        return jsonify({"error": "Idioma inválido"}), 400
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    try:
+        cursor.execute("""
+            UPDATE users
+            SET preferred_language = %s
+            WHERE user_id = %s
+            RETURNING preferred_language;
+        """, (preferred_language, current_user_id))
+        row = cursor.fetchone()
+        if row:
+            conn.commit()
+            return jsonify({"message": "Idioma preferido actualizado correctamente", "preferredLanguage": row[0]}), 200
+        else:
+            conn.rollback()
+            return jsonify({"error": "Usuario no encontrado"}), 404
+    except Exception as e:
+        conn.rollback()
+        logging.error(f"Error en /preferred-language (PUT): {e}", exc_info=True)
+        return jsonify({"error": "Error interno del servidor"}), 500
     finally:
         conn.close()

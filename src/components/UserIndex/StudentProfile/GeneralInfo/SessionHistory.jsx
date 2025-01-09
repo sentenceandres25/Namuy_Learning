@@ -12,7 +12,7 @@ import { AuthContext } from '../../../../contexts/AuthContext';
 
 const SessionHistory = () => {
   const { t } = useTranslation('UserIndex/StudentProfile/GeneralInfo');
-  const { user, token, login } = useContext(AuthContext); // Añadido login para actualizar el contexto si es necesario
+  const { user, login } = useContext(AuthContext); // Eliminamos token ya que se maneja en axiosConfig
 
   const [lastAccess, setLastAccess] = useState(null);
   const [notificationPreferences, setNotificationPreferences] = useState({
@@ -25,15 +25,8 @@ const SessionHistory = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
-  const userId = user?.user_id;
-
   // 1. Al montar, actualizar last_access solo una vez al iniciar sesión y obtener preferencias de notificación
   useEffect(() => {
-    if (!userId) {
-      setLoading(false);
-      return;
-    }
-
     const updateAndFetchData = async () => {
       try {
         // Verificar si ya se actualizó last_access en esta sesión
@@ -41,11 +34,7 @@ const SessionHistory = () => {
 
         if (!hasUpdatedAccess) {
           // Actualizar la última hora de acceso
-          const updateResponse = await axios.put(`/session/${userId}/last-access`, {}, {
-            headers: {
-              Authorization: `Bearer ${token}`
-            }
-          });
+          const updateResponse = await axios.put('/session/last-access');
 
           if (updateResponse.data.last_access) {
             const utcDate = new Date(updateResponse.data.last_access);
@@ -55,11 +44,7 @@ const SessionHistory = () => {
           }
         } else {
           // Obtener la última hora de acceso sin actualizar
-          const accessResponse = await axios.get(`/session/${userId}/last-access`, {
-            headers: {
-              Authorization: `Bearer ${token}`
-            }
-          });
+          const accessResponse = await axios.get('/session/last-access');
 
           if (accessResponse.data.last_access) {
             const utcDate = new Date(accessResponse.data.last_access);
@@ -70,11 +55,7 @@ const SessionHistory = () => {
         }
 
         // Obtener las preferencias de notificación
-        const preferencesResponse = await axios.get(`/notifications/preferences/${userId}`, {
-          headers: {
-            Authorization: `Bearer ${token}`
-          }
-        });
+        const preferencesResponse = await axios.get('/notifications/preferences');
 
         if (preferencesResponse.data.preferences) {
           setNotificationPreferences({
@@ -99,29 +80,23 @@ const SessionHistory = () => {
     };
 
     updateAndFetchData();
-  }, [userId, token, t]);
+  }, [t]);
 
   // 2. Función para actualizar la hora de último acceso manualmente
   const handleUpdateLastAccess = async () => {
-    if (!userId) return;
-
     setSaving(true);
     setError('');
     setSuccess('');
 
     try {
-      const response = await axios.put(`/session/${userId}/last-access`, {}, {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      });
+      const response = await axios.put('/session/last-access');
 
       if (response.data.last_access) {
         const utcDate = new Date(response.data.last_access);
         setLastAccess(utcDate.toLocaleString());
         setSuccess(t('lastAccessUpdated'));
         // Opcional: Actualizar el contexto de usuario si quieres reflejar el nuevo last_access
-        login({ ...user, last_access: response.data.last_access }, token);
+        login({ ...user, last_access: response.data.last_access });
       }
     } catch (err) {
       console.error('Error updating last access:', err.response?.data || err.message);
@@ -142,19 +117,13 @@ const SessionHistory = () => {
 
   // 4. Guardar preferencias de notificación
   const handleSavePreferences = async () => {
-    if (!userId) return;
-
     setSaving(true);
     setError('');
     setSuccess('');
 
     try {
-      const response = await axios.put(`/notifications/preferences/${userId}`, {
+      const response = await axios.put('/notifications/preferences', {
         preferences: notificationPreferences
-      }, {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
       });
 
       if (response.data.message) {

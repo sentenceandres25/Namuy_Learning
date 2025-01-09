@@ -33,7 +33,7 @@
   "generalInfoTitle": "Información General - Nombre de la Aplicación",
     "full_name": "Nombre Completo",
     "student_id": "ID Estudiante",
-    "email": "Correo Electrónico",
+    "correo_electronico": "Correo Electrónico",
     "alt_email": "Correo Alternativo",
     "contact_number": "Número de Contacto",
     "id_type": "Tipo de Identificación",

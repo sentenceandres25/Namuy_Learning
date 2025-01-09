@@ -3,7 +3,6 @@ import React, { useEffect, useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 // No importes AuthProvider aquí, ya que lo usarás en AppWrapper.
 import { AuthContext } from './contexts/AuthContext';
-import HeaderComponent from './components/Header/Header';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import LoginForm from './pages/LoginProcess/LoginForm';
@@ -61,7 +60,7 @@ function App() {
   return (
     <ThemeProvider>
       <Router>
-        <HeaderComponent  />
+        
         <Routes>
           <Route path="/" element={<Navigate to={`/pages/HomePage/${i18n.language}`} />} />
           <Route path="/pages/HomePage/:lang" element={<HomePage />} />
