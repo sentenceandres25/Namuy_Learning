@@ -30,7 +30,7 @@ def create_user():
         hashed_bytes = hash_password(data['password'])  # bcrypt retorna bytes
         hashed_str = hashed_bytes.decode('utf-8')
 
-        # Obtener preferred_language, si no se proporciona, usar 'es'# Obtener preferred_language, si no se proporciona, usar 'es'
+        # Obtener preferred_language, si no se proporciona, usar 'es'
         preferred_language = data.get('preferred_language', 'es')
         if preferred_language not in ['en', 'es']:
             preferred_language = 'es'  # Fallback a 'es' si el valor es inválido
