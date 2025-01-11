@@ -1,37 +1,75 @@
 .privacySettings {
-  padding: 20px;
-  background: linear-gradient(135deg, #e3f7e8, #b4e0c5); /* Fondo degradado verde claro */
-  color: #333;
+  /* Fondo degradado sutil con verde suave */
+  background: linear-gradient(125deg, #f0fff0, #e3f7e8);
+  /* Márgenes y padding */
+  margin: 20px auto;
+  padding: 30px;
+  max-width: 800px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra suave */
-  margin-bottom: 20px;
-  max-width: 900px;
-  margin: 20px auto; /* Centramos el contenedor */
+  /* Sombra suave */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.sectionTitle {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #2e2e2e;
+}
+
+/* Sección de cada ajuste */
 .settingItem {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
-.settingItem label {
-  flex: 2;
+/* Columnas del form con un poco de espaciado */
+.formGroup {
+  margin-bottom: 16px;
+}
+
+/* Etiquetas */
+.label {
   font-weight: bold;
+  color: #333;
 }
 
-.settingItem button {
-  flex: 1;
-  padding: 8px 12px;
-  background-color: var(--button-bg-color);
-  color: var(--button-text-color);
-  border: none;
-  border-radius: 6px;
+/* Ajuste para la columna con el switch */
+.switchCol {
+  display: flex;
+  align-items: center;
+}
+
+/* Switch 2FA */
+.toggleSwitch .form-check-input {
+  transform: scale(1.2);
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.settingItem button:hover {
-  background-color: var(--button-hover-bg-color);
+/* Sección "otros ajustes" */
+.otherSettings {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Botón outline personalizado */
+.outlineBtn {
+  min-width: 100px;
+  transition: background-color 0.2s ease;
+}
+
+.outlineBtn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Botón para enviar código */
+.sendCodeBtn {
+  min-width: 150px;
+  font-weight: 500;
+}
+
+/* Spinner (opcional) */
+.spinner {
+  display: block;
+  margin: 40px auto;
 }

@@ -3,7 +3,7 @@
 import React from 'react';
 import { Navbar, NavDropdown } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
-import { useLanguageCurrency } from './hooks/useLanguageCurrency'; // Ruta corregida
+import { useLanguageCurrency } from './hooks/useLanguageCurrency'; // Ruta hacia tu hook
 import './LanguageCurrencyDropdown.css';
 
 const LanguageCurrencyDropdown = () => {
@@ -13,12 +13,11 @@ const LanguageCurrencyDropdown = () => {
     handleLanguageChange,
     currency,
     handleCurrencyChange,
-  } = useLanguageCurrency();
+  } = useLanguageCurrency(); // Custom hook
 
   return (
     <Navbar className="custom-navbar-language">
       <NavDropdown
-        // Muestra el idioma actual (en mayúsculas) o '...' si está indefinido
         title={currentLanguage ? currentLanguage.toUpperCase() : '...'}
         id="nav-dropdown-options"
         className="language-dropdown"

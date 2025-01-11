@@ -16160,3 +16160,4 @@ INFO:werkzeug: * Restarting with stat
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug: * Restarting with stat
 INFO:werkzeug: * Restarting with stat
+ERROR:flask_migrate:Error: Path doesn't exist: 'F:\\Namuy_Learning\\migrations'.  Please use the 'init' command to create a new scripts folder.
