@@ -5,16 +5,15 @@ import { Form, Row, Col, Button, Spinner, Alert, Modal } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import styles from './PrivacySettings.module.css';
-import axios from '../../../../axiosConfig'; // Usar la instancia correcta de Axios
+import axios from '../../../../axiosConfig';
 import { AuthContext } from '../../../../contexts/AuthContext';
 
 const PrivacySettings = () => {
   const { t } = useTranslation('UserIndex/StudentProfile/Settings');
-  const { user } = useContext(AuthContext); // Asumiendo que AuthContext provee la info del usuario
+  const { user, token } = useContext(AuthContext);
 
   const [twoFactorAuth, setTwoFactorAuth] = useState(false);
   const [email, setEmail] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
   const [verificationCode, setVerificationCode] = useState('');
   const [showVerificationModal, setShowVerificationModal] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -23,31 +22,35 @@ const PrivacySettings = () => {
   const [success, setSuccess] = useState('');
   const [codeSent, setCodeSent] = useState(false);
 
-  // Obtener preferencias de 2FA al montar
+  // Al montar, obtener estado actual de 2FA (desde /users/2fa/preferences)
   useEffect(() => {
     const fetch2FASettings = async () => {
       try {
-        const response = await axios.get('/users/2fa/preferences');
+        const response = await axios.get('/users/2fa/preferences', {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
         const data = response.data;
         setTwoFactorAuth(data.twoFactorEnabled);
         setEmail(data.email || '');
-        setPhoneNumber(data.contactNumber || '');
         setLoading(false);
       } catch (err) {
         console.error('Error fetching 2FA settings:', err.response?.data || err.message);
-        setError(t('errorFetching2FASettings'));
+        const errorMessage = err.response?.data?.error || err.message;
+        setError(`${t('errorFetching2FASettings')}: ${errorMessage}`);
         setLoading(false);
       }
     };
 
-    if (user) {
+    if (user && token) {
       fetch2FASettings();
     } else {
       setLoading(false);
     }
-  }, [user, t]);
+  }, [user, token, t]);
 
-  // Manejar cambios en 2FA
+  // Handler para el switch de 2FA
   const handleTwoFactorAuthChange = async () => {
     setSaving(true);
     setError('');
@@ -55,40 +58,59 @@ const PrivacySettings = () => {
 
     try {
       if (!twoFactorAuth) {
-        // Habilitar 2FA: abrir modal para ingresar email y teléfono
+        // Habilitar 2FA => abrir modal
         setShowVerificationModal(true);
       } else {
-        // Deshabilitar 2FA
-        await axios.put('/users/2fa/preferences', { twoFactorEnabled: false });
+        // Deshabilitar 2FA => PUT twoFactorEnabled = false
+        await axios.put(
+          '/users/2fa/preferences',
+          { twoFactorEnabled: false },
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+              'Content-Type': 'application/json',
+            },
+          }
+        );
         setTwoFactorAuth(false);
         setSuccess(t('twoFactorDisabled'));
       }
     } catch (err) {
       console.error('Error updating 2FA settings:', err.response?.data || err.message);
-      setError(t('errorUpdating2FASettings'));
+      const errorMessage = err.response?.data?.error || err.message;
+      setError(`${t('errorUpdating2FASettings')}: ${errorMessage}`);
     } finally {
       setSaving(false);
     }
   };
 
-  // Enviar código de verificación
+  // Enviar código de verificación (al habilitar 2FA)
   const handleSendVerificationCode = async () => {
-    if (!email && !phoneNumber) {
-      setError(t('errorNoContactMethod'));
+    if (!email) {
+      setError(t('errorNoEmail'));
       return;
     }
-
     setSaving(true);
     setError('');
     setSuccess('');
 
     try {
-      await axios.post('/users/2fa/send-code', { email, phoneNumber });
+      await axios.post(
+        '/users/2fa/send-code',
+        { email },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'application/json',
+          },
+        }
+      );
       setCodeSent(true);
       setSuccess(t('codeSent'));
     } catch (err) {
       console.error('Error sending verification code:', err.response?.data || err.message);
-      setError(t('errorSendingCode'));
+      const errorMessage = err.response?.data?.error || err.message;
+      setError(`${t('errorSendingCode')}: ${errorMessage}`);
     } finally {
       setSaving(false);
     }
@@ -100,37 +122,35 @@ const PrivacySettings = () => {
       setError(t('errorNoCode'));
       return;
     }
-
     setSaving(true);
     setError('');
     setSuccess('');
 
     try {
-      // Determinar el método utilizado para recibir el código
-      let method = '';
-      if (email) method = 'email';
-      if (phoneNumber) method = 'sms'; // Ajusta según la lógica de tu aplicación
-
-      await axios.post('/users/2fa/verify', { code: verificationCode, method });
+      await axios.post(
+        '/users/2fa/verify',
+        { code: verificationCode },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'application/json',
+          },
+        }
+      );
       setTwoFactorAuth(true);
       setShowVerificationModal(false);
       setSuccess(t('twoFactorEnabled'));
     } catch (err) {
       console.error('Error verifying code:', err.response?.data || err.message);
-      setError(t('errorVerifyingCode'));
+      const errorMessage = err.response?.data?.error || err.message;
+      setError(`${t('errorVerifyingCode')}: ${errorMessage}`);
     } finally {
       setSaving(false);
     }
   };
 
-  // Manejar cambios en las casillas de contacto
-  const handleContactChange = (e) => {
-    const { name, value } = e.target;
-    if (name === 'email') {
-      setEmail(value);
-    } else if (name === 'phoneNumber') {
-      setPhoneNumber(value);
-    }
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
   };
 
   if (loading) {
@@ -153,30 +173,36 @@ const PrivacySettings = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
     >
-      <h2>{t('privacy')}</h2>
+      <h2 className={styles.sectionTitle}>{t('privacy')}</h2>
 
-      {/* Configuración de 2FA */}
+      {/* Switch 2FA */}
       <div className={styles.settingItem}>
         <Form>
           <Form.Group as={Row} className={styles.formGroup}>
             <Form.Label column sm={4} className={styles.label}>
               {t('twoFactorAuth')}
             </Form.Label>
-            <Col sm={8}>
+            <Col sm={8} className={styles.switchCol}>
               <Form.Check
                 type="switch"
                 id="twoFactorAuthSwitch"
                 label={twoFactorAuth ? t('enabled') : t('disabled')}
                 checked={twoFactorAuth}
                 onChange={handleTwoFactorAuthChange}
+                disabled={saving}
+                className={styles.toggleSwitch}
               />
             </Col>
           </Form.Group>
         </Form>
       </div>
 
-      {/* Modal de Verificación de 2FA */}
-      <Modal show={showVerificationModal} onHide={() => setShowVerificationModal(false)}>
+      {/* Modal para habilitar 2FA */}
+      <Modal
+        show={showVerificationModal}
+        onHide={() => setShowVerificationModal(false)}
+        centered
+      >
         <Modal.Header closeButton>
           <Modal.Title>{t('enableTwoFactorAuth')}</Modal.Title>
         </Modal.Header>
@@ -190,35 +216,23 @@ const PrivacySettings = () => {
                 type="email"
                 name="email"
                 value={email}
-                onChange={handleContactChange}
+                onChange={handleEmailChange}
                 placeholder={t('enterEmail')}
                 required
               />
             </Form.Group>
 
-            <Form.Group controlId="formPhoneNumber" className="mt-3">
-              <Form.Label>{t('phoneNumber')}</Form.Label>
-              <Form.Control
-                type="tel"
-                name="phoneNumber"
-                value={phoneNumber}
-                onChange={handleContactChange}
-                placeholder={t('enterPhoneNumber')}
-                required
-              />
-            </Form.Group>
-
             {!codeSent && (
-              <Button variant="primary" onClick={handleSendVerificationCode} disabled={saving} className="mt-3">
+              <Button
+                variant="primary"
+                onClick={handleSendVerificationCode}
+                disabled={saving}
+                className={`${styles.sendCodeBtn} mt-3`}
+              >
                 {saving ? (
                   <>
-                    <Spinner
-                      as="span"
-                      animation="border"
-                      size="sm"
-                      role="status"
-                      aria-hidden="true"
-                    />{' '}
+                    <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" />
+                    {' '}
                     {t('sendingCode')}
                   </>
                 ) : (
@@ -239,16 +253,16 @@ const PrivacySettings = () => {
                     required
                   />
                 </Form.Group>
-                <Button variant="success" onClick={handleVerifyCode} disabled={saving} className="mt-2">
+                <Button
+                  variant="success"
+                  onClick={handleVerifyCode}
+                  disabled={saving}
+                  className="mt-2"
+                >
                   {saving ? (
                     <>
-                      <Spinner
-                        as="span"
-                        animation="border"
-                        size="sm"
-                        role="status"
-                        aria-hidden="true"
-                      />{' '}
+                      <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" />
+                      {' '}
                       {t('verifying')}
                     </>
                   ) : (
@@ -262,27 +276,39 @@ const PrivacySettings = () => {
       </Modal>
 
       {/* Otras configuraciones de privacidad */}
-      <div className={styles.settingItem}>
+      <div className={styles.otherSettings}>
         <Form>
-          {/* Ejemplo de configuración adicional: Gestión de sesiones activas */}
+          {/* Ejemplo: Sesiones activas */}
           <Form.Group as={Row} className={styles.formGroup}>
             <Form.Label column sm={4} className={styles.label}>
               {t('activeSessions')}
             </Form.Label>
             <Col sm={8}>
-              <Button variant="outline-primary" onClick={() => {/* Implementar lógica de gestión */}}>
+              <Button
+                variant="outline-primary"
+                className={styles.outlineBtn}
+                onClick={() => {
+                  /* tu lógica */
+                }}
+              >
                 {t('manage')}
               </Button>
             </Col>
           </Form.Group>
 
-          {/* Ejemplo de configuración adicional: Registro de actividad */}
+          {/* Ejemplo: Registro de actividad */}
           <Form.Group as={Row} className={styles.formGroup}>
             <Form.Label column sm={4} className={styles.label}>
               {t('activityLog')}
             </Form.Label>
             <Col sm={8}>
-              <Button variant="outline-secondary" onClick={() => {/* Implementar lógica de visualización */}}>
+              <Button
+                variant="outline-secondary"
+                className={styles.outlineBtn}
+                onClick={() => {
+                  /* tu lógica */
+                }}
+              >
                 {t('view')}
               </Button>
             </Col>
@@ -290,7 +316,7 @@ const PrivacySettings = () => {
         </Form>
       </div>
 
-      {/* Mensajes de Éxito o Error */}
+      {/* Mensajes globales de error/éxito */}
       {error && (
         <Alert variant="danger" className="mt-3">
           {error}

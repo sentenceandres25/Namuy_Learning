@@ -1,21 +1,22 @@
-// src/components/UserIndex/StudentProfile/GeneralInfo/PersonalDetails.jsx
-
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState, useContext, useRef } from 'react';
 import { Form, Row, Col, Button, Alert, Spinner } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import styles from './PersonalDetails.module.css';
 import { AuthContext } from '../../../../contexts/AuthContext';
-import axios from '../../../../axiosConfig';  // <-- Usar tu axiosConfig con baseURL
+import axios from '../../../../axiosConfig';  // <-- Tu axiosConfig con baseURL
+
+const APPROVAL_REQUIRED_FIELDS = ['full_name', 'id_type', 'id_number', 'student_id'];
 
 const PersonalDetails = ({ data, onUpdate }) => {
   const { t } = useTranslation('UserIndex/StudentProfile/GeneralInfo');
   const { user, token, loading } = useContext(AuthContext);
 
+  // userData: estado que se va modificando con los inputs
   const [userData, setUserData] = useState({
     full_name: '',
     student_id: '',
-    email: '',
+    email: '', // Correo principal (tabla users)
     alt_email: '',
     contact_number: '',
     id_type: '',
@@ -25,6 +26,9 @@ const PersonalDetails = ({ data, onUpdate }) => {
     doc_url: ''
   });
 
+  // Guardamos la "data original" para poder comparar y ver si algo cambió
+  const [originalData, setOriginalData] = useState(null);
+
   const [pendingRequest, setPendingRequest] = useState(false);
   const [requestMessage, setRequestMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -32,15 +36,15 @@ const PersonalDetails = ({ data, onUpdate }) => {
   const [file, setFile] = useState(null);
 
   useEffect(() => {
-    console.log("Datos recibidos en PersonalDetails:", data);
-    console.log("Usuario desde contexto:", user);
-    console.log("ID de Usuario:", user && user.user_id ? user.user_id : 'No definido');
+    console.log('Datos recibidos en <PersonalDetails/>:', data);
+    console.log('Usuario desde contexto:', user);
 
     if (data) {
-      setUserData({
+      const initialData = {
         full_name: data.full_name || '',
         student_id: data.student_id || '',
-        email: data.email || '',
+        // El "correo principal" se toma de user?.email
+        email: user?.email || '',
         alt_email: data.alt_email || '',
         contact_number: data.contact_number || '',
         id_type: data.id_type || '',
@@ -48,10 +52,14 @@ const PersonalDetails = ({ data, onUpdate }) => {
         birth_date: data.birth_date ? data.birth_date.split('T')[0] : '',
         country_of_residence: data.country_of_residence || '',
         doc_url: data.doc_url || ''
-      });
+      };
+      setUserData(initialData);
+      setOriginalData(initialData); // Guardamos copia para comparar
       setIsFirstTime(false);
     } else {
+      // Asumimos primera vez
       setIsFirstTime(true);
+      setOriginalData(null);
     }
   }, [data, user]);
 
@@ -64,6 +72,15 @@ const PersonalDetails = ({ data, onUpdate }) => {
     setFile(e.target.files[0]);
   };
 
+  /**
+   * Función auxiliar: verifica si alguno de los campos "aprobables" cambió
+   * con respecto a la data original. Retorna true si al menos uno difiere.
+   */
+  const requiresApprovalDoc = () => {
+    if (!originalData) return false; 
+    return APPROVAL_REQUIRED_FIELDS.some(field => userData[field] !== originalData[field]);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setErrorMessage('');
@@ -71,104 +88,110 @@ const PersonalDetails = ({ data, onUpdate }) => {
     setPendingRequest(true);
 
     if (!user || !user.user_id) {
-      setErrorMessage('ID de usuario no definido.');
+      setErrorMessage('ID de usuario no definido. Requiere autenticación.');
       setPendingRequest(false);
       return;
     }
 
     try {
-      // Definir campos que requieren aprobación
-      const approvalRequiredFields = ['full_name', 'id_type', 'id_number', 'student_id'];
-      // Checar si el usuario cambió alguno de esos campos
-      const hasApprovalFields = approvalRequiredFields.some(field => userData[field]);
+      // 1. Verificamos si cambió alguno de los campos "approval required"
+      const changedApprovalFields = APPROVAL_REQUIRED_FIELDS.filter(
+        field => originalData && userData[field] !== originalData[field]
+      );
+      const hasApprovalFields = changedApprovalFields.length > 0;
 
-      // Si hay campos que requieren aprobación, se prepara la solicitud de cambio
+      // Si se modificó algo en esos campos => se requiere doc
       if (hasApprovalFields) {
-        const approvalFields = {};
-        approvalRequiredFields.forEach(field => {
-          if (userData[field]) {
-            approvalFields[field] = userData[field];
-          }
-        });
-
-        // Verificar si se adjuntó un archivo
         if (!file) {
-          setErrorMessage('Se requiere un documento de identidad para cambios que requieren aprobación.');
+          setErrorMessage(t('errorFileRequired')); // "Se requiere documento..."
           setPendingRequest(false);
           return;
         }
+        // Estructura con los campos cambiados
+        const approvalFields = {};
+        changedApprovalFields.forEach(field => {
+          approvalFields[field] = userData[field];
+        });
 
-        // Enviar solicitud de cambio con campos que requieren aprobación
+        // Solicitud POST con file y changes
         await handleSubmitApprovalFields(approvalFields, file);
       }
 
-      // Campos que no requieren aprobación
-      const updatableFields = ['email', 'alt_email', 'contact_number', 'birth_date', 'country_of_residence'];
+      // 2. Campos "no aprobables": alt_email, contact_number, birth_date, country_of_residence
+      //   + Manejo especial de email (tabla users)
+      const updatableFields = ['alt_email', 'contact_number', 'birth_date', 'country_of_residence'];
       const autoFields = {};
-      updatableFields.forEach(field => {
+      updatableFields.forEach((field) => {
         if (userData[field]) {
           autoFields[field] = userData[field];
         }
       });
 
-      // Enviar actualización automática solo si hay campos para actualizar
+      // Revisar correo principal en 'users'
+      if (userData.email && userData.email !== user.email) {
+        // Actualizar email en la tabla 'users'
+        await handleUpdateUserEmail(userData.email);
+      }
+
+      // Actualizar resto en personal_details
       if (Object.keys(autoFields).length > 0) {
         await handleUpdateAutoFields(autoFields);
       }
 
+      // Callback: refrescar datos en el padre
       if (onUpdate) {
         onUpdate();
       }
     } catch (error) {
-      console.error("Error al enviar la solicitud de cambio:", error);
-      setErrorMessage(error.response?.data?.error || 'Error al enviar la solicitud.');
+      console.error('Error al enviar la solicitud:', error);
+      setErrorMessage(error.response?.data?.error || t('errorSubmittingRequest'));
     } finally {
       setPendingRequest(false);
     }
   };
 
   /**
-   * handleUpdateAutoFields:
-   * Realiza la petición PUT a /api/personal_details/<user_id>
-   * para actualizar campos que no requieren aprobación (email, alt_email, etc.).
+   * PUT: /users/:user_id/email => Actualiza el correo principal en la tabla users
    */
-  const handleUpdateAutoFields = async (autoFields) => {
-    console.log("Enviando solicitud PUT con autoFields:", autoFields);
-
-    if (Object.keys(autoFields).length === 0) {
-      console.error("autoFields está vacío. No se enviará la solicitud PUT.");
-      return;
-    }
-
+  const handleUpdateUserEmail = async (newEmail) => {
     try {
-      const response = await axios.put(
-        // <-- Ajuste importante: ruta a /api/personal_details en vez de /api/user
-        `/personal_details/${user.user_id}`,
-        autoFields,
-        {
-          headers: {
-            'Authorization': `Bearer ${token}`
-            // 'Content-Type': 'application/json' se maneja automáticamente
-          }
-        }
+      const resp = await axios.put(
+        `/users/${user.user_id}/email`,
+        { email: newEmail },
+        { headers: { Authorization: `Bearer ${token}` } }
       );
-
-      console.log("Respuesta de la actualización:", response.data);
-      setUserData(prev => ({
-        ...prev,
-        ...response.data
-      }));
-      setRequestMessage("Información actualizada correctamente.");
+      console.log('Respuesta de updateEmail:', resp.data);
+      setRequestMessage(t('emailUpdated'));
     } catch (error) {
-      console.error("Error al actualizar la información:", error);
-      setErrorMessage(error.response?.data?.error || 'Error al actualizar la información.');
+      console.error('Error al actualizar email principal:', error);
+      throw error;
     }
   };
 
   /**
-   * handleSubmitApprovalFields:
-   * Realiza la petición POST a /api/personal_details/<user_id>/requestChange
-   * para los campos que requieren aprobación (full_name, id_type, etc.).
+   * PUT: /personal_details/:user_id => Actualizar campos sin aprobación
+   */
+  const handleUpdateAutoFields = async (autoFields) => {
+    try {
+      const response = await axios.put(
+        `/personal_details/${user.user_id}`,
+        autoFields,
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
+      // Actualizar userData local con la respuesta
+      setUserData(prev => ({ ...prev, ...response.data }));
+      // Actualizar originalData (solo para esos campos)
+      setOriginalData(prev => ({ ...prev, ...response.data }));
+
+      setRequestMessage(t('infoUpdated'));
+    } catch (error) {
+      console.error('Error al actualizar personal_details:', error);
+      throw error;
+    }
+  };
+
+  /**
+   * POST: /personal_details/:user_id/requestChange => Adjuntar doc + campos
    */
   const handleSubmitApprovalFields = async (approvalFields, file) => {
     try {
@@ -176,25 +199,17 @@ const PersonalDetails = ({ data, onUpdate }) => {
       formData.append('changes', JSON.stringify(approvalFields));
       formData.append('file', file);
 
-      // <-- Ajuste importante: ruta a /api/personal_details en vez de /api/user
       const response = await axios.post(
         `/personal_details/${user.user_id}/requestChange`,
         formData,
-        {
-          headers: {
-            'Authorization': `Bearer ${token}`
-            // No se necesita 'Content-Type': FormData la maneja Axios
-          }
-        }
+        { headers: { Authorization: `Bearer ${token}` } }
       );
-
-      console.log("Respuesta de la solicitud:", response.data);
-      if (response.data.pending) {
+      if (response.data?.pending) {
         setRequestMessage(response.data.message);
       }
     } catch (error) {
-      console.error("Error al enviar la solicitud de cambio:", error);
-      setErrorMessage(error.response?.data?.error || 'Error al enviar la solicitud.');
+      console.error('Error al solicitar aprobación:', error);
+      throw error;
     }
   };
 
@@ -204,14 +219,20 @@ const PersonalDetails = ({ data, onUpdate }) => {
         <Spinner animation="border" role="status">
           <span className="visually-hidden">Cargando...</span>
         </Spinner>
-        <span>Cargando...</span>
+        <span>{t('loading')}</span>
       </div>
     );
   }
 
   if (!user) {
-    return <div className={styles.error}>No autenticado.</div>;
+    return <div className={styles.error}>{t('notAuthenticated')}</div>;
   }
+
+  // Determinar si DEBEMOS mostrar el input de documento en el formulario
+  // (solo si se cambió al menos uno de los approval fields)
+  const showDocInput = originalData && APPROVAL_REQUIRED_FIELDS.some(
+    field => userData[field] !== originalData[field]
+  );
 
   return (
     <motion.div
@@ -221,15 +242,11 @@ const PersonalDetails = ({ data, onUpdate }) => {
     >
       <h3 className={styles.title}>{t('detalles_personales')}</h3>
 
-      {pendingRequest && (
-        <Alert variant="info">
-          {requestMessage || t('solicitud_pendiente')}
-        </Alert>
+      {pendingRequest && requestMessage && (
+        <Alert variant="info">{requestMessage}</Alert>
       )}
       {errorMessage && (
-        <Alert variant="danger">
-          {errorMessage}
-        </Alert>
+        <Alert variant="danger">{errorMessage}</Alert>
       )}
 
       <Form onSubmit={handleSubmit}>
@@ -274,7 +291,7 @@ const PersonalDetails = ({ data, onUpdate }) => {
           </Col>
         </Form.Group>
 
-        {/* Email */}
+        {/* Email (principal, tabla users) */}
         <Form.Group as={Row} className={styles['form-group']}>
           <Form.Label column sm={4} className={styles.label}>
             {t('correo_electronico')}
@@ -292,7 +309,7 @@ const PersonalDetails = ({ data, onUpdate }) => {
           </Col>
         </Form.Group>
 
-        {/* Alternate Email */}
+        {/* Alternate Email (personal_details) */}
         <Form.Group as={Row} className={styles['form-group']}>
           <Form.Label column sm={4} className={styles.label}>
             {t('correo_alternativo')}
@@ -409,8 +426,8 @@ const PersonalDetails = ({ data, onUpdate }) => {
           </Col>
         </Form.Group>
 
-        {/* Documento de Identidad si hay campos de aprobación */}
-        {['full_name', 'id_type', 'id_number', 'student_id'].some(field => userData[field]) && (
+        {/* Documento (archivo) SOLO si realmente cambió algún approval field */}
+        {showDocInput && (
           <Form.Group as={Row} className={styles['form-group']}>
             <Form.Label column sm={4} className={styles.label}>
               {t('documento_identidad')}
@@ -421,8 +438,8 @@ const PersonalDetails = ({ data, onUpdate }) => {
                 name="file"
                 className={styles.input}
                 onChange={handleFileChange}
-                required
                 accept=".png,.jpg,.jpeg,.pdf"
+                required
               />
               <Form.Text muted>{t('solo_formatos_permitidos')}</Form.Text>
             </Col>
@@ -442,11 +459,9 @@ const PersonalDetails = ({ data, onUpdate }) => {
         </Row>
       </Form>
 
-      {/* Mostrar link al documento de identidad si existe */}
       {userData.doc_url && (
         <div className={styles.document}>
           <h5>{t('documento_identidad')}</h5>
-          {/* Ajusta la URL si tu servidor sirve /uploads/ directamente en /uploads/... */}
           <a
             href={`http://localhost:3001${userData.doc_url}`}
             target="_blank"

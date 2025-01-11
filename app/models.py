@@ -11,17 +11,19 @@ class Users(db.Model):
     user_id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(150), nullable=False, unique=True)
     password_hash = db.Column(db.String(128), nullable=False)
-    email = db.Column(db.String(255), nullable=False, unique=True)  # Añadido
-    preferred_language = db.Column(db.String(10), nullable=False, default='en')  # Añadido
-    
+    email = db.Column(db.String(255), nullable=False, unique=True)
+    preferred_language = db.Column(db.String(10), nullable=False, default='en')
+    two_factor_enabled = db.Column(db.Boolean, nullable=False, default=False)
+
     # Relación con PersonalDetails
     personal_details = db.relationship('PersonalDetails', backref='user', uselist=False)
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
-    
+
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
+
 
 class PersonalDetails(db.Model):
     __tablename__ = 'personal_details'
@@ -42,9 +44,13 @@ class PersonalDetails(db.Model):
     pending_approval = db.Column(db.Boolean, nullable=False, default=False)
     doc_type = db.Column(db.String(50), nullable=True)
     doc_url = db.Column(db.String(255), nullable=True)
-    two_factor_enabled = db.Column(db.Boolean, nullable=False, default=False)
+
+    # Eliminado two_factor_enabled de personal_details
+    # two_factor_enabled = db.Column(db.Boolean, default=False, ...)
+    # two_factor_codes = db.relationship(...) => Mantenemos el link if needed below?
 
     two_factor_codes = db.relationship('TwoFactorCode', backref='personal_details', lazy=True)
+
 
 class TwoFactorCode(db.Model):
     __tablename__ = 'two_factor_codes'
@@ -52,7 +58,7 @@ class TwoFactorCode(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('personal_details.user_id'), nullable=False)
     code = db.Column(db.String(6), nullable=False)
-    method = db.Column(db.String(10), nullable=False)  # 'email' o 'sms'
+    method = db.Column(db.String(10), nullable=False, default='email')
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     expires_at = db.Column(db.DateTime, nullable=False)
     attempts = db.Column(db.Integer, default=0)

@@ -17,11 +17,8 @@ def create_app():
     app = Flask(__name__)
 
     # Configuración de la base de datos
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URI', 'postgresql://usuario:contraseña@localhost:5432/mi_base_de_datos')
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URI', 'postgresql://postgres:JaOb019640.@localhost:5432/namuy_learning')
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-    # Inicializar la extensión de la base de datos
-    db.init_app(app)
 
     # Configuración de Flask-Mail
     app.config['MAIL_SERVER'] = os.getenv('MAIL_SERVER', 'smtp.gmail.com')
@@ -35,18 +32,21 @@ def create_app():
     # Agregar JWT_SECRET_KEY
     app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'tu_clave_secreta_jwt')
 
-    # Inicializar Flask-Mail
+    # Inicializar extensiones
+    db.init_app(app)
     mail.init_app(app)
-
-    # Configuración de CORS
-    CORS(app,
-         resources={r"/api/*": {"origins": "http://localhost:3000"}},
-         supports_credentials=True,
-         methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-         allow_headers=["Content-Type", "Authorization"])
 
     # Inicializar Flask-Migrate
     migrate = Migrate(app, db)
+
+    # Configuración de CORS
+    CORS(
+        app,
+        resources={r"/api/*": {"origins": "http://localhost:3000"}},
+        supports_credentials=True,
+        methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+        allow_headers=["Content-Type", "Authorization"]
+    )
 
     # Importar y registrar Blueprints
     from app.routes import (
@@ -90,5 +90,13 @@ def create_app():
             line = urllib.parse.unquote(f"{rule.endpoint}: {rule}")
             output[line] = methods
         return jsonify(output)
+
+    # Manejador de errores global para incluir CORS headers
+    @app.errorhandler(Exception)
+    def handle_exception(e):
+        # Puedes personalizar el manejo de errores aquí
+        response = jsonify({'error': 'Ocurrió un error en el servidor.'})
+        response.status_code = 500
+        return response
 
     return app
