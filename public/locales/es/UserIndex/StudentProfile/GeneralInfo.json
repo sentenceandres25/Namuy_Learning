@@ -94,5 +94,6 @@
         "preferencesUpdated": "Preferencias de notificación actualizadas exitosamente.",
         "errorSavingPreferences": "Error al guardar las preferencias de notificación.",
         "errorFetchingPhoto": "Error al obtener la foto de perfil.",
-        "noSessionData": "No hay datos de sesión disponibles."
+        "noSessionData": "No hay datos de sesión disponibles.",
+        "upload_photo": "Subir Foto"
 }

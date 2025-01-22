@@ -1,23 +1,22 @@
 // src/contexts/AuthContext.jsx
-
 import React, { createContext, useState, useEffect } from 'react';
-import axios from '../axiosConfig'; // Asegúrate de que la ruta es correcta
+import axios from '../axiosConfig';
 
 export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const [user, setUser]   = useState(null);
   const [token, setToken] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const storedToken = localStorage.getItem('token');
     if (storedToken) {
+      // Inyectamos el token a las cabeceras con un interceptor o manualmente
       axios.get('/auth/me')
         .then(res => {
           setUser(res.data.user);
           setToken(storedToken);
-          console.log("Usuario autenticado:", res.data.user); // Log añadido
           setLoading(false);
         })
         .catch(err => {
@@ -45,7 +44,7 @@ const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, token, login, logout, loading }}>
+    <AuthContext.Provider value={{ user, setUser, token, login, logout, loading }}>
       {children}
     </AuthContext.Provider>
   );

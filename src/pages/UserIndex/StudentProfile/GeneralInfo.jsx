@@ -1,57 +1,105 @@
 // src/pages/UserIndex/StudentProfile/GeneralInfo/GeneralInfo.jsx
 
-import React, { useEffect, useState, useContext } from 'react';
-import { Container, Row, Col, Alert } from 'react-bootstrap';
-import ProfilePicture from '../../../components/UserIndex/StudentProfile/GeneralInfo/ProfilePicture';
-import PersonalDetails from '../../../components/UserIndex/StudentProfile/GeneralInfo/PersonalDetails';
-import AccountDetails from '../../../components/UserIndex/StudentProfile/GeneralInfo/AccountDetails';
-import Interests from '../../../components/UserIndex/StudentProfile/GeneralInfo/Interests';
-import SessionHistory from '../../../components/UserIndex/StudentProfile/GeneralInfo/SessionHistory';
+import React, {
+  useEffect,
+  useState,
+  useContext,
+  lazy,
+  Suspense,
+  useRef
+} from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+
 import HeaderComponent from '../../../components/Header/Header';
-import PersonalCenter from '../../../components/UserIndex/PersonalCenter';
 import Footer from '../../../components/Footer/Footer';
-import { useTranslation } from 'react-i18next';
+import PersonalCenter from '../../../components/UserIndex/PersonalCenter';
 import PageTitle from '../../../components/PageTitle/PageTitle';
-import axios from '../../../axiosConfig'; // Asegúrate de tener la ruta correcta
 import { AuthContext } from '../../../contexts/AuthContext';
+
 import './GeneralInfo.css';
+import { useTranslation } from 'react-i18next';
+
+// Lazy imports
+const ProfilePicture = lazy(() =>
+  import('../../../components/UserIndex/StudentProfile/GeneralInfo/ProfilePicture')
+);
+const PersonalDetails = lazy(() =>
+  import('../../../components/UserIndex/StudentProfile/GeneralInfo/PersonalDetails')
+);
+const AccountDetails = lazy(() =>
+  import('../../../components/UserIndex/StudentProfile/GeneralInfo/AccountDetails')
+);
+const Interests = lazy(() =>
+  import('../../../components/UserIndex/StudentProfile/GeneralInfo/Interests')
+);
+const SessionHistory = lazy(() =>
+  import('../../../components/UserIndex/StudentProfile/GeneralInfo/SessionHistory')
+);
 
 const GeneralInfo = () => {
   const { t } = useTranslation('UserIndex/StudentProfile/GeneralInfo');
   const headerHeight = '125px';
   const { user } = useContext(AuthContext);
 
-  const [personalDetails, setPersonalDetails] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [updateSuccess, setUpdateSuccess] = useState(false);
+  // Control visibility of each section
+  const [showProfilePic, setShowProfilePic] = useState(false);
+  const [showPersonalDetails, setShowPersonalDetails] = useState(false);
+  const [showAccountDetails, setShowAccountDetails] = useState(false);
+  const [showInterests, setShowInterests] = useState(false);
+  const [showSessionHistory, setShowSessionHistory] = useState(false);
 
-  // Obtener la información personal al montar el componente
+  // Refs for each section
+  const profilePicRef = useRef(null);
+  const personalDetailsRef = useRef(null);
+  const accountDetailsRef = useRef(null);
+  const interestsRef = useRef(null);
+  const sessionHistoryRef = useRef(null);
+
+  // IntersectionObserver for lazy loading
   useEffect(() => {
-    if (user && user.user_id) {
-      // Llamamos a /api/personal_details/<user_id> en vez de /api/user/<user_id>
-      axios
-        .get(`/personal_details/${user.user_id}`)
-        .then((response) => {
-          console.log("Datos obtenidos del backend (personal_details):", response.data);
-          setPersonalDetails(response.data);
-          setIsLoading(false);
-        })
-        .catch((err) => {
-          console.error("Error al obtener datos:", err.response?.data || err.message);
-          if (err.response && err.response.status === 404) {
-            setPersonalDetails(null);
-          } else {
-            setError(t('anErrorOccurred'));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const targetId = entry.target.id;
+            if (targetId === 'profilePicRow') setShowProfilePic(true);
+            if (targetId === 'personalDetailsRow') setShowPersonalDetails(true);
+            if (targetId === 'accountDetailsRow') setShowAccountDetails(true);
+            if (targetId === 'interestsRow') setShowInterests(true);
+            if (targetId === 'sessionHistoryRow') setShowSessionHistory(true);
+
+            observer.unobserve(entry.target);
           }
-          setIsLoading(false);
         });
-    } else {
-      setIsLoading(false);
-      setError(t('userNotAuthenticated'));
-    }
-  }, [user, t]);
+      },
+      {
+        threshold: 1,
+        rootMargin: '-50px 0px', // Adjust as needed
+      }
+    );
+
+    // Function to observe or display immediately if in viewport
+    const checkOrObserve = (ref, setState) => {
+      if (!ref.current) return;
+      const rect = ref.current.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        setState(true);
+      } else {
+        observer.observe(ref.current);
+      }
+    };
+
+    // Observe each section
+    checkOrObserve(profilePicRef, setShowProfilePic);
+    checkOrObserve(personalDetailsRef, setShowPersonalDetails);
+    checkOrObserve(accountDetailsRef, setShowAccountDetails);
+    checkOrObserve(interestsRef, setShowInterests);
+    checkOrObserve(sessionHistoryRef, setShowSessionHistory);
+
+    // Cleanup observer on unmount
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
@@ -63,7 +111,6 @@ const GeneralInfo = () => {
         className="general-info"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
       >
         <Container fluid className="user-index" style={{ marginTop: headerHeight }}>
           <Row>
@@ -72,46 +119,66 @@ const GeneralInfo = () => {
             </Col>
 
             <Col md={9}>
-              {isLoading ? (
-                <p>{t('loading')}</p>
-              ) : error ? (
-                <Alert variant="danger">{error}</Alert>
-              ) : (
-                <>
-                  {updateSuccess && <Alert variant="success">{t('updateSuccess')}</Alert>}
-                  <Row>
-                    <Col md={12}>
-                      <h2>{t('titulo')}</h2>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col md={12}>
-                      <ProfilePicture data={personalDetails} />
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col md={12}>
-                      <PersonalDetails data={personalDetails} />
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col md={12}>
-                      <AccountDetails data={personalDetails} />
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col md={12}>
-                      <Interests interests={personalDetails?.interests || []} />
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col md={12}>
-                      {/* Eliminada la prop 'data' para evitar conflictos */}
+              <Row>
+                <Col md={12}>
+                  <h2>{t('titulo')}</h2>
+                </Col>
+              </Row>
+
+              {/* ProfilePicture */}
+              <Row id="profilePicRow" ref={profilePicRef}>
+                <Col md={12}>
+                  {showProfilePic && (
+                    <Suspense fallback={<p>Loading Picture...</p>}>
+                      <ProfilePicture />
+                    </Suspense>
+                  )}
+                </Col>
+              </Row>
+
+              {/* PersonalDetails */}
+              <Row id="personalDetailsRow" ref={personalDetailsRef}>
+                <Col md={12}>
+                  {showPersonalDetails && (
+                    <Suspense fallback={<p>Loading Personal Details...</p>}>
+                      <PersonalDetails />
+                    </Suspense>
+                  )}
+                </Col>
+              </Row>
+
+              {/* AccountDetails */}
+              <Row id="accountDetailsRow" ref={accountDetailsRef}>
+                <Col md={12}>
+                  {showAccountDetails && (
+                    <Suspense fallback={<p>Loading Account Details...</p>}>
+                      <AccountDetails />
+                    </Suspense>
+                  )}
+                </Col>
+              </Row>
+
+              {/* Interests */}
+              <Row id="interestsRow" ref={interestsRef}>
+                <Col md={12}>
+                  {showInterests && (
+                    <Suspense fallback={<p>Loading Interests...</p>}>
+                      <Interests interests={[]} /> {/* Interests prop can be adjusted as needed */}
+                    </Suspense>
+                  )}
+                </Col>
+              </Row>
+
+              {/* SessionHistory */}
+              <Row id="sessionHistoryRow" ref={sessionHistoryRef}>
+                <Col md={12}>
+                  {showSessionHistory && (
+                    <Suspense fallback={<p>Loading Session History...</p>}>
                       <SessionHistory />
-                    </Col>
-                  </Row>
-                </>
-              )}
+                    </Suspense>
+                  )}
+                </Col>
+              </Row>
             </Col>
           </Row>
         </Container>

@@ -7,10 +7,10 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: auto;
-  display: flex; /* Habilitar flexbox */
-  flex-direction: column; /* Apilar elementos verticalmente */
-  align-items: center; /* Centrar horizontalmente */
-  justify-content: center; /* Centrar verticalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .profilePicImage {
@@ -21,20 +21,28 @@
   padding: 2px;
 }
 
-.profilePicLabel {
-  color: #4C8F40;
-  font-weight: 500;
+/* Center the text */
+.centeredText {
+  text-align: center;
   margin-top: 1rem;
-  text-align: center; /* Centrar texto */
-}
-
-.fileName {
-  color: #357A38;
   font-weight: 500;
-  display: inline-block;
-  margin-left: 10px;
+  color: #4C8F40;
 }
 
+/* Container for the two buttons, displayed in a column and centered */
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.hiddenFileInput {
+  display: none;
+}
+
+/* Style for the "Select File" button */
 .uploadButton {
   background-color: #77C37A;
   color: #ffffff;
@@ -50,11 +58,7 @@
   border-color: #2C6B2E;
 }
 
-.hiddenFileInput {
-  display: none;
-}
-
-/* Estilos para el botón "Subir Foto" */
+/* Style for the "Upload Photo" button */
 .uploadPhotoButton {
   background-color: #77C37A;
   color: #ffffff;
@@ -62,12 +66,19 @@
   border: 2px solid #357A38;
   padding: 6px 12px;
   transition: background-color 0.3s ease;
-  cursor: pointer;      
-  margin-top: 5px;
+  cursor: pointer;
 }
 
-/* Estado hover para el botón "Subir Foto" */
 .uploadPhotoButton:hover {
   background-color: #66AA6D;
-  border-color: #2C6B2E;         /* Mantener el texto blanco */
+  border-color: #2C6B2E;
+}
+
+.uploadLabel {
+  cursor: pointer;
+}
+
+/* Alert styling (if needed) */
+.alert {
+  margin-top: 10px;
 }

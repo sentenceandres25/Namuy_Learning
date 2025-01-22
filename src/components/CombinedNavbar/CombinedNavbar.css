@@ -145,7 +145,7 @@ header {
   left: 0;
   z-index: 1000;
   font-size: 0.8rem;
-  overflow-y: auto;
+  
 }
 
 .my-dropdown h4 {
@@ -162,7 +162,6 @@ header {
   min-width: 160px;
   width: 40px;
   max-height: 400px;
-  overflow-y: auto;
   font-size: 0.8rem;
   grid-area: vertical-menu;
 }

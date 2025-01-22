@@ -8,10 +8,9 @@ const ProtectedRoute = ({ children }) => {
   const { lang } = useParams();
 
   if (!user) {
-    // Si no hay usuario, redirige al login con el idioma actual
+    // Redirige al login con el idioma actual si no hay usuario
     return <Navigate to={`/login/${lang || 'es'}`} />;
   }
-
   return children;
 };
 

@@ -1,65 +1,123 @@
 // src/components/UserIndex/StudentProfile/GeneralInfo/AccountDetails.jsx
 
-import React, { useState } from 'react';
-import { Form, Row, Col, Button } from 'react-bootstrap';
+import React, { useEffect, useState, useContext } from 'react';
+import { Form, Row, Col, Button, Alert, Spinner } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import styles from './AccountDetails.module.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import { useLanguageCurrency } from '../../../CombinedNavbar/hooks/useLanguageCurrency'; // Ruta corregida
+import { useLanguageCurrency } from '../../../CombinedNavbar/hooks/useLanguageCurrency';
 import axios from '../../../../axiosConfig';
+import { AuthContext } from '../../../../contexts/AuthContext';
 
-const AccountDetails = ({ data = {}, onPasswordUpdate }) => {
-  // data DEBE contener { user_id, date_joined, account_status, ... }
-
+const AccountDetails = () => {
   const { t } = useTranslation('UserIndex/StudentProfile/GeneralInfo');
-
-  // Usamos el hook para manejar el idioma y la moneda
   const { currentLanguage, handleLanguageChange } = useLanguageCurrency();
+  const { user, token } = useContext(AuthContext);
 
+  // State to hold account information
+  const [accountData, setAccountData] = useState({
+    date_joined: '',
+    account_status: '',
+  });
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState('');
+
+  // States for password fields
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
+  // Fetch account details on component mount
+  useEffect(() => {
+    // Ensure user is authenticated
+    if (!user || !user.user_id) {
+      setError(t('userNotAuthenticated') || 'User is not authenticated.');
+      setIsLoading(false);
+      return;
+    }
+
+    // Fetch personal details from the backend
+    axios
+      .get(`/personal_details/${user.user_id}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      .then((response) => {
+        const data = response.data || {};
+        setAccountData({
+          date_joined: data.date_joined || '',
+          account_status: data.account_status || '',
+        });
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        const errorMessage =
+          err.response?.data?.error || t('anErrorOccurred') || 'An error occurred while fetching account details.';
+        setError(errorMessage);
+        setIsLoading(false);
+      });
+  }, [user, token, t]);
+
+  // Handler to toggle password visibility
+  const togglePasswordVisibility = (field) => {
+    if (field === 'newPassword') {
+      setShowNewPassword((prev) => !prev);
+    } else if (field === 'confirmPassword') {
+      setShowConfirmPassword((prev) => !prev);
+    }
+  };
+
+  // Handler to update password
   const handleUpdatePassword = async () => {
-    // Validar campos
+    // Validate password fields
     if (!newPassword || !confirmPassword) {
-      alert(t('passwordErrorEmpty'));
+      alert(t('passwordErrorEmpty') || 'Please fill in both password fields.');
       return;
     }
     if (newPassword !== confirmPassword) {
-      alert(t('passwordErrorMatch'));
+      alert(t('passwordErrorMatch') || 'Passwords do not match.');
       return;
     }
 
     try {
-      // Llamar a la ruta /account/<user_id>/updatePassword
-      // Ajusta la URL si tu endpoint es diferente
-      await axios.put(`/account/${data.user_id}/updatePassword`, {
-        newPassword,
-      });
+      // Send PUT request to update password
+      await axios.put(
+        `/account/${user.user_id}/updatePassword`,
+        { newPassword },
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
 
-      alert(t('passwordUpdated'));
-      // Limpiar campos
+      alert(t('passwordUpdated') || 'Password updated successfully.');
       setNewPassword('');
       setConfirmPassword('');
-      
-      // Disparar callback si lo requieres
-      if (onPasswordUpdate) onPasswordUpdate();
     } catch (error) {
-      alert(t('passwordErrorServer'));
-      console.error('Error al actualizar contraseña:', error);
+      alert(t('passwordErrorServer') || 'Server error. Please try again later.');
+      console.error('Error updating password:', error);
     }
   };
 
+  // Handler for language selection
   const handleLanguageSelect = (e) => {
-    const newLang = e.target.value;
-    handleLanguageChange(newLang);
+    handleLanguageChange(e.target.value);
   };
+
+  // Render loading state
+  if (isLoading) {
+    return (
+      <div className={styles.accountDetails}>
+        <Spinner animation="border" role="status" />
+        <span>{t('loading')}</span>
+      </div>
+    );
+  }
+
+  // Render error state
+  if (error) {
+    return <Alert variant="danger">{error}</Alert>;
+  }
 
   return (
     <motion.div
@@ -78,7 +136,7 @@ const AccountDetails = ({ data = {}, onPasswordUpdate }) => {
       </motion.h3>
 
       <Form className={styles.form}>
-        {/* Fecha de inscripción (solo lectura) */}
+        {/* Date Joined (Read-Only) */}
         <Form.Group as={Row} className={styles.formGroup}>
           <Form.Label column sm={4} className={styles.label}>
             {t('inscriptionDate')}
@@ -88,16 +146,12 @@ const AccountDetails = ({ data = {}, onPasswordUpdate }) => {
               type="text"
               disabled
               className={styles.input}
-              value={
-                data.date_joined
-                  ? data.date_joined.split('T')[0] // "yyyy-mm-dd"
-                  : ''
-              }
+              value={accountData.date_joined ? accountData.date_joined.split('T')[0] : ''}
             />
           </Col>
         </Form.Group>
 
-        {/* Nueva contraseña */}
+        {/* New Password */}
         <Form.Group as={Row} className={styles.formGroup}>
           <Form.Label column sm={4} className={styles.label}>
             {t('newPassword')}
@@ -113,13 +167,13 @@ const AccountDetails = ({ data = {}, onPasswordUpdate }) => {
               <FontAwesomeIcon
                 icon={showNewPassword ? faEyeSlash : faEye}
                 className={styles.eyeIcon}
-                onClick={() => setShowNewPassword(!showNewPassword)}
+                onClick={() => togglePasswordVisibility('newPassword')}
               />
             </div>
           </Col>
         </Form.Group>
 
-        {/* Confirmar contraseña */}
+        {/* Confirm Password */}
         <Form.Group as={Row} className={styles.formGroup}>
           <Form.Label column sm={4} className={styles.label}>
             {t('confirmPassword')}
@@ -135,13 +189,13 @@ const AccountDetails = ({ data = {}, onPasswordUpdate }) => {
               <FontAwesomeIcon
                 icon={showConfirmPassword ? faEyeSlash : faEye}
                 className={styles.eyeIcon}
-                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                onClick={() => togglePasswordVisibility('confirmPassword')}
               />
             </div>
           </Col>
         </Form.Group>
 
-        {/* Botón para actualizar contraseña */}
+        {/* Update Password Button */}
         <Form.Group as={Row} className={styles.formGroup}>
           <Form.Label column sm={4} className={styles.label} />
           <Col sm={8}>
@@ -157,7 +211,7 @@ const AccountDetails = ({ data = {}, onPasswordUpdate }) => {
           </Col>
         </Form.Group>
 
-        {/* Estado de la cuenta (solo lectura) */}
+        {/* Account Status (Read-Only) */}
         <Form.Group as={Row} className={styles.formGroup}>
           <Form.Label column sm={4} className={styles.label}>
             {t('accountStatus')}
@@ -167,14 +221,12 @@ const AccountDetails = ({ data = {}, onPasswordUpdate }) => {
               type="text"
               disabled
               className={styles.input}
-              value={
-                data.account_status ? data.account_status : ''
-              }
+              value={accountData.account_status || ''}
             />
           </Col>
         </Form.Group>
 
-        {/* Selector de idioma */}
+        {/* Language Selector */}
         <Form.Group as={Row} className={styles.formGroup}>
           <Form.Label column sm={4} className={styles.label}>
             {t('preferredLanguage')}
@@ -188,7 +240,6 @@ const AccountDetails = ({ data = {}, onPasswordUpdate }) => {
               >
                 <option value="es">{t('spanish')}</option>
                 <option value="en">{t('english')}</option>
-                {/* Agrega más opciones si soportas otros idiomas */}
               </Form.Select>
             </motion.div>
           </Col>

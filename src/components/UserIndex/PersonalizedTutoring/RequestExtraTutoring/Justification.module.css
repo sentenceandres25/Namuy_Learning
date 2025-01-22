@@ -1,29 +1,39 @@
-/* Styles/Justification.module.css */
-
 .justification {
-    background: #fff3e0;
-    padding: 20px;
-    border-radius: 12px;
-    margin-top: 20px;
-  }
-  
-  .justification h3 {
-    color: #e65100;
-    margin-bottom: 20px;
-  }
-  
+  background: #fff3e0;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.justification h3 {
+  color: #e65100;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.justification button {
+  background-color: #e65100;
+  border: none;
+  color: #fff;
+  padding: 10px 20px; /* Agregado para mejor accesibilidad */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /* Uso de la propiedad estándar */
+}
+
+.justification button:hover {
+  background-color: #bf360c;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
   .buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    flex-direction: column;
+    gap: 10px;
   }
-  
-  .justification button {
-    background-color: #e65100;
-    border: none;
-  }
-  
-  .justification button:hover {
-    background-color: #bf360c;
-  }
-  
+}

@@ -1,6 +1,5 @@
 /* ========== Horizontal Menu ========== */
 .horizontal-menu {
-    overflow-x: auto;
     display: flex;
     opacity: 1;
     justify-content: flex-start;

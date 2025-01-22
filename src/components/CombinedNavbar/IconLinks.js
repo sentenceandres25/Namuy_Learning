@@ -1,5 +1,4 @@
-// src/components/IconLinks.jsx
-
+// src/components/IconLinks/IconLinks.jsx
 import React, { useEffect, useState, useRef, useContext } from 'react';
 import { Nav } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,13 +7,13 @@ import { faFacebookSquare, faInstagramSquare, faYoutubeSquare } from '@fortaweso
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './IconLinks.css';
-import { AuthContext } from '../../contexts/AuthContext'; // Importar el contexto de autenticación
+import { AuthContext } from '../../contexts/AuthContext';
 
 const IconLinks = () => {
   const { t, i18n } = useTranslation('IconLinks');
   const currentLang = i18n.language;
   const navigate = useNavigate();
-  const { user, logout } = useContext(AuthContext); // Usar el contexto de autenticación
+  const { user, logout } = useContext(AuthContext);
 
   const [cartCount, setCartCount] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 991);
@@ -35,13 +34,11 @@ const IconLinks = () => {
         setDropdownVisible(false);
       }
     };
-
     if (dropdownVisible) {
       document.addEventListener('mousedown', handleClickOutside);
     } else {
       document.removeEventListener('mousedown', handleClickOutside);
     }
-
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -55,15 +52,13 @@ const IconLinks = () => {
     } catch (error) {
       console.error('Error al cargar datos del carrito desde localStorage:', error);
     }
-  }, [user]); // Dependencia añadida para actualizar el carrito cuando el usuario cambia
+  }, [user]);
 
-  // Función para cerrar sesión
   const handleLogout = () => {
-    logout(); // Usar el método de logout del contexto
+    logout();
     navigate(`/login/${currentLang}`);
   };
 
-  // Función para redirigir al login si no está autenticado
   const handleAccountAccess = (e) => {
     if (!user) {
       e.preventDefault();
@@ -71,11 +66,10 @@ const IconLinks = () => {
     }
   };
 
-  // Manejo de clic en cuenta del usuario
   const handleAccountClick = (e) => {
     if (isMobile) {
-      e.preventDefault(); 
-      setDropdownVisible(!dropdownVisible); 
+      e.preventDefault();
+      setDropdownVisible(!dropdownVisible);
     } else if (!user) {
       e.preventDefault();
       navigate(`/login/${currentLang}`);
@@ -84,7 +78,7 @@ const IconLinks = () => {
 
   return (
     <div className="icon-container">
-      {/* Sección de perfil de usuario con dropdown */}
+      {/* Perfil de usuario con dropdown */}
       <div 
         className="user-profile" 
         onMouseEnter={() => !isMobile && setDropdownVisible(true)} 
@@ -102,7 +96,6 @@ const IconLinks = () => {
           </span>
         </Link>
 
-        {/* Mostrar dropdown si es visible en móvil o si es pantalla grande */}
         {(dropdownVisible || (!isMobile && dropdownVisible)) && (
           <div className="dropdown-menu-account-custom" ref={dropdownRef}>
             <div className="dropdown-header-account-custom">
@@ -131,14 +124,14 @@ const IconLinks = () => {
         )}
       </div>
 
-      {/* Carrito de compras con contador */}
+      {/* Carrito de compras */}
       <Link to={`/user/MyCart/${currentLang}`} className="cart-icon">
         <FontAwesomeIcon icon={faShoppingCart} size="2x" />
         <span className="cart-count">{cartCount}</span>
         <span className="cart-text">{t('mycart')}</span>
       </Link>
 
-      {/* Redes sociales con hover animado */}
+      {/* Redes sociales */}
       <div className="social-icons">
         <Nav.Link href="https://facebook.com" target="_blank">
           <FontAwesomeIcon icon={faFacebookSquare} size="2x" />

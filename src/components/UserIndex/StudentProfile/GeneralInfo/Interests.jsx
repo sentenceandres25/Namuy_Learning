@@ -1,24 +1,23 @@
-// Interests.jsx
+// src/components/UserIndex/StudentProfile/Interests.jsx
 import React, { useState, useEffect, useContext } from 'react';
 import { Form, Row, Col, Button, Badge, Alert } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import styles from './Interests.module.css';
-import axios from '../../../../axiosConfig'; // Ajusta la ruta según tu estructura
+import axios from '../../../../axiosConfig';
 import { AuthContext } from '../../../../contexts/AuthContext';
+import styles from './Interests.module.css'; // Ajusta si usas CSS Module
 
 const Interests = () => {
   const { t } = useTranslation('UserIndex/StudentProfile/GeneralInfo');
-  const { user, token } = useContext(AuthContext);  // Para obtener user_id y token
+  const { user, token } = useContext(AuthContext);
   const [interests, setInterests] = useState([]);
   const [newInterest, setNewInterest] = useState('');
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
-  const MAX_INTERESTS = 10; // Límite razonable
+  const MAX_INTERESTS = 10;
 
-  // Al montar el componente, obtener los intereses desde el backend
   useEffect(() => {
     if (!user?.user_id) return;
     axios
@@ -26,7 +25,6 @@ const Interests = () => {
         headers: { Authorization: `Bearer ${token}` }
       })
       .then(response => {
-        // El backend retorna: { user_id: 1, interests: [...] }
         if (response.data && Array.isArray(response.data.interests)) {
           setInterests(response.data.interests);
         }
@@ -41,7 +39,6 @@ const Interests = () => {
     const trimmedInterest = newInterest.trim();
     if (trimmedInterest === '') return;
 
-    // Verificar si ya se alcanzó el límite
     if (interests.length >= MAX_INTERESTS) {
       setError(t('interestLimitReached'));
       return;
@@ -52,9 +49,7 @@ const Interests = () => {
         headers: { Authorization: `Bearer ${token}` }
       })
       .then(response => {
-        console.log("Agregado:", response.data);
         if (response.status === 201 || response.status === 200) {
-          // Agregar el nuevo interés al INICIO del array
           setInterests([trimmedInterest, ...interests]);
           setNewInterest('');
           setSuccess(t('interestAdded'));
@@ -75,9 +70,7 @@ const Interests = () => {
         data: { interest: interestToRemove }
       })
       .then(response => {
-        console.log("Eliminado:", response.data);
         if (response.status === 200) {
-          // Quitar del estado local
           setInterests(interests.filter(interest => interest !== interestToRemove));
           setSuccess(t('interestRemoved'));
           setError(null);
@@ -90,10 +83,9 @@ const Interests = () => {
       });
   };
 
-  // Función para detectar Enter en el campo de texto
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      e.preventDefault();  // Evita que el form se envíe por defecto
+      e.preventDefault();
       handleAddInterest();
     }
   };
@@ -132,13 +124,13 @@ const Interests = () => {
               placeholder={t('agregar_interes')}
               value={newInterest}
               onChange={(e) => setNewInterest(e.target.value)}
-              onKeyDown={handleKeyDown}          // Capturamos la tecla Enter
+              onKeyDown={handleKeyDown}
               className={styles.input}
               disabled={interests.length >= MAX_INTERESTS}
             />
           </Col>
           <Col sm={4}>
-            <Button 
+            <Button
               className={styles.button}
               onClick={handleAddInterest}
               disabled={interests.length >= MAX_INTERESTS}

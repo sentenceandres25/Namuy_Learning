@@ -1,7 +1,7 @@
 // src/components/UserIndex/StudentProfile/ParentComponent.jsx
-
 import React, { useContext, useState } from 'react';
-import PersonalDetails from './GeneralInfo/PersonalDetails';
+import PersonalDetails from './GeneralInfo/PersonalDetails'; 
+// Ojo: ajusta la ruta si tu PersonalDetails está en la misma carpeta
 import { AuthContext } from '../../../../contexts/AuthContext';
 import axios from 'axios';
 import { Spinner, Alert } from 'react-bootstrap';
@@ -36,8 +36,6 @@ const ParentComponent = () => {
           'Authorization': `Bearer ${token}`
         }
       });
-
-      console.log("Respuesta de la solicitud:", response.data);
       setSuccessMessage(response.data.message || 'Solicitud enviada con éxito.');
     } catch (error) {
       console.error("Error al enviar la solicitud de cambio:", error);
@@ -50,23 +48,16 @@ const ParentComponent = () => {
   return (
     <div>
       {loading && (
-        <div className={styles.loading}>
+        <div>
           <Spinner animation="border" role="status">
             <span className="visually-hidden">Enviando...</span>
           </Spinner>
           <span>Enviando...</span>
         </div>
       )}
-      {successMessage && (
-        <Alert variant="success">
-          {successMessage}
-        </Alert>
-      )}
-      {errorMessage && (
-        <Alert variant="danger">
-          {errorMessage}
-        </Alert>
-      )}
+      {successMessage && <Alert variant="success">{successMessage}</Alert>}
+      {errorMessage && <Alert variant="danger">{errorMessage}</Alert>}
+      
       <PersonalDetails data={/* tus datos */} onUpdate={handleUpdate} />
     </div>
   );

@@ -1,22 +1,27 @@
-import React, { useEffect, useState, useContext, useRef } from 'react';
+// src/components/UserIndex/StudentProfile/GeneralInfo/PersonalDetails.jsx
+
+import React, { useEffect, useState, useContext } from 'react';
 import { Form, Row, Col, Button, Alert, Spinner } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import styles from './PersonalDetails.module.css';
 import { AuthContext } from '../../../../contexts/AuthContext';
-import axios from '../../../../axiosConfig';  // <-- Tu axiosConfig con baseURL
+import axios from '../../../../axiosConfig';
+import styles from './PersonalDetails.module.css';
 
+// Approval-required fields (if these change, a document must be uploaded)
 const APPROVAL_REQUIRED_FIELDS = ['full_name', 'id_type', 'id_number', 'student_id'];
 
-const PersonalDetails = ({ data, onUpdate }) => {
+const PersonalDetails = () => {
   const { t } = useTranslation('UserIndex/StudentProfile/GeneralInfo');
-  const { user, token, loading } = useContext(AuthContext);
+  const { user, token, setUser } = useContext(AuthContext);
 
-  // userData: estado que se va modificando con los inputs
+  // Local state for personal details
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState('');
   const [userData, setUserData] = useState({
     full_name: '',
     student_id: '',
-    email: '', // Correo principal (tabla users)
+    email: '',
     alt_email: '',
     contact_number: '',
     id_type: '',
@@ -25,214 +30,178 @@ const PersonalDetails = ({ data, onUpdate }) => {
     country_of_residence: '',
     doc_url: ''
   });
-
-  // Guardamos la "data original" para poder comparar y ver si algo cambió
   const [originalData, setOriginalData] = useState(null);
 
+  // States for handling form submission and file upload
   const [pendingRequest, setPendingRequest] = useState(false);
   const [requestMessage, setRequestMessage] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
-  const [isFirstTime, setIsFirstTime] = useState(false);
   const [file, setFile] = useState(null);
+  const [isFirstTime, setIsFirstTime] = useState(false);
 
+  // Fetch personal details on mount
   useEffect(() => {
-    console.log('Datos recibidos en <PersonalDetails/>:', data);
-    console.log('Usuario desde contexto:', user);
-
-    if (data) {
-      const initialData = {
-        full_name: data.full_name || '',
-        student_id: data.student_id || '',
-        // El "correo principal" se toma de user?.email
-        email: user?.email || '',
-        alt_email: data.alt_email || '',
-        contact_number: data.contact_number || '',
-        id_type: data.id_type || '',
-        id_number: data.id_number || '',
-        birth_date: data.birth_date ? data.birth_date.split('T')[0] : '',
-        country_of_residence: data.country_of_residence || '',
-        doc_url: data.doc_url || ''
-      };
-      setUserData(initialData);
-      setOriginalData(initialData); // Guardamos copia para comparar
-      setIsFirstTime(false);
-    } else {
-      // Asumimos primera vez
-      setIsFirstTime(true);
-      setOriginalData(null);
+    if (!user || !user.user_id) {
+      setError(t('userNotAuthenticated') || 'User is not authenticated');
+      setIsLoading(false);
+      return;
     }
-  }, [data, user]);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setUserData(prev => ({ ...prev, [name]: value }));
+    axios
+      .get(`/personal_details/${user.user_id}`, {
+        headers: { Authorization: `Bearer ${token}` }
+      })
+      .then((response) => {
+        const data = response.data;
+        if (data) {
+          // Map data to local state
+          const initial = {
+            full_name: data.full_name || '',
+            student_id: data.student_id || '',
+            email: data.email || user.email || '',
+            alt_email: data.alt_email || '',
+            contact_number: data.contact_number || '',
+            id_type: data.id_type || '',
+            id_number: data.id_number || '',
+            birth_date: data.birth_date ? data.birth_date.split('T')[0] : '',
+            country_of_residence: data.country_of_residence || '',
+            doc_url: data.doc_url || ''
+          };
+          setUserData(initial);
+          setOriginalData(initial);
+          setIsFirstTime(!data.student_id);
+        }
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        setError(err.response?.data?.error || t('errorLoadingPersonalDetails') || 'Error loading personal details');
+        setIsLoading(false);
+      });
+  }, [user, token, t]);
+
+  // Returns true if any approval-required fields have changed
+  const requiresApprovalDoc = () => {
+    if (!originalData) return false;
+    return APPROVAL_REQUIRED_FIELDS.some(
+      (field) => userData[field] !== originalData[field]
+    );
   };
 
+  // Handle input changes
+  const handleChange = (e) => {
+    setUserData({
+      ...userData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // Handle file input changes
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
   };
 
-  /**
-   * Función auxiliar: verifica si alguno de los campos "aprobables" cambió
-   * con respecto a la data original. Retorna true si al menos uno difiere.
-   */
-  const requiresApprovalDoc = () => {
-    if (!originalData) return false; 
-    return APPROVAL_REQUIRED_FIELDS.some(field => userData[field] !== originalData[field]);
-  };
-
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setErrorMessage('');
+    setError('');
     setRequestMessage('');
     setPendingRequest(true);
 
     if (!user || !user.user_id) {
-      setErrorMessage('ID de usuario no definido. Requiere autenticación.');
+      setError(t('userNotAuthenticated') || 'User not authenticated or missing user_id');
       setPendingRequest(false);
       return;
     }
 
     try {
-      // 1. Verificamos si cambió alguno de los campos "approval required"
-      const changedApprovalFields = APPROVAL_REQUIRED_FIELDS.filter(
-        field => originalData && userData[field] !== originalData[field]
+      // If any approval-required fields changed, submit with file
+      const changedApprovals = APPROVAL_REQUIRED_FIELDS.filter(
+        (field) => originalData && userData[field] !== originalData[field]
       );
-      const hasApprovalFields = changedApprovalFields.length > 0;
-
-      // Si se modificó algo en esos campos => se requiere doc
-      if (hasApprovalFields) {
+      if (changedApprovals.length > 0) {
         if (!file) {
-          setErrorMessage(t('errorFileRequired')); // "Se requiere documento..."
+          setError(t('errorFileRequired') || 'Document required for changes.');
           setPendingRequest(false);
           return;
         }
-        // Estructura con los campos cambiados
         const approvalFields = {};
-        changedApprovalFields.forEach(field => {
+        changedApprovals.forEach((field) => {
           approvalFields[field] = userData[field];
         });
-
-        // Solicitud POST con file y changes
-        await handleSubmitApprovalFields(approvalFields, file);
+        await submitApprovalFields(approvalFields, file);
       }
 
-      // 2. Campos "no aprobables": alt_email, contact_number, birth_date, country_of_residence
-      //   + Manejo especial de email (tabla users)
-      const updatableFields = ['alt_email', 'contact_number', 'birth_date', 'country_of_residence'];
-      const autoFields = {};
-      updatableFields.forEach((field) => {
-        if (userData[field]) {
-          autoFields[field] = userData[field];
-        }
-      });
-
-      // Revisar correo principal en 'users'
+      // If email changed, update email
       if (userData.email && userData.email !== user.email) {
-        // Actualizar email en la tabla 'users'
-        await handleUpdateUserEmail(userData.email);
+        await updateUserEmail(userData.email);
       }
 
-      // Actualizar resto en personal_details
+      // Update non-approval fields in personal_details
+      const updatable = ['alt_email', 'contact_number', 'birth_date', 'country_of_residence'];
+      const autoFields = {};
+      updatable.forEach((f) => {
+        if (userData[f]) autoFields[f] = userData[f];
+      });
       if (Object.keys(autoFields).length > 0) {
-        await handleUpdateAutoFields(autoFields);
+        await updateAutoFields(autoFields);
       }
 
-      // Callback: refrescar datos en el padre
-      if (onUpdate) {
-        onUpdate();
-      }
-    } catch (error) {
-      console.error('Error al enviar la solicitud:', error);
-      setErrorMessage(error.response?.data?.error || t('errorSubmittingRequest'));
+      setRequestMessage(t('infoUpdated') || 'Information updated successfully');
+    } catch (err) {
+      setError(err.response?.data?.error || t('errorSubmittingRequest') || 'Error submitting request');
     } finally {
       setPendingRequest(false);
     }
   };
 
-  /**
-   * PUT: /users/:user_id/email => Actualiza el correo principal en la tabla users
-   */
-  const handleUpdateUserEmail = async (newEmail) => {
-    try {
-      const resp = await axios.put(
-        `/users/${user.user_id}/email`,
-        { email: newEmail },
-        { headers: { Authorization: `Bearer ${token}` } }
-      );
-      console.log('Respuesta de updateEmail:', resp.data);
-      setRequestMessage(t('emailUpdated'));
-    } catch (error) {
-      console.error('Error al actualizar email principal:', error);
-      throw error;
+  // Submit fields that require approval with file upload
+  const submitApprovalFields = async (approvalFields, file) => {
+    const formData = new FormData();
+    formData.append('changes', JSON.stringify(approvalFields));
+    formData.append('file', file);
+
+    await axios.post(
+      `/personal_details/${user.user_id}/requestChange`,
+      formData,
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
+  };
+
+  // Update user email in both personal_details and context
+  const updateUserEmail = async (newEmail) => {
+    await axios.put(
+      `/users/${user.user_id}/email`,
+      { email: newEmail },
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
+    if (setUser) {
+      setUser(prev => ({ ...prev, email: newEmail }));
     }
   };
 
-  /**
-   * PUT: /personal_details/:user_id => Actualizar campos sin aprobación
-   */
-  const handleUpdateAutoFields = async (autoFields) => {
-    try {
-      const response = await axios.put(
-        `/personal_details/${user.user_id}`,
-        autoFields,
-        { headers: { Authorization: `Bearer ${token}` } }
-      );
-      // Actualizar userData local con la respuesta
-      setUserData(prev => ({ ...prev, ...response.data }));
-      // Actualizar originalData (solo para esos campos)
-      setOriginalData(prev => ({ ...prev, ...response.data }));
-
-      setRequestMessage(t('infoUpdated'));
-    } catch (error) {
-      console.error('Error al actualizar personal_details:', error);
-      throw error;
-    }
+  // Update non-approval fields in personal_details
+  const updateAutoFields = async (autoFields) => {
+    const resp = await axios.put(
+      `/personal_details/${user.user_id}`,
+      autoFields,
+      { headers: { Authorization: `Bearer ${token}` } }
+    );
+    setUserData(prev => ({ ...prev, ...resp.data }));
+    setOriginalData(prev => ({ ...prev, ...resp.data }));
   };
 
-  /**
-   * POST: /personal_details/:user_id/requestChange => Adjuntar doc + campos
-   */
-  const handleSubmitApprovalFields = async (approvalFields, file) => {
-    try {
-      const formData = new FormData();
-      formData.append('changes', JSON.stringify(approvalFields));
-      formData.append('file', file);
-
-      const response = await axios.post(
-        `/personal_details/${user.user_id}/requestChange`,
-        formData,
-        { headers: { Authorization: `Bearer ${token}` } }
-      );
-      if (response.data?.pending) {
-        setRequestMessage(response.data.message);
-      }
-    } catch (error) {
-      console.error('Error al solicitar aprobación:', error);
-      throw error;
-    }
-  };
-
-  if (loading) {
+  if (isLoading) {
     return (
       <div className={styles.loading}>
         <Spinner animation="border" role="status">
-          <span className="visually-hidden">Cargando...</span>
+          <span className="visually-hidden">{t('loading')}</span>
         </Spinner>
-        <span>{t('loading')}</span>
       </div>
     );
   }
 
-  if (!user) {
-    return <div className={styles.error}>{t('notAuthenticated')}</div>;
+  if (error) {
+    return <Alert variant="danger">{error}</Alert>;
   }
-
-  // Determinar si DEBEMOS mostrar el input de documento en el formulario
-  // (solo si se cambió al menos uno de los approval fields)
-  const showDocInput = originalData && APPROVAL_REQUIRED_FIELDS.some(
-    field => userData[field] !== originalData[field]
-  );
 
   return (
     <motion.div
@@ -245,9 +214,6 @@ const PersonalDetails = ({ data, onUpdate }) => {
       {pendingRequest && requestMessage && (
         <Alert variant="info">{requestMessage}</Alert>
       )}
-      {errorMessage && (
-        <Alert variant="danger">{errorMessage}</Alert>
-      )}
 
       <Form onSubmit={handleSubmit}>
         {/* Full Name */}
@@ -259,10 +225,9 @@ const PersonalDetails = ({ data, onUpdate }) => {
             <Form.Control
               type="text"
               name="full_name"
-              placeholder={t('placeholder_nombre')}
-              className={styles.input}
               value={userData.full_name}
               onChange={handleChange}
+              className={styles.input}
               required
             />
             <Form.Text muted>{t('cambio_requiere_aprobacion')}</Form.Text>
@@ -278,20 +243,19 @@ const PersonalDetails = ({ data, onUpdate }) => {
             <Form.Control
               type="text"
               name="student_id"
-              placeholder="20230001"
-              className={styles.input}
               value={userData.student_id}
               onChange={handleChange}
               disabled={!isFirstTime}
+              className={styles.input}
               required
-              pattern="[0-9]+"
-              title={t('solo_digitos')}
             />
-            {isFirstTime && <Form.Text muted>{t('solo_primera_vez')}</Form.Text>}
+            {isFirstTime && (
+              <Form.Text muted>{t('solo_primera_vez')}</Form.Text>
+            )}
           </Col>
         </Form.Group>
 
-        {/* Email (principal, tabla users) */}
+        {/* Primary Email */}
         <Form.Group as={Row} className={styles['form-group']}>
           <Form.Label column sm={4} className={styles.label}>
             {t('correo_electronico')}
@@ -300,16 +264,15 @@ const PersonalDetails = ({ data, onUpdate }) => {
             <Form.Control
               type="email"
               name="email"
-              placeholder={t('placeholder_correo')}
-              className={styles.input}
               value={userData.email}
               onChange={handleChange}
+              className={styles.input}
               required
             />
           </Col>
         </Form.Group>
 
-        {/* Alternate Email (personal_details) */}
+        {/* Alternate Email */}
         <Form.Group as={Row} className={styles['form-group']}>
           <Form.Label column sm={4} className={styles.label}>
             {t('correo_alternativo')}
@@ -318,10 +281,9 @@ const PersonalDetails = ({ data, onUpdate }) => {
             <Form.Control
               type="email"
               name="alt_email"
-              placeholder={t('placeholder_correo_alternativo')}
-              className={styles.input}
               value={userData.alt_email}
               onChange={handleChange}
+              className={styles.input}
               required
             />
           </Col>
@@ -336,18 +298,15 @@ const PersonalDetails = ({ data, onUpdate }) => {
             <Form.Control
               type="text"
               name="contact_number"
-              placeholder={t('placeholder_numero_contacto')}
-              className={styles.input}
               value={userData.contact_number}
               onChange={handleChange}
-              pattern="[0-9]+"
+              className={styles.input}
               required
-              title={t('solo_digitos')}
             />
           </Col>
         </Form.Group>
 
-        {/* ID Type */}
+        {/* Identification Type */}
         <Form.Group as={Row} className={styles['form-group']}>
           <Form.Label column sm={4} className={styles.label}>
             {t('tipo_identificacion')}
@@ -355,9 +314,9 @@ const PersonalDetails = ({ data, onUpdate }) => {
           <Col sm={8}>
             <Form.Select
               name="id_type"
-              className={styles.input}
               value={userData.id_type}
               onChange={handleChange}
+              className={styles.input}
               required
             >
               <option value="">{t('seleccione_opcion')}</option>
@@ -370,7 +329,7 @@ const PersonalDetails = ({ data, onUpdate }) => {
           </Col>
         </Form.Group>
 
-        {/* ID Number */}
+        {/* Identification Number */}
         <Form.Group as={Row} className={styles['form-group']}>
           <Form.Label column sm={4} className={styles.label}>
             {t('numero_identificacion')}
@@ -379,13 +338,10 @@ const PersonalDetails = ({ data, onUpdate }) => {
             <Form.Control
               type="text"
               name="id_number"
-              placeholder={t('placeholder_numero_identificacion')}
-              className={styles.input}
               value={userData.id_number}
               onChange={handleChange}
-              pattern="[0-9]+"
+              className={styles.input}
               required
-              title={t('solo_digitos')}
             />
             <Form.Text muted>{t('cambio_requiere_aprobacion')}</Form.Text>
           </Col>
@@ -400,9 +356,9 @@ const PersonalDetails = ({ data, onUpdate }) => {
             <Form.Control
               type="date"
               name="birth_date"
-              className={styles['date-input']}
               value={userData.birth_date}
               onChange={handleChange}
+              className={styles.input}
               required
             />
           </Col>
@@ -417,17 +373,16 @@ const PersonalDetails = ({ data, onUpdate }) => {
             <Form.Control
               type="text"
               name="country_of_residence"
-              placeholder={t('placeholder_pais_residencia')}
-              className={styles.input}
               value={userData.country_of_residence}
               onChange={handleChange}
+              className={styles.input}
               required
             />
           </Col>
         </Form.Group>
 
-        {/* Documento (archivo) SOLO si realmente cambió algún approval field */}
-        {showDocInput && (
+        {/* File input for document upload (only if approval-required fields have changed) */}
+        {requiresApprovalDoc() && (
           <Form.Group as={Row} className={styles['form-group']}>
             <Form.Label column sm={4} className={styles.label}>
               {t('documento_identidad')}
@@ -436,8 +391,8 @@ const PersonalDetails = ({ data, onUpdate }) => {
               <Form.Control
                 type="file"
                 name="file"
-                className={styles.input}
                 onChange={handleFileChange}
+                className={styles.input}
                 accept=".png,.jpg,.jpeg,.pdf"
                 required
               />
@@ -448,11 +403,7 @@ const PersonalDetails = ({ data, onUpdate }) => {
 
         <Row>
           <Col sm={{ span: 8, offset: 4 }}>
-            <Button
-              type="submit"
-              variant="success"
-              disabled={pendingRequest}
-            >
+            <Button type="submit" variant="success" disabled={pendingRequest}>
               {t('actualizar_informacion')}
             </Button>
           </Col>

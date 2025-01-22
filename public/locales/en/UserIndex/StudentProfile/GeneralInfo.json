@@ -93,5 +93,6 @@
   "preferencesUpdated": "Notification preferences updated successfully.",
   "errorSavingPreferences": "Error saving notification preferences.",
   "errorFetchingPhoto": "Error fetching profile photo.",
-  "noSessionData": "No session data available."
+  "noSessionData": "No session data available.",
+  "upload_photo": "Upload Photo"
 }

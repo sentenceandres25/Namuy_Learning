@@ -7,7 +7,6 @@
     align-items: baseline;
     display: grid;
     max-height: 350px;
-    overflow-y: auto;
     grid-area: subcategory-menu;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 50px;

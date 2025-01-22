@@ -1,64 +1,63 @@
 .personal-details {
-    padding: 20px;
-    background: linear-gradient(135deg, #A1FFCE 0%, #FAFFD1 100%);
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
-    margin: auto;
-  }
-  
-  .title {
-    color: #388E3C; /* Verde oscuro suave */
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .label {
-    color: #2E7D32; /* Verde oscuro para las etiquetas */
-    font-weight: 500;
-  }
-  
-  .input {
-    background-color: #E8F5E9; /* Verde muy claro para los campos */
-    border: 1px solid #A5D6A7; /* Borde verde claro */
-    border-radius: 5px;
-    padding: 8px;
-    color: #388E3C; /* Texto en verde oscuro */
-  }
-  
-  .input:disabled {
-    background-color: #F1F8E9; /* Fondo más claro para los campos deshabilitados */
-    color: #9E9E9E; /* Texto gris para los deshabilitados */
-  }
-  
-  .date-input {
-    background-color: #FFFDE7; /* Amarillo pastel claro */
-    border: 1px solid #FFECB3;
-    color: #388E3C;
-  }
-  
-  /* Estilos para el bloque de Documento de Identidad */
+  padding: 20px;
+  background: linear-gradient(135deg, #A1FFCE 0%, #FAFFD1 100%);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: auto;
+}
+
+.title {
+  color: #388E3C; /* Verde oscuro suave */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.label {
+  color: #2E7D32; /* Verde oscuro para las etiquetas */
+  font-weight: 500;
+}
+
+.input {
+  background-color: #E8F5E9; /* Verde muy claro */
+  border: 1px solid #A5D6A7; 
+  border-radius: 5px;
+  padding: 8px;
+  color: #388E3C; 
+}
+
+.input:disabled {
+  background-color: #F1F8E9;
+  color: #9E9E9E;
+}
+
+.date-input {
+  background-color: #FFFDE7;
+  border: 1px solid #FFECB3;
+  color: #388E3C;
+}
+
 .document {
   margin-top: 20px;
   padding: 15px;
-  background-color: #E8F5E9; /* Verde muy claro para el fondo */
-  border: 1px solid #A5D6A7; /* Borde verde claro */
+  background-color: #E8F5E9;
+  border: 1px solid #A5D6A7;
   border-radius: 5px;
   text-align: center;
 }
 
 .document h5 {
-  color: #388E3C; /* Verde oscuro suave */
+  color: #388E3C;
   margin-bottom: 10px;
 }
 
 .document a {
-  color: #2E7D32; /* Verde oscuro para el enlace */
+  color: #2E7D32;
   text-decoration: none;
   font-weight: bold;
 }
