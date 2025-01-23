@@ -1,10 +1,10 @@
 # routes/session_history.py
 
 from flask import Blueprint, jsonify
-from db.connection import get_db_connection
+from app.db.connection import get_db_connection
 import pg8000.dbapi
 import logging
-from utils.decorators import token_required  # Asegúrate de tener este decorador
+from app.utils.decorators import token_required  # Asegúrate de tener este decorador
 
 session_history_blueprint = Blueprint('session_history_blueprint', __name__)
 

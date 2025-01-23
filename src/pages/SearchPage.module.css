@@ -1,3 +1,5 @@
+/* SearchPage.module.css */
+
 .searchPageContainer {
   margin-top: 125px; /* Ajustar según el header */
   padding: 1rem;
@@ -36,14 +38,14 @@
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out; /* Uso de la propiedad estándar */
+  transition: transform 0.2s ease-in-out; /* Propiedad estándar */
 }
 
 .filterButton:hover {
   transform: scale(1.05);
 }
 
-/* Responsivo */
+/* Estilos para dispositivos responsivos */
 @media (max-width: 768px) {
   .filterContainer {
     width: 100%;

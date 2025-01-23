@@ -1,44 +1,50 @@
+/* RepliesToMyMessages.module.css */
+
 .repliesToMyMessages {
-    background: #f0f9ff;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .repliesToMyMessages h3 {
-    color: #0369a1;
-    margin-bottom: 30px;
-    font-size: 1.5rem;
-  }
-  
-  .replyItem {
-    background: #ffffff;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .replyItem:hover {
-    background: #e0f2fe;
-    transform: scale(1.03);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .replyItem h4 {
-    margin: 0;
-    color: #075985;
-  }
-  
-  .replyItem p {
-    margin: 5px 0;
-    color: #0c4a6e;
-    text-align: center;
-  }
-  
-  .replyItem strong {
-    color: #0284c7;
-  }
-  
+  background: #f0f9ff;
+  padding: 30px;            /* Valor válido: 30px */
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 20px;
+  /* Si anteriormente se usaba max-width o max-height, asegúrate de establecer valores correctos.
+     Ejemplo:
+     max-width: 800px;
+     max-height: 600px;
+  */
+}
+
+.repliesToMyMessages h3 {
+  color: #0369a1;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+}
+
+.replyItem {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Propiedad estándar */
+}
+
+.replyItem:hover {
+  background: #e0f2fe;
+  transform: scale(1.03);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.replyItem h4 {
+  margin: 0;
+  color: #075985;
+}
+
+.replyItem p {
+  margin: 5px 0;
+  color: #0c4a6e;
+  text-align: center;
+}
+
+.replyItem strong {
+  color: #0284c7;
+}

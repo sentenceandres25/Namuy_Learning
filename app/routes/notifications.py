@@ -1,10 +1,10 @@
 # notifications.py
 
 from flask import Blueprint, request, jsonify
-from db.connection import get_db_connection
+from app.db.connection import get_db_connection
 import logging
 
-from utils.decorators import token_required  # Importar el decorador común
+from app.utils.decorators import token_required  # Importar el decorador común
 
 notifications_blueprint = Blueprint('notifications_blueprint', __name__)
 

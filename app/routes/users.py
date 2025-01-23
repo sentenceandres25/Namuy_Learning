@@ -1,20 +1,29 @@
 from flask import Blueprint, request, jsonify
-from db.connection import get_db_connection
-from utils.hash_utils import hash_password
-from utils.validators import validate_user_data
+from app.db.connection import get_db_connection
+from app.utils.hash_utils import hash_password
+from app.utils.validators import validate_user_data
+from app.utils.decorators import token_required
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 import pg8000.dbapi
 import logging
-from utils.decorators import token_required  # Asegúrate de tenerlo
 
+# Initialize the Blueprint for user-related routes
 users_blueprint = Blueprint('users_blueprint', __name__)
 
+# Apply rate limiting to the Blueprint
+limiter = Limiter(key_func=get_remote_address)
+
 @users_blueprint.route("", methods=["POST"])
+@limiter.limit("10 per minute")  # Example: Limit to 10 requests per minute
 def create_user():
     """
-    Crea un nuevo usuario en la tabla 'users' y su registro en 'personal_details'.
-    Hashea la contraseña con bcrypt y almacena en password_hash.
+    Create a new user in the 'users' table and a corresponding record in 'personal_details'.
+    Password is hashed using bcrypt and stored in 'password_hash'.
     """
     data = request.get_json()
+    
+    # Validate the incoming user data
     validation_error = validate_user_data(data)
     if validation_error:
         return jsonify({"error": validation_error}), 400
@@ -22,15 +31,16 @@ def create_user():
     conn = get_db_connection()
     try:
         with conn.cursor() as cursor:
-            hashed_bytes = hash_password(data['password'])  # bcrypt retorna bytes
+            # Hash the user's password
+            hashed_bytes = hash_password(data['password'])  # bcrypt returns bytes
             hashed_str = hashed_bytes.decode('utf-8')
 
-            # Idioma preferido por default 'es' si no es 'en' o 'es'
+            # Set default preferred language to 'es' if not 'en' or 'es'
             preferred_language = data.get('preferred_language', 'es')
             if preferred_language not in ['en', 'es']:
                 preferred_language = 'es'
 
-            # Insertar en tabla 'users'
+            # Insert the new user into the 'users' table
             cursor.execute("""
                 INSERT INTO users (username, email, password_hash, preferred_language)
                 VALUES (%s, %s, %s, %s)
@@ -39,7 +49,7 @@ def create_user():
             user_row = cursor.fetchone()
             user_id = user_row[0]
 
-            # Crear registro en 'personal_details'
+            # Create a corresponding record in 'personal_details'
             cursor.execute("""
                 INSERT INTO personal_details (user_id, full_name, student_id, email)
                 VALUES (%s, %s, %s, %s)
@@ -52,8 +62,10 @@ def create_user():
             ))
             personal_detail_id = cursor.fetchone()[0]
 
+            # Commit the transaction
             conn.commit()
 
+            # Prepare the response data
             user_data = {
                 "user_id": user_id,
                 "username": user_row[1],
@@ -65,21 +77,24 @@ def create_user():
             return jsonify(user_data), 201
 
     except pg8000.dbapi.IntegrityError:
+        # Handle duplicate email or username
         conn.rollback()
-        return jsonify({"error": "Email o username ya está en uso"}), 409
+        return jsonify({"error": "Email or username already in use"}), 409
     except Exception as e:
+        # Log unexpected errors
+        logging.error(f"Error in create_user: {e}", exc_info=True)
         conn.rollback()
-        logging.error(f"Error en create_user: {e}", exc_info=True)
-        return jsonify({"error": str(e)}), 500
+        return jsonify({"error": "Internal server error"}), 500
     finally:
         conn.close()
 
 
 @users_blueprint.route("/preferred-language", methods=["GET"])
 @token_required
+@limiter.limit("100 per hour")  # Example: Limit to 100 requests per hour
 def get_preferred_language(current_user_id):
     """
-    Obtiene el idioma preferido del usuario autenticado.
+    Retrieve the preferred language of the authenticated user.
     """
     conn = get_db_connection()
     try:
@@ -89,25 +104,27 @@ def get_preferred_language(current_user_id):
             if row:
                 return jsonify({"preferredLanguage": row[0]}), 200
             else:
-                return jsonify({"error": "Usuario no encontrado"}), 404
+                return jsonify({"error": "User not found"}), 404
     except Exception as e:
-        logging.error(f"Error en /preferred-language (GET): {e}", exc_info=True)
-        return jsonify({"error": "Error interno del servidor"}), 500
+        logging.error(f"Error in /preferred-language (GET): {e}", exc_info=True)
+        return jsonify({"error": "Internal server error"}), 500
     finally:
         conn.close()
 
 
 @users_blueprint.route("/preferred-language", methods=["PUT"])
 @token_required
+@limiter.limit("50 per hour")  # Example: Limit to 50 requests per hour
 def update_preferred_language(current_user_id):
     """
-    Actualiza el idioma preferido del usuario autenticado.
+    Update the preferred language of the authenticated user.
     """
     data = request.get_json()
     preferred_language = data.get('preferredLanguage')
 
+    # Validate the preferred language
     if not preferred_language or preferred_language not in ['en', 'es']:
-        return jsonify({"error": "Idioma inválido"}), 400
+        return jsonify({"error": "Invalid language"}), 400
 
     conn = get_db_connection()
     try:
@@ -122,49 +139,51 @@ def update_preferred_language(current_user_id):
             if row:
                 conn.commit()
                 return jsonify({
-                    "message": "Idioma preferido actualizado correctamente",
+                    "message": "Preferred language updated successfully",
                     "preferredLanguage": row[0]
                 }), 200
             else:
                 conn.rollback()
-                return jsonify({"error": "Usuario no encontrado"}), 404
+                return jsonify({"error": "User not found"}), 404
     except Exception as e:
+        logging.error(f"Error in /preferred-language (PUT): {e}", exc_info=True)
         conn.rollback()
-        logging.error(f"Error en /preferred-language (PUT): {e}", exc_info=True)
-        return jsonify({"error": "Error interno del servidor"}), 500
+        return jsonify({"error": "Internal server error"}), 500
     finally:
         conn.close()
 
 
 @users_blueprint.route("/<int:user_id>/email", methods=["PUT"])
 @token_required
+@limiter.limit("30 per hour")  # Example: Limit to 30 requests per hour
 def update_user_email(current_user_id, user_id):
     """
-    Actualiza el 'email' principal en la tabla 'users'.
-    - Verifica que user_id == current_user_id (no se permite de otro user).
-    - Si el email ya existe en OTRO user, 409 conflict.
-    - Si es el mismo user, no conflict.
+    Update the primary email in the 'users' table.
+    - Ensures that user_id matches current_user_id (prevents unauthorized access).
+    - If the email already exists for another user, returns a 409 Conflict.
+    - If the email is the same for the current user, no conflict occurs.
     """
+    # Verify that the user is updating their own email
     if current_user_id != user_id:
-        return jsonify({"error": "Acceso no autorizado"}), 403
+        return jsonify({"error": "Unauthorized access"}), 403
 
     data = request.get_json()
     new_email = data.get('email')
+
+    # Validate the new email
     if not new_email:
-        return jsonify({"error": "Falta el nuevo correo"}), 400
+        return jsonify({"error": "New email is required"}), 400
 
     conn = get_db_connection()
     try:
         with conn.cursor() as cursor:
-            # Verificar si ese 'new_email' ya existe en la tabla users
+            # Check if the new email already exists for another user
             cursor.execute("SELECT user_id FROM users WHERE email = %s", (new_email,))
             row = cursor.fetchone()
-            if row:
-                if row[0] != user_id:
-                    conn.rollback()
-                    return jsonify({"error": "Este correo ya está en uso"}), 409
+            if row and row[0] != user_id:
+                return jsonify({"error": "This email is already in use"}), 409
 
-            # Actualizar email en 'users'
+            # Update the email in the 'users' table
             cursor.execute("""
                 UPDATE users
                 SET email = %s
@@ -174,20 +193,21 @@ def update_user_email(current_user_id, user_id):
             updated_row = cursor.fetchone()
             if not updated_row:
                 conn.rollback()
-                return jsonify({"error": "Usuario no encontrado"}), 404
+                return jsonify({"error": "User not found"}), 404
 
+            # Commit the transaction
             conn.commit()
-            logging.info(f"Email principal actualizado user_id={user_id} => {new_email}")
+
             return jsonify({
-                "message": "Correo principal actualizado correctamente",
+                "message": "Primary email updated successfully",
                 "user_id": updated_row[0],
                 "username": updated_row[1],
                 "email": updated_row[2]
             }), 200
 
     except Exception as e:
+        logging.error(f"Error updating email for user_id={user_id}: {e}", exc_info=True)
         conn.rollback()
-        logging.error(f"Error al actualizar email en users: {e}", exc_info=True)
-        return jsonify({"error": "Error interno del servidor"}), 500
+        return jsonify({"error": "Internal server error"}), 500
     finally:
         conn.close()

@@ -2,7 +2,7 @@
 
 from flask import Blueprint, request, jsonify
 from app.extensions import db
-from app.models import PersonalDetails
+from app.models.user_models import PersonalDetails
 import jwt
 import datetime
 from flask import current_app

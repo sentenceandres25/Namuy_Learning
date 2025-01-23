@@ -24,7 +24,7 @@ logging.basicConfig(
 app = Flask(__name__)
 
 # Configuración de la base de datos
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URI', 'postgresql://postgres:JaOb019640.@localhost:5432/namuy_learning')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Inicializar la extensión de la base de datos
@@ -40,7 +40,7 @@ app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_DEFAULT_SENDER', app.config[
 app.config['MAIL_DEFAULT_CHARSET'] = 'utf-8'
 
 # Agregar JWT_SECRET_KEY
-app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'tu_clave_secreta_jwt')
+app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY')
 
 # Inicializar Flask-Mail
 mail = Mail(app)

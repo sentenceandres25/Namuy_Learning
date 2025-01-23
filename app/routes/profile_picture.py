@@ -1,7 +1,7 @@
 # routes/profile_picture.py
 
 from flask import Blueprint, request, jsonify, current_app
-from db.connection import get_db_connection
+from app.db.connection import get_db_connection
 import pg8000.dbapi
 import logging
 import os

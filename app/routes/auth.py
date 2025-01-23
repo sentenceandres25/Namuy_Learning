@@ -3,8 +3,8 @@
 from flask import Blueprint, request, jsonify
 import jwt
 from functools import wraps
-from db.connection import get_db_connection
-from utils.hash_utils import check_password
+from app.db.connection import get_db_connection
+from app.utils.hash_utils import check_password
 import os
 import datetime
 import logging

@@ -3,7 +3,7 @@
 from functools import wraps
 from flask import request, jsonify, current_app
 import jwt
-from app.models import Users  # <-- En lugar de PersonalDetails
+from app.models.user_models import Users  # <-- En lugar de PersonalDetails
 from app.extensions import db
 
 def token_required(f):

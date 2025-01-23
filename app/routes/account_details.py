@@ -1,9 +1,9 @@
 # routes/account_details.py
 
 from flask import Blueprint, request, jsonify, current_app
-from db.connection import get_db_connection
-from utils.hash_utils import hash_password, check_password
-from utils.validators import validate_user_data
+from app.db.connection import get_db_connection
+from app.utils.hash_utils import hash_password, check_password
+from app.utils.validators import validate_user_data
 import pg8000.dbapi
 import logging
 import json
