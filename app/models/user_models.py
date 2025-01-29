@@ -15,21 +15,21 @@ class Users(db.Model):
     preferred_language = db.Column(db.String(10), nullable=False, default='en')
     two_factor_enabled = db.Column(db.Boolean, nullable=False, default=False)
 
-    # Relationship with PersonalDetails
+    # Relación con PersonalDetails
     personal_details = db.relationship('PersonalDetails', backref='user', uselist=False)
 
-    # Relationship with TwoFactorCode
+    # Relación con TwoFactorCode
     two_factor_codes = db.relationship('TwoFactorCode', backref='user', lazy=True)
 
     def set_password(self, password):
         """
-        Hashes and sets the user's password.
+        Hashea y establece la contraseña del usuario.
         """
         self.password_hash = generate_password_hash(password)
 
     def check_password(self, password):
         """
-        Checks if the provided password matches the stored hash.
+        Verifica si la contraseña proporcionada coincide con el hash almacenado.
         """
         return check_password_hash(self.password_hash, password)
 
@@ -54,7 +54,7 @@ class PersonalDetails(db.Model):
     doc_type = db.Column(db.String(50), nullable=True)
     doc_url = db.Column(db.String(255), nullable=True)
 
-    # Relationship with TwoFactorCode (if needed)
+    # Relación con TwoFactorCode (si es necesario)
     # two_factor_codes = db.relationship('TwoFactorCode', backref='personal_details', lazy=True)
 
 
@@ -64,20 +64,20 @@ class TwoFactorCode(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
     code = db.Column(db.String(6), nullable=False)
-    method = db.Column(db.String(10), nullable=False, default='email')  # e.g., 'email' or 'sms'
+    method = db.Column(db.String(10), nullable=False, default='email')  # e.g., 'email' o 'sms'
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     expires_at = db.Column(db.DateTime, nullable=False)
     attempts = db.Column(db.Integer, default=0)
 
     def is_expired(self):
         """
-        Checks if the verification code has expired.
+        Verifica si el código de verificación ha expirado.
         """
         return datetime.utcnow() > self.expires_at
 
     def increment_attempts(self):
         """
-        Increments the number of verification attempts.
+        Incrementa el número de intentos de verificación.
         """
         self.attempts += 1
 

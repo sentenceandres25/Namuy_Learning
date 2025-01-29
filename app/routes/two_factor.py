@@ -13,7 +13,7 @@ from app.utils.email_utils import generate_verification_code, send_verification_
 from app.utils.validators import validate_email, validate_phone_number  # Asegúrate de tener funciones de validación
 
 # Inicializar el Blueprint para las rutas de dos factores
-two_factor_bp = Blueprint('two_factor', __name__)
+two_factor_bp = Blueprint('two_factor_bp', __name__)
 
 # Inicializar el Rate Limiter específicamente para este Blueprint
 limiter = Limiter(
@@ -23,23 +23,36 @@ limiter = Limiter(
 # Aplicar rate limiting al Blueprint
 two_factor_bp.before_request(limiter.check)
 
+
 @two_factor_bp.route('/preferences', methods=['GET'])
 @token_required
 @limiter.limit("100 per hour")  # Ejemplo: Limitar a 100 solicitudes por hora
 def get_2fa_preferences(user_id):
     """
     Recupera si 2FA está habilitado y la dirección de correo electrónico registrada para el usuario autenticado.
+    
+    Args:
+        user_id (int): El ID del usuario autenticado, proporcionado por el decorador token_required.
+    
+    Returns:
+        JSON con el estado de 2FA y el correo electrónico, o un mensaje de error.
     """
-    # Obtener el objeto current_user desde flask.g
-    current_user = g.get('current_user')
-    if not current_user:
-        return jsonify({'error': 'Usuario no encontrado'}), 404
+    try:
+        # Obtener el objeto current_user desde flask.g
+        current_user = g.get('current_user')
+        if not current_user:
+            return jsonify({'error': 'Usuario no encontrado'}), 404
 
-    response = {
-        'twoFactorEnabled': current_user.two_factor_enabled,
-        'email': current_user.email if current_user.email else ''
-    }
-    return jsonify(response), 200
+        response = {
+            'twoFactorEnabled': current_user['two_factor_enabled'],
+            'email': current_user['email'] if current_user['email'] else ''
+        }
+        return jsonify(response), 200
+
+    except Exception as e:
+        logging.error(f"Error retrieving 2FA preferences for user_id {user_id}: {e}", exc_info=True)
+        return jsonify({'error': 'Internal server error'}), 500
+
 
 @two_factor_bp.route('/preferences', methods=['PUT'])
 @token_required
@@ -48,10 +61,16 @@ def update_2fa_preferences(user_id):
     """
     Habilita o deshabilita 2FA y actualiza la dirección de correo electrónico del usuario.
     Envía un código de verificación al correo electrónico proporcionado si se está habilitando 2FA.
+    
+    Args:
+        user_id (int): El ID del usuario autenticado, proporcionado por el decorador token_required.
+    
+    Returns:
+        JSON confirmando la actualización o un mensaje de error.
     """
     data = request.get_json()
     if not data:
-        return jsonify({'error': 'Se requiere datos'}), 400
+        return jsonify({'error': 'Se requieren datos'}), 400
 
     two_factor_enabled = data.get('twoFactorEnabled')
     email = data.get('email')
@@ -60,6 +79,10 @@ def update_2fa_preferences(user_id):
         # Obtener el objeto current_user desde flask.g
         current_user = g.get('current_user')
         if not current_user:
+            return jsonify({'error': 'Usuario no encontrado'}), 404
+
+        user = Users.query.filter_by(user_id=user_id).first()
+        if not user:
             return jsonify({'error': 'Usuario no encontrado'}), 404
 
         if two_factor_enabled:
@@ -71,18 +94,18 @@ def update_2fa_preferences(user_id):
                 return jsonify({'error': 'Formato de correo electrónico inválido'}), 400
 
             # Actualizar el correo electrónico del usuario
-            current_user.email = email
+            user.email = email
 
             # Generar código de verificación
             code = generate_verification_code()
 
             # Enviar correo electrónico de verificación de forma asíncrona
-            send_verification_email_async(current_user.user_id, code)
+            send_verification_email_async(user_id, code)
 
             # Guardar el código de verificación en la base de datos
             expires_at = datetime.utcnow() + timedelta(minutes=Config.TWO_FACTOR_CODE_EXPIRY_MINUTES)
             new_code = TwoFactorCode(
-                user_id=current_user.user_id,
+                user_id=user_id,
                 code=code,
                 method='email',
                 expires_at=expires_at
@@ -90,21 +113,22 @@ def update_2fa_preferences(user_id):
             db.session.add(new_code)
 
             # Marcar 2FA como habilitado
-            current_user.two_factor_enabled = True
+            user.two_factor_enabled = True
             db.session.commit()
 
             return jsonify({'message': 'Código de verificación enviado. Por favor, verifica para habilitar 2FA.'}), 200
 
         else:
             # Deshabilitar 2FA
-            current_user.two_factor_enabled = False
+            user.two_factor_enabled = False
             db.session.commit()
             return jsonify({'message': '2FA ha sido deshabilitado exitosamente.'}), 200
 
     except Exception as e:
-        logging.error(f"Error al actualizar preferencias de 2FA: {e}", exc_info=True)
+        logging.error(f"Error al actualizar preferencias de 2FA para user_id {user_id}: {e}", exc_info=True)
         db.session.rollback()
         return jsonify({'error': 'Error interno del servidor'}), 500
+
 
 @two_factor_bp.route('/send-code', methods=['POST'])
 @token_required
@@ -112,6 +136,12 @@ def update_2fa_preferences(user_id):
 def send_2fa_code(user_id):
     """
     Envía un código de verificación a la dirección de correo electrónico del usuario.
+    
+    Args:
+        user_id (int): El ID del usuario autenticado, proporcionado por el decorador token_required.
+    
+    Returns:
+        JSON confirmando el envío del código o un mensaje de error.
     """
     data = request.get_json()
     if not data or not data.get('email'):
@@ -134,12 +164,12 @@ def send_2fa_code(user_id):
         code = generate_verification_code()
 
         # Enviar correo electrónico de verificación de forma asíncrona
-        send_verification_email_async(current_user.user_id, code)
+        send_verification_email_async(user_id, code)
 
         # Guardar el código de verificación en la base de datos
         expires_at = datetime.utcnow() + timedelta(minutes=Config.TWO_FACTOR_CODE_EXPIRY_MINUTES)
         new_code = TwoFactorCode(
-            user_id=current_user.user_id,
+            user_id=user_id,
             code=code,
             method='email',
             expires_at=expires_at
@@ -150,9 +180,10 @@ def send_2fa_code(user_id):
         return jsonify({'message': 'Código de verificación enviado exitosamente.'}), 200
 
     except Exception as e:
-        logging.error(f"Error al enviar código de 2FA: {e}", exc_info=True)
+        logging.error(f"Error al enviar código de 2FA para user_id {user_id}: {e}", exc_info=True)
         db.session.rollback()
         return jsonify({'error': 'No se pudo enviar el correo de verificación'}), 500
+
 
 @two_factor_bp.route('/verify', methods=['POST'])
 @token_required
@@ -160,6 +191,12 @@ def send_2fa_code(user_id):
 def verify_2fa_code(user_id):
     """
     Verifica el código 2FA proporcionado para completar la habilitación de 2FA.
+    
+    Args:
+        user_id (int): El ID del usuario autenticado, proporcionado por el decorador token_required.
+    
+    Returns:
+        JSON confirmando la verificación exitosa o un mensaje de error.
     """
     data = request.get_json()
     if not data or not data.get('code'):
@@ -174,7 +211,7 @@ def verify_2fa_code(user_id):
             return jsonify({'error': 'Usuario no encontrado'}), 404
 
         # Recuperar el código de la base de datos
-        verification_code = TwoFactorCode.query.filter_by(user_id=current_user.user_id, code=code).first()
+        verification_code = TwoFactorCode.query.filter_by(user_id=user_id, code=code).first()
 
         if not verification_code:
             return jsonify({'error': 'Código inválido'}), 400
@@ -194,7 +231,10 @@ def verify_2fa_code(user_id):
         db.session.commit()
 
         # Marcar 2FA como habilitado en la tabla de usuarios
-        current_user.two_factor_enabled = True
+        user = Users.query.filter_by(user_id=user_id).first()
+        if not user:
+            return jsonify({'error': 'Usuario no encontrado'}), 404
+        user.two_factor_enabled = True
         db.session.commit()
 
         # Eliminar el código utilizado
@@ -204,6 +244,6 @@ def verify_2fa_code(user_id):
         return jsonify({'message': '2FA ha sido habilitado exitosamente.'}), 200
 
     except Exception as e:
-        logging.error(f"Error al verificar código de 2FA: {e}", exc_info=True)
+        logging.error(f"Error al verificar código de 2FA para user_id {user_id}: {e}", exc_info=True)
         db.session.rollback()
         return jsonify({'error': 'Error interno del servidor'}), 500

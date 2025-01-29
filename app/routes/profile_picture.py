@@ -1,14 +1,17 @@
-# routes/profile_picture.py
+# app/routes/profile_picture.py
 
-from flask import Blueprint, request, jsonify, current_app
+from flask import Blueprint, request, jsonify, current_app, send_file
 from app.db.connection import get_db_connection
-import pg8000.dbapi
 import logging
 import os
 import datetime
 from werkzeug.utils import secure_filename
 
-profile_picture_blueprint = Blueprint('profile_picture_blueprint', __name__)
+from app.utils.decorators import token_required
+from app.extensions import limiter  # Importar Limiter desde app/extensions.py
+
+# Inicializar el Blueprint para rutas relacionadas con fotos de perfil
+profile_picture_blueprint = Blueprint('profile_picture_blueprint', __name__, url_prefix='/api/profile_picture')
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
@@ -19,38 +22,50 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 @profile_picture_blueprint.route("/<int:user_id>", methods=["GET"])
-def get_profile_picture(user_id):
+@token_required
+@limiter.limit("50 per hour")  # Limitar a 50 solicitudes por hora
+def get_profile_picture(current_user_id, user_id):
     """
     Retorna la URL de la foto de perfil si existe.
     """
-    conn = get_db_connection()
-    cursor = conn.cursor()
+    # Verificar que el usuario está accediendo a su propia foto de perfil
+    if current_user_id != user_id:
+        logging.warning(f"Intento de acceder a foto de perfil no autorizado por user_id={current_user_id} para user_id={user_id}")
+        return jsonify({"error": "Acceso no autorizado"}), 403
+
     try:
-        cursor.execute("""
-            SELECT picture_url
-            FROM profile_pictures
-            WHERE user_id = %s
-            ORDER BY profile_picture_id DESC
-            LIMIT 1;
-        """, (user_id,))
-        row = cursor.fetchone()
-        if row and row[0]:
-            return jsonify({"picture_url": row[0]}), 200
-        else:
-            return jsonify({"picture_url": None}), 200
+        with get_db_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute("""
+                SELECT picture_url
+                FROM profile_pictures
+                WHERE user_id = %s
+                ORDER BY profile_picture_id DESC
+                LIMIT 1;
+            """, (user_id,))
+            row = cursor.fetchone()
+            if row and row[0]:
+                return jsonify({"picture_url": row[0]}), 200
+            else:
+                return jsonify({"picture_url": None}), 200
     except Exception as e:
         logging.error(f"Error al obtener foto de perfil user_id={user_id}: {e}", exc_info=True)
         return jsonify({"error": str(e)}), 500
-    finally:
-        conn.close()
 
 @profile_picture_blueprint.route("/<int:user_id>", methods=["POST"])
-def upload_profile_picture(user_id):
+@token_required
+@limiter.limit("20 per hour")  # Limitar a 20 solicitudes por hora
+def upload_profile_picture(current_user_id, user_id):
     """
     Sube/actualiza la foto de perfil.
     Espera la imagen en 'file' dentro del multipart/form-data.
     Guarda la ruta en la base de datos (profile_pictures.picture_url).
     """
+    # Verificar que el usuario está subiendo su propia foto de perfil
+    if current_user_id != user_id:
+        logging.warning(f"Intento de subir foto de perfil no autorizado por user_id={current_user_id} para user_id={user_id}")
+        return jsonify({"error": "Acceso no autorizado"}), 403
+
     if 'file' not in request.files:
         return jsonify({"error": "No se encontró la imagen en la solicitud"}), 400
 
@@ -73,31 +88,28 @@ def upload_profile_picture(user_id):
     file.save(file_path)
 
     # La URL que se guardará en la DB
-    # (ejemplo: /uploads/user_11/profilePic_20231231_235900.jpg)
+    # (ejemplo: /uploads/user_11/profilePic_20250128_192057.jpg)
     picture_url = f"/uploads/user_{user_id}/{filename}"
 
     # Guardar en la DB
-    conn = get_db_connection()
-    cursor = conn.cursor()
     try:
-        # Insertar en la tabla profile_pictures
-        cursor.execute("""
-            INSERT INTO profile_pictures (user_id, picture_url)
-            VALUES (%s, %s)
-            RETURNING profile_picture_id;
-        """, (user_id, picture_url))
-        profile_pic_id = cursor.fetchone()[0]
-        conn.commit()
+        with get_db_connection() as conn:
+            cursor = conn.cursor()
+            # Insertar en la tabla profile_pictures
+            cursor.execute("""
+                INSERT INTO profile_pictures (user_id, picture_url)
+                VALUES (%s, %s)
+                RETURNING profile_picture_id;
+            """, (user_id, picture_url))
+            profile_pic_id = cursor.fetchone()[0]
+            conn.commit()
 
-        return jsonify({
-            "message": "Foto de perfil actualizada",
-            "profile_picture_id": profile_pic_id,
-            "picture_url": picture_url
-        }), 200
+            return jsonify({
+                "message": "Foto de perfil actualizada",
+                "profile_picture_id": profile_pic_id,
+                "picture_url": picture_url
+            }), 200
 
     except Exception as e:
-        conn.rollback()
         logging.error(f"Error al subir foto de perfil user_id={user_id}: {e}", exc_info=True)
         return jsonify({"error": str(e)}), 500
-    finally:
-        conn.close()

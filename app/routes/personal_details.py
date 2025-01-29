@@ -1,20 +1,44 @@
+# app/routes/personal_details.py
+
 from flask import Blueprint, request, jsonify, current_app
 from app.db.connection import get_db_connection
-import pg8000.dbapi
 import logging
 import json
 from werkzeug.utils import secure_filename
 import os
 from flask_mail import Message
 
-personal_details_blueprint = Blueprint('personal_details_blueprint', __name__)
+from app.utils.decorators import token_required
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
+
+# Inicializar el Blueprint para rutas relacionadas con detalles personales
+personal_details_blueprint = Blueprint('personal_details_blueprint', __name__, url_prefix='/api/personal_details')
+
+# Inicializar el Rate Limiter específicamente para este Blueprint
+limiter = Limiter(
+    key_func=get_remote_address
+)
+
+# Aplicar rate limiting a las rutas de este Blueprint
+personal_details_blueprint.before_request(limiter.check)
+
 
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'pdf'}
 
+
 def allowed_file(filename):
+    """
+    Verifica si un nombre de archivo tiene una extensión permitida.
+    """
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+
 def send_change_request_email(user_id, changes, doc_url):
+    """
+    Envía un correo al administrador indicando que hay cambios pendientes de aprobación.
+    Incluye la URL local donde se subió el archivo (doc_url).
+    """
     mail = current_app.extensions.get('mail')
     if not mail:
         logging.error("Flask-Mail no está configurado correctamente.")
@@ -43,94 +67,103 @@ def send_change_request_email(user_id, changes, doc_url):
     except Exception as e:
         logging.error(f"Error al enviar el correo: {e}")
 
+
 @personal_details_blueprint.route("/<int:user_id>", methods=["GET", "PUT"])
-def manage_personal_details(user_id):
+@token_required
+@limiter.limit("100 per hour")  # Limitar a 100 solicitudes por hora
+def manage_personal_details(current_user_id, user_id):
     """
     GET: Retorna datos del usuario (JOIN con 'users') => personal_details + info de la cuenta.
     PUT: Actualiza campos que NO requieren aprobación (los que no sean full_name, id_type, etc.).
+
+    Args:
+        current_user_id (int): El ID del usuario autenticado.
+        user_id (int): El ID del usuario cuyos detalles personales se gestionarán.
+
+    Returns:
+        JSON con los datos actualizados o un mensaje de error.
     """
-    conn = get_db_connection()
-    cursor = conn.cursor()
+    # Verificar que el usuario está accediendo a sus propios detalles
+    if current_user_id != user_id:
+        logging.warning(f"Acceso no autorizado a personal_details para user_id={user_id} por user_id={current_user_id}")
+        return jsonify({"error": "Acceso no autorizado"}), 403
 
     if request.method == "GET":
         try:
-            cursor.execute("""
-                SELECT 
-                    u.user_id,
-                    p.full_name,
-                    p.student_id,
-                    p.email,
-                    p.alt_email,
-                    p.contact_number,
-                    p.id_type,
-                    p.id_number,
-                    p.birth_date,
-                    p.country_of_residence,
-                    p.last_update,
-                    p.last_access,
-                    p.pending_approval,
-                    p.doc_type,
-                    p.doc_url,
-                    u.account_status,
-                    u.date_joined
-                FROM personal_details p
-                JOIN users u ON p.user_id = u.user_id
-                WHERE p.user_id = %s;
-            """, (user_id,))
-            row = cursor.fetchone()
-            if row:
-                data = {
-                    "user_id": row[0],
-                    "full_name": row[1],
-                    "student_id": row[2],
-                    "email": row[3],
-                    "alt_email": row[4],
-                    "contact_number": row[5],
-                    "id_type": row[6],
-                    "id_number": row[7],
-                    "birth_date": row[8].isoformat() if row[8] else None,
-                    "country_of_residence": row[9],
-                    "last_update": row[10].isoformat() if row[10] else None,
-                    "last_access": row[11].isoformat() if row[11] else None,
-                    "pending_approval": row[12],
-                    "doc_type": row[13],
-                    "doc_url": row[14],
-                    "account_status": row[15],
-                    "date_joined": row[16].isoformat() if row[16] else None
-                }
-                return jsonify(data), 200
-            else:
-                logging.warning(f"Usuario no encontrado: user_id={user_id}")
-                return jsonify({"error": "Usuario no encontrado"}), 404
+            with get_db_connection() as conn:
+                cursor = conn.cursor()
+                cursor.execute("""
+                    SELECT 
+                        u.user_id,
+                        p.full_name,
+                        p.student_id,
+                        p.email,
+                        p.alt_email,
+                        p.contact_number,
+                        p.id_type,
+                        p.id_number,
+                        p.birth_date,
+                        p.country_of_residence,
+                        p.last_update,
+                        p.last_access,
+                        p.pending_approval,
+                        p.doc_type,
+                        p.doc_url,
+                        u.account_status,
+                        u.date_joined
+                    FROM personal_details p
+                    JOIN users u ON p.user_id = u.user_id
+                    WHERE p.user_id = %s;
+                """, (user_id,))
+                row = cursor.fetchone()
+                if row:
+                    data = {
+                        "user_id": row[0],
+                        "full_name": row[1],
+                        "student_id": row[2],
+                        "email": row[3],
+                        "alt_email": row[4],
+                        "contact_number": row[5],
+                        "id_type": row[6],
+                        "id_number": row[7],
+                        "birth_date": row[8].isoformat() if row[8] else None,
+                        "country_of_residence": row[9],
+                        "last_update": row[10].isoformat() if row[10] else None,
+                        "last_access": row[11].isoformat() if row[11] else None,
+                        "pending_approval": row[12],
+                        "doc_type": row[13],
+                        "doc_url": row[14],
+                        "account_status": row[15],
+                        "date_joined": row[16].isoformat() if row[16] else None
+                    }
+                    return jsonify(data), 200
+                else:
+                    logging.warning(f"Usuario no encontrado: user_id={user_id}")
+                    return jsonify({"error": "Usuario no encontrado"}), 404
         except Exception as e:
             logging.error(f"Error en GET /personal_details/{user_id}: {e}", exc_info=True)
             return jsonify({"error": "Error interno del servidor"}), 500
-        finally:
-            conn.close()
 
     elif request.method == "PUT":
-        # Aquí actualizamos SOLO campos que NO requieren aprobación
+        # Actualizar SOLO campos que NO requieren aprobación
         if not request.is_json:
             logging.warning(f"PUT /personal_details/{user_id} sin JSON")
-            conn.close()
             return jsonify({"error": "Content-Type debe ser 'application/json'"}), 415
 
         data_req = request.get_json()
         if not data_req:
-            conn.close()
             return jsonify({"error": "No se proporcionaron datos"}), 400
 
         logging.info(f"PUT /personal_details/{user_id} con data: {data_req}")
 
         # Campos permitidos
         updatable_fields = [
-            'email',  # email en personal_details (OJO: no es el principal)
+            'email',  # email en personal_details (no es el principal)
             'alt_email',
             'contact_number',
             'birth_date',
             'country_of_residence'
         ]
-        # Los que requieren aprobación se manejan en /requestChange => full_name, id_type, id_number, student_id
 
         auto_update_changes = {}
         for key, value in data_req.items():
@@ -138,71 +171,77 @@ def manage_personal_details(user_id):
                 auto_update_changes[key] = value
             else:
                 logging.warning(f"Campo no reconocido o requiere aprobación: {key}")
-                conn.close()
                 return jsonify({"error": f"Campo no reconocido o no actualizable: {key}"}), 400
 
         if not auto_update_changes:
-            conn.close()
             return jsonify({"error": "No se proporcionaron campos válidos"}), 400
 
         try:
-            updates = [f"{k} = %s" for k in auto_update_changes.keys()]
-            set_clause = ", ".join(updates)
-            values = list(auto_update_changes.values())
-            values.append(user_id)
+            with get_db_connection() as conn:
+                cursor = conn.cursor()
+                updates = [f"{k} = %s" for k in auto_update_changes.keys()]
+                set_clause = ", ".join(updates)
+                values = list(auto_update_changes.values())
+                values.append(user_id)
 
-            cursor.execute(f"""
-                UPDATE personal_details
-                SET {set_clause}, last_update = CURRENT_DATE
-                WHERE user_id = %s
-                RETURNING full_name, student_id, email, alt_email, contact_number,
-                          id_type, id_number, birth_date, country_of_residence,
-                          last_update, last_access, pending_approval, doc_type, doc_url;
-            """, tuple(values))
+                cursor.execute(f"""
+                    UPDATE personal_details
+                    SET {set_clause}, last_update = CURRENT_DATE
+                    WHERE user_id = %s
+                    RETURNING full_name, student_id, email, alt_email, contact_number,
+                              id_type, id_number, birth_date, country_of_residence,
+                              last_update, last_access, pending_approval, doc_type, doc_url;
+                """, tuple(values))
 
-            row = cursor.fetchone()
-            if not row:
-                conn.rollback()
-                logging.warning(f"No se encontró personal_details para user_id={user_id}")
-                return jsonify({"error": "Usuario no encontrado"}), 404
+                row = cursor.fetchone()
+                if not row:
+                    return jsonify({"error": "Usuario no encontrado"}), 404
 
-            conn.commit()
+                conn.commit()
 
-            updated_response = {
-                "full_name": row[0],
-                "student_id": row[1],
-                "email": row[2],
-                "alt_email": row[3],
-                "contact_number": row[4],
-                "id_type": row[5],
-                "id_number": row[6],
-                "birth_date": row[7].isoformat() if row[7] else None,
-                "country_of_residence": row[8],
-                "last_update": row[9].isoformat() if row[9] else None,
-                "last_access": row[10].isoformat() if row[10] else None,
-                "pending_approval": row[11],
-                "doc_type": row[12],
-                "doc_url": row[13]
-            }
-            return jsonify(updated_response), 200
+                updated_response = {
+                    "full_name": row[0],
+                    "student_id": row[1],
+                    "email": row[2],
+                    "alt_email": row[3],
+                    "contact_number": row[4],
+                    "id_type": row[5],
+                    "id_number": row[6],
+                    "birth_date": row[7].isoformat() if row[7] else None,
+                    "country_of_residence": row[8],
+                    "last_update": row[9].isoformat() if row[9] else None,
+                    "last_access": row[10].isoformat() if row[10] else None,
+                    "pending_approval": row[11],
+                    "doc_type": row[12],
+                    "doc_url": row[13]
+                }
+                return jsonify(updated_response), 200
 
-        except pg8000.dbapi.IntegrityError as e:
-            conn.rollback()
-            logging.error(f"IntegrityError en PUT personal_details user_id={user_id}: {e}", exc_info=True)
-            return jsonify({"error": "Email en personal_details ya está en uso"}), 409
         except Exception as e:
-            conn.rollback()
-            logging.error(f"Error en PUT personal_details user_id={user_id}: {e}", exc_info=True)
+            logging.error(f"Error en PUT /personal_details/{user_id}: {e}", exc_info=True)
             return jsonify({"error": "Error interno del servidor"}), 500
-        finally:
-            conn.close()
+
 
 @personal_details_blueprint.route("/<int:user_id>/requestChange", methods=["POST"])
-def request_change(user_id):
+@token_required
+@limiter.limit("10 per hour")  # Limitar a 10 solicitudes por hora
+def request_change(current_user_id, user_id):
     """
     Procesa la subida de archivo y campos 'aprobables' (full_name, id_type, id_number, student_id).
     Guarda en change_requests, marca pending_approval, etc.
+
+    Args:
+        current_user_id (int): El ID del usuario autenticado.
+        user_id (int): El ID del usuario que solicita el cambio.
+
+    Returns:
+        JSON confirmando la solicitud o un mensaje de error.
     """
+    # Verificar que el usuario está realizando la solicitud para sí mismo
+    if current_user_id != user_id:
+        logging.warning(f"Intento de solicitud de cambio no autorizado por user_id={current_user_id} para user_id={user_id}")
+        return jsonify({"error": "Acceso no autorizado"}), 403
+
     if 'file' not in request.files:
         return jsonify({"error": "No se encontró el archivo 'file'"}), 400
     file = request.files['file']
@@ -236,73 +275,82 @@ def request_change(user_id):
 
     doc_url = f"/uploads/user_{user_id}/request_{filename}"
 
-    conn = get_db_connection()
-    cursor = conn.cursor()
     try:
-        # Insertar en change_requests
-        cursor.execute("""
-            INSERT INTO change_requests (user_id, changes, status, created_at)
-            VALUES (%s, %s, %s, CURRENT_TIMESTAMP)
-            RETURNING request_id;
-        """, (user_id, json.dumps(changes_dict), 'pending'))
-        request_id = cursor.fetchone()[0]
-        logging.info(f"Solicitud de cambio creada: ID={request_id}, user_id={user_id}")
+        with get_db_connection() as conn:
+            cursor = conn.cursor()
+            # Insertar en change_requests
+            cursor.execute("""
+                INSERT INTO change_requests (user_id, changes, status, created_at)
+                VALUES (%s, %s, %s, CURRENT_TIMESTAMP)
+                RETURNING request_id;
+            """, (user_id, json.dumps(changes_dict), 'pending'))
+            request_id = cursor.fetchone()[0]
+            logging.info(f"Solicitud de cambio creada: ID={request_id}, user_id={user_id}")
 
-        # Marcar pending_approval en personal_details
-        cursor.execute("""
-            UPDATE personal_details
-            SET pending_approval = TRUE,
-                doc_type = %s,
-                doc_url = %s
-            WHERE user_id = %s
-            RETURNING user_id;
-        """, ('document', doc_url, user_id))
-        row = cursor.fetchone()
-        if not row:
-            conn.rollback()
-            return jsonify({"error": "Usuario no encontrado en personal_details"}), 404
+            # Marcar pending_approval en personal_details
+            cursor.execute("""
+                UPDATE personal_details
+                SET pending_approval = TRUE,
+                    doc_type = %s,
+                    doc_url = %s
+                WHERE user_id = %s
+                RETURNING user_id;
+            """, ('document', doc_url, user_id))
+            row = cursor.fetchone()
+            if not row:
+                return jsonify({"error": "Usuario no encontrado en personal_details"}), 404
 
-        # Actualizar (o insertar) en user_status si la tienes
-        cursor.execute("""
-            INSERT INTO user_status (user_id, pending, message)
-            VALUES (%s, %s, %s)
-            ON CONFLICT (user_id)
-            DO UPDATE SET pending = EXCLUDED.pending, message = EXCLUDED.message;
-        """, (user_id, True, f'Solicitud #{request_id} pendiente de aprobación.'))
+            # Actualizar (o insertar) en user_status si existe
+            cursor.execute("""
+                INSERT INTO user_status (user_id, pending, message)
+                VALUES (%s, %s, %s)
+                ON CONFLICT (user_id)
+                DO UPDATE SET pending = EXCLUDED.pending, message = EXCLUDED.message;
+            """, (user_id, True, f'Solicitud #{request_id} pendiente de aprobación.'))
 
-        conn.commit()
+            conn.commit()
 
-        # Enviar correo
-        base_url = request.host_url.rstrip('/')
-        full_doc_url = f"{base_url}{doc_url}"
-        send_change_request_email(user_id, changes_dict, full_doc_url)
+            # Enviar correo
+            base_url = request.host_url.rstrip('/')
+            full_doc_url = f"{base_url}{doc_url}"
+            send_change_request_email(user_id, changes_dict, full_doc_url)
 
-        return jsonify({"pending": True,
-                        "message": "Solicitud enviada y pendiente de aprobación."}), 200
+            return jsonify({"pending": True,
+                            "message": "Solicitud enviada y pendiente de aprobación."}), 200
 
     except Exception as e:
-        conn.rollback()
-        logging.error(f"Error en requestChange user_id={user_id}: {e}", exc_info=True)
-        return jsonify({"error": str(e)}), 500
-    finally:
-        conn.close()
+        logging.error(f"Error en POST /personal_details/{user_id}/requestChange: {e}", exc_info=True)
+        return jsonify({"error": "Error interno del servidor"}), 500
+
 
 @personal_details_blueprint.route("/<int:user_id>/status", methods=["GET"])
-def get_user_status(user_id):
+@token_required
+@limiter.limit("100 per hour")  # Limitar a 100 solicitudes por hora
+def get_user_status(current_user_id, user_id):
     """
     Retorna si el usuario tiene cambios pendientes (user_status).
+
+    Args:
+        current_user_id (int): El ID del usuario autenticado.
+        user_id (int): El ID del usuario cuyo status se desea obtener.
+
+    Returns:
+        JSON con el estado de las solicitudes pendientes o un mensaje de error.
     """
-    conn = get_db_connection()
-    cursor = conn.cursor()
+    # Verificar que el usuario está solicitando su propio estado
+    if current_user_id != user_id:
+        logging.warning(f"Intento de obtener status no autorizado por user_id={current_user_id} para user_id={user_id}")
+        return jsonify({"error": "Acceso no autorizado"}), 403
+
     try:
-        cursor.execute("SELECT pending, message FROM user_status WHERE user_id = %s;", (user_id,))
-        row = cursor.fetchone()
-        if row:
-            return jsonify({"pending": row[0], "message": row[1]}), 200
-        else:
-            return jsonify({"pending": False, "message": ""}), 200
+        with get_db_connection() as conn:
+            cursor = conn.cursor()
+            cursor.execute("SELECT pending, message FROM user_status WHERE user_id = %s;", (user_id,))
+            row = cursor.fetchone()
+            if row:
+                return jsonify({"pending": row[0], "message": row[1]}), 200
+            else:
+                return jsonify({"pending": False, "message": ""}), 200
     except Exception as e:
-        logging.error(f"Error al obtener status user_id={user_id}: {e}", exc_info=True)
-        return jsonify({"error": str(e)}), 500
-    finally:
-        conn.close()
+        logging.error(f"Error en GET /personal_details/{user_id}/status: {e}", exc_info=True)
+        return jsonify({"error": "Error interno del servidor"}), 500

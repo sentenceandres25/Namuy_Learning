@@ -7,8 +7,7 @@ import os
 import logging
 from flask_mail import Mail
 import sys
-from app.extensions import db
-from app import create_app
+from app.extensions import db, mail, limiter  # Importar las extensiones correctamente
 
 # Cargar variables de entorno desde .env
 load_dotenv()
@@ -43,7 +42,10 @@ app.config['MAIL_DEFAULT_CHARSET'] = 'utf-8'
 app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY')
 
 # Inicializar Flask-Mail
-mail = Mail(app)
+mail.init_app(app)
+
+# Inicializar Limiter y asociarlo con la aplicación Flask
+limiter.init_app(app)
 
 # Configuración de CORS
 CORS(app,
@@ -62,7 +64,7 @@ from app.routes import (
     account_details_blueprint,
     profile_picture_blueprint,
     notifications_blueprint,
-    two_factor_bp  # Añadir esta línea
+    two_factor_bp  # Asegúrate de tener este Blueprint definido
 )
 
 # Registrar Blueprints con sus respectivos prefixes
@@ -82,11 +84,18 @@ app.config['STORAGE_TYPE'] = os.getenv('STORAGE_TYPE', 'local')
 # Ruta para servir archivos subidos
 @app.route('/uploads/<path:filename>')
 def uploaded_file(filename):
-    return send_from_directory(os.path.join(app.root_path, 'uploads'), filename)
+    """
+    Sirve archivos desde la carpeta de uploads.
+    """
+    uploads_path = os.path.join(app.root_path, 'uploads')
+    return send_from_directory(uploads_path, filename)
 
 # Ruta para listar todas las rutas disponibles (útil para depuración)
 @app.route('/api/routes', methods=['GET'])
 def list_routes():
+    """
+    Retorna un JSON con todas las rutas disponibles en la aplicación.
+    """
     import urllib
     output = {}
     for rule in app.url_map.iter_rules():
@@ -97,7 +106,8 @@ def list_routes():
 
 # Ejecutar la aplicación
 if __name__ == '__main__':
-    print("JWT_SECRET_KEY:", app.config['JWT_SECRET_KEY'])  # **Eliminar después de la verificación**
+    # **Eliminar esta línea después de verificar que JWT_SECRET_KEY se carga correctamente**
+    print("JWT_SECRET_KEY:", app.config['JWT_SECRET_KEY'])  
     app.run(
         host=os.getenv('FLASK_HOST', 'localhost'),
         port=int(os.getenv('FLASK_PORT', 3001)),
