@@ -27,6 +27,10 @@
   "free": "Free",
   "instructor": "Instructor",
   "languages": "Languages",
-  "enroll_now": "Enroll Now"
+  "enroll_now": "Enroll Now",
+  "beginner": "Principiante",
+  "intermediate": "Intermedio",
+  "advanced": "Avanzado",
+  "level": "Nivel"
   }
   

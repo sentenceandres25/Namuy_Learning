@@ -1,5 +1,3 @@
-# app/utils/decorators.py
-
 from functools import wraps
 from flask import request, jsonify, g
 import jwt
@@ -37,6 +35,21 @@ def token_required(f):
             if not user_id:
                 logging.warning("Token is invalid: missing user_id.")
                 return jsonify({'error': 'Invalid token: missing user_id.'}), 401
+
+            # Verificar que, si se envía, el session_id esté activo
+            session_id = data.get('session_id')
+            if session_id:
+                with get_db_connection() as conn:
+                    cursor = conn.cursor()
+                    cursor.execute(
+                        "SELECT session_id FROM user_sessions WHERE session_id = %s AND user_id = %s;",
+                        (session_id, user_id)
+                    )
+                    if not cursor.fetchone():
+                        logging.warning(f"Session {session_id} for user_id {user_id} is no longer active.")
+                        return jsonify({'error': 'Session is no longer active.'}), 401
+                # Guardar el session_id en el contexto global para usarlo en otros endpoints (por ejemplo, DELETE)
+                g.current_session_id = session_id
 
             # Recuperar el usuario desde la base de datos
             with get_db_connection() as conn:

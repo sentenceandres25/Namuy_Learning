@@ -17,7 +17,6 @@ import NewAccountPage from './pages/LoginProcess/NewAccountPage';
 import GeneralInfo from './pages/UserIndex/StudentProfile/GeneralInfo';
 import AcademicHistory from './pages/UserIndex/StudentProfile/AcademicHistory';
 import Settings from './pages/UserIndex/StudentProfile/Settings';
-import UbicacionesGuardadas from './pages/UserIndex/StudentProfile/UbicacionesGuardadas';
 import PerformanceStatistics from './pages/UserIndex/StudentProfile/PerformanceStatistics';
 
 // Cursos
@@ -100,7 +99,6 @@ function App() {
           <Route path="/user/Info/:lang" element={<ProtectedRoute><GeneralInfo /></ProtectedRoute>} />
           <Route path="/user/AcademicHistory/:lang" element={<ProtectedRoute><AcademicHistory /></ProtectedRoute>} />
           <Route path="/user/Settings/:lang" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
-          <Route path="/user/UbicacionesGuardadas/:lang" element={<ProtectedRoute><UbicacionesGuardadas /></ProtectedRoute>} />
           <Route path="/user/PerformanceStatistics/:lang" element={<ProtectedRoute><PerformanceStatistics /></ProtectedRoute>} />
           <Route path="/user/CoursesInProgress/:lang" element={<ProtectedRoute><CoursesInProgress /></ProtectedRoute>} />
           <Route path="/user/CoursePage/:lang" element={<ProtectedRoute><CoursePage /></ProtectedRoute>} />

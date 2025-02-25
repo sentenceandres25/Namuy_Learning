@@ -70,7 +70,7 @@ def send_change_request_email(user_id, changes, doc_url):
 
 @personal_details_blueprint.route("/<int:user_id>", methods=["GET", "PUT"])
 @token_required
-@limiter.limit("100 per hour")  # Limitar a 100 solicitudes por hora
+@limiter.limit("10000 per hour")  # Limitar a 100 solicitudes por hora
 def manage_personal_details(current_user_id, user_id):
     """
     GET: Retorna datos del usuario (JOIN con 'users') => personal_details + info de la cuenta.

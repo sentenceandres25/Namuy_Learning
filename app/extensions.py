@@ -14,6 +14,6 @@ cors = CORS()
 # Inicializar Flask-Limiter con almacenamiento en memoria
 limiter = Limiter(
     key_func=get_remote_address,
-    default_limits=["200 per day", "50 per hour"],
+    default_limits=["200 per day", "1000 per hour"],
     headers_enabled=True  # Opcional: Añade encabezados de rate limiting a las respuestas
 )

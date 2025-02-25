@@ -1,17 +1,17 @@
 // src/i18n.js
-
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import Backend from 'i18next-http-backend';
-// import LanguageDetector from 'i18next-browser-languagedetector'; // Descomentar si deseas usarlo
+import LanguageDetector from 'i18next-browser-languagedetector';
 
 i18n
-  // Carga de traducciones desde ficheros JSON de manera asíncrona
+  // Carga traducciones desde archivos JSON de manera asíncrona
   .use(Backend)
-  // .use(LanguageDetector) // Descomentar si deseas detectar idioma con querystring, cookies, etc.
+  // Detecta el idioma a través de querystring, cookie, localStorage, o el navegador
+  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'es',
+    fallbackLng: 'en',
     ns: [
       'UserIndex/MyCart/MyCart',
       'UserIndex/AcademicRegulations',
@@ -39,10 +39,12 @@ i18n
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
-    // detection: {
-    //   order: ['querystring', 'cookie', 'localStorage', 'navigator'],
-    //   caches: ['localStorage', 'cookie'],
-    // },
+    detection: {
+      // Se buscará el idioma en la query string (ej. ?lng=es), luego en cookies, localStorage y finalmente en el navegador
+      order: ['querystring', 'cookie', 'localStorage', 'navigator'],
+      lookupQuerystring: 'lng',
+      caches: ['localStorage', 'cookie'],
+    },
     react: {
       useSuspense: true,
     },

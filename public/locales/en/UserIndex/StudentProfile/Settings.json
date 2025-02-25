@@ -62,12 +62,9 @@
   "preferencesUpdated": "Notification preferences updated successfully",
   "errorFetchingPreferences": "Error fetching preferences. Please try again later.",
   "errorSavingPreferences": "Error saving preferences. Please try again later.",
-  "privacy": "Privacy",
-  "twoFactorAuth": "Two-Factor Authentication (2FA)",
   "enabled": "Enabled",
   "disabled": "Disabled",
   "enableTwoFactorAuth": "Enable Two-Factor Authentication",
-  "email": "Email",
   "phoneNumber": "Phone Number",
   "enterEmail": "Enter your email",
   "enterPhoneNumber": "Enter your phone number",
@@ -92,6 +89,18 @@
   "passwordErrorMatch": "Passwords do not match.",
   "passwordErrorServer": "Error updating password. Please try again later.",
   "passwordUpdated": "Password updated successfully.",
-  "accountStatus": "Account Status"
+  "accountStatus": "Account Status",
+  "errorFetchingSessions": "Error fetching sessions.",
+  "currentSessionClosed": "Your current session has been closed. Please log out.",
+  "sessionClosedSuccessfully": "Session closed successfully.",
+  "errorClosingSession": "Error closing session.",
+  "hideActiveSessions": "Hide active sessions",
+  "showActiveSessions": "Show active sessions",
+  "noActiveSessions": "No active sessions found.",
+  "device": "Device",
+  "location": "Location",
+  "loginTime": "Login Time",
+  "actions": "Actions",
+  "closeSession": "Close Session"
         }
   

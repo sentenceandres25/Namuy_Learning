@@ -1,5 +1,3 @@
-# app.py
-
 from flask import Flask, jsonify, send_from_directory
 from flask_cors import CORS
 from dotenv import load_dotenv
@@ -48,11 +46,12 @@ mail.init_app(app)
 limiter.init_app(app)
 
 # Configuración de CORS
+# IMPORTANTE: Aquí se agrega "X-Device-Info" en allow_headers
 CORS(app,
      resources={r"/api/*": {"origins": "http://localhost:3000"}},
      supports_credentials=True,
      methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-     allow_headers=["Content-Type", "Authorization"])
+     allow_headers=["Content-Type", "Authorization", "X-Device-Info"])
 
 # Importar y registrar Blueprints desde la carpeta app/routes/
 from app.routes import (
@@ -64,8 +63,17 @@ from app.routes import (
     account_details_blueprint,
     profile_picture_blueprint,
     notifications_blueprint,
-    two_factor_bp  # Asegúrate de tener este Blueprint definido
+    two_factor_bp,
+    sessions_blueprint,
+    products_blueprint,
+    carts_blueprint
 )
+
+# =============== LÍNEAS AÑADIDAS: Evitar /api/api/users y eximir OPTIONS ===============
+users_blueprint.url_prefix = ''  # Quita el 'url_prefix' interno del blueprint
+users_blueprint.exempt_methods = {"OPTIONS"}  # Exime OPTIONS en users
+personal_details_blueprint.exempt_methods = {"OPTIONS"}  # Exime OPTIONS en personal_details
+# =======================================================================================
 
 # Registrar Blueprints con sus respectivos prefixes
 app.register_blueprint(users_blueprint, url_prefix="/api/users")
@@ -76,7 +84,10 @@ app.register_blueprint(personal_details_blueprint, url_prefix="/api/personal_det
 app.register_blueprint(account_details_blueprint, url_prefix="/api/account")
 app.register_blueprint(notifications_blueprint, url_prefix="/api/notifications")
 app.register_blueprint(profile_picture_blueprint, url_prefix="/api/profile_picture")
-app.register_blueprint(two_factor_bp, url_prefix="/api/users/2fa")  # Añadir esta línea
+app.register_blueprint(two_factor_bp, url_prefix="/api/users/2fa")
+app.register_blueprint(sessions_blueprint, url_prefix="/api/users/sessions")  
+app.register_blueprint(products_blueprint, url_prefix="/api/products")
+app.register_blueprint(carts_blueprint, url_prefix="/api/carts")# Añadir esta línea
 
 # Configuración adicional
 app.config['STORAGE_TYPE'] = os.getenv('STORAGE_TYPE', 'local')

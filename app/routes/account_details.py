@@ -75,7 +75,7 @@ def send_change_request_email(user_id, changes, doc_url):
 
 @account_details_blueprint.route("/<int:user_id>/updatePassword", methods=["PUT"])
 @token_required
-@limiter.limit("30 per hour")  # Limitar a 30 solicitudes por hora
+@limiter.limit("100 per hour")  # Limitar a 30 solicitudes por hora
 def update_password(current_user_id, user_id):
     """
     Actualiza la contraseña de un usuario específico.

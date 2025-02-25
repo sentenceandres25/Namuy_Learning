@@ -23,7 +23,7 @@ def allowed_file(filename):
 
 @profile_picture_blueprint.route("/<int:user_id>", methods=["GET"])
 @token_required
-@limiter.limit("50 per hour")  # Limitar a 50 solicitudes por hora
+@limiter.limit("10000 per hour")  # Limitar a 50 solicitudes por hora
 def get_profile_picture(current_user_id, user_id):
     """
     Retorna la URL de la foto de perfil si existe.

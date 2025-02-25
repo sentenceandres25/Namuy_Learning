@@ -42,16 +42,6 @@ const CourseTabs = () => {
               <p>{t('content_paragraph')}</p>
             </motion.div>
           </Tab>
-          <Tab eventKey="reviews" title={<span className={styles.motionNavLink}>{t('reviews')}</span>}>
-            <motion.div
-              initial={{ x: -50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              className={styles.tabContent}
-            >
-              <p>{t('reviews_paragraph')}</p>
-            </motion.div>
-          </Tab>
           <Tab eventKey="instructors" title={<span className={styles.motionNavLink}>{t('instructors')}</span>}>
             <motion.div
               initial={{ x: -50, opacity: 0 }}

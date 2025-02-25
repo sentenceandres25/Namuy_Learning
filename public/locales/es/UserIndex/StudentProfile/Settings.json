@@ -92,6 +92,18 @@
         "passwordErrorMatch": "Las contraseñas no coinciden.",
         "passwordErrorServer": "Error al actualizar la contraseña. Por favor, inténtelo nuevamente más tarde.",
         "passwordUpdated": "Contraseña actualizada exitosamente.",
-        "accountStatus": "Estado de la Cuenta"
+        "accountStatus": "Estado de la Cuenta",
+            "errorFetchingSessions": "Error al obtener las sesiones.",
+            "currentSessionClosed": "Su sesión actual ha sido cerrada. Por favor, cierre sesión.",
+            "sessionClosedSuccessfully": "Sesión cerrada con éxito.",
+            "errorClosingSession": "Error al cerrar la sesión.",
+            "hideActiveSessions": "Ocultar sesiones activas",
+            "showActiveSessions": "Mostrar sesiones activas",
+            "noActiveSessions": "No hay sesiones activas.",
+            "device": "Dispositivo",
+            "location": "Ubicación",
+            "loginTime": "Hora de inicio de sesión",
+            "actions": "Acciones",
+            "closeSession": "Cerrar sesión"
   }
   

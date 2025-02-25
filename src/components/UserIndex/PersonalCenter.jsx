@@ -10,7 +10,6 @@ import {
   faUser,
   faBook,
   faChalkboardTeacher,
-  faCertificate,
   faCommentDots,
   faCogs,
   faClipboardCheck,
@@ -21,9 +20,6 @@ import {
   faGraduationCap,
   faClipboard,
   faClock,
-  faMapMarkerAlt,
-  faExclamationTriangle,
-  faComments
 } from '@fortawesome/free-solid-svg-icons';
 import styles from './PersonalCenter.module.css';
 
@@ -54,22 +50,7 @@ const PersonalCenter = () => {
   // Definición de los elementos de cada sección
   const profileItems = [
     { title: t('General Information'), icon: faGraduationCap, link: 'Info' },
-    { title: t('Academic History'), icon: faClipboard, link: 'AcademicHistory' },
     { title: t('Preferences and Settings'), icon: faCogs, link: 'Settings' },
-    { title: t('Saved Locations'), icon: faMapMarkerAlt, link: 'UbicacionesGuardadas' },
-    { title: t('Performance Statistics'), icon: faClipboardCheck, link: 'PerformanceStatistics' },
-  ];
-
-  const coursesItems = [
-    { title: t('In Progress Courses'), icon: faClipboardCheck, link: 'CoursesInProgress' },
-    { title: t('Completed Courses'), icon: faClipboardCheck, link: 'CompletedCourses' },
-    { title: t('Pending Evaluations'), icon: faClipboardCheck, link: 'PendingEvaluations' },
-  ];
-
-  const certificationsItems = [
-    { title: t('Obtained Certificates'), icon: faCertificate, link: 'CertificatesObtained' },
-    { title: t('Certificates in Progress'), icon: faClipboardCheck, link: 'CertificatesInProgress' },
-    { title: t('Expired Certificates'), icon: faExclamationTriangle, link: 'ExpiredCertificates' },
   ];
 
   const tutoringItems = [
@@ -77,23 +58,11 @@ const PersonalCenter = () => {
     { title: t('Schedule New Tutoring'), icon: faClock, link: 'ScheduleTutoring' },
     { title: t('Pending Tutoring Sessions'), icon: faClipboardCheck, link: 'PendingTutoringSessions' },
     { title: t('Evaluate Tutoring Sessions'), icon: faStar, link: 'EvaluateTutoringSessions' },
-    { title: t('Request Extra Tutoring'), icon: faCommentDots, link: 'RequestExtraTutoring' },
-  ];
-
-  const forumItems = [
-    { title: t('Recent Topics'), icon: faClock, link: 'RecentTopics' },
-    { title: t('My Participations'), icon: faClipboard, link: 'MyContributions' },
-    { title: t('Start New Conversation'), icon: faComments, link: 'StartNewConversation' },
   ];
 
   const supportItems = [
     { title: t('Frequent Questions'), icon: faQuestionCircle, link: 'FrequentlyAskedQuestions' },
     { title: t('Technical Support'), icon: faClipboardCheck, link: 'TechnicalAssistance' },
-  ];
-
-  const resourcesItems = [
-    { title: t('Virtual Library'), icon: faBook, link: 'VirtualLibrary' },
-    { title: t('Supplementary Materials'), icon: faDownload, link: 'SupplementaryMaterial' },
   ];
 
   const policyItems = [
@@ -114,20 +83,6 @@ const PersonalCenter = () => {
         />
 
         <CollapsibleSection
-          title={t('My Courses')}
-          icon={faBook}
-          items={coursesItems}
-          lang={lang}
-        />
-
-        <CollapsibleSection
-          title={t('Certifications')}
-          icon={faCertificate}
-          items={certificationsItems}
-          lang={lang}
-        />
-
-        <CollapsibleSection
           title={t('Personalized Tutoring')}
           icon={faChalkboardTeacher}
           items={tutoringItems}
@@ -135,23 +90,9 @@ const PersonalCenter = () => {
         />
 
         <CollapsibleSection
-          title={t('Discussion Forum')}
-          icon={faComments}
-          items={forumItems}
-          lang={lang}
-        />
-
-        <CollapsibleSection
           title={t('Academic Support')}
           icon={faCommentDots}
           items={supportItems}
-          lang={lang}
-        />
-
-        <CollapsibleSection
-          title={t('Additional Resources')}
-          icon={faClipboard}
-          items={resourcesItems}
           lang={lang}
         />
 

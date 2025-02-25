@@ -99,7 +99,7 @@ def create_user():
 
 @users_blueprint.route("/preferred-language", methods=["GET"])
 @token_required
-@limiter.limit("100 per hour")  # Example: Limit to 100 requests per hour
+@limiter.limit("1000 per hour")  # Example: Limit to 100 requests per hour
 def get_preferred_language(user_id):
     """
     Recupera el idioma preferido del usuario autenticado.
@@ -126,7 +126,7 @@ def get_preferred_language(user_id):
 
 @users_blueprint.route("/preferred-language", methods=["PUT"])
 @token_required
-@limiter.limit("50 per hour")  # Example: Limit to 50 requests per hour
+@limiter.limit("10000 per hour")  # Example: Limit to 50 requests per hour
 def update_preferred_language(user_id):
     """
     Actualiza el idioma preferido del usuario autenticado.

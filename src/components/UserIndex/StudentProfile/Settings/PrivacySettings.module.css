@@ -1,58 +1,50 @@
 .privacySettings {
-  /* Fondo degradado sutil con verde suave */
-  background: linear-gradient(125deg, #f0fff0, #e3f7e8);
-  /* Márgenes y padding */
-  margin: 20px auto;
-  padding: 30px;
-  max-width: 800px;
+  padding: 20px;
+  background: linear-gradient(135deg, #d6f5db, #b5e6b6);
+  color: #333;
   border-radius: 12px;
-  /* Sombra suave */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 20px auto;
+  max-width: 900px;
 }
 
 .sectionTitle {
   text-align: center;
-  font-weight: 600;
-  margin-bottom: 24px;
-  color: #2e2e2e;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-/* Sección de cada ajuste */
 .settingItem {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
-/* Columnas del form con un poco de espaciado */
 .formGroup {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
-/* Etiquetas */
 .label {
   font-weight: bold;
   color: #333;
 }
 
-/* Ajuste para la columna con el switch */
 .switchCol {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
-/* Switch 2FA */
 .toggleSwitch .form-check-input {
   transform: scale(1.2);
   cursor: pointer;
 }
 
-/* Sección "otros ajustes" */
 .otherSettings {
   margin-top: 24px;
   padding-top: 16px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* Botón outline personalizado */
 .outlineBtn {
   min-width: 100px;
   transition: background-color 0.2s ease;
@@ -62,14 +54,14 @@
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* Botón para enviar código */
 .sendCodeBtn {
   min-width: 150px;
   font-weight: 500;
 }
 
-/* Spinner (opcional) */
 .spinner {
-  display: block;
-  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
 }

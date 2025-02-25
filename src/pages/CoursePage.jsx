@@ -1,3 +1,4 @@
+// src/pages/CoursePage.jsx
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
@@ -9,19 +10,30 @@ import PageTitle from '../components/PageTitle/PageTitle';
 import CoursePreview from '../components/CoursePage/CoursePreview';
 import CourseInfo from '../components/CoursePage/CourseInfo';
 import CourseTabs from '../components/CoursePage/CourseTabs';
-import CourseComparison from '../components/CoursePage/CourseComparison'; 
-import RecommendedCoursesCarousel from '../components/UserIndex/MyCourses/CoursesInProgress/RecommendedCoursesCarousel'; // Importar el carrusel recomendado
+import CourseComparison from '../components/CoursePage/CourseComparison';
+import RecommendedCoursesCarousel from '../components/UserIndex/MyCourses/CoursesInProgress/RecommendedCoursesCarousel';
 import styles from './CoursePage.module.css';
 
 const CoursePage = () => {
   const { lang } = useParams(); 
   const { t, i18n } = useTranslation('CoursePage');
   const headerHeight = '125px';
+  
+  // Estado para almacenar el curso obtenido de la API
+  const [course, setCourse] = useState(null);
 
   useEffect(() => {
     if (lang) {
       i18n.changeLanguage(lang); 
     }
+    // Realiza la petición a la API para obtener el curso (se asume que el ID es 2)
+    fetch(`http://localhost:3001/api/products/2?lang=${lang}`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Fetched course:', data);
+        setCourse(data);
+      })
+      .catch((err) => console.error('Error fetching course:', err));
   }, [lang, i18n]);
 
   return (
@@ -40,14 +52,18 @@ const CoursePage = () => {
               <CoursePreview /> 
             </Col>
             <Col md={4}>
-              <CourseInfo /> 
+              {course ? (
+                <CourseInfo course={course} />
+              ) : (
+                <p>Cargando información del curso...</p>
+              )}
             </Col>
           </Row>
 
           <CourseTabs /> 
           <CourseComparison /> 
 
-          {/* Agregar el carrusel de cursos recomendados */}
+          {/* Carrusel de cursos recomendados */}
           <RecommendedCoursesCarousel /> 
           
         </Container>

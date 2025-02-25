@@ -1,5 +1,3 @@
-// src/pages/LoginProcess/LoginPasswordPage.jsx
-
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams, useLocation, useNavigate, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -19,7 +17,6 @@ const LoginPasswordPage = () => {
   const { lang } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
-
   const { login } = useContext(AuthContext);
 
   // Recibir email desde la pantalla anterior
@@ -50,7 +47,23 @@ const LoginPasswordPage = () => {
   const handlePasswordChange = (e) => setPassword(e.target.value.trim());
   const handleCodeChange = (e) => setCode(e.target.value.trim());
 
-  // Submit general (etapa 1 -> password, etapa 2 -> codigo 2FA)
+  // Función para registrar la sesión actual (opcional si ya se registró en el login)
+  const registerSession = async (token) => {
+    try {
+      await fetch('http://localhost:3001/api/users/sessions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+          'X-Device-Info': navigator.userAgent,
+        },
+      });
+    } catch (error) {
+      console.error('Error registering session:', error);
+    }
+  };
+
+  // Submit general: etapa 1 (password) y etapa 2 (código 2FA)
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -66,6 +79,7 @@ const LoginPasswordPage = () => {
 
         if (!loginData.email || !loginData.password) {
           setErrorMessage(t('emailAndPasswordRequired'));
+          setLoading(false);
           return;
         }
 
@@ -84,14 +98,14 @@ const LoginPasswordPage = () => {
           } else {
             setErrorMessage(data.error || t('anErrorOccurred'));
           }
+          setLoading(false);
           return;
         }
 
-        // Si el backend indica 2FA
+        // Si el backend indica que se requiere 2FA
         if (data.twoFactorRequired) {
           setTwoFactorRequired(true);
         } else {
-          // 2FA no requerido => login directo
           const userData = {
             user_id: data.user_id,
             email: loginData.email,
@@ -100,6 +114,10 @@ const LoginPasswordPage = () => {
           };
           // Guardar en AuthContext
           login(userData, data.token);
+
+          // Registrar la sesión actual (si fuera necesario)
+          await registerSession(data.token);
+
           navigate(`/pages/HomePage/${lang || 'es'}`);
         }
       } catch (error) {
@@ -114,6 +132,7 @@ const LoginPasswordPage = () => {
       try {
         if (!code) {
           setErrorMessage(t('invalidVerificationCode'));
+          setLoading(false);
           return;
         }
 
@@ -127,10 +146,10 @@ const LoginPasswordPage = () => {
 
         if (!resp.ok) {
           setErrorMessage(data.error || t('invalidVerificationCode'));
+          setLoading(false);
           return;
         }
 
-        // Éxito con 2FA
         const userData = {
           user_id: data.user_id,
           email,
@@ -139,7 +158,9 @@ const LoginPasswordPage = () => {
         };
         login(userData, data.token);
 
-        // Ir a Home
+        // Registrar la sesión actual tras la verificación 2FA (si fuera necesario)
+        await registerSession(data.token);
+
         navigate(`/pages/HomePage/${lang || 'es'}`);
       } catch (error) {
         console.error('Error al verificar 2FA:', error);
@@ -158,9 +179,7 @@ const LoginPasswordPage = () => {
       <HeaderComponent headerHeight="125px" className="header-user-index" />
 
       <div className={styles['password-login']}>
-        <Container
-          className={`${styles['password-login-container']} d-flex justify-content-center align-items-center`}
-        >
+        <Container className={`${styles['password-login-container']} d-flex justify-content-center align-items-center`}>
           <Card className={`${styles['password-login-card']} shadow-lg`}>
             <h3 className="text-center mb-4">
               {twoFactorRequired ? t('twoFactorAuthentication') : t('signIn')}
@@ -201,11 +220,7 @@ const LoginPasswordPage = () => {
               )}
 
               <ButtonLogin
-                text={
-                  loading
-                    ? <Spinner size="sm" />
-                    : twoFactorRequired ? t('verify') : t('login')
-                }
+                text={loading ? <Spinner size="sm" /> : twoFactorRequired ? t('verify') : t('login')}
                 disabled={loading}
               />
             </Form>

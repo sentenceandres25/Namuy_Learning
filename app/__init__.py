@@ -72,7 +72,7 @@ def configure_app(app):
     app.config['STORAGE_TYPE'] = os.getenv('STORAGE_TYPE', 'local')
 
     # Rate Limiting configuration (default limits)
-    app.config['RATELIMIT_DEFAULT'] = os.getenv('RATELIMIT_DEFAULT', '200 per day;50 per hour')
+    app.config['RATELIMIT_DEFAULT'] = os.getenv('RATELIMIT_DEFAULT', '200 per day;1000 per hour')
     app.config['RATELIMIT_STORAGE_URI'] = os.getenv('RATELIMIT_STORAGE_URI', 'memory://')
 
     # SMTP configurations for email_utils

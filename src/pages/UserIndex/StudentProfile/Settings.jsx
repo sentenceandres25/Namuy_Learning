@@ -1,42 +1,64 @@
-// Settings.jsx
-
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
-import HeaderComponent from '../../../components/Header/Header';
-import CentroPersonal from '../../../components/UserIndex/PersonalCenter';
-import Footer from '../../../components/Footer/Footer';
-import PageTitle from '../../../components/PageTitle/PageTitle';
-import NotificationSettings from '../../../components/UserIndex/StudentProfile/Settings/NotificationSettings';
-import PrivacySettings from '../../../components/UserIndex/StudentProfile/Settings/PrivacySettings';
-import ContentPreferences from '../../../components/UserIndex/StudentProfile/Settings/ContentPreferences';
-import AccessibilitySettings from '../../../components/UserIndex/StudentProfile/Settings/AccessibilitySettings';
-import AccountPreferences from '../../../components/UserIndex/StudentProfile/Settings/AccountPreferences';
-import DeviceSettings from '../../../components/UserIndex/StudentProfile/Settings/DeviceSettings';
-import AdsPreferences from '../../../components/UserIndex/StudentProfile/Settings/AdsPreferences';
-import KeyboardShortcuts from '../../../components/UserIndex/StudentProfile/Settings/KeyboardShortcuts';
-import Integrations from '../../../components/UserIndex/StudentProfile/Settings/Integrations';
+import { useInView } from 'react-intersection-observer';
 import styles from './Settings.module.css';
 
-const Settings = () => {
-  const { lang } = useParams(); // Obtener el parámetro lang de la URL
-  const { t } = useTranslation('UserIndex/StudentProfile/Settings'); // Usar el namespace de traducción
-  const headerHeight = '125px'; // Ajusta esto según el tamaño del header
-
-  // Puedes usar el parámetro `lang` para ajustar el contenido según el idioma
-  console.log(`Idioma seleccionado: ${lang}`);
+// Lazy loading for performance optimization
+const HeaderComponent = lazy(() => import('../../../components/Header/Header'));
+const CentroPersonal = lazy(() => import('../../../components/UserIndex/PersonalCenter'));
+const Footer = lazy(() => import('../../../components/Footer/Footer'));
+const PageTitle = lazy(() => import('../../../components/PageTitle/PageTitle'));
+const NotificationSettings = lazy(() => import('../../../components/UserIndex/StudentProfile/Settings/NotificationSettings'));
+const PrivacySettings = lazy(() => import('../../../components/UserIndex/StudentProfile/Settings/PrivacySettings'));
+const ContentPreferences = lazy(() => import('../../../components/UserIndex/StudentProfile/Settings/ContentPreferences'));
+/**
+ * AnimatedSection
+ * A reusable wrapper that uses Intersection Observer to trigger
+ * an entrance animation when the user scrolls this section into view.
+ */
+const AnimatedSection = ({ children }) => {
+  // "triggerOnce: true" ensures the animation only happens on the first entry.
+  // "threshold: 0.1" means the component starts animating when 10% is in view.
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <>
-      {/* Agregando el título de la pestaña */}
-      <PageTitle titleKey="settingsTitle" /> {/* Usamos 'titleKey' para traducir el título de la pestaña */}
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5 }}
+      style={{ marginBottom: '20px' }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
-      {/* Encabezado */}
+const Settings = () => {
+  // Getting language parameter from the URL (e.g., /en, /es, etc.)
+  const { lang } = useParams();
+  
+  // Using the i18next translation with a specific namespace
+  const { t } = useTranslation('UserIndex/StudentProfile/Settings');
+
+  // Define a consistent header height
+  const headerHeight = '125px';
+
+  // Debugging the selected language (remove if not needed)
+  console.log(`Selected language: ${lang}`);
+
+  return (
+    <Suspense fallback={<div>Loading settings...</div>}>
+      {/* Tab/Page Title - uses "settingsTitle" key from the translation file */}
+      <PageTitle titleKey="settingsTitle" />
+
+      {/* Header with dynamic height */}
       <HeaderComponent headerHeight={headerHeight} className="header-user-index" />
 
-      {/* Contenido principal con margen superior para evitar superposición con el encabezado */}
+      {/* Main content with an entry animation using Framer Motion */}
       <motion.div
         className="settings-page"
         initial={{ opacity: 0 }}
@@ -45,72 +67,52 @@ const Settings = () => {
       >
         <Container fluid className="user-index" style={{ marginTop: headerHeight }}>
           <Row>
-            {/* Menú lateral izquierdo */}
+            {/* Left column: Personal Center menu */}
             <Col md={3}>
               <CentroPersonal />
             </Col>
 
-            {/* Contenido principal */}
+            {/* Right column: All settings sections */}
             <Col md={9}>
+              {/* Main Settings Title */}
               <Row>
                 <Col md={12}>
-                <h2 className={styles['settings-title']}>{t('settings')}</h2>
-                {/* Usando traducción para el título */}
+                  <h2 className={styles['settings-title']}>{t('settings')}</h2>
                 </Col>
               </Row>
-              <Row>
-                <Col md={12}>
-                  <NotificationSettings />
-                </Col>
-              </Row>
-              <Row>
-                <Col md={12}>
-                  <PrivacySettings />
-                </Col>
-              </Row>
-              <Row>
-                <Col md={12}>
-                  <ContentPreferences />
-                </Col>
-              </Row>
-              <Row>
-                <Col md={12}>
-                  <AccessibilitySettings />
-                </Col>
-              </Row>
-              <Row>
-                <Col md={12}>
-                  <AccountPreferences />
-                </Col>
-              </Row>
-              <Row>
-                <Col md={12}>
-                  <DeviceSettings />
-                </Col>
-              </Row>
-              <Row>
-                <Col md={12}>
-                  <AdsPreferences />
-                </Col>
-              </Row>
-              <Row>
-                <Col md={12}>
-                  <KeyboardShortcuts />
-                </Col>
-              </Row>
-              <Row>
-                <Col md={12}>
-                  <Integrations />
-                </Col>
-              </Row>
+
+              {/* Wrap each section in an AnimatedSection to reveal it on scroll */}
+              <AnimatedSection>
+                <Row>
+                  <Col md={12}>
+                    <NotificationSettings />
+                  </Col>
+                </Row>
+              </AnimatedSection>
+
+              <AnimatedSection>
+                <Row>
+                  <Col md={12}>
+                    <PrivacySettings />
+                  </Col>
+                </Row>
+              </AnimatedSection>
+
+              <AnimatedSection>
+                <Row>
+                  <Col md={12}>
+                    <ContentPreferences />
+                  </Col>
+                </Row>
+              </AnimatedSection>
             </Col>
           </Row>
         </Container>
       </motion.div>
 
-      {/* Pie de página */}
+      {/* Footer */}
       <Footer />
-    </>
+    </Suspense>
   );
 };
 
